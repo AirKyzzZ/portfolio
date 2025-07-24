@@ -61,18 +61,14 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
   const currentMedia = sampleMediaContent[mediaType];
 
   return (
-    <div className='max-w-4xl mx-auto'>
-      <SparklesText text="Bienvenue !" />
-      <div className="mt-2"> {/* Reduce space between title and scrolling text */}
-        <ScrollingText />
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="flex flex-col items-center justify-center w-full h-full max-w-4xl">
+        <SparklesText text="Bienvenue !" />
+        <div className="mt-2">
+          <ScrollingText />
+        </div>
+        {/* ... */}
       </div>
-      {/*       <p className='text-lg mb-8 text-black dark:text-white'>
-        {currentMedia.about.overview}
-      </p>
-
-      <p className='text-lg mb-8 text-black dark:text-white'>
-        {currentMedia.about.conclusion}
-      </p> */}
     </div>
   );
 };
