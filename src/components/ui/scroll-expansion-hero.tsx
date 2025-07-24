@@ -296,14 +296,6 @@ const ScrollExpandMedia = ({
                       {date}
                     </p>
                   )}
-                  {scrollToExpand && (
-                    <p
-                      className='text-blue-200 font-medium text-center'
-                      style={{ transform: `translateX(${textTranslateX}vw)` }}
-                    >
-                      {scrollToExpand}
-                    </p>
-                  )}
                 </div>
               </div>
 

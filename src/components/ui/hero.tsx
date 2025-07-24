@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
+import { SparklesText } from '@/components/ui/sparkles-text';
+import { ScrollingText } from '@/components/ui/magic-text-export';
 
 interface MediaAbout {
   overview: string;
@@ -40,9 +42,9 @@ const sampleMediaContent: MediaContentCollection = {
     },
   }, */
   image: {
-    src: '/test.jpg',
+    src: '/moi.png',
     background:
-      '/moi.png',
+      '/test.jpg',
     title: 'Dynamic Image Showcase',
     date: 'Underwater Adventure',
     scrollToExpand: 'Scroll to Expand Demo',
@@ -60,16 +62,17 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
 
   return (
     <div className='max-w-4xl mx-auto'>
-      <h2 className='text-3xl font-bold mb-6 text-black dark:text-white'>
-        About This Component
-      </h2>
-      <p className='text-lg mb-8 text-black dark:text-white'>
+      <SparklesText text="Bienvenue !" />
+      <div className="mt-2"> {/* Reduce space between title and scrolling text */}
+        <ScrollingText />
+      </div>
+      {/*       <p className='text-lg mb-8 text-black dark:text-white'>
         {currentMedia.about.overview}
       </p>
 
       <p className='text-lg mb-8 text-black dark:text-white'>
         {currentMedia.about.conclusion}
-      </p>
+      </p> */}
     </div>
   );
 };
@@ -94,7 +97,6 @@ export const VideoExpansionTextBlend = () => {
         bgImageSrc={currentMedia.background}
         title={currentMedia.title}
         date={currentMedia.date}
-        scrollToExpand={currentMedia.scrollToExpand}
         textBlend
       >
         <MediaContent mediaType={mediaType} />
@@ -122,7 +124,6 @@ export const ImageExpansionTextBlend = () => {
         bgImageSrc={currentMedia.background}
         title={currentMedia.title}
         date={currentMedia.date}
-        scrollToExpand={currentMedia.scrollToExpand}
         textBlend
       >
         <MediaContent mediaType={mediaType} />
@@ -151,7 +152,6 @@ export const VideoExpansion = () => {
         bgImageSrc={currentMedia.background}
         title={currentMedia.title}
         date={currentMedia.date}
-        scrollToExpand={currentMedia.scrollToExpand}
       >
         <MediaContent mediaType={mediaType} />
       </ScrollExpandMedia>
@@ -178,7 +178,6 @@ export const ImageExpansion = () => {
         bgImageSrc={currentMedia.background}
         title={currentMedia.title}
         date={currentMedia.date}
-        scrollToExpand={currentMedia.scrollToExpand}
       >
         <MediaContent mediaType={mediaType} />
       </ScrollExpandMedia>
@@ -230,7 +229,6 @@ const Hero = () => {
         bgImageSrc={currentMedia.background}
         title={currentMedia.title}
         date={currentMedia.date}
-        scrollToExpand={currentMedia.scrollToExpand}
       >
         <MediaContent mediaType={mediaType as 'video' | 'image'} />
       </ScrollExpandMedia>

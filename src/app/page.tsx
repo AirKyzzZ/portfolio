@@ -4,5 +4,9 @@ import { motion } from "framer-motion";
 import Hero from "@/components/ui/hero";
 
 export default function Home() {
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+   </>
+  );
 }
