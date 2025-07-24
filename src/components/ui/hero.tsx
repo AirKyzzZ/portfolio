@@ -25,14 +25,14 @@ interface MediaContentCollection {
 }
 
 const sampleMediaContent: MediaContentCollection = {
-/*   video: {
-    src: 'https://me7aitdbxq.ufs.sh/f/2wsMIGDMQRdYuZ5R8ahEEZ4aQK56LizRdfBSqeDMsmUIrJN1',
+   video: {
+    src: '/background.mp4',
     poster:
-      'https://images.pexels.com/videos/5752729/space-earth-universe-cosmos-5752729.jpeg',
+      '/moi.png',
     background:
-      'https://me7aitdbxq.ufs.sh/f/2wsMIGDMQRdYMNjMlBUYHaeYpxduXPVNwf8mnFA61L7rkcoS',
-    title: 'Immersive Video Experience',
-    date: 'Cosmic Journey',
+      '/moi.png',
+    title: 'Rencontrez Maxime Mansiet',
+    date: 'Développeur Full Stack',
     scrollToExpand: 'Scroll to Expand Demo',
     about: {
       overview:
@@ -40,8 +40,8 @@ const sampleMediaContent: MediaContentCollection = {
       conclusion:
         'The ScrollExpandMedia component provides a unique way to engage users with your content through interactive scrolling. Try switching between video and image modes to see different implementations.',
     },
-  }, */
-  image: {
+  }, 
+   image: {
     src: '/moi.png',
     background:
       '/test.jpg',
@@ -55,7 +55,7 @@ const sampleMediaContent: MediaContentCollection = {
         'The ScrollExpandMedia component works equally well with images and videos. This flexibility allows you to choose the media type that best suits your content while maintaining the same engaging user experience.',
     },
   },
-};
+}; 
 
 const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
   const currentMedia = sampleMediaContent[mediaType];
@@ -74,7 +74,7 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
 };
 
 export const VideoExpansionTextBlend = () => {
-  const mediaType = 'image';
+  const mediaType = 'video';
   const currentMedia = sampleMediaContent[mediaType];
 
   useEffect(() => {
@@ -102,7 +102,7 @@ export const VideoExpansionTextBlend = () => {
 };
 
 export const ImageExpansionTextBlend = () => {
-  const mediaType = 'image';
+  const mediaType = 'video';
   const currentMedia = sampleMediaContent[mediaType];
 
   useEffect(() => {
@@ -156,7 +156,7 @@ export const VideoExpansion = () => {
 };
 
 export const ImageExpansion = () => {
-  const mediaType = 'image';
+  const mediaType = 'video';
   const currentMedia = sampleMediaContent[mediaType];
 
   useEffect(() => {
@@ -182,7 +182,7 @@ export const ImageExpansion = () => {
 };
 
 const Hero = () => {
-  const [mediaType, setMediaType] = useState('image');
+  const [mediaType, setMediaType] = useState('video');
   const currentMedia = sampleMediaContent[mediaType]
 
   useEffect(() => {
