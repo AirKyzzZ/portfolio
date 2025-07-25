@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 import { SparklesText } from '@/components/ui/sparkles-text';
 import { ScrollingText } from '@/components/ui/magic-text-export';
+import { Herocta } from './hero-cta';
 
 interface MediaAbout {
   overview: string;
@@ -66,6 +67,7 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
         <SparklesText text="Bienvenue !" />
         <div className="mt-2">
           <ScrollingText />
+          <Herocta />
         </div>
         {/* ... */}
       </div>
