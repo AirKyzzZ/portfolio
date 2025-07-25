@@ -6,6 +6,7 @@ import { SparklesText } from '@/components/ui/sparkles-text';
 import { ScrollingText } from '@/components/ui/magic-text-export';
 import { Herocta } from './hero-cta';
 import { TimelinePortfolio } from "@/components/ui/timeline-export";
+import { GlowingEffectDemoSecond } from '@/components/ui/glowing-export';
 
 interface MediaAbout {
   overview: string;
@@ -76,6 +77,7 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
       </div>
       <div className="w-full relative">
         <TimelinePortfolio />
+        <GlowingEffectDemoSecond />
       </div>
     </div>
   );
