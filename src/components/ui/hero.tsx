@@ -7,6 +7,7 @@ import { ScrollingText } from '@/components/ui/magic-text-export';
 import { Herocta } from './hero-cta';
 import { TimelinePortfolio } from "@/components/ui/timeline-export";
 import { GlowingEffectDemoSecond } from '@/components/ui/glowing-export';
+import { HeroScroll } from '@/components/ui/containerscroll';
 
 interface MediaAbout {
   overview: string;
@@ -78,6 +79,7 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
       <div className="w-full relative">
         <TimelinePortfolio />
         <GlowingEffectDemoSecond />
+        <HeroScroll />
       </div>
     </div>
   );
