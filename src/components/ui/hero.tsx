@@ -35,7 +35,7 @@ const sampleMediaContent: MediaContentCollection = {
     background:
       '/moi.png',
     title: 'Rencontrez Maxime Mansiet',
-    date: 'Développeur Full Stack',
+    date: 'Développeur & Traceur',
     scrollToExpand: 'Scroll to Expand Demo',
     about: {
       overview:
