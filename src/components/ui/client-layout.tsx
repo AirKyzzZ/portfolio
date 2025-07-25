@@ -26,17 +26,19 @@ export default function ClientLayout({
           <Loader />
         </div>
       ) : (
-        <div 
-          className={`
-            transition-all 
-            duration-[3000ms] 
-            ease-in-out 
-            animate-fadeIn
-          `}
-        >
+        <>
           <FloatingNavBar />
-          {children}
-        </div>
+          <div 
+            className={`
+              transition-all 
+              duration-[3000ms] 
+              ease-in-out 
+              animate-fadeIn
+            `}
+          >
+            {children}
+          </div>
+        </>
       )}
       <style jsx global>{`
         @keyframes fadeIn {
