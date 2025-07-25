@@ -5,6 +5,7 @@ import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 import { SparklesText } from '@/components/ui/sparkles-text';
 import { ScrollingText } from '@/components/ui/magic-text-export';
 import { Herocta } from './hero-cta';
+import { TimelinePortfolio } from "@/components/ui/timeline-export";
 
 interface MediaAbout {
   overview: string;
@@ -62,14 +63,19 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
   const currentMedia = sampleMediaContent[mediaType];
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="flex flex-col items-center justify-center w-full h-full max-w-4xl">
-        <SparklesText text="Bienvenue !" />
-        <div className="mt-2">
-          <ScrollingText />
-          <Herocta />
+    <div className="flex flex-col items-center justify-start min-h-screen w-full">
+      {/* Première section avec SparklesText et CTA */}
+      <div className="flex flex-col items-center justify-center min-h-screen w-full">
+        <div className="flex flex-col items-center justify-center w-full h-full max-w-4xl">
+          <SparklesText text="Bienvenue !" />
+          <div className="mt-2">
+            <ScrollingText />
+            <Herocta />
+          </div>
         </div>
-        {/* ... */}
+      </div>
+      <div className="w-full relative">
+        <TimelinePortfolio />
       </div>
     </div>
   );
