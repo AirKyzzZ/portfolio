@@ -8,6 +8,7 @@ import { Herocta } from './hero-cta';
 import { TimelinePortfolio } from "@/components/ui/timeline-export";
 import { GlowingEffectDemoSecond } from '@/components/ui/glowing-export';
 import { HeroScroll } from '@/components/ui/containerscroll';
+import MyFooter from '@/components/ui/myfooter';
 
 interface MediaAbout {
   overview: string;
@@ -80,6 +81,7 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
         <TimelinePortfolio />
         <GlowingEffectDemoSecond />
         <HeroScroll />
+        <MyFooter />
       </div>
     </div>
   );
