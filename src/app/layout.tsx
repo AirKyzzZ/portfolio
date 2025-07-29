@@ -18,6 +18,11 @@ export const metadata = {
   description: "Portfolio de Maxime Mansiet, développeur full-stack et entrepreneur basé à Bordeaux. Spécialisé en React, Next.js et développement web moderne. Fondateur de Klyx et VertiFlow. Découvrez mes projets et expériences.",
   keywords: "Maxime Mansiet, développeur full-stack, React, Next.js, TypeScript, Bordeaux, entrepreneur, Klyx, VertiFlow, développement web, UI/UX, GDG Bordeaux",
   author: "Maxime Mansiet",
+  icons: {
+    icon: '/icon.jpg',
+    shortcut: '/icon.jpg',
+    apple: '/icon.jpg',
+  },
   openGraph: {
     title: "Maxime Mansiet - Développeur Full-Stack & Entrepreneur",
     description: "Portfolio de Maxime Mansiet, développeur full-stack et entrepreneur basé à Bordeaux. Spécialisé en React, Next.js et développement web moderne.",
