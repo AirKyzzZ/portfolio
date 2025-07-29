@@ -6,7 +6,7 @@ const ScrollingText = () => {
       <div className= "relative flex items-center justify-center pb-20 mt-12" >
         <MagicText
           text={
-          "Hi there! I'm preet, creator of HextaUI. Thank you so much of all the support and love you've shown me. I hope you enjoy using HextaUI as much as I enjoyed creating it."
+          "Salut, moi c'est Maxime, 19 ans et étudiant en ingénierie informatique à l'EPSI Bordeaux. Passionné par la programmation et l'entrepreneuriat, je fonde des projets qui allient technique, créativité et esprit communautaire."
         }
         />
         </div>

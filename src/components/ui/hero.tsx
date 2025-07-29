@@ -10,6 +10,7 @@ import { GlowingEffectDemoSecond } from '@/components/ui/glowing-export';
 import { HeroScroll } from '@/components/ui/containerscroll';
 import MyFooter from '@/components/ui/myfooter';
 
+
 interface MediaAbout {
   overview: string;
   conclusion: string;
@@ -37,27 +38,27 @@ const sampleMediaContent: MediaContentCollection = {
     background:
       '/moi.png',
     title: 'Rencontrez Maxime Mansiet',
-    date: 'Développeur & Traceur',
+    date: 'Développeur Full-Stack & Entrepreneur',
     scrollToExpand: 'Scroll to Expand Demo',
     about: {
       overview:
-        'This is a demonstration of the ScrollExpandMedia component with a video. As you scroll, the video expands to fill more of the screen, creating an immersive experience. This component is perfect for showcasing video content in a modern, interactive way.',
+        'Portfolio de Maxime Mansiet, développeur full-stack et entrepreneur basé à Bordeaux. Spécialisé en React, Next.js et développement web moderne. Fondateur de Klyx et VertiFlow.',
       conclusion:
-        'The ScrollExpandMedia component provides a unique way to engage users with your content through interactive scrolling. Try switching between video and image modes to see different implementations.',
+        'Découvrez mes projets et expériences en développement web, entrepreneuriat et communauté tech. Basé à Bordeaux, je suis ouvert aux projets ambitieux.',
     },
   }, 
    image: {
     src: '/moi.png',
     background:
       '/test.jpg',
-    title: 'Dynamic Image Showcase',
-    date: 'Underwater Adventure',
+    title: 'Maxime Mansiet - Portfolio',
+    date: 'Développeur Full-Stack & Entrepreneur',
     scrollToExpand: 'Scroll to Expand Demo',
     about: {
       overview:
-        'This is a demonstration of the ScrollExpandMedia component with an image. The same smooth expansion effect works beautifully with static images, allowing you to create engaging visual experiences without video content.',
+        'Portfolio de Maxime Mansiet, développeur full-stack et entrepreneur basé à Bordeaux. Spécialisé en React, Next.js et développement web moderne. Fondateur de Klyx et VertiFlow.',
       conclusion:
-        'The ScrollExpandMedia component works equally well with images and videos. This flexibility allows you to choose the media type that best suits your content while maintaining the same engaging user experience.',
+        'Découvrez mes projets et expériences en développement web, entrepreneuriat et communauté tech. Basé à Bordeaux, je suis ouvert aux projets ambitieux.',
     },
   },
 }; 
@@ -77,8 +78,13 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
           </div>
         </div>
       </div>
-      <div className="w-full relative">
+      
+      {/* Section Timeline */}
+      <div id="timeline" className="w-full relative">
         <TimelinePortfolio />
+      </div>
+      
+      <div className="w-full relative">
         <GlowingEffectDemoSecond />
         <HeroScroll />
         <MyFooter />

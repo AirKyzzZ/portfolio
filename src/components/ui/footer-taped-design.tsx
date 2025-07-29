@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Link from 'next/link'
 
-import {Linkedin, Twitter} from 'lucide-react';
+import {Linkedin, Twitter, Mail, Phone, Globe} from 'lucide-react';
 
 const tape = <svg xmlns="http://www.w3.org/2000/svg" width="95" height="80" viewBox="0 0 95 80" fill="none">
 <path d="M1 45L70.282 5L88.282 36.1769L19 76.1769L1 45Z" fill="#222222"/>
@@ -28,48 +28,61 @@ export const Component = () => {
             href="/"
             className="flex flex-row gap-1 items-center justify-start text-2xl font-display font-extrabold text-gray-900"
           >
-            
-            ActivationLed
+            Maxime Mansiet
           </Link>
-          <p className='text-gray-600 font-medium text-base w-full lg:w-4/5'>Behavioral Designed Activation Journeys for PLG SaaS to lift Aha! moments by 23%.</p>
+          <p className='text-gray-600 font-medium text-base w-full lg:w-4/5'>
+            Développeur Full-Stack & Entrepreneur basé à Bordeaux. Spécialisé en React, Next.js et développement web moderne. 
+            Fondateur de Klyx et VertiFlow.
+          </p>
           </div>
 
           <div className='flex flex-col lg:flex-row gap-6 lg:gap-20 items-start lg:items-start w-full lg:w-auto'>
 
           <div className='flex flex-col gap-1 md:gap-4'>
-          <h4 className='uppercase font-display text-md text-gray-700 font-semibold'>Resources</h4>
+          <h4 className='uppercase font-display text-md text-gray-700 font-semibold'>Contact</h4>
           <div className="flex flex-wrap md:flex-col gap-2 text-sm text-gray-600 items-start ">
-            <Link className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors' href="/resources/freebies">Freebies & Audits</Link>
-            <Link className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors' href="/resources/tools">Tools</Link>
-            <Link className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors' href="/resources/behavior-principles">Psychology</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/resources/blog">Blog <span className='inline-flex ml-1 py-0.5 px-3 bg-gray-200 text-xs rounded-xl -rotate-3'>soon</span> </Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/resources/components">Components <span className='inline-flex ml-1 py-0.5 px-3 bg-gray-200 text-xs rounded-xl -rotate-3'>soon</span> </Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/resources/playbooks">Playbooks <span className='inline-flex ml-1 py-0.5 px-3 bg-gray-200 text-xs rounded-xl rotate-3'>soon</span></Link>
+            <a className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors flex items-center gap-2' href="mailto:maxime.mansiet@gmail.com">
+              <Mail className="w-4 h-4" />
+              maxime.mansiet@gmail.com
+            </a>
+            <a className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors flex items-center gap-2' href="tel:0783972360">
+              <Phone className="w-4 h-4" />
+              07 83 97 23 60
+            </a>
+            <a className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors flex items-center gap-2' href="https://www.linkedin.com/in/maxime-mansiet" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-4 h-4" />
+              LinkedIn
+            </a>
           </div>
           </div>
 
           <div className='hidden md:flex flex-col gap-1 md:gap-4'>
-          <h4 className='uppercase whitespace-nowrap font-display text-md text-gray-700 font-semibold'>Company <span className='inline-flex  ml-1 py-0.5 px-3 bg-gray-200 text-xs rounded-xl rotate-3'>soon</span></h4>
+          <h4 className='uppercase whitespace-nowrap font-display text-md text-gray-700 font-semibold'>Projets</h4>
           <div className="flex gap-2 flex-wrap md:flex-col text-sm text-gray-600 items-start ">
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/company/mission">Mission</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/company/ecosystem">SaaS Ecosystem</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/company/affiliates">Affiliate Program</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/company/referrals">Referral Program</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/company/partners">Partners</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/company/about-us">About Us</Link>
+            <a className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors flex items-center gap-2' href="https://klyx.fr" target="_blank" rel="noopener noreferrer">
+              <Globe className="w-4 h-4" />
+              Klyx.fr
+            </a>
+            <a className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors' href="#projects">
+              Portfolio
+            </a>
+            <a className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors' href="#timeline">
+              Expériences
+            </a>
+            <a className='text-gray-600 whitespace-nowrap font-medium hover:text-gray-900 transition-colors' href="#about">
+              À propos
+            </a>
           </div>
           </div>
           
           <div className='hidden lg:flex flex-col gap-1 gap-4'>
-          <h4 className='uppercase whitespace-nowrap font-display text-md text-gray-700 font-semibold'>Compare <span className='inline-flex  ml-1 py-0.5 px-3 bg-gray-200 text-xs rounded-xl rotate-3'>soon</span></h4>
+          <h4 className='uppercase whitespace-nowrap font-display text-md text-gray-700 font-semibold'>Compétences</h4>
           <div className="flex flex-col gap-2 text-sm text-gray-600 items-start ">
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/legal/privacy-policy">DaaS</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/legal/tos">PLG Boutique</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/legal/tos">ProductLed</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/legal/tos">Vulnabyl</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/pricing">GrowthMates</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/pricing">DelightPath</Link>
-            <Link className='pointer-events-none text-gray-400 whitespace-nowrap font-medium' href="/pricing"></Link>
+            <span className='text-gray-600 whitespace-nowrap font-medium'>React & Next.js</span>
+            <span className='text-gray-600 whitespace-nowrap font-medium'>TypeScript</span>
+            <span className='text-gray-600 whitespace-nowrap font-medium'>UI/UX Design</span>
+            <span className='text-gray-600 whitespace-nowrap font-medium'>Entrepreneuriat</span>
+            <span className='text-gray-600 whitespace-nowrap font-medium'>GDG Bordeaux</span>
           </div>
           </div>
         </div>
@@ -79,35 +92,46 @@ export const Component = () => {
       <div className="my-3 px-4 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-gray-600">
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 items-start sm:items-center">
           <p className="whitespace-nowrap text-gray-700">
-            ©{currentYear} ActivationLed. All rights reserved.
+            ©{currentYear} Maxime Mansiet. Tous droits réservés.
           </p>
           <div className="flex flex-row gap-4">
-            <Link href="/legal/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/legal/tos" className="hover:text-white transition-colors">Terms &#38; Co</Link>
-            <Link href="https://www.linkedin.com/in/radu-a-popescu/" className="hover:text-white transition-colors">
-              Radu Popescu
-            </Link>
+            <a href="https://www.linkedin.com/in/maxime-mansiet" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+              LinkedIn
+            </a>
+            <a href="mailto:maxime.mansiet@gmail.com" className="hover:text-gray-900 transition-colors">
+              Email
+            </a>
+            <a href="https://klyx.fr" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+              Klyx
+            </a>
           </div>
         </div>
 
         <div className="flex gap-4 items-center">
           <a
-            href="https://www.linkedin.com/in/radu-a-popescu/"
+            href="https://www.linkedin.com/in/maxime-mansiet"
             target="_blank"
             rel="nofollow noopener"
-            aria-label="Radu Popescu, Founder of ActivationLed Linkedin"
-            className="hover:text-white transition-colors"
+            aria-label="Maxime Mansiet LinkedIn"
+            className="hover:text-gray-900 transition-colors"
           >
-            <Linkedin className="w-5 h-5 fill-current" />
+            <Linkedin className="w-5 h-5" />
           </a>
           <a
-            href="https://x.com/activation_guy"
+            href="mailto:maxime.mansiet@gmail.com"
+            aria-label="Email Maxime Mansiet"
+            className="hover:text-gray-900 transition-colors"
+          >
+            <Mail className="w-5 h-5" />
+          </a>
+          <a
+            href="https://klyx.fr"
             target="_blank"
             rel="nofollow noopener"
-            aria-label="X (formerly Twitter)"
-            className="hover:text-white transition-colors"
+            aria-label="Klyx - Agence digitale"
+            className="hover:text-gray-900 transition-colors"
           >
-            <Twitter className="w-5 h-5 fill-current" />
+            <Globe className="w-5 h-5" />
           </a>
         </div>
       </div>
