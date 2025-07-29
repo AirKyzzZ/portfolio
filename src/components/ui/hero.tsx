@@ -80,7 +80,7 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
       </div>
       
       {/* Section Timeline */}
-      <div id="timeline" className="w-full relative">
+      <div id="timeline" className="w-full relative -mt-32">
         <TimelinePortfolio />
       </div>
       
