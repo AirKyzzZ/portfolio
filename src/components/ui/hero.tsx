@@ -7,7 +7,7 @@ import { ScrollingText } from '@/components/ui/MagicText/magic-text-export';
 import { Herocta } from './GradientButtons/hero-cta';
 import { TimelinePortfolio } from "@/components/ui/Timeline/timeline-export";
 import { GlowingEffectDemoSecond } from '@/components/ui/Glowing/glowing-export';
-import { HeroScroll } from '@/components/ui/VideoScroller/containerscroll';
+import { HeroScroll } from '@/components/ui/ContainerScroll/containerscroll';
 import MyFooter from '@/components/ui/Footer/myfooter';
 import { ContactForm } from '@/components/ui/ContactForm/demo';
 
@@ -85,15 +85,14 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
         <TimelinePortfolio />
       </div>
       
-      {/* Section Expériences (avec GlowingEffect et HeroScroll) */}
+      {/* Section Expériences (avec GlowingEffect) */}
       <div id="projects" className="w-full relative">
         <GlowingEffectDemoSecond />
-        <HeroScroll />
       </div>
       
-      {/* Section Compétences */}
+      {/* Section Compétences (avec HeroScroll/ContainerScroll) */}
       <div id="skills" className="w-full relative">
-        {/* Ajoutez ici votre contenu pour les compétences */}
+        <HeroScroll />
       </div>
       
       {/* Section Contact - juste avant le footer */}
