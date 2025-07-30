@@ -9,6 +9,7 @@ import { TimelinePortfolio } from "@/components/ui/Timeline/timeline-export";
 import { GlowingEffectDemoSecond } from '@/components/ui/Glowing/glowing-export';
 import { HeroScroll } from '@/components/ui/VideoScroller/containerscroll';
 import MyFooter from '@/components/ui/Footer/myfooter';
+import { ContactForm } from '@/components/ui/ContactForm/demo';
 
 
 interface MediaAbout {
@@ -87,6 +88,7 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
       <div className="w-full relative">
         <GlowingEffectDemoSecond />
         <HeroScroll />
+        <ContactForm />
         <MyFooter />
       </div>
     </div>
