@@ -70,7 +70,7 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
   return (
     <div className="flex flex-col items-center justify-start min-h-screen w-full">
       {/* Première section avec SparklesText et CTA */}
-      <div className="flex flex-col items-center justify-center min-h-screen w-full">
+      <div id="home" className="flex flex-col items-center justify-center min-h-screen w-full">
         <div className="flex flex-col items-center justify-center w-full h-full max-w-4xl">
           <SparklesText text="Bienvenue !" />
           <div className="mt-2">
@@ -80,15 +80,28 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
         </div>
       </div>
       
-      {/* Section Timeline */}
+      {/* Section Timeline (Projets) */}
       <div id="timeline" className="w-full relative -mt-32">
         <TimelinePortfolio />
       </div>
       
-      <div className="w-full relative">
+      {/* Section Expériences (avec GlowingEffect et HeroScroll) */}
+      <div id="projects" className="w-full relative">
         <GlowingEffectDemoSecond />
         <HeroScroll />
+      </div>
+      
+      {/* Section Compétences */}
+      <div id="skills" className="w-full relative">
+        {/* Ajoutez ici votre contenu pour les compétences */}
+      </div>
+      
+      {/* Section Contact - juste avant le footer */}
+      <div id="contact" className="w-full relative">
         <ContactForm />
+      </div>
+      
+      <div className="w-full relative">
         <MyFooter />
       </div>
     </div>

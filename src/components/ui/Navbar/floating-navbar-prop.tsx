@@ -8,21 +8,21 @@ export function FloatingNavBar() {
   const navItems = [
     {
       name: "Accueil",
-      link: "#",
+      link: "#home",
       icon: <Home className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
-      name: "Projets",
-      link: "#projects",
-      icon: <Briefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Expériences",
       link: "#timeline",
-      icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <Briefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Compétences",
+      link: "#projects",
+      icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Projets",
       link: "#skills",
       icon: <FileCode className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
