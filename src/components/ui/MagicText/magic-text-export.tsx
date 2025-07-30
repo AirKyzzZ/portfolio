@@ -1,4 +1,4 @@
-import { MagicText } from "@/components/ui/magic-text"
+import { MagicText } from "@/components/ui/MagicText/magic-text"
 
 const ScrollingText = () => {
   return (

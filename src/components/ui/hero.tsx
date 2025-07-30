@@ -1,14 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
-import { SparklesText } from '@/components/ui/sparkles-text';
-import { ScrollingText } from '@/components/ui/magic-text-export';
-import { Herocta } from './hero-cta';
-import { TimelinePortfolio } from "@/components/ui/timeline-export";
-import { GlowingEffectDemoSecond } from '@/components/ui/glowing-export';
-import { HeroScroll } from '@/components/ui/containerscroll';
-import MyFooter from '@/components/ui/myfooter';
+import ScrollExpandMedia from '@/components/ui/VideoScroller/scroll-expansion-hero';
+import { SparklesText } from '@/components/ui/SparklesText/sparkles-text';
+import { ScrollingText } from '@/components/ui/MagicText/magic-text-export';
+import { Herocta } from './GradientButtons/hero-cta';
+import { TimelinePortfolio } from "@/components/ui/Timeline/timeline-export";
+import { GlowingEffectDemoSecond } from '@/components/ui/Glowing/glowing-export';
+import { HeroScroll } from '@/components/ui/VideoScroller/containerscroll';
+import MyFooter from '@/components/ui/Footer/myfooter';
 
 
 interface MediaAbout {

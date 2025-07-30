@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { FloatingNav } from "@/components/ui/floating-navbar"
+import { FloatingNav } from "@/components/ui/Navbar/floating-navbar"
 import { Home, Briefcase, User, Mail, FileCode } from "lucide-react"
 
 export function FloatingNavBar() {

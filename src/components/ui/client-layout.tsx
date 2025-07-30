@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FloatingNavBar } from "@/components/ui/floating-navbar-prop";
-import Loader from '@/components/ui/loader';
+import { FloatingNavBar } from "@/components/ui/Navbar/floating-navbar-prop";
+import Loader from '@/components/ui/Loader/loader';
 
 export default function ClientLayout({
   children

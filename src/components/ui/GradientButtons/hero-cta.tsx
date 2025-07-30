@@ -1,4 +1,4 @@
-import { GradientButton } from "@/components/ui/gradient-button"
+import { GradientButton } from "@/components/ui/GradientButtons/gradient-button"
 
 function Herocta() {
   return (
