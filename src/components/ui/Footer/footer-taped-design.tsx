@@ -92,16 +92,16 @@ export const Component = () => {
       <div className="my-3 px-4 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-gray-600">
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 items-start sm:items-center">
           <p className="whitespace-nowrap text-gray-700">
-            ©{currentYear} Maxime Mansiet. Tous droits réservés.
+            ©{currentYear} <a href="https://klyx.fr/">Klyx.</a> Tous droits réservés.
           </p>
           <div className="flex flex-row gap-4">
-            <a href="https://www.linkedin.com/in/maxime-mansiet" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+            <a href="https://www.linkedin.com/in/maxime-mansiet" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               LinkedIn
             </a>
-            <a href="mailto:maxime.mansiet@gmail.com" className="hover:text-gray-900 transition-colors">
+            <a href="mailto:maxime.mansiet@gmail.com" className="hover:text-white transition-colors">
               Email
             </a>
-            <a href="https://klyx.fr" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+            <a href="https://klyx.fr" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               Klyx
             </a>
           </div>
@@ -113,14 +113,14 @@ export const Component = () => {
             target="_blank"
             rel="nofollow noopener"
             aria-label="Maxime Mansiet LinkedIn"
-            className="hover:text-gray-900 transition-colors"
+            className="hover:text-white transition-colors"
           >
             <Linkedin className="w-5 h-5" />
           </a>
           <a
             href="mailto:maxime.mansiet@gmail.com"
             aria-label="Email Maxime Mansiet"
-            className="hover:text-gray-900 transition-colors"
+            className="hover:text-white transition-colors"
           >
             <Mail className="w-5 h-5" />
           </a>
@@ -129,7 +129,7 @@ export const Component = () => {
             target="_blank"
             rel="nofollow noopener"
             aria-label="Klyx - Agence digitale"
-            className="hover:text-gray-900 transition-colors"
+            className="hover:text-white transition-colors"
           >
             <Globe className="w-5 h-5" />
           </a>
