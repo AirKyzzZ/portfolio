@@ -3,6 +3,7 @@
 
 @tailwind base;
 @tailwind components;
+@import "tailwindcss/preflight";
 @tailwind utilities;
 
 @layer base {
@@ -233,4 +234,16 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Custom cursor styles */
+* {
+  cursor: none !important;
+}
+
+/* Touch device fallback */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
 }

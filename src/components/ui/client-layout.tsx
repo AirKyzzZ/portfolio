@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { FloatingNavBar } from "@/components/ui/Navbar/floating-navbar-prop";
 import Loader from '@/components/ui/Loader/loader';
+import CustomCursor from '@/components/ui/CustomCursor/custom-cursor';
 
 export default function ClientLayout({
   children
@@ -26,7 +27,7 @@ export default function ClientLayout({
           <Loader />
         </div>
       ) : (
-        <>
+        <CustomCursor>
           <FloatingNavBar />
           <div 
             className={`
@@ -38,7 +39,7 @@ export default function ClientLayout({
           >
             {children}
           </div>
-        </>
+        </CustomCursor>
       )}
       <style jsx global>{`
         @keyframes fadeIn {
