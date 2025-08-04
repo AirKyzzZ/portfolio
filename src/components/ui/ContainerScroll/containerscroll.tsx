@@ -2,6 +2,7 @@
 import React from "react";
 import { ContainerScroll } from "@/components/ui/ContainerScroll/container-scroll-animation";
 import Image from "next/image";
+import Link from "next/link";
 
 export function HeroScroll() {
   return (
@@ -18,14 +19,20 @@ export function HeroScroll() {
           </>
         }
       >
-        <Image
-          src={`/moi.png`}
-          alt="hero"
-          height={720}
-          width={1400}
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
-          draggable={false}
-        />
+        <Link 
+          href="https://linkedin.com/in/maxime-mansiet/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={`/openpk.jpg`}
+            alt="hero"
+            height={720}
+            width={1400}
+            className="mx-auto rounded-2xl object-cover h-full object-left-top"
+            draggable={false}
+          />
+        </Link>
       </ContainerScroll>
     </div>
   );
