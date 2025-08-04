@@ -65,7 +65,6 @@ const sampleMediaContent: MediaContentCollection = {
 }; 
 
 const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
-  const currentMedia = sampleMediaContent[mediaType];
 
   return (
     <div className="flex flex-col items-center justify-start min-h-screen w-full">
@@ -216,7 +215,7 @@ export const ImageExpansion = () => {
 };
 
 const Hero = () => {
-  const [mediaType, setMediaType] = useState('video');
+  const [mediaType] = useState('video');
   const currentMedia = sampleMediaContent[mediaType]
 
   useEffect(() => {

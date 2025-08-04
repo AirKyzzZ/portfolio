@@ -30,7 +30,6 @@ const ScrollExpandMedia = ({
   bgImageSrc,
   title,
   date,
-  scrollToExpand,
   textBlend,
   children,
 }: ScrollExpandMediaProps) => {
