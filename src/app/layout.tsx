@@ -36,9 +36,9 @@ export const metadata = {
     canonical: 'https://maximemansiet.fr',
   },
   icons: {
-    icon: '/icon.jpg',
-    shortcut: '/icon.jpg',
-    apple: '/icon.jpg',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
   manifest: '/manifest.json',
   openGraph: {
