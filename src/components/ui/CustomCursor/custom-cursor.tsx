@@ -95,39 +95,39 @@ export default function CustomCursor({ children }: CustomCursorProps) {
       case 'link':
         return (
           <div className="flex items-center justify-center w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-black stroke-2">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
         );
       case 'image':
         return (
           <div className="flex items-center justify-center w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2"/>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-black stroke-2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2.5"/>
               <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
-              <polyline points="21,15 16,10 5,21" stroke="currentColor" strokeWidth="2"/>
+              <polyline points="21,15 16,10 5,21" stroke="currentColor" strokeWidth="2.5"/>
             </svg>
           </div>
         );
       case 'button':
         return (
           <div className="flex items-center justify-center w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
-              <path d="M9 11l3 3L22 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-black stroke-2">
+              <path d="M9 11l3 3L22 4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
         );
       case 'text':
         return (
           <div className="flex items-center justify-center w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
-              <line x1="17" y1="10" x2="3" y2="10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <line x1="21" y1="6" x2="3" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <line x1="21" y1="14" x2="3" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <line x1="17" y1="18" x2="3" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-black stroke-2">
+              <line x1="17" y1="10" x2="3" y2="10" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <line x1="21" y1="6" x2="3" y2="6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <line x1="21" y1="14" x2="3" y2="14" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <line x1="17" y1="18" x2="3" y2="18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
         );
@@ -154,32 +154,32 @@ export default function CustomCursor({ children }: CustomCursorProps) {
 
   const getCursorBackground = () => {
     if (isClicking) {
-      return 'bg-white/80 backdrop-blur-md';
+      return 'bg-white/90 backdrop-blur-md shadow-2xl';
     }
     
     switch (cursorType) {
       case 'link':
-        return 'bg-gradient-to-r from-purple-500/90 to-pink-500/90 backdrop-blur-sm';
+        return 'bg-gradient-to-r from-purple-500/95 to-pink-500/95 backdrop-blur-sm shadow-lg';
       case 'image':
-        return 'bg-gradient-to-r from-blue-500/90 to-cyan-500/90 backdrop-blur-sm';
+        return 'bg-gradient-to-r from-blue-500/95 to-cyan-500/95 backdrop-blur-sm shadow-lg';
       case 'button':
-        return 'bg-gradient-to-r from-green-500/90 to-emerald-500/90 backdrop-blur-sm';
+        return 'bg-gradient-to-r from-green-500/95 to-emerald-500/95 backdrop-blur-sm shadow-lg';
       case 'text':
-        return 'bg-gradient-to-r from-orange-500/90 to-red-500/90 backdrop-blur-sm';
+        return 'bg-gradient-to-r from-orange-500/95 to-red-500/95 backdrop-blur-sm shadow-lg';
       default:
-        return 'bg-white/10 backdrop-blur-md border border-white/20';
+        return 'bg-white/80 backdrop-blur-md border-2 border-black/60 shadow-lg';
     }
   };
 
   const getCursorBorder = () => {
     if (isClicking) {
-      return 'border-2 border-white/80';
+      return 'border-2 border-black/90';
     }
     
     if (cursorType === 'default') {
-      return 'border border-white/30';
+      return 'border-2 border-black/60';
     }
-    return 'border-2 border-white/50';
+    return 'border-2 border-white/90';
   };
 
   return (
@@ -242,7 +242,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
             {/* Click indicator */}
             {isClicking && (
               <motion.div
-                className="w-2 h-2 bg-white rounded-full"
+                className="w-2 h-2 bg-black rounded-full shadow-lg"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0 }}
@@ -251,8 +251,8 @@ export default function CustomCursor({ children }: CustomCursorProps) {
             )}
             
             {/* Glow effect */}
-            <div className={`absolute inset-0 rounded-full blur-xl opacity-30 ${
-              cursorType === 'default' ? 'bg-white/20' : 'bg-current'
+            <div className={`absolute inset-0 rounded-full blur-xl opacity-50 ${
+              cursorType === 'default' ? 'bg-white/40' : 'bg-current'
             }`} />
           </motion.div>
         )}
@@ -262,7 +262,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
       <AnimatePresence>
         {isVisible && (
           <motion.div
-            className="fixed top-0 left-0 pointer-events-none z-[9998] w-3 h-3 bg-white/40 rounded-full backdrop-blur-sm"
+            className="fixed top-0 left-0 pointer-events-none z-[9998] w-4 h-4 bg-white/80 rounded-full backdrop-blur-sm shadow-lg border border-black/40"
             style={{
               x: cursorX,
               y: cursorY,
@@ -281,7 +281,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
       <AnimatePresence>
         {isVisible && isHovering && !isClicking && (
           <motion.div
-            className="fixed top-0 left-0 pointer-events-none z-[9997] w-1 h-1 bg-white/60 rounded-full"
+            className="fixed top-0 left-0 pointer-events-none z-[9997] w-2 h-2 bg-black/90 rounded-full shadow-lg border border-white/40"
             style={{
               x: cursorX,
               y: cursorY,
@@ -305,7 +305,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
       <AnimatePresence>
         {isClicking && (
           <motion.div
-            className="fixed top-0 left-0 pointer-events-none z-[9996] w-20 h-20 border-2 border-white/30 rounded-full"
+            className="fixed top-0 left-0 pointer-events-none z-[9996] w-20 h-20 border-2 border-white/60 rounded-full"
             style={{
               x: cursorX,
               y: cursorY,
