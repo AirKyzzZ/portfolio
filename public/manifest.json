@@ -1,0 +1,25 @@
+{
+  "name": "Maxime Mansiet - Développeur Full-Stack & Entrepreneur",
+  "short_name": "Maxime Mansiet",
+  "description": "Portfolio de Maxime Mansiet, développeur full-stack et entrepreneur basé à Bordeaux",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/moi.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "fr",
+  "dir": "ltr"
+} 
