@@ -159,7 +159,7 @@ export const FloatingNav = ({
              }}
              className="flex items-center space-x-4"
            >
-            {navItems.map((navItem: any, idx: number) => (
+                             {navItems.map((navItem, idx: number) => (
               <motion.button
                 key={`link=${idx}`}
                 onClick={() => handleNavClick(navItem.link)}
@@ -211,7 +211,7 @@ export const FloatingNav = ({
               className="absolute top-full mt-4 left-1/2 transform -translate-x-1/2 bg-white dark:bg-black border border-neutral-200 dark:border-white/[0.2] rounded-2xl shadow-xl p-4 min-w-[200px] backdrop-blur-sm"
             >
               <div className="space-y-2">
-                {navItems.map((navItem: any, idx: number) => (
+                {navItems.map((navItem, idx: number) => (
                   <motion.button
                     key={`menu-link=${idx}`}
                     onClick={() => handleNavClick(navItem.link)}

@@ -41,13 +41,13 @@ export function TimelinePortfolio() {
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             <strong>Fondateur de VertiFlow</strong> - Marque innovante dédiée au parkour et au mouvement urbain. 
-            Développement de l'identité de marque, stratégie marketing et animation de communauté. 
+            Développement de l&apos;identité de marque, stratégie marketing et animation de communauté. 
             Création de vêtements techniques et contenus pédagogiques pour la communauté freerun.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             <strong>Membre actif GDG Bordeaux</strong> - Participation aux meetups Google Developer Group, 
             veille technologique sur Flutter, TensorFlow, Angular et PWA. Networking avec 100+ contacts tech 
-            et contribution à l'écosystème tech bordelais.
+            et contribution à l&apos;écosystème tech bordelais.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <a href="https://vertiflow.fr/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
@@ -120,7 +120,7 @@ export function TimelinePortfolio() {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <strong>EPSI - L'école d'ingénierie informatique</strong> - Étudiant en ingénierie informatique à Bordeaux.
+            <strong>EPSI - L&apos;école d&apos;ingénierie informatique</strong> - Étudiant en ingénierie informatique à Bordeaux.
             Formation en développement web, programmation et technologies modernes. BTS services informatiques aux organisations (2024-2026).
           </p>
           <div className="mb-8">

@@ -2,7 +2,7 @@
 
 import * as React from "react"
  
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { useRef } from "react";
  
 export interface MagicTextProps {
@@ -11,7 +11,7 @@ export interface MagicTextProps {
  
 interface WordProps {
   children: string;
-  progress: any;
+  progress: MotionValue<number>;
   range: number[];
 }
  
@@ -34,7 +34,6 @@ export const MagicText: React.FC<MagicTextProps> = ({ text }) => {
  
     offset: ["start 0.9", "start 0.25"],
   });
-  text;
   const words = text.split(" ");
  
   return (
