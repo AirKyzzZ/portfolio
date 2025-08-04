@@ -19,7 +19,7 @@ const Word: React.FC<WordProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
  
   return (
-    <span className="relative mt-[12px] mr-1 text-3xl font-semibold">
+    <span className="relative mt-[12px] mr-1 text-base md:text-2xl lg:text-3xl font-semibold">
       <span className="absolute opacity-20">{children}</span>
       <motion.span style={{ opacity: opacity }}>{children}</motion.span>
     </span>
