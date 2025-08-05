@@ -48,7 +48,7 @@ export const metadata = {
     siteName: 'Maxime Mansiet - Portfolio',
     images: [
       {
-        url: '/moi.png',
+        url: 'https://maximemansiet.fr/banner.png',
         width: 1200,
         height: 630,
         alt: 'Maxime Mansiet - Développeur Full-Stack',
@@ -61,7 +61,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Maxime Mansiet - Développeur Full-Stack & Entrepreneur",
     description: "Portfolio de Maxime Mansiet, développeur full-stack et entrepreneur basé à Bordeaux.",
-    images: ['/moi.png'],
+    images: ['https://maximemansiet.fr/banner.png'],
   },
   verification: {
     google: 'your-google-verification-code', // Replace with your actual verification code

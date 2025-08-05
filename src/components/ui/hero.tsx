@@ -35,9 +35,9 @@ const sampleMediaContent: MediaContentCollection = {
    video: {
     src: '/background.mp4',
     poster:
-      '/moi.png',
+      '/banner.png',
     background:
-      '/moi.png',
+      '/banner.png',
     title: 'Rencontrez Maxime Mansiet',
     date: 'Développeur Full-Stack & Entrepreneur',
     scrollToExpand: 'Scroll to Expand Demo',
@@ -49,7 +49,7 @@ const sampleMediaContent: MediaContentCollection = {
     },
   }, 
    image: {
-    src: '/moi.png',
+    src: '/banner.png',
     background:
       '/test.jpg',
     title: 'Maxime Mansiet - Portfolio',

@@ -6,7 +6,7 @@ export default function StructuredData() {
     "jobTitle": "Développeur Full-Stack & Entrepreneur",
     "description": "Développeur full-stack et entrepreneur basé à Bordeaux, spécialisé en React, Next.js et développement web moderne. Fondateur de Klyx et VertiFlow.",
     "url": "https://maximemansiet.fr",
-    "image": "https://maximemansiet.fr/moi.png",
+    "image": "https://maximemansiet.fr/banner.png",
     "sameAs": [
       "https://linkedin.com/in/maximemansiet",
       "https://github.com/maximemansiet",
