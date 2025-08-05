@@ -20,7 +20,7 @@ export const Contact2 = ({
   description = "Je suis disponible pour vos questions, retours ou opportunités de collaboration. Dites-moi comment je peux vous aider !",
   phone = "+33 7 83 97 23 60",
   email = "maxime.mansiet@gmail.com",
-  web = { label: "maxime-mansiet.fr", url: "https://maxime-mansiet.fr/" },
+  web = { label: "maximemansiet.fr", url: "https://maximemansiet.fr/" },
 }: Contact2Props) => {
   const [formData, setFormData] = useState({
     firstName: "",
