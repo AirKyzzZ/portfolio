@@ -88,6 +88,12 @@ export default function CustomCursor({ children }: CustomCursorProps) {
         return;
       }
       
+      // Don't show custom cursor for elements with data-cursor="none"
+      if (target.closest('[data-cursor="none"]')) {
+        setIsVisible(false);
+        return;
+      }
+      
       if (target.tagName === 'A' || target.closest('a')) {
         setCursorType('link');
         setIsHovering(true);

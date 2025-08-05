@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import { FloatingNavBar } from "@/components/ui/Navbar/floating-navbar-prop";
 import Loader from '@/components/ui/Loader/loader';
 import CustomCursor from '@/components/ui/CustomCursor/custom-cursor';
+import ScrollProgress from '@/components/ui/ScrollProgress/scroll-progress';
+import ScrollToTop from '@/components/ui/ScrollToTop/scroll-to-top';
 
 export default function ClientLayout({
   children
@@ -28,6 +30,7 @@ export default function ClientLayout({
         </div>
       ) : (
         <CustomCursor>
+          <ScrollProgress />
           <FloatingNavBar />
           <div 
             className={`
@@ -39,6 +42,7 @@ export default function ClientLayout({
           >
             {children}
           </div>
+          <ScrollToTop />
         </CustomCursor>
       )}
       <style jsx global>{`
