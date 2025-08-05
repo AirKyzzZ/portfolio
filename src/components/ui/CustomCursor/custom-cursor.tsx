@@ -14,6 +14,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -23,7 +24,31 @@ export default function CustomCursor({ children }: CustomCursorProps) {
   const cursorY = useSpring(mouseY, springConfig);
 
   useEffect(() => {
+    // Detect touch device
+    const checkTouchDevice = () => {
+      const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      setIsTouchDevice(isTouch);
+      
+      // If it's a touch device, hide the custom cursor immediately
+      if (isTouch) {
+        setIsVisible(false);
+      }
+    };
+
+    checkTouchDevice();
+
+    // Re-check on resize/orientation change
+    const handleResize = () => {
+      checkTouchDevice();
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+
     const handleMouseMove = (e: MouseEvent) => {
+      // Don't track mouse on touch devices
+      if (isTouchDevice) return;
+      
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
       setIsVisible(true);
@@ -34,20 +59,34 @@ export default function CustomCursor({ children }: CustomCursorProps) {
     };
 
     const handleMouseEnter = () => {
-      setIsVisible(true);
+      if (!isTouchDevice) {
+        setIsVisible(true);
+      }
     };
 
     const handleMouseDown = () => {
-      setIsClicking(true);
+      if (!isTouchDevice) {
+        setIsClicking(true);
+      }
     };
 
     const handleMouseUp = () => {
-      setIsClicking(false);
+      if (!isTouchDevice) {
+        setIsClicking(false);
+      }
     };
 
     // Add event listeners for cursor type detection
     const handleMouseOver = (e: MouseEvent) => {
+      if (isTouchDevice) return;
+      
       const target = e.target as HTMLElement;
+      
+      // Don't show custom cursor for navigation elements on mobile
+      if (target.closest('.navbar-container') || target.closest('.floating-nav')) {
+        setIsVisible(false);
+        return;
+      }
       
       if (target.tagName === 'A' || target.closest('a')) {
         setCursorType('link');
@@ -68,16 +107,21 @@ export default function CustomCursor({ children }: CustomCursorProps) {
     };
 
     const handleMouseOut = () => {
-      setIsHovering(false);
+      if (!isTouchDevice) {
+        setIsHovering(false);
+      }
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('mouseenter', handleMouseEnter);
-    document.addEventListener('mouseover', handleMouseOver);
-    document.addEventListener('mouseout', handleMouseOut);
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('mouseup', handleMouseUp);
+    // Only add mouse event listeners if not a touch device
+    if (!isTouchDevice) {
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseleave', handleMouseLeave);
+      document.addEventListener('mouseenter', handleMouseEnter);
+      document.addEventListener('mouseover', handleMouseOver);
+      document.addEventListener('mouseout', handleMouseOut);
+      document.addEventListener('mousedown', handleMouseDown);
+      document.addEventListener('mouseup', handleMouseUp);
+    }
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
@@ -87,15 +131,17 @@ export default function CustomCursor({ children }: CustomCursorProps) {
       document.removeEventListener('mouseout', handleMouseOut);
       document.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
     };
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, isTouchDevice]);
 
   const getCursorContent = () => {
     switch (cursorType) {
       case 'link':
         return (
           <div className="flex items-center justify-center w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-black stroke-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white stroke-2">
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -104,7 +150,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
       case 'image':
         return (
           <div className="flex items-center justify-center w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-black stroke-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white stroke-2">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2.5"/>
               <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
               <polyline points="21,15 16,10 5,21" stroke="currentColor" strokeWidth="2.5"/>
@@ -114,7 +160,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
       case 'button':
         return (
           <div className="flex items-center justify-center w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-black stroke-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white stroke-2">
               <path d="M9 11l3 3L22 4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -123,7 +169,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
       case 'text':
         return (
           <div className="flex items-center justify-center w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-black stroke-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white stroke-2">
               <line x1="17" y1="10" x2="3" y2="10" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               <line x1="21" y1="6" x2="3" y2="6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               <line x1="21" y1="14" x2="3" y2="14" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -186,10 +232,13 @@ export default function CustomCursor({ children }: CustomCursorProps) {
     <>
       {children}
       
-      {/* Hide default cursor */}
+      {/* Hide default cursor only on non-touch devices */}
       <style jsx global>{`
-        * {
-          cursor: none !important;
+        /* Only hide cursor on non-touch devices */
+        @media (hover: hover) and (pointer: fine) {
+          * {
+            cursor: none !important;
+          }
         }
         
         /* Show default cursor for touch devices */
@@ -198,127 +247,141 @@ export default function CustomCursor({ children }: CustomCursorProps) {
             cursor: auto !important;
           }
         }
+        
+        /* Ensure navigation elements always show proper cursor on mobile */
+        .navbar-container *,
+        .floating-nav * {
+          cursor: auto !important;
+        }
       `}</style>
 
-      {/* Custom cursor */}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            className={`fixed top-0 left-0 pointer-events-none z-[9999] ${getCursorSize()} ${getCursorBackground()} ${getCursorBorder()} rounded-full flex items-center justify-center transition-all duration-500 ease-out`}
-            style={{
-              x: cursorX,
-              y: cursorY,
-              translateX: '-50%',
-              translateY: '-50%',
-            }}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ 
-              opacity: 1, 
-              scale: isClicking ? 0.8 : 1,
-              rotate: isHovering && !isClicking ? 360 : 0
-            }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ 
-              type: "spring", 
-              damping: 25, 
-              stiffness: 700,
-              rotate: { duration: 0.5, ease: "easeInOut" }
-            }}
-          >
-            <AnimatePresence mode="wait">
-              {getCursorContent() && !isClicking && (
+      {/* Custom cursor - only show on non-touch devices */}
+      {!isTouchDevice && (
+        <AnimatePresence>
+          {isVisible && (
+            <motion.div
+              className={`fixed top-0 left-0 pointer-events-none z-[9999] ${getCursorSize()} ${getCursorBackground()} ${getCursorBorder()} rounded-full flex items-center justify-center transition-all duration-500 ease-out`}
+              style={{
+                x: cursorX,
+                y: cursorY,
+                translateX: '-50%',
+                translateY: '-50%',
+              }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ 
+                opacity: 1, 
+                scale: isClicking ? 0.8 : 1,
+                rotate: isHovering && !isClicking ? 360 : 0
+              }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ 
+                type: "spring", 
+                damping: 25, 
+                stiffness: 700,
+                rotate: { duration: 0.5, ease: "easeInOut" }
+              }}
+            >
+              <AnimatePresence mode="wait">
+                {getCursorContent() && !isClicking && (
+                  <motion.div
+                    key={cursorType}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {getCursorContent()}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              
+              {/* Click indicator */}
+              {isClicking && (
                 <motion.div
-                  key={cursorType}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {getCursorContent()}
-                </motion.div>
+                  className="w-2 h-2 bg-black rounded-full shadow-lg"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  transition={{ duration: 0.1 }}
+                />
               )}
-            </AnimatePresence>
-            
-            {/* Click indicator */}
-            {isClicking && (
-              <motion.div
-                className="w-2 h-2 bg-black rounded-full shadow-lg"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0 }}
-                transition={{ duration: 0.1 }}
-              />
-            )}
-            
-            {/* Glow effect */}
-            <div className={`absolute inset-0 rounded-full blur-xl opacity-50 ${
-              cursorType === 'default' ? 'bg-white/40' : 'bg-current'
-            }`} />
-          </motion.div>
-        )}
-      </AnimatePresence>
+              
+              {/* Glow effect */}
+              <div className={`absolute inset-0 rounded-full blur-xl opacity-50 ${
+                cursorType === 'default' ? 'bg-white/40' : 'bg-current'
+              }`} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
 
-      {/* Cursor trail effect */}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            className="fixed top-0 left-0 pointer-events-none z-[9998] w-4 h-4 bg-white/80 rounded-full backdrop-blur-sm shadow-lg border border-black/40"
-            style={{
-              x: cursorX,
-              y: cursorY,
-              translateX: '-50%',
-              translateY: '-50%',
-            }}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ type: "spring", damping: 50, stiffness: 400 }}
-          />
-        )}
-      </AnimatePresence>
+      {/* Cursor trail effect - only on non-touch devices */}
+      {!isTouchDevice && (
+        <AnimatePresence>
+          {isVisible && (
+            <motion.div
+              className="fixed top-0 left-0 pointer-events-none z-[9998] w-4 h-4 bg-white/80 rounded-full backdrop-blur-sm shadow-lg border border-black/40"
+              style={{
+                x: cursorX,
+                y: cursorY,
+                translateX: '-50%',
+                translateY: '-50%',
+              }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ type: "spring", damping: 50, stiffness: 400 }}
+            />
+          )}
+        </AnimatePresence>
+      )}
 
-      {/* Additional trail dots */}
-      <AnimatePresence>
-        {isVisible && isHovering && !isClicking && (
-          <motion.div
-            className="fixed top-0 left-0 pointer-events-none z-[9997] w-2 h-2 bg-black/90 rounded-full shadow-lg border border-white/40"
-            style={{
-              x: cursorX,
-              y: cursorY,
-              translateX: '-50%',
-              translateY: '-50%',
-            }}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ 
-              type: "spring", 
-              damping: 30, 
-              stiffness: 300,
-              delay: 0.1
-            }}
-          />
-        )}
-      </AnimatePresence>
+      {/* Additional trail dots - only on non-touch devices */}
+      {!isTouchDevice && (
+        <AnimatePresence>
+          {isVisible && isHovering && !isClicking && (
+            <motion.div
+              className="fixed top-0 left-0 pointer-events-none z-[9997] w-2 h-2 bg-black/90 rounded-full shadow-lg border border-white/40"
+              style={{
+                x: cursorX,
+                y: cursorY,
+                translateX: '-50%',
+                translateY: '-50%',
+              }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ 
+                type: "spring", 
+                damping: 30, 
+                stiffness: 300,
+                delay: 0.1
+              }}
+            />
+          )}
+        </AnimatePresence>
+      )}
 
-      {/* Click ripple effect */}
-      <AnimatePresence>
-        {isClicking && (
-          <motion.div
-            className="fixed top-0 left-0 pointer-events-none z-[9996] w-20 h-20 border-2 border-white/60 rounded-full"
-            style={{
-              x: cursorX,
-              y: cursorY,
-              translateX: '-50%',
-              translateY: '-50%',
-            }}
-            initial={{ opacity: 1, scale: 0 }}
-            animate={{ opacity: 0, scale: 2 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          />
-        )}
-      </AnimatePresence>
+      {/* Click ripple effect - only on non-touch devices */}
+      {!isTouchDevice && (
+        <AnimatePresence>
+          {isClicking && (
+            <motion.div
+              className="fixed top-0 left-0 pointer-events-none z-[9996] w-20 h-20 border-2 border-white/60 rounded-full"
+              style={{
+                x: cursorX,
+                y: cursorY,
+                translateX: '-50%',
+                translateY: '-50%',
+              }}
+              initial={{ opacity: 1, scale: 0 }}
+              animate={{ opacity: 0, scale: 2 }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            />
+          )}
+        </AnimatePresence>
+      )}
     </>
   );
 } 

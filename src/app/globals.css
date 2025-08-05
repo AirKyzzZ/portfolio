@@ -235,14 +235,25 @@ body {
   color: var(--foreground);
 }
 
-/* Custom cursor styles */
-* {
-  cursor: none !important;
+/* Custom cursor styles - only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }
 
 /* Touch device fallback */
 @media (hover: none) and (pointer: coarse) {
   * {
     cursor: auto !important;
+  }
+  
+  /* Ensure navigation elements are always clickable on mobile */
+  .navbar-container *,
+  .floating-nav *,
+  button,
+  a,
+  [role="button"] {
+    cursor: pointer !important;
   }
 }

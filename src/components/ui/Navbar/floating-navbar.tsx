@@ -70,7 +70,7 @@ export const FloatingNav = ({
 
   // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       const target = event.target as HTMLElement;
       if (!target.closest('.navbar-container')) {
         setIsMenuOpen(false);
@@ -78,7 +78,11 @@ export const FloatingNav = ({
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
   }, []);
 
   return (
@@ -128,7 +132,8 @@ export const FloatingNav = ({
                ease: "easeInOut"
              }}
              onClick={toggleMenu}
-             className="absolute inset-0 z-50 flex items-center justify-center w-full h-full rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-300"
+             onTouchStart={(e) => e.stopPropagation()}
+             className="absolute inset-0 z-50 flex items-center justify-center w-full h-full rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 active:bg-neutral-200 dark:active:bg-neutral-700 transition-all duration-300 touch-manipulation"
            >
             <motion.div
               animate={{ rotate: isMenuOpen ? 180 : 0 }}
@@ -163,8 +168,9 @@ export const FloatingNav = ({
               <motion.button
                 key={`link=${idx}`}
                 onClick={() => handleNavClick(navItem.link)}
+                onTouchStart={(e) => e.stopPropagation()}
                 className={cn(
-                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 cursor-pointer transition-all duration-200"
+                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 cursor-pointer transition-all duration-200 touch-manipulation"
                 )}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -215,7 +221,8 @@ export const FloatingNav = ({
                   <motion.button
                     key={`menu-link=${idx}`}
                     onClick={() => handleNavClick(navItem.link)}
-                    className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-left"
+                    onTouchStart={(e) => e.stopPropagation()}
+                    className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 active:bg-neutral-200 dark:active:bg-neutral-700 transition-colors text-left touch-manipulation"
                     whileHover={{ x: 5 }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.2 }}
