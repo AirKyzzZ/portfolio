@@ -26,12 +26,25 @@ export default function CustomCursor({ children }: CustomCursorProps) {
   useEffect(() => {
     // Detect touch device
     const checkTouchDevice = () => {
-      const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      // More precise touch device detection
+      const isTouch = (
+        'ontouchstart' in window || 
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0
+      ) && window.innerWidth < 1024; // Only consider it touch on smaller screens
+      
       setIsTouchDevice(isTouch);
       
       // If it's a touch device, hide the custom cursor immediately
       if (isTouch) {
         setIsVisible(false);
+        console.log('Touch device detected - hiding custom cursor');
+      } else {
+        // On desktop, show cursor after a short delay
+        console.log('Desktop device detected - showing custom cursor');
+        setTimeout(() => {
+          setIsVisible(true);
+        }, 100);
       }
     };
 
@@ -258,6 +271,13 @@ export default function CustomCursor({ children }: CustomCursorProps) {
         .navbar-container *,
         .floating-nav * {
           cursor: auto !important;
+        }
+        
+        /* Force cursor visibility on desktop */
+        @media (min-width: 1024px) {
+          * {
+            cursor: none !important;
+          }
         }
       `}</style>
 

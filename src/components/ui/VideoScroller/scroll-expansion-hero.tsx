@@ -198,8 +198,8 @@ const ScrollExpandMedia = ({
 
           <div className='container mx-auto flex flex-col items-center justify-start relative z-10'>
             <div className='flex flex-col items-center justify-center w-full h-[100dvh] relative'>
-              {/* Mouse scroll indicator - only show when not expanded */}
-              {scrollProgress < 0.1 && (
+              {/* Mouse scroll indicator - only show when not expanded and not on mobile */}
+              {scrollProgress < 0.1 && !isMobileState && (
                 <MouseScrollIndicator />
               )}
               
