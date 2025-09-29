@@ -46,6 +46,12 @@ export default function ClientLayout({
         </CustomCursor>
       )}
       <style jsx global>{`
+        /* Hide scroll indicator on short viewports */
+        @media (max-height: 830px) {
+          .hide-on-short { display: none !important; }
+          #timeline { margin-top: 0 !important; }
+        }
+
         @keyframes fadeIn {
           from {
             opacity: 0;

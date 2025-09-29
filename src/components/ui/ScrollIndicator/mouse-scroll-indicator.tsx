@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 export default function MouseScrollIndicator() {
   return (
     <motion.div
-      className="absolute z-20 flex flex-col items-center left-1/2 transform -translate-x-1/2
+      className="absolute z-20 flex flex-col items-center left-1/2 transform -translate-x-1/2 hide-on-short
         bottom-[max(theme(spacing.10),env(safe-area-inset-bottom))]
         pointer-events-none select-none
-        hidden xs:flex sm:flex md:flex
+        hidden sm:flex md:flex
       "
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
