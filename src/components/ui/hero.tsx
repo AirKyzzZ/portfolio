@@ -67,7 +67,7 @@ const sampleMediaContent: MediaContentCollection = {
 const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen w-full">
+    <div data-media-type={mediaType} className="flex flex-col items-center justify-start min-h-screen w-full">
       {/* Première section avec SparklesText et CTA */}
       <div id="home" className="flex flex-col items-center justify-start md:justify-center min-h-[80vh] md:min-h-screen w-full pt-16 md:pt-0">
         <div className="flex flex-col items-center justify-center w-full h-full max-w-4xl px-4">

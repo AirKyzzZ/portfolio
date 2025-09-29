@@ -27,10 +27,11 @@ export default function CustomCursor({ children }: CustomCursorProps) {
     // Detect touch device
     const checkTouchDevice = () => {
       // More precise touch device detection
+      const navAny = navigator as Navigator & { msMaxTouchPoints?: number };
       const isTouch = (
         'ontouchstart' in window || 
         navigator.maxTouchPoints > 0 ||
-        navigator.msMaxTouchPoints > 0
+        (typeof navAny.msMaxTouchPoints === 'number' && navAny.msMaxTouchPoints > 0)
       ) && window.innerWidth < 1024; // Only consider it touch on smaller screens
       
       setIsTouchDevice(isTouch);
