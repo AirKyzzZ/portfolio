@@ -17,6 +17,20 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "pkba",
+    title: "Parkour Bassin d'Arcachon",
+    description: "Site web pour l'association de parkour du Bassin d'Arcachon.",
+    thumbnail: "/handstand-pkba-antoine.png",
+    images: ["/handstand-pkba-antoine.png"],
+    demoUrl: "https://pkba.vertiflow.fr/",
+    skills: [
+      { name: "Web Design", color: "bg-indigo-500" },
+      { name: "HTML/CSS", color: "bg-orange-500" },
+      { name: "JavaScript", color: "bg-yellow-400" }
+    ],
+    featured: false
+  },
+  {
     id: "klyx",
     title: "Klyx",
     description: "Plateforme de gestion de contenu digital avec une interface intuitive et personnalisable.",
@@ -53,7 +67,7 @@ export const projects: Project[] = [
     description: "Application d'échange de services entre particuliers, favorisant l'économie collaborative.",
     thumbnail: "/reciproq.png",
     images: ["/reciproq.png", "/reciproq_banner.png"],
-    demoUrl: "https://reciproq.fr",
+    demoUrl: "https://reciproq.com",
     skills: [
       { name: "React Native", color: "bg-blue-500" },
       { name: "Firebase", color: "bg-yellow-500" },
