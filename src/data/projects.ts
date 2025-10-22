@@ -36,7 +36,7 @@ export const projects: Project[] = [
     description: "Plateforme de gestion de contenu digital avec une interface intuitive et personnalisable.",
     thumbnail: "/klyx_screenshot.png",
     images: ["/klyx_screenshot.png", "/klyx_post.jpg"],
-    sourceCodeUrl: "https://github.com/yourusername/klyx",
+    sourceCodeUrl: "https://github.com/airkyzzz/klyx",
     demoUrl: "https://klyx.io",
     skills: [
       { name: "React", color: "bg-blue-500" },
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     description: "Solution de workflow automatisé pour les entreprises, optimisant les processus métiers.",
     thumbnail: "/vertiflow.png",
     images: ["/vertiflow.png"],
-    sourceCodeUrl: "https://github.com/yourusername/vertiflow",
+    sourceCodeUrl: "https://github.com/airkyzzz/vertiflow",
     demoUrl: "https://vertiflow.com",
     skills: [
       { name: "Vue.js", color: "bg-green-500" },
