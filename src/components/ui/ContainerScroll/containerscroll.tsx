@@ -11,9 +11,9 @@ export function HeroScroll() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black dark:text-white">
-              Découvrez mes <br />
+              Découvrez mon <br />
               <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                Projets & Réalisations
+                Profil Linkedin
               </span>
             </h1>
           </>
