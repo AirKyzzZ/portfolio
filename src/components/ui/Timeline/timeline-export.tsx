@@ -16,7 +16,7 @@ export function TimelinePortfolio() {
           <div className="grid grid-cols-2 gap-4">
           <a href="https://verana.io/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
               <Image
-                src="/klyx_screenshot.png"
+                src="/verana.png"
                 alt="Klyx - Agence de création digitale"
                 width={500}
                 height={500}
@@ -38,7 +38,7 @@ export function TimelinePortfolio() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/openpk.jpg"
+              src="/handstand-pkba-antoine.png"
               alt="Parkour Bassin d'Arcachon"
               width={500}
               height={500}
