@@ -19,7 +19,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
-  const springConfig = { damping: 25, stiffness: 700 };
+  const springConfig = { damping: 40, stiffness: 800 };
   const cursorX = useSpring(mouseX, springConfig);
   const cursorY = useSpring(mouseY, springConfig);
 
@@ -357,7 +357,7 @@ export default function CustomCursor({ children }: CustomCursorProps) {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
-              transition={{ type: "spring", damping: 50, stiffness: 400 }}
+              transition={{ type: "spring", damping: 40, stiffness: 800 }}
             />
           )}
         </AnimatePresence>
@@ -380,9 +380,9 @@ export default function CustomCursor({ children }: CustomCursorProps) {
               exit={{ opacity: 0, scale: 0 }}
               transition={{ 
                 type: "spring", 
-                damping: 30, 
-                stiffness: 300,
-                delay: 0.1
+                damping: 40, 
+                stiffness: 800,
+                delay: 0.05
               }}
             />
           )}
