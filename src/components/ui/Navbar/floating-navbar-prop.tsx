@@ -12,19 +12,24 @@ export function FloatingNavBar() {
       icon: <Home className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Expériences",
+      name: "Parcours",
       link: "#timeline",
       icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Compétences",
-      link: "#projects",
+      name: "Projets",
+      link: "#projects-cards",
+      icon: <Briefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Expériences",
+      link: "#experiences",
       icon: <FileCode className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Projets",
+      name: "Compétences",
       link: "#skills",
-      icon: <Briefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <FileCode className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Contact",

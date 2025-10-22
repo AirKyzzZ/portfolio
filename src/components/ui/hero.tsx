@@ -10,6 +10,7 @@ import { GlowingEffectDemoSecond } from '@/components/ui/Glowing/glowing-export'
 import { HeroScroll } from '@/components/ui/ContainerScroll/containerscroll';
 import MyFooter from '@/components/ui/Footer/myfooter';
 import { ContactForm } from '@/components/ui/ContactForm/demo';
+import { ProjectsSection } from '@/components/ui/Projects/projects-section';
 
 
 interface MediaAbout {
@@ -79,13 +80,18 @@ const MediaContent = ({ mediaType }: { mediaType: 'video' | 'image' }) => {
         </div>
       </div>
       
-      {/* Section Timeline (Projets) */}
+      {/* Section Timeline (Parcours) */}
       <div id="timeline" className="w-full relative -mt-32">
         <TimelinePortfolio />
       </div>
       
+      {/* Section Projets */}
+      <div id="projects-cards" className="w-full relative">
+        <ProjectsSection />
+      </div>
+      
       {/* Section Expériences (avec GlowingEffect) */}
-      <div id="projects" className="w-full relative">
+      <div id="experiences" className="w-full relative">
         <GlowingEffectDemoSecond />
       </div>
       
