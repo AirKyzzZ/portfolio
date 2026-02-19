@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "description": "Fullstack developer and researcher specializing in decentralized identity, SSI, and verifiable credentials. Based in Bordeaux, France."
+  },
+  "nav": {
+    "home": "Home",
+    "research": "Research",
+    "projects": "Projects",
+    "blog": "Blog",
+    "publications": "Publications",
+    "talks": "Talks",
+    "cv": "CV"
+  },
+  "footer": {
+    "copyright": "© 2026 Maxime Mansiet"
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewProject": "View project",
+    "sourceCode": "Source code",
+    "liveDemo": "Live demo",
+    "backToList": "Back to list",
+    "noContent": "Nothing here yet — check back soon.",
+    "draft": "Draft",
+    "featured": "Featured",
+    "allProjects": "All projects",
+    "downloadPdf": "Download PDF",
+    "latestPosts": "Latest posts"
+  },
+  "home": {
+    "about": "About",
+    "bio1": "I'm a fullstack developer working at the intersection of software engineering and decentralized identity. Currently at Verana and 2060.io, I build production systems for Self-Sovereign Identity (SSI) — including DIDComm messaging, verifiable credential exchange, and trust registries.",
+    "bio2": "My work focuses on making privacy-preserving identity systems practical and interoperable. I'm interested in how cryptographic protocols can enable individuals to control their own digital identity without relying on centralized authorities.",
+    "bio3": "I'm preparing to pursue a PhD in this space, aiming to contribute to the formal foundations and practical deployment of decentralized identity systems.",
+    "researchInterests": "Research Interests",
+    "interest1": "Decentralized Identity & DIDs",
+    "interest2": "Privacy-Preserving Credential Systems",
+    "interest3": "Verifiable Credentials & Selective Disclosure",
+    "interest4": "Applied Cryptography for Identity",
+    "interest5": "Trust Frameworks & Governance Models",
+    "news": "News",
+    "news1": "Joined Verana as fullstack developer — building SSI infrastructure",
+    "news1date": "2025.09",
+    "news2": "Enrolled in Harvard CS50 — expanding CS fundamentals",
+    "news2date": "2026.01",
+    "news3": "Founded Klyx — web development agency in Bordeaux",
+    "news3date": "2025.04",
+    "news4": "Speaker at GDG Bordeaux — presentation on modern web development",
+    "news4date": "2024.11"
+  },
+  "research": {
+    "title": "Research",
+    "intro": "My research interests lie at the intersection of distributed systems, applied cryptography, and digital identity. I'm particularly interested in systems that give individuals control over their personal data while maintaining interoperability across organizations and borders.",
+    "area1title": "Decentralized Identity & DIDs",
+    "area1desc": "Decentralized Identifiers (DIDs) provide a foundation for self-sovereign identity by allowing entities to create and control their own identifiers without permission from any central authority. I study the design trade-offs between different DID methods (did:web, did:peer, did:key) and their implications for security, privacy, and scalability.",
+    "area2title": "Privacy-Preserving Credential Systems",
+    "area2desc": "Verifiable Credentials enable portable, tamper-evident digital attestations. I'm interested in selective disclosure mechanisms (BBS+ signatures, SD-JWT) that allow holders to share only the minimum necessary information, and in zero-knowledge proof techniques that enable predicate proofs without revealing underlying data.",
+    "area3title": "Trust Frameworks & Governance",
+    "area3desc": "Decentralized systems still need trust anchors. I work on trust registry architectures that allow ecosystems to define and enforce governance rules — who can issue what, which credentials are accepted where, and how trust decisions are made at scale.",
+    "area4title": "DIDComm & Secure Messaging",
+    "area4desc": "DIDComm is a messaging protocol that enables secure, private communication between identity agents. I work on production implementations of DIDComm v2, including message routing, encryption, and protocol negotiation for credential exchange workflows.",
+    "openQuestions": "Open Questions",
+    "question1": "How can trust registries be made both decentralized and practically governable?",
+    "question2": "What are the formal privacy guarantees of different selective disclosure schemes under realistic adversarial models?",
+    "question3": "How can SSI systems achieve meaningful interoperability across jurisdictions with different legal frameworks?",
+    "question4": "What are effective revocation mechanisms that preserve holder privacy?"
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Technical Skills",
+    "languages": "Languages",
+    "exp1title": "Fullstack Developer",
+    "exp1company": "Verana & 2060.io",
+    "exp1period": "Sep 2025 – Present",
+    "exp1desc": "Building SSI infrastructure: DIDComm messaging, verifiable credential exchange, trust registries. TypeScript/Node.js backend, React frontend.",
+    "exp2title": "Founder & Developer",
+    "exp2company": "Klyx",
+    "exp2period": "Apr 2025 – Present",
+    "exp2desc": "Web development agency. Building production sites with Next.js, Tailwind, and modern deployment pipelines for clients in Bordeaux.",
+    "exp3title": "Fullstack Developer",
+    "exp3company": "VertiFlow",
+    "exp3period": "2024 – 2025",
+    "exp3desc": "Developed web applications and SaaS tools. Full-stack work with React, Node.js, PostgreSQL.",
+    "edu1title": "Engineering Degree in Computer Science",
+    "edu1school": "EPSI Bordeaux",
+    "edu1period": "2020 – 2025",
+    "edu1desc": "5-year software engineering program. Specialization in web development and distributed systems.",
+    "edu2title": "CS50: Introduction to Computer Science",
+    "edu2school": "Harvard University (online)",
+    "edu2period": "2026",
+    "edu2desc": "Fundamental CS concepts: algorithms, data structures, systems programming.",
+    "skill1": "Languages: TypeScript, JavaScript, Python, SQL",
+    "skill2": "Frontend: React, Next.js, Tailwind CSS",
+    "skill3": "Backend: Node.js, PostgreSQL, Prisma, REST/GraphQL",
+    "skill4": "SSI: DIDComm, Verifiable Credentials, DIDs, Aries Framework",
+    "skill5": "DevOps: Docker, Kubernetes, GitHub Actions, Vercel, Netlify",
+    "lang1": "French — Native",
+    "lang2": "English — Bilingual"
+  },
+  "talks": {
+    "title": "Talks & Presentations",
+    "talk1title": "Modern Web Development with Next.js",
+    "talk1venue": "GDG Bordeaux",
+    "talk1date": "November 2024",
+    "talk1desc": "Presentation on building modern web applications with Next.js App Router, server components, and deployment strategies."
+  },
+  "publications": {
+    "title": "Publications",
+    "empty": "No publications yet. This section will be updated as research work progresses."
+  },
+  "projects": {
+    "title": "Projects",
+    "featured": "Featured",
+    "all": "All"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "description": "Développeur fullstack et chercheur spécialisé en identité décentralisée, SSI et verifiable credentials. Basé à Bordeaux, France."
+  },
+  "nav": {
+    "home": "Accueil",
+    "research": "Recherche",
+    "projects": "Projets",
+    "blog": "Blog",
+    "publications": "Publications",
+    "talks": "Talks",
+    "cv": "CV"
+  },
+  "footer": {
+    "copyright": "© 2026 Maxime Mansiet"
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "viewProject": "Voir le projet",
+    "sourceCode": "Code source",
+    "liveDemo": "Démo en ligne",
+    "backToList": "Retour à la liste",
+    "noContent": "Rien ici pour l'instant — revenez bientôt.",
+    "draft": "Brouillon",
+    "featured": "En vedette",
+    "allProjects": "Tous les projets",
+    "downloadPdf": "Télécharger le PDF",
+    "latestPosts": "Derniers articles"
+  },
+  "home": {
+    "about": "À propos",
+    "bio1": "Je suis développeur fullstack, travaillant à l'intersection de l'ingénierie logicielle et de l'identité décentralisée. Actuellement chez Verana et 2060.io, je construis des systèmes de production pour le Self-Sovereign Identity (SSI) — incluant la messagerie DIDComm, l'échange de verifiable credentials et les registres de confiance.",
+    "bio2": "Mon travail se concentre sur la mise en pratique de systèmes d'identité respectueux de la vie privée et interopérables. Je m'intéresse à la façon dont les protocoles cryptographiques peuvent permettre aux individus de contrôler leur propre identité numérique sans dépendre d'autorités centralisées.",
+    "bio3": "Je me prépare à poursuivre un doctorat dans ce domaine, visant à contribuer aux fondements formels et au déploiement pratique des systèmes d'identité décentralisée.",
+    "researchInterests": "Intérêts de recherche",
+    "interest1": "Identité décentralisée & DIDs",
+    "interest2": "Systèmes de credentials préservant la vie privée",
+    "interest3": "Verifiable Credentials & divulgation sélective",
+    "interest4": "Cryptographie appliquée à l'identité",
+    "interest5": "Cadres de confiance & modèles de gouvernance",
+    "news": "Actualités",
+    "news1": "Rejoint Verana en tant que développeur fullstack — construction d'infrastructure SSI",
+    "news1date": "2025.09",
+    "news2": "Inscrit au CS50 de Harvard — approfondissement des fondamentaux CS",
+    "news2date": "2026.01",
+    "news3": "Fondation de Klyx — agence de développement web à Bordeaux",
+    "news3date": "2025.04",
+    "news4": "Conférencier au GDG Bordeaux — présentation sur le développement web moderne",
+    "news4date": "2024.11"
+  },
+  "research": {
+    "title": "Recherche",
+    "intro": "Mes intérêts de recherche se situent à l'intersection des systèmes distribués, de la cryptographie appliquée et de l'identité numérique. Je m'intéresse particulièrement aux systèmes qui donnent aux individus le contrôle de leurs données personnelles tout en maintenant l'interopérabilité entre organisations et frontières.",
+    "area1title": "Identité décentralisée & DIDs",
+    "area1desc": "Les Decentralized Identifiers (DIDs) constituent le socle de l'identité auto-souveraine en permettant aux entités de créer et contrôler leurs propres identifiants sans l'autorisation d'une autorité centrale. J'étudie les compromis de conception entre différentes méthodes DID (did:web, did:peer, did:key) et leurs implications en termes de sécurité, confidentialité et scalabilité.",
+    "area2title": "Systèmes de credentials préservant la vie privée",
+    "area2desc": "Les Verifiable Credentials permettent des attestations numériques portables et infalsifiables. Je m'intéresse aux mécanismes de divulgation sélective (signatures BBS+, SD-JWT) qui permettent aux détenteurs de ne partager que le minimum d'information nécessaire, et aux techniques de preuves à divulgation nulle permettant des preuves sur prédicats sans révéler les données sous-jacentes.",
+    "area3title": "Cadres de confiance & gouvernance",
+    "area3desc": "Les systèmes décentralisés ont toujours besoin d'ancres de confiance. Je travaille sur des architectures de registres de confiance permettant aux écosystèmes de définir et appliquer des règles de gouvernance — qui peut émettre quoi, quels credentials sont acceptés où, et comment les décisions de confiance sont prises à grande échelle.",
+    "area4title": "DIDComm & messagerie sécurisée",
+    "area4desc": "DIDComm est un protocole de messagerie qui permet une communication sécurisée et privée entre agents d'identité. Je travaille sur des implémentations en production de DIDComm v2, incluant le routage de messages, le chiffrement et la négociation de protocoles pour les workflows d'échange de credentials.",
+    "openQuestions": "Questions ouvertes",
+    "question1": "Comment rendre les registres de confiance à la fois décentralisés et pratiquement gouvernables ?",
+    "question2": "Quelles sont les garanties formelles de confidentialité des différents schémas de divulgation sélective sous des modèles adversariaux réalistes ?",
+    "question3": "Comment les systèmes SSI peuvent-ils atteindre une interopérabilité significative entre juridictions aux cadres légaux différents ?",
+    "question4": "Quels sont les mécanismes de révocation efficaces qui préservent la vie privée du détenteur ?"
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "experience": "Expérience",
+    "education": "Formation",
+    "skills": "Compétences techniques",
+    "languages": "Langues",
+    "exp1title": "Développeur Fullstack",
+    "exp1company": "Verana & 2060.io",
+    "exp1period": "Sep 2025 – Présent",
+    "exp1desc": "Construction d'infrastructure SSI : messagerie DIDComm, échange de verifiable credentials, registres de confiance. Backend TypeScript/Node.js, frontend React.",
+    "exp2title": "Fondateur & Développeur",
+    "exp2company": "Klyx",
+    "exp2period": "Avr 2025 – Présent",
+    "exp2desc": "Agence de développement web. Construction de sites en production avec Next.js, Tailwind et pipelines de déploiement modernes pour des clients à Bordeaux.",
+    "exp3title": "Développeur Fullstack",
+    "exp3company": "VertiFlow",
+    "exp3period": "2024 – 2025",
+    "exp3desc": "Développement d'applications web et outils SaaS. Travail full-stack avec React, Node.js, PostgreSQL.",
+    "edu1title": "Diplôme d'ingénieur en informatique",
+    "edu1school": "EPSI Bordeaux",
+    "edu1period": "2020 – 2025",
+    "edu1desc": "Programme d'ingénierie logicielle de 5 ans. Spécialisation en développement web et systèmes distribués.",
+    "edu2title": "CS50 : Introduction à l'informatique",
+    "edu2school": "Harvard University (en ligne)",
+    "edu2period": "2026",
+    "edu2desc": "Concepts fondamentaux CS : algorithmes, structures de données, programmation système.",
+    "skill1": "Langages : TypeScript, JavaScript, Python, SQL",
+    "skill2": "Frontend : React, Next.js, Tailwind CSS",
+    "skill3": "Backend : Node.js, PostgreSQL, Prisma, REST/GraphQL",
+    "skill4": "SSI : DIDComm, Verifiable Credentials, DIDs, Aries Framework",
+    "skill5": "DevOps : Docker, Kubernetes, GitHub Actions, Vercel, Netlify",
+    "lang1": "Français — Natif",
+    "lang2": "Anglais — Bilingue"
+  },
+  "talks": {
+    "title": "Talks & Présentations",
+    "talk1title": "Développement web moderne avec Next.js",
+    "talk1venue": "GDG Bordeaux",
+    "talk1date": "Novembre 2024",
+    "talk1desc": "Présentation sur la construction d'applications web modernes avec Next.js App Router, server components et stratégies de déploiement."
+  },
+  "publications": {
+    "title": "Publications",
+    "empty": "Pas encore de publications. Cette section sera mise à jour au fil de l'avancement des travaux de recherche."
+  },
+  "projects": {
+    "title": "Projets",
+    "featured": "En vedette",
+    "all": "Tous"
+  }
+}

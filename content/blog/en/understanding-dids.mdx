@@ -1,0 +1,46 @@
+---
+title: "Understanding Decentralized Identifiers (DIDs)"
+date: "2026-02-15"
+description: "A primer on DIDs — what they are, why they matter, and how they form the foundation of self-sovereign identity systems."
+tags: ["SSI", "DIDs", "Decentralized Identity"]
+---
+
+Decentralized Identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity. Unlike traditional identifiers (email addresses, usernames, phone numbers), DIDs are created, owned, and controlled by the identity subject — without requiring permission from any centralized registry or authority.
+
+## Why DIDs Matter
+
+Traditional identity systems have a fundamental problem: **they depend on centralized authorities**. Your email is controlled by Google or Microsoft. Your social identity lives on Meta's servers. Your government ID is issued and revoked by the state.
+
+DIDs flip this model. A DID is:
+
+- **Self-owned**: You create it, you control it
+- **Persistent**: It doesn't depend on any single organization's continued existence
+- **Resolvable**: Anyone can look up the public keys and service endpoints associated with a DID
+- **Cryptographically verifiable**: Ownership is proven through digital signatures, not passwords
+
+## Anatomy of a DID
+
+A DID looks like this:
+
+```
+did:web:example.com:users:alice
+```
+
+It has three parts:
+1. **Scheme**: Always `did:`
+2. **Method**: Specifies how the DID is created and resolved (e.g., `web`, `key`, `peer`)
+3. **Method-specific identifier**: Unique within the method's namespace
+
+## DID Methods in Practice
+
+| Method | Resolution | Use Case |
+|--------|-----------|----------|
+| `did:web` | HTTPS/DNS | Organizations, public entities |
+| `did:key` | Self-contained | Ephemeral, quick setup |
+| `did:peer` | Peer-to-peer | Private pairwise connections |
+
+Each method makes different trade-offs between decentralization, ease of use, and security guarantees.
+
+## What's Next
+
+In future posts, I'll explore how DIDs connect to **Verifiable Credentials** and how the DIDComm protocol enables secure messaging between identity agents.

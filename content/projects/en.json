@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "klyx",
+    "title": "Klyx",
+    "description": "Web development agency offering modern, performant websites built with Next.js and Tailwind CSS.",
+    "longDescription": "Klyx is a web development agency I founded in Bordeaux. We build production-grade websites and web applications using modern tools — Next.js for the framework, Tailwind CSS for styling, and Vercel/Netlify for deployment. The agency focuses on delivering fast, accessible, and SEO-optimized sites for local businesses and startups.",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
+    "sourceUrl": "https://github.com/airkyzzz/klyx",
+    "demoUrl": "https://klyx.io",
+    "featured": true,
+    "year": 2025
+  },
+  {
+    "slug": "vertiflow",
+    "title": "VertiFlow",
+    "description": "SaaS platform for workflow automation and business process management.",
+    "longDescription": "VertiFlow is a SaaS platform designed to streamline business workflows. Built with a React frontend and Node.js backend, it features drag-and-drop workflow builders, automated task routing, and real-time collaboration. The platform uses PostgreSQL for data persistence and Docker for containerized deployment.",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Docker", "TypeScript"],
+    "sourceUrl": "https://github.com/airkyzzz/vertiflow",
+    "demoUrl": "https://vertiflow.com",
+    "featured": true,
+    "year": 2024
+  },
+  {
+    "slug": "reciproq",
+    "title": "Reciproq",
+    "description": "Social platform for recipe sharing and collaborative cooking.",
+    "longDescription": "Reciproq is a social platform that connects food enthusiasts. Users can share recipes, collaborate on cooking projects, and discover new dishes from their community. Built with a modern web stack featuring real-time updates and responsive design.",
+    "technologies": ["React", "Next.js", "Node.js", "PostgreSQL"],
+    "demoUrl": "https://reciproq.com",
+    "featured": false,
+    "year": 2024
+  },
+  {
+    "slug": "pkba",
+    "title": "Parkour Bassin d'Arcachon",
+    "description": "Community website for the Parkour Bassin d'Arcachon association.",
+    "longDescription": "A community website built for the Parkour Bassin d'Arcachon association. Features event scheduling, member profiles, training spot mapping, and photo galleries. Designed to be mobile-first for athletes checking spots on the go.",
+    "technologies": ["React", "Tailwind CSS", "Vercel"],
+    "demoUrl": "https://pkba.vertiflow.fr",
+    "featured": false,
+    "year": 2024
+  }
+]
