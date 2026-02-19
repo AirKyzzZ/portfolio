@@ -1,6 +1,6 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Site temporairement non indexé pour des raisons de vie privée
-# Sitemap désactivé temporairement
-# Sitemap: https://maximemansiet.fr/sitemap.xml 
+Sitemap: https://maximemansiet.fr/sitemap.xml
+
+Crawl-delay: 1

@@ -1,11 +1,5 @@
-"use client";
-import React from "react";
-import Hero from "@/components/ui/hero";
+import { redirect } from 'next/navigation'
 
-export default function Home() {
-  return (
-    <>
-      <Hero />
-    </>
-  );
+export default function RootPage() {
+  redirect('/en')
 }

@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "klyx",
+    "title": "Klyx",
+    "description": "Agence de développement web proposant des sites modernes et performants avec Next.js et Tailwind CSS.",
+    "longDescription": "Klyx est une agence de développement web que j'ai fondée à Bordeaux. Nous construisons des sites web et applications web de production avec des outils modernes — Next.js comme framework, Tailwind CSS pour le styling, et Vercel/Netlify pour le déploiement. L'agence se concentre sur la livraison de sites rapides, accessibles et optimisés SEO pour les entreprises locales et startups.",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
+    "sourceUrl": "https://github.com/airkyzzz/klyx",
+    "demoUrl": "https://klyx.io",
+    "featured": true,
+    "year": 2025
+  },
+  {
+    "slug": "vertiflow",
+    "title": "VertiFlow",
+    "description": "Plateforme SaaS pour l'automatisation des workflows et la gestion des processus métier.",
+    "longDescription": "VertiFlow est une plateforme SaaS conçue pour fluidifier les workflows d'entreprise. Construite avec un frontend React et un backend Node.js, elle propose des constructeurs de workflows drag-and-drop, du routage automatisé des tâches et de la collaboration en temps réel. La plateforme utilise PostgreSQL pour la persistance des données et Docker pour le déploiement conteneurisé.",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Docker", "TypeScript"],
+    "sourceUrl": "https://github.com/airkyzzz/vertiflow",
+    "demoUrl": "https://vertiflow.com",
+    "featured": true,
+    "year": 2024
+  },
+  {
+    "slug": "reciproq",
+    "title": "Reciproq",
+    "description": "Plateforme sociale de partage de recettes et de cuisine collaborative.",
+    "longDescription": "Reciproq est une plateforme sociale qui connecte les passionnés de cuisine. Les utilisateurs peuvent partager des recettes, collaborer sur des projets culinaires et découvrir de nouveaux plats de leur communauté. Construit avec une stack web moderne avec des mises à jour en temps réel et un design responsive.",
+    "technologies": ["React", "Next.js", "Node.js", "PostgreSQL"],
+    "demoUrl": "https://reciproq.com",
+    "featured": false,
+    "year": 2024
+  },
+  {
+    "slug": "pkba",
+    "title": "Parkour Bassin d'Arcachon",
+    "description": "Site communautaire pour l'association Parkour Bassin d'Arcachon.",
+    "longDescription": "Un site communautaire construit pour l'association Parkour Bassin d'Arcachon. Fonctionnalités : planning d'événements, profils des membres, cartographie des spots d'entraînement et galeries photos. Conçu mobile-first pour les athlètes qui consultent les spots en déplacement.",
+    "technologies": ["React", "Tailwind CSS", "Vercel"],
+    "demoUrl": "https://pkba.vertiflow.fr",
+    "featured": false,
+    "year": 2024
+  }
+]

@@ -1,9 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://maximemansiet.fr/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://maximemansiet.fr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/" />
+    <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-</urlset> 
+  <url>
+    <loc>https://maximemansiet.fr/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/" />
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/en/research/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/research/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/research/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/fr/research/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/research/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/research/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/en/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/projects/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/projects/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/fr/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/projects/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/projects/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/blog/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/fr/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/blog/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/en/publications/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/publications/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/publications/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/fr/publications/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/publications/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/publications/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/en/talks/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/talks/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/talks/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/fr/talks/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/talks/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/talks/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/en/cv/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/cv/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/cv/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/fr/cv/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maximemansiet.fr/en/cv/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maximemansiet.fr/fr/cv/" />
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/en/blog/understanding-dids/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maximemansiet.fr/fr/blog/comprendre-les-dids/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+</urlset>

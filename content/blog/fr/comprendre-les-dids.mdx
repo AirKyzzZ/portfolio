@@ -1,0 +1,46 @@
+---
+title: "Comprendre les Decentralized Identifiers (DIDs)"
+date: "2026-02-15"
+description: "Un guide sur les DIDs — ce qu'ils sont, pourquoi ils comptent, et comment ils forment le socle des systèmes d'identité auto-souveraine."
+tags: ["SSI", "DIDs", "Identité décentralisée"]
+---
+
+Les Decentralized Identifiers (DIDs) sont un nouveau type d'identifiant qui permet une identité numérique vérifiable et décentralisée. Contrairement aux identifiants traditionnels (adresses email, noms d'utilisateur, numéros de téléphone), les DIDs sont créés, possédés et contrôlés par le sujet de l'identité — sans nécessiter la permission d'un registre ou d'une autorité centralisée.
+
+## Pourquoi les DIDs comptent
+
+Les systèmes d'identité traditionnels ont un problème fondamental : **ils dépendent d'autorités centralisées**. Votre email est contrôlé par Google ou Microsoft. Votre identité sociale vit sur les serveurs de Meta. Votre pièce d'identité est émise et révoquée par l'État.
+
+Les DIDs inversent ce modèle. Un DID est :
+
+- **Auto-possédé** : Vous le créez, vous le contrôlez
+- **Persistant** : Il ne dépend pas de l'existence continue d'une organisation
+- **Résolvable** : N'importe qui peut consulter les clés publiques et endpoints associés à un DID
+- **Vérifiable cryptographiquement** : La propriété est prouvée par des signatures numériques, pas des mots de passe
+
+## Anatomie d'un DID
+
+Un DID ressemble à ceci :
+
+```
+did:web:example.com:users:alice
+```
+
+Il comporte trois parties :
+1. **Schéma** : Toujours `did:`
+2. **Méthode** : Spécifie comment le DID est créé et résolu (ex: `web`, `key`, `peer`)
+3. **Identifiant spécifique à la méthode** : Unique dans l'espace de noms de la méthode
+
+## Méthodes DID en pratique
+
+| Méthode | Résolution | Cas d'usage |
+|---------|-----------|-------------|
+| `did:web` | HTTPS/DNS | Organisations, entités publiques |
+| `did:key` | Auto-contenu | Éphémère, mise en place rapide |
+| `did:peer` | Pair-à-pair | Connexions privées bilatérales |
+
+Chaque méthode fait des compromis différents entre décentralisation, facilité d'utilisation et garanties de sécurité.
+
+## La suite
+
+Dans de prochains articles, j'explorerai comment les DIDs se connectent aux **Verifiable Credentials** et comment le protocole DIDComm permet une messagerie sécurisée entre agents d'identité.
