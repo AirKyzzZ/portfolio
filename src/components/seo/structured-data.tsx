@@ -26,6 +26,7 @@ export function PersonSchema({ locale }: PersonSchemaProps) {
       SOCIAL_LINKS.github,
       SOCIAL_LINKS.linkedin,
       SOCIAL_LINKS.twitter,
+      SOCIAL_LINKS.orcid,
     ],
     address: {
       '@type': 'PostalAddress',

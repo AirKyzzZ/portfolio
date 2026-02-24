@@ -43,3 +43,5 @@ next-env.d.ts
 
 # fail 
 public/IMG_0856.png
+# Local Netlify folder
+.netlify
