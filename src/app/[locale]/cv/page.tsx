@@ -24,10 +24,18 @@ export default async function CVPage({ params }: Props) {
   const education = [
     { title: t('edu1title'), school: t('edu1school'), period: t('edu1period'), desc: t('edu1desc') },
     { title: t('edu2title'), school: t('edu2school'), period: t('edu2period'), desc: t('edu2desc') },
+    { title: t('edu3title'), school: t('edu3school'), period: t('edu3period'), desc: t('edu3desc') },
   ]
 
-  const skills = [t('skill1'), t('skill2'), t('skill3'), t('skill4'), t('skill5')]
-  const languages = [t('lang1'), t('lang2')]
+  const skills = [t('skill1'), t('skill2'), t('skill3'), t('skill4')]
+  const languages = [t('lang1'), t('lang2'), t('lang3')]
+
+  const projects = [
+    { title: t('proj1title'), desc: t('proj1desc') },
+    { title: t('proj2title'), desc: t('proj2desc') },
+    { title: t('proj3title'), desc: t('proj3desc') },
+    { title: t('proj4title'), desc: t('proj4desc') },
+  ]
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-10">
@@ -82,13 +90,26 @@ export default async function CVPage({ params }: Props) {
       </section>
 
       {/* Languages */}
-      <section>
+      <section className="mb-10">
         <SectionHeading>{t('languages')}</SectionHeading>
         <ul className="space-y-1.5 text-sm text-foreground-secondary">
           {languages.map((lang) => (
             <li key={lang}>• {lang}</li>
           ))}
         </ul>
+      </section>
+
+      {/* Projects & Community Engagement */}
+      <section>
+        <SectionHeading>{t('engagement')}</SectionHeading>
+        <div className="space-y-6">
+          {projects.map((proj) => (
+            <div key={proj.title}>
+              <h3 className="font-semibold text-sm">{proj.title}</h3>
+              <p className="text-sm text-foreground-secondary mt-1">{proj.desc}</p>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   )

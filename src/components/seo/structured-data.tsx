@@ -13,7 +13,6 @@ export function PersonSchema({ locale }: PersonSchemaProps) {
     jobTitle: 'Fullstack Developer & Researcher',
     worksFor: [
       { '@type': 'Organization', name: 'Verana' },
-      { '@type': 'Organization', name: '2060.io' },
     ],
     knowsAbout: [
       'Decentralized Identity',

@@ -36,7 +36,7 @@ export function Sidebar({ locale }: SidebarProps) {
           {locale === 'fr' ? 'Développeur Fullstack' : 'Fullstack Developer'}
         </p>
         <p className="text-sm text-foreground-tertiary">
-          Verana / 2060.io
+          Verana
         </p>
       </div>
       <div className="flex items-center gap-3 text-foreground-secondary">
