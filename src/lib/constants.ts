@@ -7,4 +7,5 @@ export const SOCIAL_LINKS = {
   twitter: 'https://x.com/maximecodes',
   email: 'mailto:maxime.mansiet@gmail.com',
   orcid: 'https://orcid.org/0009-0000-5647-5281',
+  mastodon: 'https://mastodon.social/@maximecodes',
 } as const

@@ -17,6 +17,9 @@ export function Footer() {
           <a href="https://x.com/maximecodes" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
             X
           </a>
+          <a href="https://mastodon.social/@maximecodes" target="_blank" rel="me noopener noreferrer" className="hover:text-foreground transition-colors">
+            Mastodon
+          </a>
           <a href="https://orcid.org/0009-0000-5647-5281" target="_blank" rel="me noopener noreferrer" className="hover:text-foreground transition-colors">
             ORCID
           </a>
