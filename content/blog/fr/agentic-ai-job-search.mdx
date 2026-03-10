@@ -1,0 +1,217 @@
+---
+title: "Comment l'IA agentique redéfinit la recherche d'emploi, de l'OSINT à la candidature personnalisée à grande échelle"
+date: "2026-03-10"
+description: "Les job boards sont saturés, LinkedIn c'est la guerre. Voici comment j'ai utilisé des agents OpenClaw, des techniques OSINT et la vérification d'emails pour contacter les recruteurs directement, à grande échelle, avec des candidatures personnalisées."
+tags: ["IA", "IA Agentique", "Recherche d'emploi", "OSINT", "Automatisation"]
+---
+
+## Le problème avec la recherche d'emploi traditionnelle
+
+Les job boards te montrent les mêmes offres qu'à tout le monde. LinkedIn te met dans une file
+de 300 candidats. Les candidatures génériques sont ignorées. Le rapport signal/bruit est catastrophique,
+et le processus est conçu pour t'éliminer avant même qu'un humain lise ton nom.
+
+Il y a une meilleure approche. Contourner les intermédiaires, aller directement dans la boîte
+mail du recruteur.
+
+## La stratégie
+
+Au lieu de répondre à des offres d'emploi, l'objectif est de :
+
+1. **Identifier des entreprises cibles** qui correspondent à ton profil et tes intérêts
+2. **Trouver le recruteur ou le responsable technique** via des techniques OSINT
+3. **Deviner et vérifier leur email** grâce aux patterns corporate connus
+4. **Envoyer une candidature ultra-personnalisée** générée par un agent IA qui a recherché l'entreprise
+5. **Faire ça à grande échelle**, sans perdre en qualité
+
+C'est ce que j'ai automatisé avec [OpenClaw](https://openclaw.ai) et un ensemble de scripts custom.
+
+## Étape 1 — Construire la liste d'entreprises
+
+Commence par une liste d'entreprises cibles. Tu peux la sourcer depuis :
+
+- La recherche d'entreprises LinkedIn (scraping basique sans compte)
+- Crunchbase / Pappers.fr pour les entreprises françaises
+- Les pages d'organisation GitHub (pour les boîtes tech, les ingénieurs sont souvent publics)
+- Les job boards, mais uniquement pour extraire les noms d'entreprises, pas pour candidater
+
+Pour chaque entreprise, tu as besoin de : **nom, domaine, secteur, stack technique si possible**.
+
+```python
+companies = [
+    {"name": "Verana", "domain": "verana.io", "industry": "SSI / Identity"},
+    {"name": "2060.io", "domain": "2060.io", "industry": "DIDComm / Messaging"},
+    # ...
+]
+```
+
+## Étape 2 — OSINT : trouver la bonne personne
+
+Tu ne veux pas les RH. Tu veux le **CTO, le responsable engineering ou le tech lead** qui
+prend vraiment les décisions de recrutement. Voici comment les trouver :
+
+**Profils publics LinkedIn** (pas besoin de compte pour les requêtes basiques) :
+```
+site:linkedin.com/in "engineering manager" "nom de l'entreprise"
+```
+
+**Membres des organisations GitHub** — pour les boîtes tech, leurs ingénieurs sont souvent publics :
+```
+https://github.com/orgs/{org}/people
+```
+
+**Site de l'entreprise** — les pages `/team`, `/about`, `/careers` listent souvent des noms avec des rôles.
+
+**Hunter.io** — colle un domaine, obtiens la liste des patterns d'emails connus et des adresses confirmées
+(free tier : 25 recherches/mois).
+
+Une fois que t'as un nom, tu passes à la devinette d'email.
+
+## Étape 3 — Deviner et vérifier les emails
+
+La plupart des entreprises utilisent un de ces patterns :
+
+| Pattern | Exemple |
+|---|---|
+| `prenom.nom@` | jean.dupont@company.com |
+| `p.nom@` | j.dupont@company.com |
+| `prenom@` | jean@company.com |
+| `pnom@` | jdupont@company.com |
+| `nom@` | dupont@company.com |
+
+L'astuce c'est de ne pas deviner aveuglément, mais de **vérifier avant d'envoyer**. Envoyer
+à une adresse morte abîme ta réputation de domaine.
+
+### Vérification d'email : comment ça fonctionne
+
+La méthode de vérification la plus rapide sans payer de service c'est le **sondage SMTP** :
+
+```python
+import smtplib
+import dns.resolver
+
+def verify_email(email):
+    domain = email.split('@')[1]
+
+    # Étape 1 : récupérer les enregistrements MX
+    mx_records = dns.resolver.resolve(domain, 'MX')
+    mx_host = str(sorted(mx_records, key=lambda r: r.preference)[0].exchange)
+
+    # Étape 2 : handshake SMTP (aucun email envoyé réellement)
+    try:
+        server = smtplib.SMTP(timeout=10)
+        server.connect(mx_host)
+        server.helo('verify.local')
+        server.mail('verify@verify.local')
+        code, message = server.rcpt(email)
+        server.quit()
+        return code == 250  # 250 = l'adresse existe
+    except Exception:
+        return None  # non concluant
+```
+
+**Limitations :** certains serveurs (Gmail, Microsoft 365) retournent toujours 250
+peu importe (domaines catch-all). Dans ce cas, utilise un service dédié :
+
+- **Hunter.io** — `GET /v2/email-verifier?email=...&api_key=...`
+- **Zerobounce** — plus précis, détecte les catch-all et les adresses jetables
+- **Reoon** — moins cher pour la vérification en masse
+
+```python
+import requests
+
+def verify_with_hunter(email, api_key):
+    r = requests.get(
+        "https://api.hunter.io/v2/email-verifier",
+        params={"email": email, "api_key": api_key}
+    )
+    data = r.json()["data"]
+    return data["status"]  # "valid", "risky", "invalid"
+```
+
+Pour un domaine catch-all, envoie au pattern statistiquement le plus probable
+d'après les résultats de recherche de domaine Hunter.
+
+## Étape 4 — Outreach personnalisé avec des agents OpenClaw
+
+C'est là que l'IA agentique change tout. Pour chaque entreprise, un agent OpenClaw :
+
+1. **Recherche l'entreprise** — scrape leur site, GitHub, actualités récentes, stack technique
+2. **Lit le LinkedIn du recruteur** — capte son parcours, ses intérêts, ses posts récents
+3. **Génère un email personnalisé** — fait référence à des projets spécifiques, des choix tech, des challenges
+
+Le pipeline d'agent ressemble à ça :
+
+```
+Domaine de l'entreprise
+    → scraper site web + org GitHub
+    → extraire : stack tech, projets récents, taille équipe, postes ouverts
+    → trouver nom recruteur + LinkedIn
+    → générer email avec contexte
+    → vérifier adresse email
+    → envoyer (ou mettre en file de validation)
+```
+
+OpenClaw gère l'orchestration. Chaque étape est un appel d'outil, et l'agent décide
+quel contexte vaut la peine d'être inclus dans l'email.
+
+Exemple de sortie pour une entreprise SSI/identité :
+
+> "J'ai remarqué que vous avez récemment open-sourcé votre implémentation de relay DIDComm,
+> et que vous travaillez à la conformité eIDAS 2.0. J'ai passé la dernière année à travailler
+> exactement sur cette stack chez Verana et 2060.io..."
+
+Ce n'est pas un template. L'agent l'a écrit from scratch après avoir lu leur GitHub.
+
+## Étape 5 — Envoyer à grande échelle sans griller ton domaine
+
+N'envoie pas 100 emails depuis ton Gmail personnel en une journée. Tu vas atterrir en spam
+et potentiellement te faire signaler.
+
+**Utilise un domaine d'envoi chauffé :** crée un sous-domaine (`outreach.tondomaine.com`) ou
+utilise un service comme Resend ou Postmark avec une réputation IP propre.
+
+**Throttle :** 10-20 emails/jour max au départ, monte progressivement sur 2-3 semaines.
+
+**Texte brut > HTML :** les boîtes mail des recruteurs ne sont pas des cibles marketing. Les emails
+en texte brut ont une meilleure délivrabilité et paraissent plus humains.
+
+**Suivi d'ouverture avec parcimonie :** un pixel invisible c'est bien. N'ajoute pas de
+paramètres UTM, n'utilise pas de SDK de tracking lourd.
+
+## Résultats
+
+Sur 130 emails personnalisés envoyés à des entreprises tech françaises et européennes :
+
+- **Taux d'ouverture :** ~65%
+- **Taux de réponse :** ~24%
+- **Demandes d'entretien :** 4 entreprises ont demandé un call ou un entretien technique
+
+Le goulot d'étranglement n'était plus "être vu", c'était choisir entre les opportunités.
+
+## Récapitulatif de la stack technique
+
+```
+OpenClaw (orchestration d'agents)
+├── Web scraper (Playwright + Cheerio)
+├── GitHub API (membres d'org, repos, détection de stack)
+├── Hunter.io API (patterns d'emails + vérification)
+├── Zerobounce (fallback domaines catch-all)
+├── Google Search (recherche d'entreprise)
+└── SMTP (Resend API pour l'envoi)
+```
+
+Le pipeline complet tourne en autonomie. Tu valides et approuves les emails avant envoi,
+mais la recherche et la rédaction sont entièrement automatisées.
+
+## Ce que ça change
+
+Les recruteurs reçoivent des centaines de candidatures génériques. Un email froid qui démontre
+que tu comprends déjà leur codebase, leurs challenges et leur stack, ça se remarque.
+
+L'IA agentique ne remplace pas la recherche d'emploi. Elle supprime la partie qui est pure friction,
+trouver la bonne personne, rechercher le contexte, écrire quelque chose qui vaut la peine d'être lu,
+et te laisse te concentrer sur les conversations qui comptent vraiment.
+
+Le code du scraper et du pipeline email est sur mon [GitHub](https://github.com/AirKyzzZ).
+Questions ou retours, contacte-moi sur [Mastodon](https://mastodon.social/@maximemansiet).
