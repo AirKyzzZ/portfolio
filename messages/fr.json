@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Développeur fullstack et chercheur spécialisé en identité décentralisée, SSI et verifiable credentials. Basé à Bordeaux, France."
+    "description": "Développeur fullstack et chercheur spécialisé en identité décentralisée, SSI, systèmes IA agentiques et credentials vérifiables. Basé à Bordeaux, France."
   },
   "nav": {
     "home": "Accueil",
@@ -29,9 +29,9 @@
   },
   "home": {
     "about": "À propos",
-    "bio1": "Je suis développeur fullstack, travaillant à l'intersection de l'ingénierie logicielle et de l'identité décentralisée. Actuellement chez Verana, je construis des systèmes de production pour le Self-Sovereign Identity (SSI) — incluant la messagerie DIDComm, l'échange de verifiable credentials et les registres de confiance.",
-    "bio2": "Mon travail se concentre sur la mise en pratique de systèmes d'identité respectueux de la vie privée et interopérables. Je m'intéresse à la façon dont les protocoles cryptographiques peuvent permettre aux individus de contrôler leur propre identité numérique sans dépendre d'autorités centralisées.",
-    "bio3": "Je me prépare à poursuivre un master dans ce domaine, visant à contribuer aux fondements formels et au déploiement pratique des systèmes d'identité décentralisée.",
+    "bio1": "Je suis développeur fullstack et chercheur, basé à Bordeaux. Je suis tombé dans l'informatique jeune et je n'en suis jamais ressorti, attiré par l'idée que le code n'est pas juste un outil, c'est l'infrastructure de la société. Cette curiosité m'a mené aux systèmes distribués, à la cryptographie, et finalement à une question à laquelle je reviens sans cesse : comment établir la confiance sans autorité centrale ?",
+    "bio2": "Plus je regarde l'architecture du web, plus le problème est clair. Chaque système de confiance qu'on a construit repose encore sur quelqu'un au centre qui se porte garant pour tout le monde : autorités de certification, social login, fournisseurs d'identité (salut France Connect). Ça fonctionne, jusqu'au jour où ça ne fonctionne plus. Ce qui m'intéresse, c'est ce qui vient après.",
+    "bio3": "Aujourd'hui je construis de l'infrastructure SSI en production chez Verana, messagerie DIDComm, credentials vérifiables, registres de confiance. J'ai aussi créé Credat, une bibliothèque open-source qui applique le même modèle de confiance aux agents IA, en leur donnant des identités vérifiables et une délégation de permissions. À mesure que les agents deviennent plus capables et plus autonomes, la question de comment les services les vérifient, et qui les a autorisés à agir, devient urgente.",
     "researchInterests": "Intérêts de recherche",
     "interest1": "Identité décentralisée & DIDs",
     "interest2": "Systèmes de credentials préservant la vie privée",
@@ -46,7 +46,8 @@
     "news3": "Fondation de Klyx — agence de développement web à Bordeaux",
     "news3date": "2025.04",
     "news4": "Conférencier au GDG Bordeaux — présentation sur le développement web moderne",
-    "news4date": "2024.11"
+    "news4date": "2024.11",
+    "bio4": "J'ai récemment rejoint la Trust over IP Foundation pour approfondir le côté recherche de ce travail. J'ai 19 ans, j'investis tout ce que j'ai dans ce domaine, convaincu que l'identité décentralisée est l'un des problèmes fondamentaux de la prochaine ère. Pour les humains, et pour les agents IA."
   },
   "research": {
     "title": "Recherche",

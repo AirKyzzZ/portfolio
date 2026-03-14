@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Fullstack developer and researcher specializing in decentralized identity, SSI, and verifiable credentials. Based in Bordeaux, France."
+    "description": "Fullstack developer and researcher specializing in decentralized identity, SSI, agentic AI systems, and verifiable credentials. Based in Bordeaux, France."
   },
   "nav": {
     "home": "Home",
@@ -29,9 +29,9 @@
   },
   "home": {
     "about": "About",
-    "bio1": "I'm a fullstack developer working at the intersection of software engineering and decentralized identity. Currently at Verana, I build production systems for Self-Sovereign Identity (SSI) — including DIDComm messaging, verifiable credential exchange, and trust registries.",
-    "bio2": "My work focuses on making privacy-preserving identity systems practical and interoperable. I'm interested in how cryptographic protocols can enable individuals to control their own digital identity without relying on centralized authorities.",
-    "bio3": "I'm preparing to pursue a master's degree in this space, aiming to contribute to the formal foundations and practical deployment of decentralized identity systems.",
+    "bio1": "I'm a fullstack developer and researcher based in Bordeaux. I fell into computer science young and never left, drawn by the idea that code isn't just tooling, it's infrastructure for society. That curiosity led me to distributed systems, cryptography, and eventually to the question I keep coming back to: how do we establish trust without a central authority?",
+    "bio2": "The more I look at the web's architecture, the clearer the problem becomes. Every system of trust we've built still relies on someone at the center vouching for everyone else: certificate authorities, social login, identity providers. It works, until it doesn't. I'm interested in what comes after.",
+    "bio3": "Today I build production SSI infrastructure at Verana, DIDComm messaging, verifiable credentials, trust registries. I also created Credat, an open-source library that brings the same trust model to AI agents, giving autonomous systems verifiable identities and scoped delegation. As agents become more capable and autonomous, the question of how services verify them, and who authorized them to act, becomes urgent.",
     "researchInterests": "Research Interests",
     "interest1": "Decentralized Identity & DIDs",
     "interest2": "Privacy-Preserving Credential Systems",
@@ -46,7 +46,8 @@
     "news3": "Founded Klyx — web development agency in Bordeaux",
     "news3date": "2025.04",
     "news4": "Speaker at GDG Bordeaux — presentation on modern web development",
-    "news4date": "2024.11"
+    "news4date": "2024.11",
+    "bio4": "I recently joined the Trust over IP Foundation to deepen the research side of this work. I'm 19, investing everything I have in this space, convinced that decentralized identity is one of the foundational problems of the next era. For humans, and for AI agents."
   },
   "research": {
     "title": "Research",

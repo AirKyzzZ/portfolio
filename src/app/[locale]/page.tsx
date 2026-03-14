@@ -35,6 +35,7 @@ export default async function HomePage({ params }: Props) {
               <p>{t('bio1')}</p>
               <p>{t('bio2')}</p>
               <p>{t('bio3')}</p>
+              <p>{t('bio4')}</p>
             </div>
           </section>
 
