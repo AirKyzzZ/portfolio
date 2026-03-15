@@ -1,0 +1,79 @@
+---
+title: "Ne faites pas confiance aux gouvernements ni aux grandes entreprises. Faites-vous confiance."
+date: "2026-03-15"
+description: "Sur la confiance, les ZKP, les agents IA, et pourquoi l'identité auto-souveraine est le paradigme central de cette révolution."
+tags: ["SSI", "ZKP", "Agents IA", "Vie privée", "Identité décentralisée"]
+---
+
+On est en train de basculer. Lentement, puis d'un coup. On externalise non seulement notre travail mais notre *pensée* vers internet, on expose nos idées, on accède à notre propriété intellectuelle via des machines, on fait confiance à des algorithmes avec des choses qu'on ne dirait pas à ses voisins.
+
+D'où vient vraiment cette confiance ?
+
+## Le problème avec la confiance aujourd'hui
+
+Chaque fois que vous vous connectez quelque part, prouvez votre identité, partagez un credential, ou laissez un agent IA agir en votre nom, vous comptez sur quelqu'un d'autre pour vous cautionner. Une autorité de certification. Un fournisseur de social login. Une base de données gouvernementale.
+
+Ces systèmes fonctionnent, jusqu'au jour où ils ne fonctionnent plus. Et quand ils tombent, ils tombent spectaculairement, des points de défaillance uniques par conception. Internet a été construit sans couche d'identité. On en a ajouté une par-dessus, mal faite, en s'appuyant sur des institutions auxquelles on est censé faire confiance par défaut. Ce n'est pas de la confiance. C'est de la dépendance.
+
+## Les zero-knowledge proofs à l'ère de l'IA
+
+Voilà quelque chose dont on ne parle pas assez : les ZKP peuvent être intégrées dans les frameworks IA. On pourrait prouver qu'on est un utilisateur légitime sans révéler qui on est. Séparer son identité de son usage. Un système IA pourrait vérifier qu'on est autorisé, qu'on est humain, qu'on détient un certain credential, sans connaître notre nom, notre adresse, ou quoi que ce soit d'autre.
+
+Ça ne résout pas le problème de la propriété intellectuelle. Si vous alimentez un modèle avec vos idées, ces idées sont toujours quelque part en lui. Mais ça commence à tracer une ligne entre ce qu'on *prouve* et ce qu'on *révèle*. Cette distinction compte plus que les gens ne le réalisent.
+
+## Les agents IA : le nouveau paradoxe identitaire
+
+On entre maintenant en territoire plus étrange. Les agents IA ne se contentent pas de répondre à des questions, ils prennent des actions, signent des choses, interagissent avec des services, négocient en votre nom. Et ils introduisent un paradoxe que personne n'a encore vraiment résolu :
+
+**Qui est un agent ? Qu'est-ce qu'il peut prouver sur lui-même ? Et qui l'a autorisé à agir ?**
+
+Un humain peut porter un passeport. Un agent ne peut pas. Mais il peut porter un credential cryptographique, délégué par son propriétaire, limité à des actions spécifiques, vérifiable par n'importe quel service avec lequel il interagit, sans qu'une autorité centrale valide quoi que ce soit.
+
+C'est là que SSI et IA agentique entrent en collision. Ce n'est pas un nice-to-have. À mesure que les agents deviennent plus autonomes, la question de leur identité devient une infrastructure critique.
+
+## Le hardware est prêt. Sommes-nous prêts ?
+
+Quelque chose de discrètement révolutionnaire se passe côté hardware. Plus de RAM, plus de cœurs CPU, meilleure efficacité, tout le monde a maintenant accès à une machine capable de faire tourner des algorithmes cryptographiques complexes en local. La puissance de calcul qui nécessitait autrefois un datacenter tient dans votre poche.
+
+L'excuse "c'est trop coûteux à calculer" n'existe plus. On peut le faire. Le fossé n'est plus technique, il est conceptuel. Les gens n'ont pas encore intégré l'idée qu'ils *peuvent* gérer leurs propres clés, faire tourner leur propre vérification, contrôler leurs propres données.
+
+## La confiance est le paradigme central. Pas l'IA. Pas la blockchain.
+
+Voilà ce que je crois, même si la plupart des gens ne l'ont pas encore formulé ainsi : la confiance est le problème central de cette révolution. La question de à qui vous faites confiance, comment vous prouvez des choses, et comment vous gardez le contrôle sur vos informations, c'est le fil conducteur qui relie tout.
+
+Les informations et les identités devraient être vérifiables et réfutables. On devrait pouvoir partager la preuve de quelque chose sans partager la chose elle-même. Vérifier sans stocker. Et rien de tout ça ne devrait dépendre d'un point de défaillance unique.
+
+Ne faites pas confiance aux gouvernements ni aux grandes boîtes pour tenir votre vie numérique ensemble. Ils se préoccupent de l'argent et de leur image de marque. Je me ferais confiance mille fois plus, même bourré, pour gérer ma propre identité numérique. Le but de tout ça, c'est de remettre ce pouvoir là où il doit être : chez les utilisateurs.
+
+## Ce que ça donne en pratique
+
+Ce n'est pas abstrait. Prenons les credentials d'éducation. Des plateformes comme MIT OpenCourseware pourraient émettre des preuves vérifiables de completion, qu'un futur employeur pourrait vérifier instantanément, sans appeler le MIT, sans base de données centralisée, sans intermédiaire.
+
+Pareil pour l'expérience professionnelle, les licences, les certifications. Au lieu du cauchemar actuel des vérifications de références et des demandes de documents, vous partagez une preuve. Vérifiée cryptographiquement. Personne ne peut la falsifier. Personne ne peut la modifier. Et vous contrôlez qui la voit.
+
+```
+Système traditionnel
+---------------------
+Employeur  →  "Prouvez que vous avez ce diplôme"
+Vous       →  envoyez le PDF, contactez le MIT
+MIT        →  "oui, c'est authentique" (peut-être, un jour)
+
+Point de défaillance unique. Centralisé. Lent.
+
+
+Avec les Verifiable Credentials
+---------------------------------
+MIT        →  émet un credential cryptographique  →  stocké dans votre wallet
+Employeur  →  "Prouvez que vous avez ce diplôme"
+Vous       →  présentez une zero-knowledge proof
+Employeur  →  vérifie instantanément ✓
+
+MIT non contacté. Aucune base de données interrogée.
+Vous gardez le contrôle.
+```
+
+## La suite
+
+Je travaille sur les agents IA ensuite. La question de comment les agents s'identifient, délèguent des permissions, et établissent la confiance avec les services avec lesquels ils interagissent, c'est le problème qui m'intéresse le plus en ce moment.
+
+On a construit une couche d'identité pour les humains, mal. Maintenant on déploie des agents sans en avoir du tout. Ne reproduisons pas la même erreur.

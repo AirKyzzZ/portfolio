@@ -1,0 +1,79 @@
+---
+title: "Don't Trust Governments or Big Corps. Trust Yourself."
+date: "2026-03-15"
+description: "On trust, ZKPs, AI agents, and why self-sovereign identity is the central paradigm of this revolution."
+tags: ["SSI", "ZKP", "AI Agents", "Privacy", "Decentralized Identity"]
+---
+
+We're shifting. Slowly, then all at once. We're outsourcing not just our work but our *thinking* to the internet, exposing our thoughts, accessing our intellectual property through machines, trusting algorithms with things we wouldn't tell our neighbors.
+
+Where does that trust actually come from?
+
+## The Problem With Trust Today
+
+Every time you log in somewhere, prove who you are, share a credential, or let an AI agent act on your behalf, you're relying on someone else to vouch for you. A certificate authority. A social login provider. A government database.
+
+These systems work, until they don't. And when they fail, they fail spectacularly, single points of failure by design. The internet was built without an identity layer. We stitched one on top, badly, using institutions we're supposed to trust by default. That's not trust. That's dependency.
+
+## Zero-Knowledge Proofs in the AI Era
+
+Here's something that doesn't get talked about enough: ZKPs can be layered onto AI frameworks. You could prove you're a legitimate user without revealing who you are. Separate your identity from your usage. An AI system could verify that you're authorized, that you're human, that you hold a certain credential, without knowing your name, your address, or anything else.
+
+It doesn't solve the intellectual property problem. If you feed your ideas into a model, those ideas are still in there somewhere. But it starts to draw a line between what you *prove* and what you *reveal*. That distinction matters more than people realize.
+
+## AI Agents: The New Identity Paradox
+
+Now we're entering stranger territory. AI agents don't just answer questions, they take actions, sign things, interact with services, negotiate on your behalf. And they introduce a paradox nobody has cleanly solved yet:
+
+**Who is an agent? What can it prove about itself? And who authorized it to act?**
+
+A human can carry a passport. An agent can't. But it can carry a cryptographic credential, delegated by its owner, scoped to specific actions, verifiable by any service it interacts with, without a central authority validating anything.
+
+This is where SSI and agentic AI collide. It's not a nice-to-have. As agents become more autonomous, the question of their identity becomes critical infrastructure.
+
+## The Hardware Is Ready. Are We?
+
+Something quietly revolutionary is happening. More RAM, more CPU cores, better efficiency, everyone now has access to a machine capable of running complex cryptographic algorithms locally. The processing power that used to require a data center is in your pocket.
+
+The excuse of "it's too expensive to compute" is gone. We can do this. The gap isn't technical anymore, it's conceptual. People haven't caught up to the idea that they *can* hold their own keys, run their own verification, control their own data.
+
+## Trust Is the Central Paradigm. Not AI. Not Blockchain.
+
+Here's what I believe, even if most people haven't framed it this way yet: trust is the central problem of this revolution. The question of who you trust, how you prove things, and how you maintain control over your own information, that's the throughline connecting everything.
+
+Information and identities should be trustable and refutable. You should be able to share proof of something without sharing the thing itself. Verify without storing. And none of this should depend on a single point of failure.
+
+Don't trust governments or big corps to hold your digital life together. They care about money and brand image. I'd trust myself a thousand times more, even drunk, to manage my own digital identity. The goal of all of this is to put that power back where it belongs: with users.
+
+## What This Looks Like in Practice
+
+This isn't abstract. Take education credentials. Platforms like MIT OpenCourseware could issue verifiable proofs of completion, that a future employer could verify instantly, without calling MIT, without a centralized database, without a third party in the middle.
+
+Same thing for work experience, licenses, certifications. Instead of the current nightmare of reference checks and document requests, you share a proof. Verified cryptographically. Nobody can fake it. Nobody can modify it. And you control who sees it.
+
+```
+Traditional system
+------------------
+Employer  →  "Prove you graduated"
+You       →  send diploma PDF, email MIT
+MIT       →  "yes, that's real" (maybe, eventually)
+
+Single point of failure. Centralized. Slow.
+
+
+With Verifiable Credentials
+----------------------------
+MIT       →  issues cryptographic credential  →  stored in your wallet
+Employer  →  "Prove you graduated"
+You       →  present a zero-knowledge proof
+Employer  →  verifies instantly ✓
+
+No MIT contacted. No database queried.
+You stay in control.
+```
+
+## Where I'm Going With This
+
+I'm working on AI agents next. The question of how agents identify themselves, delegate permissions, and build trust with services they interact with, that's the problem I find most interesting right now.
+
+We built an identity layer for humans, badly. Now we're deploying agents without one at all. Let's not make the same mistake twice.
