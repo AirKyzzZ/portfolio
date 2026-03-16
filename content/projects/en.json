@@ -6,7 +6,7 @@
     "longDescription": "Credat is an open-source TypeScript library that brings decentralized identity to AI agent ecosystems. It allows agents to create verifiable identities (did:web, did:key), issue scoped delegation credentials, and perform cryptographic handshakes to establish mutual trust. Built on W3C DID v1.1 and VC Data Model standards, with minimal dependencies and a transport-agnostic design. Used as the reference implementation for ongoing research on Sybil attacks in DID-based agent ecosystems.",
     "technologies": ["TypeScript", "DIDs", "Verifiable Credentials", "SD-JWT", "Node.js"],
     "sourceUrl": "https://github.com/credat/credat",
-    "demoUrl": "https://credat.dev",
+    "demoUrl": "https://credat.io",
     "featured": true,
     "year": 2026
   },
@@ -27,7 +27,7 @@
     "description": "Real estate platform connecting buyers with new-build property programs across France.",
     "longDescription": "HopHopImmo is a real estate platform built and maintained as a long-term client project. The work involves building a production Next.js frontend with interactive maps, program directories, developer pages, and a full contact flow, delivered across multiple milestones with GitLab CI/CD. It is my main ongoing client engagement and the largest project under Klyx.",
     "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GitLab CI/CD", "Netlify"],
-    "demoUrl": "https://hophopimmo.fr",
+    "demoUrl": "https://hophopimmo.com",
     "featured": true,
     "year": 2025
   },
@@ -68,7 +68,7 @@
     "longDescription": "VertiFlow is an urban movement brand centered around the parkour community. The platform connects athletes, documents sessions, and builds a community around freerunning and movement culture. Drawing from seven years of high-level parkour practice, the project bridges athletic identity with digital community building.",
     "technologies": ["React", "Node.js", "TypeScript"],
     "sourceUrl": "https://github.com/airkyzzz/vertiflow",
-    "demoUrl": "https://vertiflow.com",
+    "demoUrl": "https://vertiflow.fr",
     "featured": false,
     "year": 2024
   },
@@ -85,7 +85,7 @@
   {
     "slug": "pkba",
     "title": "Parkour Bassin d'Arcachon",
-    "description": "Community website for the largest parkour club in southwestern France, co-founded in 2019.",
+    "description": "Community website for the largest parkour club in southwestern France, co-founded in 2025.",
     "longDescription": "PKBA is the largest parkour club in Nouvelle-Aquitaine, which I co-founded and where I serve on the board. The community website handles event scheduling, member profiles, training spot maps, and photo galleries. Designed mobile-first for athletes checking spots on the go. As a high-level parkour athlete from 2017 to 2024, building this was as much a personal project as a technical one.",
     "technologies": ["React", "Tailwind CSS", "Vercel"],
     "demoUrl": "https://pkba.vertiflow.fr",
