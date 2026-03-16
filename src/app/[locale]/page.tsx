@@ -36,6 +36,7 @@ export default async function HomePage({ params }: Props) {
               <p>{t('bio2')}</p>
               <p>{t('bio3')}</p>
               <p>{t('bio4')}</p>
+              <p>{t('bio5')}</p>
             </div>
           </section>
 
@@ -55,10 +56,12 @@ export default async function HomePage({ params }: Props) {
           <section>
             <SectionHeading id="news">{t('news')}</SectionHeading>
             <div className="space-y-2">
+              <NewsItem date={t('news5date')}>{t('news5')}</NewsItem>
               <NewsItem date={t('news2date')}>{t('news2')}</NewsItem>
               <NewsItem date={t('news1date')}>{t('news1')}</NewsItem>
               <NewsItem date={t('news3date')}>{t('news3')}</NewsItem>
               <NewsItem date={t('news4date')}>{t('news4')}</NewsItem>
+              <NewsItem date={t('news6date')}>{t('news6')}</NewsItem>
             </div>
           </section>
 
