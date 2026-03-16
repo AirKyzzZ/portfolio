@@ -47,7 +47,12 @@
     "news3date": "2025.04",
     "news4": "Conférencier au GDG Bordeaux — présentation sur le développement web moderne",
     "news4date": "2024.11",
-    "bio4": "J'ai récemment rejoint la Trust over IP Foundation pour approfondir le côté recherche de ce travail. J'ai 19 ans, j'investis tout ce que j'ai dans ce domaine, convaincu que l'identité décentralisée est l'un des problèmes fondamentaux de la prochaine ère. Pour les humains, et pour les agents IA."
+    "bio4": "J'ai récemment rejoint la Trust over IP Foundation pour approfondir le côté recherche de ce travail. J'ai 19 ans, j'investis tout ce que j'ai dans ce domaine, convaincu que l'identité décentralisée est l'un des problèmes fondamentaux de la prochaine ère. Pour les humains, et pour les agents IA.",
+    "bio5": "Avant le code, j'ai passé sept ans à m'entraîner en tant qu'athlète de haut niveau en parkour, en compétition et en enseignement à travers la France. En 2019, j'ai co-fondé le PKBA, aujourd'hui le plus grand club de parkour de Nouvelle-Aquitaine. Discipline, reconnaissance de patterns et apprentissage rapide de ses erreurs, le sport et la pensée systémique ont plus en commun qu'il n'y paraît.",
+    "news5": "Publication de Credat sur npm, couche de confiance open-source pour agents IA avec DIDs et VCs",
+    "news5date": "2026.02",
+    "news6": "Co-fondation du PKBA, le plus grand club de parkour du Sud-Ouest",
+    "news6date": "2019.06"
   },
   "research": {
     "title": "Recherche",
