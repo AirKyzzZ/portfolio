@@ -47,7 +47,12 @@
     "news3date": "2025.04",
     "news4": "Speaker at GDG Bordeaux — presentation on modern web development",
     "news4date": "2024.11",
-    "bio4": "I recently joined the Trust over IP Foundation to deepen the research side of this work. I'm 19, investing everything I have in this space, convinced that decentralized identity is one of the foundational problems of the next era. For humans, and for AI agents."
+    "bio4": "I recently joined the Trust over IP Foundation to deepen the research side of this work. I'm 19, investing everything I have in this space, convinced that decentralized identity is one of the foundational problems of the next era. For humans, and for AI agents.",
+    "bio5": "Before tech, I spent seven years training as a high-level parkour athlete, competing and teaching across France. In 2019, I co-founded PKBA, now the largest parkour club in Nouvelle-Aquitaine. Discipline, pattern recognition, and learning from failure fast, sports and systems thinking have more in common than they appear.",
+    "news5": "Published Credat on npm, open-source trust layer for AI agents using DIDs and VCs",
+    "news5date": "2026.02",
+    "news6": "Co-founded PKBA, the largest parkour club in southwestern France",
+    "news6date": "2019.06"
   },
   "research": {
     "title": "Research",
