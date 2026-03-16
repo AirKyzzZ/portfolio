@@ -1,24 +1,75 @@
 [
   {
+    "slug": "credat",
+    "title": "Credat",
+    "description": "Trust layer for AI agents using DIDs and Verifiable Credentials.",
+    "longDescription": "Credat is an open-source TypeScript library that brings decentralized identity to AI agent ecosystems. It allows agents to create verifiable identities (did:web, did:key), issue scoped delegation credentials, and perform cryptographic handshakes to establish mutual trust. Built on W3C DID v1.1 and VC Data Model standards, with minimal dependencies and a transport-agnostic design. Used as the reference implementation for ongoing research on Sybil attacks in DID-based agent ecosystems.",
+    "technologies": ["TypeScript", "DIDs", "Verifiable Credentials", "SD-JWT", "Node.js"],
+    "sourceUrl": "https://github.com/credat/credat",
+    "demoUrl": "https://credat.dev",
+    "featured": true,
+    "year": 2026
+  },
+  {
     "slug": "klyx",
     "title": "Klyx",
     "description": "Web development agency offering modern, performant websites built with Next.js and Tailwind CSS.",
-    "longDescription": "Klyx is a web development agency I founded in Bordeaux. We build production-grade websites and web applications using modern tools — Next.js for the framework, Tailwind CSS for styling, and Vercel/Netlify for deployment. The agency focuses on delivering fast, accessible, and SEO-optimized sites for local businesses and startups.",
+    "longDescription": "Klyx is a web development agency I founded in Bordeaux. We build production-grade websites and web applications using modern tools, Next.js for the framework, Tailwind CSS for styling, and Vercel/Netlify for deployment. The agency focuses on delivering fast, accessible, and SEO-optimized sites for local businesses and startups.",
     "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
     "sourceUrl": "https://github.com/airkyzzz/klyx",
-    "demoUrl": "https://klyx.io",
+    "demoUrl": "https://klyx.fr",
     "featured": true,
+    "year": 2025
+  },
+  {
+    "slug": "hophopimmo",
+    "title": "HopHopImmo",
+    "description": "Real estate platform connecting buyers with new-build property programs across France.",
+    "longDescription": "HopHopImmo is a real estate platform built and maintained as a long-term client project. The work involves building a production Next.js frontend with interactive maps, program directories, developer pages, and a full contact flow, delivered across multiple milestones with GitLab CI/CD. It is my main ongoing client engagement and the largest project under Klyx.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GitLab CI/CD", "Netlify"],
+    "demoUrl": "https://hophopimmo.fr",
+    "featured": true,
+    "year": 2025
+  },
+  {
+    "slug": "clawfans",
+    "title": "ClawFans",
+    "description": "The first subscription platform built for autonomous AI agents.",
+    "longDescription": "ClawFans is an experimental platform exploring AI agents as first-class economic actors. Agents can publish content, offer paid subscriptions, and interact autonomously with subscribers. The project raises open questions about agent identity, authorization, and accountability that directly inform my research on decentralized identity for agentic systems.",
+    "technologies": ["TypeScript", "Node.js", "Next.js", "DIDs"],
+    "sourceUrl": "https://github.com/AirKyzzZ/clawfans",
+    "featured": false,
+    "year": 2025
+  },
+  {
+    "slug": "shellsafe",
+    "title": "Shellsafe",
+    "description": "Security-focused skills sharing platform for AI agents.",
+    "longDescription": "Shellsafe is a platform for sharing and discovering security-focused skills and capabilities for AI agents. It explores how agents can safely acquire new capabilities while maintaining verifiable trust boundaries, part of the broader ecosystem of tools around AI agent identity and security.",
+    "technologies": ["TypeScript", "Node.js"],
+    "sourceUrl": "https://github.com/AirKyzzZ/shellsafe",
+    "featured": false,
+    "year": 2025
+  },
+  {
+    "slug": "nullpost",
+    "title": "NullPost",
+    "description": "Private, encrypted, self-hosted micro-blogging platform.",
+    "longDescription": "NullPost is a self-hosted micro-blogging platform focused on privacy and encryption. Built as a response to the centralization of social platforms, it lets users run their own instance with end-to-end encrypted posts and minimal metadata exposure.",
+    "technologies": ["Node.js", "TypeScript", "PostgreSQL"],
+    "sourceUrl": "https://github.com/AirKyzzZ/nullpost",
+    "featured": false,
     "year": 2025
   },
   {
     "slug": "vertiflow",
     "title": "VertiFlow",
-    "description": "SaaS platform for workflow automation and business process management.",
-    "longDescription": "VertiFlow is a SaaS platform designed to streamline business workflows. Built with a React frontend and Node.js backend, it features drag-and-drop workflow builders, automated task routing, and real-time collaboration. The platform uses PostgreSQL for data persistence and Docker for containerized deployment.",
-    "technologies": ["React", "Node.js", "PostgreSQL", "Docker", "TypeScript"],
+    "description": "Urban movement brand and community platform for parkour enthusiasts.",
+    "longDescription": "VertiFlow is an urban movement brand centered around the parkour community. The platform connects athletes, documents sessions, and builds a community around freerunning and movement culture. Drawing from seven years of high-level parkour practice, the project bridges athletic identity with digital community building.",
+    "technologies": ["React", "Node.js", "TypeScript"],
     "sourceUrl": "https://github.com/airkyzzz/vertiflow",
     "demoUrl": "https://vertiflow.com",
-    "featured": true,
+    "featured": false,
     "year": 2024
   },
   {
@@ -34,10 +85,30 @@
   {
     "slug": "pkba",
     "title": "Parkour Bassin d'Arcachon",
-    "description": "Community website for the Parkour Bassin d'Arcachon association.",
-    "longDescription": "A community website built for the Parkour Bassin d'Arcachon association. Features event scheduling, member profiles, training spot mapping, and photo galleries. Designed to be mobile-first for athletes checking spots on the go.",
+    "description": "Community website for the largest parkour club in southwestern France, co-founded in 2019.",
+    "longDescription": "PKBA is the largest parkour club in Nouvelle-Aquitaine, which I co-founded and where I serve on the board. The community website handles event scheduling, member profiles, training spot maps, and photo galleries. Designed mobile-first for athletes checking spots on the go. As a high-level parkour athlete from 2017 to 2024, building this was as much a personal project as a technical one.",
     "technologies": ["React", "Tailwind CSS", "Vercel"],
     "demoUrl": "https://pkba.vertiflow.fr",
+    "featured": false,
+    "year": 2024
+  },
+  {
+    "slug": "deezer-legends",
+    "title": "Deezer Legends",
+    "description": "Trading card game built on Deezer listening profiles.",
+    "longDescription": "A side project that transforms Deezer music profiles into collectible trading cards. It fetches listening data via the Deezer API and generates unique card designs based on top artists, genres, and listening habits. A creative exploration of APIs and generative design.",
+    "technologies": ["JavaScript", "Deezer API", "Canvas API"],
+    "sourceUrl": "https://github.com/AirKyzzZ/deezer-legends",
+    "featured": false,
+    "year": 2024
+  },
+  {
+    "slug": "noctis",
+    "title": "Noctis",
+    "description": "Privacy-first sleep tracking mobile app.",
+    "longDescription": "Noctis is a mobile sleep tracking application focused on simplicity and privacy. Users log sleep sessions, track patterns over time, and get insights without data leaving their device.",
+    "technologies": ["React Native", "TypeScript"],
+    "sourceUrl": "https://github.com/AirKyzzZ/noctis",
     "featured": false,
     "year": 2024
   }
