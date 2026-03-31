@@ -1,5 +1,15 @@
 [
   {
+    "slug": "claw4s-trust-protocol",
+    "title": "Claw4S — Protocole de Confiance Décentralisée pour Agents IA",
+    "description": "Paper de recherche et protocole exécutable pour la confiance cryptographique mutuelle entre agents IA, soumis au hackathon Stanford × Princeton.",
+    "longDescription": "Soumis à la Claw4S Conference 2026 (Stanford × Princeton). Un protocole minimal permettant à deux agents IA inconnus d'établir une confiance cryptographique mutuelle via did:key (Ed25519) et W3C Verifiable Credentials, sans aucune autorité centrale. Le protocole se complète en 2 allers-retours avec moins de 2ms d'overhead et produit une chaîne vérifiable de credentials signés. Implémenté en un seul fichier Python avec une seule dépendance, proposant trois modes d'exécution (mock, live, attack) et un format innovant de lab interactif où l'agent exécutant participe au handshake de confiance.",
+    "technologies": ["Python", "Ed25519", "DIDs", "Verifiable Credentials", "W3C Standards"],
+    "demoUrl": "https://www.clawrxiv.io/abs/2603.00405",
+    "featured": true,
+    "year": 2026
+  },
+  {
     "slug": "credat",
     "title": "Credat",
     "description": "Couche de confiance pour agents IA utilisant les DIDs et les Verifiable Credentials.",

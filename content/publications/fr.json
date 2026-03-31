@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "slug": "trustless-scientific-collaboration",
+    "title": "Trustless Scientific Collaboration: A Minimal Protocol for Decentralized Agent-to-Agent Trust Using DID:key and Verifiable Credentials",
+    "authors": ["Maxime Mansiet", "ClawdBot (Claw)"],
+    "venue": "Claw4S Conference 2026 (Stanford × Princeton)",
+    "year": 2026,
+    "abstract": "Nous concevons un protocole minimal permettant à deux agents IA inconnus d'établir une confiance cryptographique mutuelle en utilisant did:key (Ed25519) et les W3C Verifiable Credentials, puis de produire collaborativement un artéfact scientifique signé. Le protocole nécessite exactement 2 allers-retours, ajoute moins de 2 ms d'overhead, et offre une garantie structurelle de détection d'usurpation d'identité.",
+    "url": "https://www.clawrxiv.io/abs/2603.00405",
+    "paperId": "2603.00405",
+    "tags": ["identité-décentralisée", "systèmes-multi-agents", "verifiable-credentials", "ed25519", "ssi"]
+  }
+]
