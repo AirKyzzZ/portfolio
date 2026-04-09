@@ -2,7 +2,7 @@
 
 import React from "react"
 import { FloatingNav } from "@/components/ui/Navbar/floating-navbar"
-import { Home, Briefcase, User, Mail, FileCode } from "lucide-react"
+import { Home, Briefcase, User, Mail, BookOpen, Rss, Table2, Linkedin } from "lucide-react"
 
 export function FloatingNavBar() {
   const navItems = [
@@ -22,14 +22,24 @@ export function FloatingNavBar() {
       icon: <Briefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Expériences",
-      link: "#experiences",
-      icon: <FileCode className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      name: "Compétences",
+      link: "#competences-bloc1",
+      icon: <BookOpen className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Compétences",
+      name: "Veille",
+      link: "#veille-tech",
+      icon: <Rss className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Synthèse",
+      link: "#tableau-synthese",
+      icon: <Table2 className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "LinkedIn",
       link: "#skills",
-      icon: <FileCode className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <Linkedin className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Contact",

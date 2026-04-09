@@ -7,15 +7,16 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const project = projects.find(p => p.id === params.id) || null;
-  const otherProjects = projects.filter(p => p.id !== params.id);
-  
+export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const project = projects.find(p => p.id === id) || null;
+  const otherProjects = projects.filter(p => p.id !== id);
+
   return (
-    <ProjectPageClient 
-      project={project} 
+    <ProjectPageClient
+      project={project}
       otherProjects={otherProjects}
-      projectId={params.id}
+      projectId={id}
     />
   );
 }

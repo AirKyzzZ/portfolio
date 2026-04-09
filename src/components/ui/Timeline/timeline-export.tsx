@@ -5,25 +5,81 @@ import { Timeline } from "@/components/ui/Timeline/timeline";
 export function TimelinePortfolio() {
   const data = [
     {
+      title: "Jan. 2026 - Présent",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            <strong>Ingénieur logiciel chez Hop Hop Immo</strong> — Stage (→ alternance en sept. 2026) à Saint-Médard-en-Jalles.
+            Développement de <em>Hoppy</em>, premier assistant immobilier vocal (ElevenLabs + LLM) disponible 24/7 sur une base de 28&nbsp;000+ annonces.
+            Agents IA autonomes pour l&apos;automatisation marketing. Refonte homepage Next.js avec triplement du trafic organique en 3 mois.
+          </p>
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Hoppy — assistant vocal immobilier (ElevenLabs, LLM)
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Agents IA marketing (génération contenu, réseaux sociaux)
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ SEO — trafic organique ×3 en 3 mois
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Stage officiel BTS SIO SLAM
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "Sept. 2025 - Présent",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <strong>Développeur fullstack chez Verana</strong> - Conception et développement des briques clés du Verana Verifiable Trust Network. 
-            Développement d&apos;applications web (Verana Visualizer), APIs, services backend et SDKs avec Next.js, React, TypeScript, Tailwind, Node.js.
-            Déploiements via Docker, Kubernetes/Helm et CI/CD. Contribution à une infrastructure de confiance ouverte pour l&apos;Internet.
+            <strong>Développeur fullstack chez Verana (2060.io)</strong> - Conception et développement des briques clés du Verana Verifiable Trust Network.
+            Développement d&apos;applications web (Verana Visualizer pour explorer DIDs, credentials et trust registries), APIs, services backend et SDKs avec Next.js, React, TypeScript, Tailwind, Node.js.
+            Déploiements via Docker, Kubernetes/Helm et CI/CD. Conception de Concieragent (agent IA orchestrant 6 serveurs MCP via DIDComm chiffré).
           </p>
           <div className="grid grid-cols-2 gap-4">
           <a href="https://verana.io/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
               <Image
                 src="/verana.png"
-                alt="Klyx - Agence de création digitale"
+                alt="Verana - Verifiable Trust Network"
                 width={500}
                 height={500}
                 className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
               />
             </a>
             </div>
+        </div>
+      ),
+    },
+    {
+      title: "Août 2025 - Jan. 2026",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            <strong>Harvard University — CS50</strong> : Introduction to Computer Science (Cambridge, MA / Online).
+            Certification en ingénierie informatique couvrant algorithmique, structures de données, C, Python, SQL et développement web.
+          </p>
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ CS50x — Introduction to Computer Science
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Algorithmique, C, Python, SQL, Web
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <a href="https://epsi.fr/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/epsi_logo.png"
+                alt="Harvard CS50"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </a>
+          </div>
         </div>
       ),
     },

@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 
 // Metadata should be in a separate metadata file or directly exported without 'use client'
 export const metadata = {
-  title: "Maxime Mansiet - Développeur Full-Stack & Entrepreneur | React, Next.js, Bordeaux",
-  description: "Portfolio de Maxime Mansiet, développeur full-stack et entrepreneur basé à Bordeaux. Spécialisé en React, Next.js et développement web moderne. Fondateur de Klyx et VertiFlow. Découvrez mes projets et expériences.",
-  keywords: "Maxime Mansiet, développeur full-stack, React, Next.js, TypeScript, Bordeaux, entrepreneur, Klyx, VertiFlow, développement web, UI/UX, GDG Bordeaux, portfolio développeur, développeur React Bordeaux, entrepreneur tech Bordeaux",
+  title: "Portfolio BTS SIO SLAM — Maxime Mansiet | E4 Bloc 1 | EPSI Bordeaux",
+  description: "Portfolio professionnel de Maxime Mansiet, étudiant BTS SIO option SLAM à l'EPSI Bordeaux. Présentation du parcours de professionnalisation et des réalisations couvrant les 6 compétences du Bloc 1 — Épreuve E4. Développeur fullstack chez Verana, fondateur de Klyx, ingénieur logiciel chez Hop Hop Immo.",
+  keywords: "BTS SIO SLAM, E4, Bloc 1, EPSI Bordeaux, Maxime Mansiet, portfolio professionnel, compétences informatiques, développement web, stage informatique, Verana, Klyx, Hop Hop Immo, Next.js, TypeScript",
   author: "Maxime Mansiet",
   creator: "Maxime Mansiet",
   publisher: "Maxime Mansiet",
@@ -33,7 +33,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://maximemansiet.fr',
+    canonical: 'https://e4.maximemansiet.fr',
   },
   icons: {
     icon: '/favicon.ico',
@@ -42,16 +42,16 @@ export const metadata = {
   },
   manifest: '/manifest.json',
   openGraph: {
-    title: "Maxime Mansiet - Développeur Full-Stack & Entrepreneur",
-    description: "Portfolio de Maxime Mansiet, développeur full-stack et entrepreneur basé à Bordeaux. Spécialisé en React, Next.js et développement web moderne.",
-    url: 'https://maximemansiet.fr',
-    siteName: 'Maxime Mansiet - Portfolio',
+    title: "Portfolio BTS SIO SLAM — Maxime Mansiet | E4 Bloc 1",
+    description: "Portfolio BTS SIO SLAM de Maxime Mansiet (EPSI Bordeaux). Épreuve E4 Bloc 1 — parcours de professionnalisation, tableau de synthèse et compétences.",
+    url: 'https://e4.maximemansiet.fr',
+    siteName: 'Portfolio BTS SIO SLAM — Maxime Mansiet',
     images: [
       {
-        url: 'https://maximemansiet.fr/banner.png',
+        url: 'https://e4.maximemansiet.fr/banner.png',
         width: 1200,
         height: 630,
-        alt: 'Maxime Mansiet - Développeur Full-Stack',
+        alt: 'Portfolio BTS SIO SLAM — Maxime Mansiet',
       },
     ],
     locale: "fr_FR",
@@ -59,12 +59,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maxime Mansiet - Développeur Full-Stack & Entrepreneur",
-    description: "Portfolio de Maxime Mansiet, développeur full-stack et entrepreneur basé à Bordeaux.",
-    images: ['https://maximemansiet.fr/banner.png'],
+    title: "Portfolio BTS SIO SLAM — Maxime Mansiet | E4 Bloc 1",
+    description: "Portfolio BTS SIO SLAM de Maxime Mansiet (EPSI Bordeaux). Épreuve E4 Bloc 1 — parcours de professionnalisation et tableau de synthèse.",
+    images: ['https://e4.maximemansiet.fr/banner.png'],
   },
   verification: {
-    google: 'your-google-verification-code', // Replace with your actual verification code
+    google: 'your-google-verification-code',
   },
 };
 

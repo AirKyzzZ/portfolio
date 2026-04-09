@@ -41,9 +41,9 @@ export default function ProjectPageClient({ project, otherProjects, projectId }:
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-4">
         <h1 className="text-3xl font-bold mb-4">Projet non trouvé</h1>
-        <p className="mb-8">Le projet que vous recherchez n'existe pas.</p>
+        <p className="mb-8">Le projet que vous recherchez n&apos;existe pas.</p>
         <Link href="/" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg">
-          Retour à l'accueil
+          Retour à l&apos;accueil
         </Link>
       </div>
     );
