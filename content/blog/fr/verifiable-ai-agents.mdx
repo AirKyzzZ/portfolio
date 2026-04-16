@@ -1,0 +1,62 @@
+---
+title: "L'avenir des agents IA est vérifiable, personnalisable, et vous appartient"
+date: "2026-04-16"
+description: "Les agents IA deviennent autonomes. C'est puissant, et dangereux. Les credentials vérifiables, les permissions scopées et l'identité décentralisée sont la réponse, pour tout le monde, pas seulement les développeurs."
+tags: ["Agents IA", "SSI", "Credentials Vérifiables", "Hologram", "Confiance"]
+---
+
+Les agents IA appellent des API, planifient des réunions, écrivent du code, négocient en votre nom. Ils deviennent semi-autonomes. Et personne ne pose la question évidente :
+
+**Qui les surveille ?**
+
+Il n'y a pas de couche de responsabilité. On ne peut pas vérifier qui opère un bot, ce qu'il a le droit de faire, ou s'il a vraiment fait ce qu'il prétend. Pas de traçabilité. Pas de permissions limitées. Pas d'identité. C'est du tout-ou-rien sur l'accès aux outils et aux données, en faisant aveuglément confiance à la plateforme qui les héberge.
+
+Pour un chatbot personnel, ça passe. Pour quoi que ce soit de sérieux, des services, des équipes, des entreprises, c'est un désastre en attente.
+
+## La vérification est la couche manquante
+
+La prochaine vague de l'IA ne consiste pas à rendre les agents plus intelligents. C'est de les rendre *dignes de confiance*.
+
+Trois choses rendent ça possible :
+
+- **Les credentials vérifiables**, les agents prouvent qui ils sont et qui les opère, cryptographiquement
+- **Les permissions scopées**, chaque appel d'outil passe par un contrôle d'accès basé sur les rôles, pas un accès blanket
+- **L'identité décentralisée**, aucune autorité centrale ne décide qui est légitime, ce sont les maths qui décident
+
+Ce n'est pas un sujet de développeur. C'est le socle pour *quiconque* déploie ou interagit avec un agent IA en toute sécurité. Le passage de "faire confiance à la plateforme" à "vérifier l'agent."
+
+Et voilà ce qui m'enthousiasme le plus : quand on combine plusieurs agents semi-autonomes vérifiables, chacun avec des modèles différents, des scopes différents, des perspectives différentes, mais tous responsables, on obtient des workflows fondamentalement plus puissants que n'importe quel agent seul. Perspectives multiples, harnais multiples, traçabilité totale.
+
+## Ce que ça donne en pratique
+
+### HoloClaw, Espaces de travail IA multiplayer vérifiés
+
+Je construis quelque chose appelé HoloClaw chez [2060.io](https://2060.io). L'idée : plusieurs utilisateurs vérifiés partageant une seule session d'agent IA, chacun sur son propre canal chiffré, chacun avec une identité cryptographiquement vérifiée et un rôle spécifique.
+
+Un collaborateur peut utiliser les outils. Un observateur peut regarder mais pas interagir avec l'IA. Un approbateur doit valider avant que certaines actions s'exécutent. Chaque appel d'outil passe par un point d'application unique qui décide : autoriser, refuser, ou demander approbation. Aucun contournement possible. Chaque action est loggée, diffusée aux membres en temps réel, et liée à une identité vérifiée.
+
+C'est comme ça qu'on obtient de la responsabilité dans les workflows multi-agents. Pas en espérant que la plateforme fasse bien les choses, mais en rendant structurellement impossible d'agir sans vérification.
+
+J'ai formalisé ce modèle dans un article intitulé *Verifiable Multi-Party Agent Workflows*, décrivant un framework pour N participants authentifiés partageant une seule session d'agent avec des propriétés de sécurité prouvables. Il est en cours de review, plus d'infos bientôt.
+
+### Hackathon EAFIT, Des utilisateurs non-tech créent leurs propres agents vérifiés
+
+C'est là que ça devient concret pour tout le monde, pas seulement les développeurs.
+
+À l'[Université EAFIT](https://github.com/verana-labs/eafit-challenge) en Colombie, on a lancé un challenge avec [Verana Labs](https://verana.io) : des étudiants ont construit une plateforme no-code où n'importe qui, un plombier, un fleuriste, un consultant freelance, peut créer son propre agent IA.
+
+On lui donne une persona. On connecte des outils : Google Calendar, Gmail, une API météo. On le déploie en un clic. Les clients interagissent via l'application Hologram, ils scannent un QR code, vérifient l'identité de l'agent via des credentials blockchain, et commencent à discuter.
+
+L'agent du plombier gère les rendez-vous. Celui de la fleuriste traite les commandes. Chacun est vérifiable dès le premier jour. Les clients savent qui l'opère, ce qu'il peut faire, et que les interactions sont cryptographiquement sécurisées.
+
+Ce n'est pas un outil de développeur. C'est une plateforme pour des personnes non-techniques qui veulent posséder leur présence IA avec des garanties de confiance intégrées.
+
+## Pourquoi c'est important
+
+Vérifier les actions et les scopes des agents IA semi-autonomes sera le défi majeur des workflows IA augmentés. Pas comme une réflexion après coup. Comme le fondement.
+
+La sécurité et la traçabilité ne sont pas des fonctionnalités qu'on ajoute après. C'est l'infrastructure qui rend tout le reste possible, la collaboration multi-agents, les workflows inter-organisations, les services qui interagissent avec de vrais utilisateurs qui ont besoin de savoir qu'ils peuvent faire confiance à ce à quoi ils parlent.
+
+On a construit une couche d'identité pour les humains, mal. On déploie maintenant des agents sans en avoir du tout. Les outils existent, credentials vérifiables, identifiants décentralisés, permissions scopées, canaux chiffrés. La question est de savoir si on les utilisera avant que quelque chose casse, ou après.
+
+Je parie sur avant.

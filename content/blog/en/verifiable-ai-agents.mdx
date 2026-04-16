@@ -1,0 +1,62 @@
+---
+title: "The Future of AI Agents Is Verifiable, Customizable, and Yours"
+date: "2026-04-16"
+description: "AI agents are getting autonomous. That's powerful, and dangerous. Verifiable credentials, scoped permissions, and decentralized identity are how we make them trustworthy for everyone, not just developers."
+tags: ["AI Agents", "SSI", "Verifiable Credentials", "Hologram", "Trust"]
+---
+
+AI agents are calling APIs, scheduling meetings, writing code, negotiating on your behalf. They're becoming semi-autonomous. And nobody is asking the obvious question:
+
+**Who's watching them?**
+
+There's no accountability layer. You can't verify who operates a bot, what it's allowed to do, or whether it actually did what it claims. No audit trail. No scoped permissions. No identity. It's all-or-nothing access to tools and data, running on blind trust in whatever platform hosts them.
+
+For a personal chatbot, that's fine. For anything real, services, teams, businesses, it's a disaster waiting to happen.
+
+## Verification is the missing layer
+
+The next wave of AI isn't about making agents smarter. It's about making them *trustworthy*.
+
+Three things make that possible:
+
+- **Verifiable credentials**, agents prove who they are and who operates them, cryptographically
+- **Scoped permissions**, every tool call goes through role-based access control, not blanket access
+- **Decentralized identity**, no central authority decides who's legitimate, the math does
+
+This isn't a developer concern. It's the foundation for *anyone* deploying or interacting with an AI agent safely. The shift from "trust the platform" to "verify the agent."
+
+And here's the part that excites me most: when you combine multiple verifiable semi-autonomous agents, each with different models, different scopes, different perspectives, but all accountable, you get workflows that are fundamentally more powerful than any single agent could be. Multiple perspectives, multiple harnesses, full traceability.
+
+## What this looks like in practice
+
+### HoloClaw, Multiplayer verified AI workspaces
+
+I've been building something called HoloClaw at [2060.io](https://2060.io). The idea: multiple verified users sharing a single AI agent session, each on their own encrypted channel, each with a cryptographically verified identity and a specific role.
+
+A collaborator can use tools. An observer can watch but not interact with the AI. An approver must sign off before certain actions execute. Every single tool call passes through one enforcement point that decides: allow, deny, or request approval. No bypass. Every action is logged, broadcast to members in real time, and tied to a verified identity.
+
+This is how you get accountability in multi-agent workflows. Not by hoping the platform does the right thing, but by making it structurally impossible to act without verification.
+
+I formalized this model in a paper called *Verifiable Multi-Party Agent Workflows*, describing a framework for N authenticated participants sharing a single agent session with provable security properties. It's currently in review, more on that soon.
+
+### EAFIT Hackathon, Non-tech users creating their own verified agents
+
+Here's where it gets concrete for everyone, not just developers.
+
+At [EAFIT University](https://github.com/verana-labs/eafit-challenge) in Colombia, we ran a challenge with [Verana Labs](https://verana.io): students built a no-code platform where anyone, a plumber, a florist, a freelance consultant, can create their own AI agent.
+
+You give it a persona. Connect tools: Google Calendar, Gmail, a weather API. Deploy it with one click. Clients interact through the Hologram app, they scan a QR code, verify the agent's identity via blockchain credentials, and start chatting.
+
+The plumber's agent manages appointments. The florist's handles orders. Each one is verifiable from day one. Clients know who operates it, what it can do, and that interactions are cryptographically secured.
+
+This is not a developer tool. It's a platform for non-technical people to own their AI presence with built-in trust guarantees.
+
+## Why this matters
+
+Verifying actions and scopes of semi-autonomous AI agents will be the defining challenge of augmented AI workflows. Not as an afterthought. As the foundation.
+
+Security and traceability aren't features you bolt on later. They're the infrastructure that makes everything else possible, multi-agent collaboration, cross-organization workflows, services that interact with real users who need to know they can trust what they're talking to.
+
+We built an identity layer for humans, badly. We're now deploying agents without one at all. The tools exist, verifiable credentials, decentralized identifiers, scoped permissions, encrypted channels. The question is whether we'll use them before something breaks, or after.
+
+I'm betting on before.
