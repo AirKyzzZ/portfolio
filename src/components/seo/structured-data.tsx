@@ -12,7 +12,8 @@ export function PersonSchema({ locale }: PersonSchemaProps) {
     url: `${SITE_URL}/${locale}/`,
     jobTitle: 'Fullstack Developer & Researcher',
     worksFor: [
-      { '@type': 'Organization', name: 'Verana' },
+      { '@type': 'Organization', name: 'Verana', url: 'https://verana.io' },
+      { '@type': 'Organization', name: '2060.io', url: 'https://2060.io' },
     ],
     knowsAbout: [
       'Decentralized Identity',
