@@ -70,8 +70,12 @@ export async function generateMetadata({
       ],
     },
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
+      googleBot: {
+        index: false,
+        follow: false,
+      },
     },
     icons: {
       icon: '/favicon.ico',

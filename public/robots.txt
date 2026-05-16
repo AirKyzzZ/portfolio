@@ -1,6 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://maximemansiet.fr/sitemap.xml
-
-Crawl-delay: 1
