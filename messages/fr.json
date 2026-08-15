@@ -32,96 +32,160 @@
     "bio1": "Je suis développeur fullstack et chercheur, basé à Bordeaux. Je suis tombé dans l'informatique jeune et je n'en suis jamais ressorti, attiré par l'idée que le code n'est pas juste un outil, c'est l'infrastructure de la société. Cette curiosité m'a mené aux systèmes distribués, à la cryptographie, et finalement à une question à laquelle je reviens sans cesse : comment établir la confiance sans autorité centrale ?",
     "bio2": "Plus je regarde l'architecture du web, plus le problème est clair. Chaque système de confiance qu'on a construit repose encore sur quelqu'un au centre qui se porte garant pour tout le monde : autorités de certification, social login, fournisseurs d'identité (salut France Connect). Ça fonctionne, jusqu'au jour où ça ne fonctionne plus. Ce qui m'intéresse, c'est ce qui vient après.",
     "bio3": "Aujourd'hui je construis de l'infrastructure SSI en production chez Verana et 2060.io, messagerie DIDComm, credentials vérifiables, registres de confiance. J'ai aussi créé Credat, une bibliothèque open-source qui applique le même modèle de confiance aux agents IA, en leur donnant des identités vérifiables et une délégation de permissions. À mesure que les agents deviennent plus capables et plus autonomes, la question de comment les services les vérifient, et qui les a autorisés à agir, devient urgente.",
-    "researchInterests": "Intérêts de recherche",
-    "interest1": "Identité décentralisée & DIDs",
-    "interest2": "Systèmes de credentials préservant la vie privée",
-    "interest3": "Verifiable Credentials & divulgation sélective",
-    "interest4": "Cryptographie appliquée à l'identité",
-    "interest5": "Cadres de confiance & modèles de gouvernance",
-    "news": "Actualités",
-    "news1": "Rejoint Verana / 2060.io en tant que développeur fullstack, construction d'infrastructure SSI",
-    "news1date": "2025.09",
-    "news2": "Inscrit au CS50 de Harvard, approfondissement des fondamentaux CS",
-    "news2date": "2026.01",
-    "news3": "Fondation de Klyx, agence de développement web à Bordeaux",
-    "news3date": "2025.04",
     "bio4": "J'ai 20 ans. J'ai tout misé sur l'identité décentralisée, l'un des problèmes fondateurs de la prochaine ère, pour les humains comme pour les agents qui agissent en leur nom.",
     "bio5": "Avant le code, j'ai passé sept ans à m'entraîner en tant qu'athlète de haut niveau en parkour, en compétition et en enseignement à travers la France. En 2025, j'ai co-fondé le PKBA, aujourd'hui le plus grand club de parkour de Nouvelle-Aquitaine. Discipline, reconnaissance de patterns et apprentissage rapide de ses erreurs, le sport et la pensée systémique ont plus en commun qu'il n'y paraît.",
-    "news5": "Publication de Credat sur npm, couche de confiance open-source pour agents IA avec DIDs et VCs",
-    "news5date": "2026.02",
-    "news6": "Co-fondation du PKBA, le plus grand club de parkour du Sud-Ouest",
-    "news6date": "2025.07"
+    "researchInterests": "Intérêts de recherche",
+    "interests": [
+      "Identité décentralisée & DIDs",
+      "Systèmes de credentials préservant la vie privée",
+      "Verifiable Credentials & divulgation sélective",
+      "Cryptographie appliquée à l'identité",
+      "Cadres de confiance & modèles de gouvernance"
+    ],
+    "news": "Actualités",
+    "newsItems": [
+      {
+        "date": "2026.02",
+        "text": "Publication de Credat sur npm, couche de confiance open-source pour agents IA avec DIDs et VCs"
+      },
+      {
+        "date": "2026.01",
+        "text": "Inscrit au CS50 de Harvard, approfondissement des fondamentaux CS"
+      },
+      {
+        "date": "2025.09",
+        "text": "Rejoint Verana / 2060.io en tant que développeur fullstack, construction d'infrastructure SSI"
+      },
+      {
+        "date": "2025.04",
+        "text": "Fondation de Klyx, agence de développement web à Bordeaux"
+      },
+      {
+        "date": "2025.07",
+        "text": "Co-fondation du PKBA, le plus grand club de parkour du Sud-Ouest"
+      }
+    ]
   },
   "research": {
     "title": "Recherche",
     "intro": "Mes intérêts de recherche se situent à l'intersection des systèmes distribués, de la cryptographie appliquée et de l'identité numérique. Je m'intéresse particulièrement aux systèmes qui donnent aux individus le contrôle de leurs données personnelles tout en maintenant l'interopérabilité entre organisations et frontières.",
-    "area1title": "Identité décentralisée & DIDs",
-    "area1desc": "Les Decentralized Identifiers (DIDs) constituent le socle de l'identité auto-souveraine en permettant aux entités de créer et contrôler leurs propres identifiants sans l'autorisation d'une autorité centrale. J'étudie les compromis de conception entre différentes méthodes DID (did:web, did:peer, did:key) et leurs implications en termes de sécurité, confidentialité et scalabilité.",
-    "area2title": "Systèmes de credentials préservant la vie privée",
-    "area2desc": "Les Verifiable Credentials permettent des attestations numériques portables et infalsifiables. Je m'intéresse aux mécanismes de divulgation sélective (signatures BBS+, SD-JWT) qui permettent aux détenteurs de ne partager que le minimum d'information nécessaire, et aux techniques de preuves à divulgation nulle permettant des preuves sur prédicats sans révéler les données sous-jacentes.",
-    "area3title": "Cadres de confiance & gouvernance",
-    "area3desc": "Les systèmes décentralisés ont toujours besoin d'ancres de confiance. Je travaille sur des architectures de registres de confiance permettant aux écosystèmes de définir et appliquer des règles de gouvernance, qui peut émettre quoi, quels credentials sont acceptés où, et comment les décisions de confiance sont prises à grande échelle.",
-    "area4title": "DIDComm & messagerie sécurisée",
-    "area4desc": "DIDComm est un protocole de messagerie qui permet une communication sécurisée et privée entre agents d'identité. Je travaille sur des implémentations en production de DIDComm v2, incluant le routage de messages, le chiffrement et la négociation de protocoles pour les workflows d'échange de credentials.",
+    "areas": [
+      {
+        "id": "dids",
+        "title": "Identité décentralisée & DIDs",
+        "body": "Les Decentralized Identifiers (DIDs) constituent le socle de l'identité auto-souveraine en permettant aux entités de créer et contrôler leurs propres identifiants sans l'autorisation d'une autorité centrale. J'étudie les compromis de conception entre différentes méthodes DID (did:web, did:peer, did:key) et leurs implications en termes de sécurité, confidentialité et scalabilité."
+      },
+      {
+        "id": "credentials",
+        "title": "Systèmes de credentials préservant la vie privée",
+        "body": "Les Verifiable Credentials permettent des attestations numériques portables et infalsifiables. Je m'intéresse aux mécanismes de divulgation sélective (signatures BBS+, SD-JWT) qui permettent aux détenteurs de ne partager que le minimum d'information nécessaire, et aux techniques de preuves à divulgation nulle permettant des preuves sur prédicats sans révéler les données sous-jacentes."
+      },
+      {
+        "id": "trust",
+        "title": "Cadres de confiance & gouvernance",
+        "body": "Les systèmes décentralisés ont toujours besoin d'ancres de confiance. Je travaille sur des architectures de registres de confiance permettant aux écosystèmes de définir et appliquer des règles de gouvernance, qui peut émettre quoi, quels credentials sont acceptés où, et comment les décisions de confiance sont prises à grande échelle."
+      },
+      {
+        "id": "didcomm",
+        "title": "DIDComm & messagerie sécurisée",
+        "body": "DIDComm est un protocole de messagerie qui permet une communication sécurisée et privée entre agents d'identité. Je travaille sur des implémentations en production de DIDComm v2, incluant le routage de messages, le chiffrement et la négociation de protocoles pour les workflows d'échange de credentials."
+      }
+    ],
     "openQuestions": "Questions ouvertes",
-    "question1": "Comment rendre les registres de confiance à la fois décentralisés et pratiquement gouvernables ?",
-    "question2": "Quelles sont les garanties formelles de confidentialité des différents schémas de divulgation sélective sous des modèles adversariaux réalistes ?",
-    "question3": "Comment les systèmes SSI peuvent-ils atteindre une interopérabilité significative entre juridictions aux cadres légaux différents ?",
-    "question4": "Quels sont les mécanismes de révocation efficaces qui préservent la vie privée du détenteur ?"
+    "questions": [
+      "Comment rendre les registres de confiance à la fois décentralisés et pratiquement gouvernables ?",
+      "Quelles sont les garanties formelles de confidentialité des différents schémas de divulgation sélective sous des modèles adversariaux réalistes ?",
+      "Comment les systèmes SSI peuvent-ils atteindre une interopérabilité significative entre juridictions aux cadres légaux différents ?",
+      "Quels sont les mécanismes de révocation efficaces qui préservent la vie privée du détenteur ?"
+    ]
   },
   "cv": {
     "title": "Curriculum Vitae",
-    "experience": "Expérience",
-    "education": "Formation",
-    "skills": "Compétences techniques",
-    "languages": "Langues",
-    "engagement": "Projets & Engagement communautaire",
-    "exp1title": "Ingénieur Logiciel",
-    "exp1company": "Verana / 2060.io",
-    "exp1period": "Sep 2025 – Présent",
-    "exp1desc": "Développement du Verana Visualizer, un tableau de bord blockchain en temps réel avec visualisation réseau 3D déployé sur une infrastructure multi-cloud. Développement du frontend de Verifiable Credentials conforme W3C et intégration wallet. Architecture de Concieragent, un assistant IA orchestrant 6 serveurs MCP avec messagerie DIDComm et routage multi-LLM.",
-    "exp2title": "Fondateur & Développeur Principal",
-    "exp2company": "Klyx",
-    "exp2period": "Avr 2025 – Présent",
-    "exp2desc": "Fondation d'une agence de développement web servant 5+ clients avec 100% de satisfaction. Livraison de sites en production avec un score Lighthouse >95, atteignant +80% de croissance du trafic organique et +35% de génération de leads pour les clients.",
-    "exp3title": "Développeur Fullstack & IA",
-    "exp3company": "Hop Hop Immo",
-    "exp3period": "Jan 2026 – Présent",
-    "exp3desc": "Développement de Hoppy, un assistant immobilier vocal utilisant ElevenLabs et l'intégration LLM sur plus de 28K annonces. Création d'agents marketing IA et refonte de la page d'accueil, triplant le trafic du site.",
-    "edu1title": "Cursus d'ingénierie informatique",
-    "edu1school": "EPSI Bordeaux",
-    "edu1period": "Sep 2024 – Présent",
-    "edu1desc": "Cursus d'ingénierie logicielle en cinq ans. Actuellement en préparation du titre RNCP 6 Concepteur Développeur d'Applications (RNCP37873), de septembre 2026 à septembre 2027. BTS SIO SLAM obtenu en juin 2026.",
-    "edu2title": "CS50 : Introduction à l'informatique",
-    "edu2school": "Harvard University (en ligne)",
-    "edu2period": "Août 2025 – Jan 2026",
-    "edu2desc": "Concepts fondamentaux CS : algorithmes, structures de données, programmation système.",
-    "edu3title": "Baccalauréat Général – Mention Bien",
-    "edu3school": "Lycée Privé Saint-Elme",
-    "edu3period": "Juin 2024",
-    "edu3desc": "Baccalauréat Général avec mention Bien, spécialités Mathématiques et Physique.",
-    "skill1": "Langages & Frameworks : TypeScript, JavaScript, Python, Next.js, React, Node.js, HTML/CSS, LaTeX",
-    "skill2": "Infrastructure & DevOps : Docker, Kubernetes, Helm, CI/CD (GitHub Actions), Git, MySQL/SQL",
-    "skill3": "Web3 & Architecture : COSMOS SDK, Verifiable Credentials, DIDs, MCP (Model Context Protocol), DIDComm",
-    "skill4": "Compétences transversales : Autodiscipline, Rigueur, Gestion de projet, Résolution de problèmes, Esprit entrepreneurial, Marketing digital, Travail d'équipe",
-    "lang1": "Français, Natif",
-    "lang2": "Anglais, Bilingue (C2 EFSET Certifié)",
-    "lang3": "Allemand, Intermédiaire (B1 Certifié)",
-    "proj1title": "Open Source & Projets personnels",
-    "proj1desc": "Contribution à plus de 10 projets dont des travaux avec l'OpenWallet Foundation. Créateur de Credat.io (plateforme de verifiable credentials).",
-    "proj2title": "VertiFlow",
-    "proj2desc": "Création d'une marque e-commerce centrée sur la communauté Parkour et Mouvement.",
-    "proj3title": "PKBA",
-    "proj3desc": "Co-fondateur et trésorier d'un club de Parkour comptant plus de 65 membres actifs.",
-    "proj4title": "GDG Bordeaux",
-    "proj4desc": "Membre actif du Google Developer Group Bordeaux, participant et contributeur aux meetups tech."
+    "experienceHeading": "Expérience",
+    "educationHeading": "Formation",
+    "skillsHeading": "Compétences techniques",
+    "languagesHeading": "Langues",
+    "engagementHeading": "Projets & Engagement communautaire",
+    "experience": [
+      {
+        "title": "Ingénieur Logiciel",
+        "company": "Verana / 2060.io",
+        "period": "Sep 2025 – Présent",
+        "desc": "Développement du Verana Visualizer, un tableau de bord blockchain en temps réel avec visualisation réseau 3D déployé sur une infrastructure multi-cloud. Développement du frontend de Verifiable Credentials conforme W3C et intégration wallet. Architecture de Concieragent, un assistant IA orchestrant 6 serveurs MCP avec messagerie DIDComm et routage multi-LLM."
+      },
+      {
+        "title": "Fondateur & Développeur Principal",
+        "company": "Klyx",
+        "period": "Avr 2025 – Présent",
+        "desc": "Fondation d'une agence de développement web servant 5+ clients avec 100% de satisfaction. Livraison de sites en production avec un score Lighthouse >95, atteignant +80% de croissance du trafic organique et +35% de génération de leads pour les clients."
+      },
+      {
+        "title": "Développeur Fullstack & IA",
+        "company": "Hop Hop Immo",
+        "period": "Jan 2026 – Présent",
+        "desc": "Développement de Hoppy, un assistant immobilier vocal utilisant ElevenLabs et l'intégration LLM sur plus de 28K annonces. Création d'agents marketing IA et refonte de la page d'accueil, triplant le trafic du site."
+      }
+    ],
+    "education": [
+      {
+        "title": "Cursus d'ingénierie informatique",
+        "school": "EPSI Bordeaux",
+        "period": "Sep 2024 – Présent",
+        "desc": "Cursus d'ingénierie logicielle en cinq ans. Actuellement en préparation du titre RNCP 6 Concepteur Développeur d'Applications (RNCP37873), de septembre 2026 à septembre 2027. BTS SIO SLAM obtenu en juin 2026."
+      },
+      {
+        "title": "CS50 : Introduction à l'informatique",
+        "school": "Harvard University (en ligne)",
+        "period": "Août 2025 – Jan 2026",
+        "desc": "Concepts fondamentaux CS : algorithmes, structures de données, programmation système."
+      },
+      {
+        "title": "Baccalauréat Général – Mention Bien",
+        "school": "Lycée Privé Saint-Elme",
+        "period": "Juin 2024",
+        "desc": "Baccalauréat Général avec mention Bien, spécialités Mathématiques et Physique."
+      }
+    ],
+    "skills": [
+      "Langages & Frameworks : TypeScript, JavaScript, Python, Next.js, React, Node.js, HTML/CSS, LaTeX",
+      "Infrastructure & DevOps : Docker, Kubernetes, Helm, CI/CD (GitHub Actions), Git, MySQL/SQL",
+      "Web3 & Architecture : COSMOS SDK, Verifiable Credentials, DIDs, MCP (Model Context Protocol), DIDComm",
+      "Compétences transversales : Autodiscipline, Rigueur, Gestion de projet, Résolution de problèmes, Esprit entrepreneurial, Marketing digital, Travail d'équipe"
+    ],
+    "languages": [
+      "Français, Natif",
+      "Anglais, Bilingue (C2 EFSET Certifié)",
+      "Allemand, Intermédiaire (B1 Certifié)"
+    ],
+    "engagement": [
+      {
+        "title": "Open Source & Projets personnels",
+        "desc": "Contribution à plus de 10 projets dont des travaux avec l'OpenWallet Foundation. Créateur de Credat.io (plateforme de verifiable credentials)."
+      },
+      {
+        "title": "VertiFlow",
+        "desc": "Création d'une marque e-commerce centrée sur la communauté Parkour et Mouvement."
+      },
+      {
+        "title": "PKBA",
+        "desc": "Co-fondateur et trésorier d'un club de Parkour comptant plus de 65 membres actifs."
+      },
+      {
+        "title": "GDG Bordeaux",
+        "desc": "Membre actif du Google Developer Group Bordeaux, participant et contributeur aux meetups tech."
+      }
+    ]
   },
   "talks": {
     "title": "Talks & Présentations",
-    "talk1title": "Confiance inter-écosystèmes pour les portefeuilles d'identité numérique",
-    "talk1venue": "Global Digital Collaboration Conference (GDC26), Palexpo Genève",
-    "talk1date": "1-3 septembre 2026",
-    "talk1desc": "Intervention conjointe avec Fabrice Rochette et Ariel Gentile pour 2060.io sur nos travaux pour le Global Digital Trust Collaboration Award : l'intégration d'une résolution de confiance en direct dans huit portefeuilles d'identité tiers. Détails de la session à confirmer."
+    "items": [
+      {
+        "title": "Confiance inter-écosystèmes pour les portefeuilles d'identité numérique",
+        "venue": "Global Digital Collaboration Conference (GDC26), Palexpo Genève",
+        "date": "1-3 septembre 2026",
+        "desc": "Intervention conjointe avec Fabrice Rochette et Ariel Gentile pour 2060.io sur nos travaux pour le Global Digital Trust Collaboration Award : l'intégration d'une résolution de confiance en direct dans huit portefeuilles d'identité tiers. Détails de la session à confirmer."
+      }
+    ]
   },
   "publications": {
     "title": "Publications",

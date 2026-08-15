@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { SectionHeading } from '@/components/ui/section-heading'
 import { routing } from '@/i18n/routing'
+import type { ResearchArea } from '@/types/content'
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
@@ -15,19 +16,8 @@ export default async function ResearchPage({ params }: Props) {
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'research' })
 
-  const areas = [
-    { title: t('area1title'), desc: t('area1desc') },
-    { title: t('area2title'), desc: t('area2desc') },
-    { title: t('area3title'), desc: t('area3desc') },
-    { title: t('area4title'), desc: t('area4desc') },
-  ]
-
-  const questions = [
-    t('question1'),
-    t('question2'),
-    t('question3'),
-    t('question4'),
-  ]
+  const areas = t.raw('areas') as ResearchArea[]
+  const questions = t.raw('questions') as string[]
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-10">
@@ -38,10 +28,10 @@ export default async function ResearchPage({ params }: Props) {
 
       <div className="space-y-8">
         {areas.map((area) => (
-          <section key={area.title}>
+          <section key={area.id} id={area.id} className="scroll-mt-8">
             <h3 className="font-serif font-semibold mb-2">{area.title}</h3>
             <p className="text-sm leading-relaxed text-foreground-secondary">
-              {area.desc}
+              {area.body}
             </p>
           </section>
         ))}

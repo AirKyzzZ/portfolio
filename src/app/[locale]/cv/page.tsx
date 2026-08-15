@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { SectionHeading } from '@/components/ui/section-heading'
 import { routing } from '@/i18n/routing'
+import type { CvEntry, EducationEntry, EngagementEntry } from '@/types/content'
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
@@ -15,27 +16,11 @@ export default async function CVPage({ params }: Props) {
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'cv' })
 
-  const experiences = [
-    { title: t('exp1title'), company: t('exp1company'), period: t('exp1period'), desc: t('exp1desc') },
-    { title: t('exp2title'), company: t('exp2company'), period: t('exp2period'), desc: t('exp2desc') },
-    { title: t('exp3title'), company: t('exp3company'), period: t('exp3period'), desc: t('exp3desc') },
-  ]
-
-  const education = [
-    { title: t('edu1title'), school: t('edu1school'), period: t('edu1period'), desc: t('edu1desc') },
-    { title: t('edu2title'), school: t('edu2school'), period: t('edu2period'), desc: t('edu2desc') },
-    { title: t('edu3title'), school: t('edu3school'), period: t('edu3period'), desc: t('edu3desc') },
-  ]
-
-  const skills = [t('skill1'), t('skill2'), t('skill3'), t('skill4')]
-  const languages = [t('lang1'), t('lang2'), t('lang3')]
-
-  const projects = [
-    { title: t('proj1title'), desc: t('proj1desc') },
-    { title: t('proj2title'), desc: t('proj2desc') },
-    { title: t('proj3title'), desc: t('proj3desc') },
-    { title: t('proj4title'), desc: t('proj4desc') },
-  ]
+  const experiences = t.raw('experience') as CvEntry[]
+  const education = t.raw('education') as EducationEntry[]
+  const skills = t.raw('skills') as string[]
+  const languages = t.raw('languages') as string[]
+  const projects = t.raw('engagement') as EngagementEntry[]
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-10">
@@ -43,7 +28,7 @@ export default async function CVPage({ params }: Props) {
 
       {/* Experience */}
       <section className="mb-10">
-        <SectionHeading>{t('experience')}</SectionHeading>
+        <SectionHeading>{t('experienceHeading')}</SectionHeading>
         <div className="space-y-6">
           {experiences.map((exp) => (
             <div key={exp.title + exp.company}>
@@ -62,7 +47,7 @@ export default async function CVPage({ params }: Props) {
 
       {/* Education */}
       <section className="mb-10">
-        <SectionHeading>{t('education')}</SectionHeading>
+        <SectionHeading>{t('educationHeading')}</SectionHeading>
         <div className="space-y-6">
           {education.map((edu) => (
             <div key={edu.title + edu.school}>
@@ -81,7 +66,7 @@ export default async function CVPage({ params }: Props) {
 
       {/* Skills */}
       <section className="mb-10">
-        <SectionHeading>{t('skills')}</SectionHeading>
+        <SectionHeading>{t('skillsHeading')}</SectionHeading>
         <ul className="space-y-1.5 text-sm text-foreground-secondary">
           {skills.map((skill) => (
             <li key={skill}>• {skill}</li>
@@ -91,7 +76,7 @@ export default async function CVPage({ params }: Props) {
 
       {/* Languages */}
       <section className="mb-10">
-        <SectionHeading>{t('languages')}</SectionHeading>
+        <SectionHeading>{t('languagesHeading')}</SectionHeading>
         <ul className="space-y-1.5 text-sm text-foreground-secondary">
           {languages.map((lang) => (
             <li key={lang}>• {lang}</li>
@@ -101,7 +86,7 @@ export default async function CVPage({ params }: Props) {
 
       {/* Projects & Community Engagement */}
       <section>
-        <SectionHeading>{t('engagement')}</SectionHeading>
+        <SectionHeading>{t('engagementHeading')}</SectionHeading>
         <div className="space-y-6">
           {projects.map((proj) => (
             <div key={proj.title}>

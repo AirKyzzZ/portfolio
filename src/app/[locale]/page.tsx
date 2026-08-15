@@ -4,6 +4,7 @@ import { SectionHeading } from '@/components/ui/section-heading'
 import { NewsItem } from '@/components/ui/news-item'
 import { BlogCard } from '@/components/ui/blog-card'
 import { getAllBlogPosts } from '@/lib/mdx'
+import type { NewsEntry } from '@/types/content'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -14,6 +15,9 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'home' })
   const ct = await getTranslations({ locale, namespace: 'common' })
+
+  const interests = t.raw('interests') as string[]
+  const newsItems = t.raw('newsItems') as NewsEntry[]
 
   let posts: Awaited<ReturnType<typeof getAllBlogPosts>> = []
   try {
@@ -44,11 +48,9 @@ export default async function HomePage({ params }: Props) {
           <section>
             <SectionHeading id="interests">{t('researchInterests')}</SectionHeading>
             <ul className="space-y-1.5 text-sm text-foreground-secondary">
-              <li>• {t('interest1')}</li>
-              <li>• {t('interest2')}</li>
-              <li>• {t('interest3')}</li>
-              <li>• {t('interest4')}</li>
-              <li>• {t('interest5')}</li>
+              {interests.map((interest) => (
+                <li key={interest}>• {interest}</li>
+              ))}
             </ul>
           </section>
 
@@ -56,11 +58,9 @@ export default async function HomePage({ params }: Props) {
           <section>
             <SectionHeading id="news">{t('news')}</SectionHeading>
             <div className="space-y-2">
-              <NewsItem date={t('news5date')}>{t('news5')}</NewsItem>
-              <NewsItem date={t('news2date')}>{t('news2')}</NewsItem>
-              <NewsItem date={t('news1date')}>{t('news1')}</NewsItem>
-              <NewsItem date={t('news3date')}>{t('news3')}</NewsItem>
-              <NewsItem date={t('news6date')}>{t('news6')}</NewsItem>
+              {newsItems.map((item) => (
+                <NewsItem key={item.text} date={item.date}>{item.text}</NewsItem>
+              ))}
             </div>
           </section>
 

@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
+import type { TalkEntry } from '@/types/content'
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
@@ -14,9 +15,7 @@ export default async function TalksPage({ params }: Props) {
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'talks' })
 
-  const talks = [
-    { title: t('talk1title'), venue: t('talk1venue'), date: t('talk1date'), desc: t('talk1desc') },
-  ]
+  const talks = t.raw('items') as TalkEntry[]
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-10">
