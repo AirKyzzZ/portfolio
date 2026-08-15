@@ -1,7 +1,7 @@
 [
   {
     "slug": "claw4s-trust-protocol",
-    "title": "Claw4S — Decentralized Agent Trust Protocol",
+    "title": "Claw4S, Decentralized Agent Trust Protocol",
     "description": "Research paper and executable protocol for mutual cryptographic trust between AI agents, submitted to Stanford × Princeton hackathon.",
     "longDescription": "Submitted to the Claw4S Conference 2026 (Stanford × Princeton). A minimal protocol enabling two previously unknown AI agents to establish mutual cryptographic trust using did:key (Ed25519) and W3C Verifiable Credentials, without any central authority. The protocol completes in 2 round trips with under 2ms overhead and produces a fully auditable chain of signed credentials. Implemented as a single Python file with one dependency, featuring three execution modes (mock, live, attack) and a novel interactive lab format where the executing agent participates in the trust handshake.",
     "technologies": ["Python", "Ed25519", "DIDs", "Verifiable Credentials", "W3C Standards"],
@@ -13,7 +13,7 @@
     "slug": "credat",
     "title": "Credat",
     "description": "Trust layer for AI agents using DIDs and Verifiable Credentials.",
-    "longDescription": "Credat is an open-source TypeScript library that brings decentralized identity to AI agent ecosystems. It allows agents to create verifiable identities (did:web, did:key), issue scoped delegation credentials, and perform cryptographic handshakes to establish mutual trust. Built on W3C DID v1.1 and VC Data Model standards, with minimal dependencies and a transport-agnostic design. Used as the reference implementation for ongoing research on Sybil attacks in DID-based agent ecosystems.",
+    "longDescription": "Credat is an open-source TypeScript library that brings decentralized identity to AI agent ecosystems. It allows agents to create verifiable identities (did:web, did:key), issue scoped delegation credentials, and perform cryptographic handshakes to establish mutual trust. Built on W3C DID v1.1 and VC Data Model standards, with minimal dependencies and a transport-agnostic design.",
     "technologies": ["TypeScript", "DIDs", "Verifiable Credentials", "SD-JWT", "Node.js"],
     "sourceUrl": "https://github.com/credat/credat",
     "demoUrl": "https://credat.io",

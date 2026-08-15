@@ -60,7 +60,6 @@ export default async function HomePage({ params }: Props) {
               <NewsItem date={t('news2date')}>{t('news2')}</NewsItem>
               <NewsItem date={t('news1date')}>{t('news1')}</NewsItem>
               <NewsItem date={t('news3date')}>{t('news3')}</NewsItem>
-              <NewsItem date={t('news4date')}>{t('news4')}</NewsItem>
               <NewsItem date={t('news6date')}>{t('news6')}</NewsItem>
             </div>
           </section>

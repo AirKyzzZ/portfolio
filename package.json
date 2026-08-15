@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:content": "node scripts/check-content.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
