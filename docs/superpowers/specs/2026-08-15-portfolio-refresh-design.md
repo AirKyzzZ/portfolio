@@ -110,11 +110,13 @@ Bio goes from five paragraphs to four:
 3. Agents. Credat and Claw4S. The Sybil framing is removed, it is outdated.
 4. Parkour. Stays, it is distinctive. Dates corrected to 2017 to April 2025.
 
-The current `bio4` is deleted entirely. It carries the false ToIP claim and the age,
-and what survives of it belongs in paragraph 3.
+The current `bio4` is deleted entirely. It carries the false ToIP claim, and the part
+worth keeping belongs in paragraph 3.
 
-Age is dropped, not corrected to 20. A number that needs an edit every birthday is a
-staleness generator, and the work speaks without it.
+Age stays, corrected to 20. It is an asset here rather than filler: the same sentence
+reads differently when the person shipping into production trust infrastructure is
+20. It is placed next to the concrete work so it modifies something, not left standing
+alone as a fact about him. It needs an edit every birthday, which is accepted.
 
 Research interests are replaced with five that match the actual work: trust
 registries and TRQP, cross-ecosystem wallet interoperability, agent identity and
