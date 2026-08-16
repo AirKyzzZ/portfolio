@@ -1,7 +1,11 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { getProjects, getProject } from '@/lib/content'
+import { alternatesFor } from '@/lib/metadata'
+import { SITE_URL } from '@/lib/constants'
+import { ProjectSchema } from '@/components/seo/structured-data'
 import { Tag } from '@/components/ui/tag'
 import { routing } from '@/i18n/routing'
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react'
@@ -21,6 +25,25 @@ type Props = {
   params: Promise<{ locale: string; slug: string }>
 }
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, slug } = await params
+  const project = getProject(locale, slug)
+
+  if (!project) return {}
+
+  return {
+    title: project.title,
+    description: project.description,
+    alternates: alternatesFor(locale, `/projects/${slug}/`),
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      type: 'article',
+      url: `${SITE_URL}/${locale}/projects/${slug}/`,
+    },
+  }
+}
+
 export default async function ProjectDetailPage({ params }: Props) {
   const { locale, slug } = await params
   setRequestLocale(locale)
@@ -33,6 +56,15 @@ export default async function ProjectDetailPage({ params }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-10">
+      <ProjectSchema
+        name={project.title}
+        description={project.description}
+        slug={project.slug}
+        locale={locale}
+        technologies={project.technologies}
+        year={project.year}
+        sourceUrl={project.sourceUrl}
+      />
       <Link
         href={`/${locale}/projects/`}
         className="inline-flex items-center gap-1.5 text-sm text-foreground-secondary hover:text-foreground transition-colors mb-8"

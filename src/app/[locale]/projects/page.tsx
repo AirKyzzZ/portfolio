@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { alternatesFor } from '@/lib/metadata'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { getProjects } from '@/lib/content'
 import { ProjectCard } from '@/components/ui/project-card'
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t('title'),
     description: t('metaDescription'),
-    alternates: { canonical: `/${locale}/projects/` },
+    alternates: alternatesFor(locale, '/projects/'),
   }
 }
 

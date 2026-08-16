@@ -48,6 +48,49 @@ export function PersonSchema({ locale }: PersonSchemaProps) {
   )
 }
 
+type ProjectSchemaProps = {
+  name: string
+  description: string
+  slug: string
+  locale: string
+  technologies: string[]
+  year: number
+  sourceUrl?: string
+}
+
+export function ProjectSchema({
+  name,
+  description,
+  slug,
+  locale,
+  technologies,
+  year,
+  sourceUrl,
+}: ProjectSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': sourceUrl ? 'SoftwareSourceCode' : 'CreativeWork',
+    name,
+    description,
+    url: `${SITE_URL}/${locale}/projects/${slug}/`,
+    dateCreated: String(year),
+    keywords: technologies.join(', '),
+    author: {
+      '@type': 'Person',
+      name: 'Maxime Mansiet',
+      url: `${SITE_URL}/${locale}/`,
+    },
+    ...(sourceUrl ? { codeRepository: sourceUrl, programmingLanguage: technologies } : {}),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 type BlogPostSchemaProps = {
   title: string
   description: string

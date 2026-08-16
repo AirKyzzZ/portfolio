@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
@@ -8,7 +9,9 @@ import rehypeKatex from 'rehype-katex'
 import rehypeHighlight from 'rehype-highlight'
 import fs from 'fs'
 import path from 'path'
-import { getBlogSlugs } from '@/lib/mdx'
+import { getBlogSlugs, getBlogPost } from '@/lib/mdx'
+import { alternatesFor } from '@/lib/metadata'
+import { SITE_URL } from '@/lib/constants'
 import { mdxComponents } from '@/components/mdx/mdx-components'
 import { Tag } from '@/components/ui/tag'
 import { routing } from '@/i18n/routing'
@@ -29,6 +32,29 @@ export function generateStaticParams() {
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, slug } = await params
+  const post = await getBlogPost(locale, slug)
+
+  if (!post) return {}
+
+  const { title, description, date, tags } = post.frontmatter
+
+  return {
+    title,
+    description,
+    keywords: tags,
+    alternates: alternatesFor(locale, `/blog/${slug}/`),
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      publishedTime: date,
+      url: `${SITE_URL}/${locale}/blog/${slug}/`,
+    },
+  }
 }
 
 export default async function BlogPostPage({ params }: Props) {

@@ -39,7 +39,7 @@ export function Sidebar({ locale }: SidebarProps) {
         priority
       />
       <div className="text-center md:text-left">
-        <h2 className="font-serif text-lg font-semibold">Maxime Mansiet</h2>
+        <h1 className="font-serif text-lg font-semibold">Maxime Mansiet</h1>
         <p className="text-sm text-foreground-secondary mt-1">
           {locale === 'fr' ? 'Ingénieur en identité auto-souveraine' : 'Self-Sovereign Identity Engineer'}
         </p>
