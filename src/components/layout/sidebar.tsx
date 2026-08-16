@@ -41,10 +41,10 @@ export function Sidebar({ locale }: SidebarProps) {
       <div className="text-center md:text-left">
         <h2 className="font-serif text-lg font-semibold">Maxime Mansiet</h2>
         <p className="text-sm text-foreground-secondary mt-1">
-          {locale === 'fr' ? 'Développeur Fullstack' : 'Fullstack Developer'}
+          {locale === 'fr' ? 'Ingénieur en identité auto-souveraine' : 'Self-Sovereign Identity Engineer'}
         </p>
         <p className="text-sm text-foreground-tertiary">
-          Verana / 2060.io
+          2060.io / Verana
         </p>
       </div>
       <div className="flex items-center gap-3 text-foreground-secondary">

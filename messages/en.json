@@ -29,40 +29,55 @@
   },
   "home": {
     "about": "About",
-    "bio1": "I'm a fullstack developer and researcher based in Bordeaux. I fell into computer science young and never left, drawn by the idea that code isn't just tooling, it's infrastructure for society. That curiosity led me to distributed systems, cryptography, and eventually to the question I keep coming back to: how do we establish trust without a central authority?",
-    "bio2": "The more I look at the web's architecture, the clearer the problem becomes. Every system of trust we've built still relies on someone at the center vouching for everyone else: certificate authorities, social login, identity providers. It works, until it doesn't. I'm interested in what comes after.",
-    "bio3": "Today I build production SSI infrastructure at Verana and 2060.io, DIDComm messaging, verifiable credentials, trust registries. I also created Credat, an open-source library that brings the same trust model to AI agents, giving autonomous systems verifiable identities and scoped delegation. As agents become more capable and autonomous, the question of how services verify them, and who authorized them to act, becomes urgent.",
-    "bio4": "I'm 20. I've bet everything on decentralized identity being one of the foundational problems of the next era, for people and for the agents acting on their behalf.",
-    "bio5": "Before tech, I spent seven years training as a high-level parkour athlete, competing and teaching across France. In 2025, I co-founded PKBA, now the largest parkour club in Nouvelle-Aquitaine. Discipline, pattern recognition, and learning from failure fast, sports and systems thinking have more in common than they appear.",
+    "bio1": "I'm a software engineer working on self-sovereign identity, based in Bordeaux. I fell into computer science young and never left, drawn by the idea that code isn't just tooling, it's infrastructure for society. That curiosity led me to distributed systems, cryptography, and eventually to the question I keep coming back to: how do we establish trust without a central authority?",
+    "bio2": "I build that at 2060.io, on Verana, an open trust layer for the internet. 182 merged pull requests since February 2026, across the trust registry frontend, spec-compliant credential tooling, and the resolver work that lets a verifier ask a live question instead of trusting a static list. This year I wired Verana trust resolution into eight third-party identity wallets, among them the EUDI reference wallet, MOSIP's Inji, Talao, Sphereon, Paradym and Procivis One. Every one of them shipped with a hardcoded list of issuers it trusts. Replacing that list with a live, fail-closed call is the whole idea.",
+    "bio3": "The same problem is arriving for AI agents, faster. I wrote Credat, an open-source library that gives agents verifiable identities and scoped delegation, and co-authored a protocol showing that two previously unknown agents can establish mutual cryptographic trust in two round trips, with under 2ms of overhead. I'm 20, and I've bet everything on decentralized identity being one of the foundational problems of the next era, for people and for the agents acting on their behalf.",
+    "bio4": "Before tech, I trained as a competitive parkour athlete with the French Gymnastics Federation from 2017 to 2025. In 2025 I co-founded PKBA, now the largest parkour club in southwestern France. Discipline, pattern recognition, and learning from failure fast: sport and systems thinking have more in common than they appear.",
     "researchInterests": "Research Interests",
     "interests": [
-      "Decentralized Identity & DIDs",
-      "Privacy-Preserving Credential Systems",
-      "Verifiable Credentials & Selective Disclosure",
-      "Applied Cryptography for Identity",
+      "Trust Registries & the Trust Registry Query Protocol",
+      "Cross-Ecosystem Wallet Interoperability",
+      "Agent Identity, Delegation & Scoped Authorization",
+      "Credential Exchange Protocols (OID4VP, OID4VCI, SD-JWT VC)",
       "Trust Frameworks & Governance Models"
     ],
     "news": "News",
     "newsItems": [
       {
-        "date": "2026.02",
-        "text": "Published Credat on npm, open-source trust layer for AI agents using DIDs and VCs"
+        "date": "2026.09",
+        "text": "Co-speaking at Global Digital Collaboration (GDC26), Geneva, on cross-ecosystem wallet trust"
       },
       {
-        "date": "2026.01",
-        "text": "Enrolled in Harvard CS50, expanding CS fundamentals"
+        "date": "2026.08",
+        "text": "Shipped Verana trust resolution into eight third-party identity wallets, including the EUDI reference wallet and MOSIP's Inji"
+      },
+      {
+        "date": "2026.08",
+        "text": "First upstream contribution merged into credo-ts at the OpenWallet Foundation"
+      },
+      {
+        "date": "2026.06",
+        "text": "Co-founded CiteMe, generative engine optimization, as CTO"
+      },
+      {
+        "date": "2026.03",
+        "text": "Claw4S protocol paper accepted, agent-to-agent trust with did:key and Verifiable Credentials"
+      },
+      {
+        "date": "2026.02",
+        "text": "Published Credat, an open-source trust layer for AI agents using DIDs and VCs"
       },
       {
         "date": "2025.09",
-        "text": "Joined Verana / 2060.io as fullstack developer, building SSI infrastructure"
-      },
-      {
-        "date": "2025.04",
-        "text": "Founded Klyx, web development agency in Bordeaux"
+        "text": "Joined 2060.io as a software engineer, building SSI infrastructure on Verana"
       },
       {
         "date": "2025.07",
         "text": "Co-founded PKBA, the largest parkour club in southwestern France"
+      },
+      {
+        "date": "2025.04",
+        "text": "Founded Klyx, a web development studio in Bordeaux"
       }
     ]
   },

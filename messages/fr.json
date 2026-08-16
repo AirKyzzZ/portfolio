@@ -29,40 +29,55 @@
   },
   "home": {
     "about": "À propos",
-    "bio1": "Je suis développeur fullstack et chercheur, basé à Bordeaux. Je suis tombé dans l'informatique jeune et je n'en suis jamais ressorti, attiré par l'idée que le code n'est pas juste un outil, c'est l'infrastructure de la société. Cette curiosité m'a mené aux systèmes distribués, à la cryptographie, et finalement à une question à laquelle je reviens sans cesse : comment établir la confiance sans autorité centrale ?",
-    "bio2": "Plus je regarde l'architecture du web, plus le problème est clair. Chaque système de confiance qu'on a construit repose encore sur quelqu'un au centre qui se porte garant pour tout le monde : autorités de certification, social login, fournisseurs d'identité (salut France Connect). Ça fonctionne, jusqu'au jour où ça ne fonctionne plus. Ce qui m'intéresse, c'est ce qui vient après.",
-    "bio3": "Aujourd'hui je construis de l'infrastructure SSI en production chez Verana et 2060.io, messagerie DIDComm, credentials vérifiables, registres de confiance. J'ai aussi créé Credat, une bibliothèque open-source qui applique le même modèle de confiance aux agents IA, en leur donnant des identités vérifiables et une délégation de permissions. À mesure que les agents deviennent plus capables et plus autonomes, la question de comment les services les vérifient, et qui les a autorisés à agir, devient urgente.",
-    "bio4": "J'ai 20 ans. J'ai tout misé sur l'identité décentralisée, l'un des problèmes fondateurs de la prochaine ère, pour les humains comme pour les agents qui agissent en leur nom.",
-    "bio5": "Avant le code, j'ai passé sept ans à m'entraîner en tant qu'athlète de haut niveau en parkour, en compétition et en enseignement à travers la France. En 2025, j'ai co-fondé le PKBA, aujourd'hui le plus grand club de parkour de Nouvelle-Aquitaine. Discipline, reconnaissance de patterns et apprentissage rapide de ses erreurs, le sport et la pensée systémique ont plus en commun qu'il n'y paraît.",
+    "bio1": "Je suis ingénieur logiciel, spécialisé en identité auto-souveraine, basé à Bordeaux. Je suis tombé dans l'informatique très jeune et je n'en suis jamais sorti, porté par l'idée que le code n'est pas qu'un outil, c'est une infrastructure de société. Cette curiosité m'a mené aux systèmes distribués, à la cryptographie, puis à la question qui me retient depuis : comment établir la confiance sans autorité centrale ?",
+    "bio2": "C'est ce que je construis chez 2060.io, sur Verana, une couche de confiance ouverte pour l'internet. 182 pull requests fusionnées depuis février 2026, sur le frontend du registre de confiance, l'outillage de credentials conforme aux specs, et le résolveur qui permet à un vérifieur de poser une question en direct plutôt que de se fier à une liste figée. Cette année, j'ai intégré la résolution de confiance Verana dans huit portefeuilles d'identité tiers, dont le portefeuille de référence EUDI, Inji de MOSIP, Talao, Sphereon, Paradym et Procivis One. Tous embarquaient une liste d'émetteurs de confiance codée en dur. Remplacer cette liste par un appel en direct, fail-closed, c'est toute l'idée.",
+    "bio3": "Le même problème arrive pour les agents IA, plus vite encore. J'ai écrit Credat, une bibliothèque open source qui donne aux agents une identité vérifiable et une délégation à portée limitée, et co-signé un protocole montrant que deux agents qui ne se connaissent pas peuvent établir une confiance cryptographique mutuelle en deux allers-retours, avec moins de 2 ms de surcoût. J'ai 20 ans, et j'ai tout misé sur l'identité décentralisée, l'un des problèmes fondateurs de la prochaine ère, pour les humains comme pour les agents qui agissent en leur nom.",
+    "bio4": "Avant la tech, j'ai été athlète de parkour en compétition à la Fédération Française de Gymnastique, de 2017 à 2025. En 2025, j'ai cofondé PKBA, aujourd'hui le plus grand club de parkour du Sud-Ouest. Discipline, reconnaissance de motifs, apprendre vite de ses échecs : le sport et la pensée systèmes ont plus en commun qu'il n'y paraît.",
     "researchInterests": "Intérêts de recherche",
     "interests": [
-      "Identité décentralisée & DIDs",
-      "Systèmes de credentials préservant la vie privée",
-      "Verifiable Credentials & divulgation sélective",
-      "Cryptographie appliquée à l'identité",
-      "Cadres de confiance & modèles de gouvernance"
+      "Registres de confiance et Trust Registry Query Protocol",
+      "Interopérabilité des portefeuilles entre écosystèmes",
+      "Identité des agents, délégation et autorisations à portée limitée",
+      "Protocoles d'échange de credentials (OID4VP, OID4VCI, SD-JWT VC)",
+      "Cadres de confiance et modèles de gouvernance"
     ],
     "news": "Actualités",
     "newsItems": [
       {
-        "date": "2026.02",
-        "text": "Publication de Credat sur npm, couche de confiance open-source pour agents IA avec DIDs et VCs"
+        "date": "2026.09",
+        "text": "Intervention à Global Digital Collaboration (GDC26), Genève, sur la confiance inter-écosystèmes des portefeuilles"
       },
       {
-        "date": "2026.01",
-        "text": "Inscrit au CS50 de Harvard, approfondissement des fondamentaux CS"
+        "date": "2026.08",
+        "text": "Résolution de confiance Verana intégrée dans huit portefeuilles d'identité tiers, dont le portefeuille de référence EUDI et Inji de MOSIP"
+      },
+      {
+        "date": "2026.08",
+        "text": "Première contribution amont fusionnée dans credo-ts à l'OpenWallet Foundation"
+      },
+      {
+        "date": "2026.06",
+        "text": "Cofondation de CiteMe, generative engine optimization, en tant que CTO"
+      },
+      {
+        "date": "2026.03",
+        "text": "Papier du protocole Claw4S accepté, confiance entre agents avec did:key et Verifiable Credentials"
+      },
+      {
+        "date": "2026.02",
+        "text": "Publication de Credat, couche de confiance open source pour agents IA fondée sur DIDs et VCs"
       },
       {
         "date": "2025.09",
-        "text": "Rejoint Verana / 2060.io en tant que développeur fullstack, construction d'infrastructure SSI"
-      },
-      {
-        "date": "2025.04",
-        "text": "Fondation de Klyx, agence de développement web à Bordeaux"
+        "text": "Arrivée chez 2060.io comme ingénieur logiciel, infrastructure SSI sur Verana"
       },
       {
         "date": "2025.07",
-        "text": "Co-fondation du PKBA, le plus grand club de parkour du Sud-Ouest"
+        "text": "Cofondation de PKBA, le plus grand club de parkour du Sud-Ouest"
+      },
+      {
+        "date": "2025.04",
+        "text": "Création de Klyx, studio de développement web à Bordeaux"
       }
     ]
   },
