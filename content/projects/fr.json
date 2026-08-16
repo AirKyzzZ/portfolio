@@ -1,125 +1,180 @@
 [
   {
-    "slug": "claw4s-trust-protocol",
-    "title": "Claw4S, Protocole de Confiance Décentralisée pour Agents IA",
-    "description": "Paper de recherche et protocole exécutable pour la confiance cryptographique mutuelle entre agents IA, soumis au hackathon Stanford × Princeton.",
-    "longDescription": "Soumis à la Claw4S Conference 2026 (Stanford × Princeton). Un protocole minimal permettant à deux agents IA inconnus d'établir une confiance cryptographique mutuelle via did:key (Ed25519) et W3C Verifiable Credentials, sans aucune autorité centrale. Le protocole se complète en 2 allers-retours avec moins de 2ms d'overhead et produit une chaîne vérifiable de credentials signés. Implémenté en un seul fichier Python avec une seule dépendance, proposant trois modes d'exécution (mock, live, attack) et un format innovant de lab interactif où l'agent exécutant participe au handshake de confiance.",
-    "technologies": ["Python", "Ed25519", "DIDs", "Verifiable Credentials", "W3C Standards"],
-    "demoUrl": "https://www.clawrxiv.io/abs/2603.00405",
+    "slug": "verana-wallet-interop",
+    "title": "Interopérabilité Verana entre portefeuilles",
+    "description": "Résolution de confiance en direct intégrée dans huit portefeuilles d'identité tiers, en remplacement de leurs listes d'émetteurs codées en dur.",
+    "longDescription": "Tout portefeuille d'identité mature embarque une liste figée d'émetteurs de confiance, compilée au build et mise à jour par release. Ces travaux la remplacent par un appel en direct, fail-closed, au résolveur de confiance Verana, avec la même surface HTTP sur chaque cible pour que l'approche soit portable plutôt que sur mesure. Livré et vérifié sur appareil : Inji de MOSIP en triangle complet émetteur, portefeuille et vérifieur ; le portefeuille Android de référence EUDI validé sur testnet face au playground Unfold de France Identité ; Talao AltMe, Sphereon, Paradym et Procivis One construits et démontrés sur appareil, chemins de confiance et chemins malveillants vérifiés ; et Hologram tournant nativement sur vs-agent. SWIYU, le portefeuille de la Confédération suisse, reste partiel : les flux d'émission positifs et de contrôle sont acceptés sur Android, un chemin de requête vérifieur reste bloqué. Réalisé pour le Global Digital Trust Collaboration Award 2026, présenté à GDC Genève en septembre 2026.",
+    "technologies": [
+      "TypeScript",
+      "Kotlin",
+      "Rust",
+      "Dart",
+      "OID4VP",
+      "OID4VCI",
+      "SD-JWT VC",
+      "DIDs",
+      "Verifiable Credentials"
+    ],
+    "demoUrl": "https://playground.mosip.testnet.verana.network/",
     "featured": true,
     "year": 2026
   },
   {
     "slug": "credat",
     "title": "Credat",
-    "description": "Couche de confiance pour agents IA utilisant les DIDs et les Verifiable Credentials.",
-    "longDescription": "Credat est une bibliothèque TypeScript open-source qui apporte l'identité décentralisée aux écosystèmes d'agents IA. Elle permet aux agents de créer des identités vérifiables (did:web, did:key), d'émettre des credentials de délégation, et d'effectuer des handshakes cryptographiques pour établir une confiance mutuelle. Construite sur les standards W3C DID v1.1 et VC Data Model, avec un minimum de dépendances et une architecture agnostique du transport.",
-    "technologies": ["TypeScript", "DIDs", "Verifiable Credentials", "SD-JWT", "Node.js"],
+    "description": "Couche de confiance pour agents IA fondée sur les DIDs et les Verifiable Credentials.",
+    "longDescription": "Credat est une bibliothèque TypeScript open source qui apporte l'identité décentralisée aux écosystèmes d'agents IA. Les agents obtiennent une identité vérifiable via did:web et did:key, émettent des credentials de délégation à portée limitée, et effectuent une poignée de main cryptographique pour établir une confiance mutuelle. Construite sur W3C DID v1.1 et le Verifiable Credentials Data Model, avec un minimum de dépendances et un cœur agnostique du transport. Autour gravite une petite suite : une CLI, une protection prête à l'emploi pour les API HTTP, une intégration LangChain et LangGraph, et des démos exécutables de bout en bout.",
+    "technologies": [
+      "TypeScript",
+      "DIDs",
+      "Verifiable Credentials",
+      "SD-JWT",
+      "Node.js"
+    ],
     "sourceUrl": "https://github.com/credat/credat",
     "demoUrl": "https://credat.io",
     "featured": true,
     "year": 2026
   },
   {
+    "slug": "claw4s-trust-protocol",
+    "title": "Claw4S, Protocole de Confiance Décentralisée pour Agents IA",
+    "description": "Paper de recherche et protocole exécutable pour la confiance cryptographique mutuelle entre agents IA, soumis au hackathon Stanford × Princeton.",
+    "longDescription": "Soumis à la Claw4S Conference 2026 (Stanford × Princeton). Un protocole minimal permettant à deux agents IA inconnus d'établir une confiance cryptographique mutuelle via did:key (Ed25519) et W3C Verifiable Credentials, sans aucune autorité centrale. Le protocole se complète en 2 allers-retours avec moins de 2ms d'overhead et produit une chaîne vérifiable de credentials signés. Implémenté en un seul fichier Python avec une seule dépendance, proposant trois modes d'exécution (mock, live, attack) et un format innovant de lab interactif où l'agent exécutant participe au handshake de confiance.",
+    "technologies": [
+      "Python",
+      "Ed25519",
+      "DIDs",
+      "Verifiable Credentials",
+      "W3C Standards"
+    ],
+    "demoUrl": "https://www.clawrxiv.io/abs/2603.00405",
+    "featured": true,
+    "year": 2026
+  },
+  {
+    "slug": "hologram-agents",
+    "title": "Agents de service vérifiables Hologram",
+    "description": "Agents IA DIDComm et credentials vérifiables tournant comme services de production sur Hologram, la plateforme de 2060.io.",
+    "longDescription": "Hologram est la plateforme de messagerie à confiance vérifiable de 2060.io, où chaque connexion entre un humain et un agent est conditionnée par des DIDs et des credentials vérifiables. J'y ai construit et livré plusieurs agents : un agent à avatar en direct adossé à LiveKit qui ouvre une session dès la connexion, un concierge multilingue gérant des parcours de voyage structurés, et un bot d'automatisation conditionné par credential. Tous sont des services NestJS déployés sur Kubernetes avec Helm, sur le framework vs-agent.",
+    "technologies": [
+      "TypeScript",
+      "NestJS",
+      "DIDComm",
+      "Verifiable Credentials",
+      "LiveKit",
+      "Kubernetes",
+      "Helm"
+    ],
+    "featured": true,
+    "year": 2026
+  },
+  {
+    "slug": "citeme",
+    "title": "CiteMe",
+    "description": "Plateforme de generative engine optimization qui mesure la fréquence à laquelle les moteurs de recherche IA citent une marque.",
+    "longDescription": "La recherche migre de Google vers les moteurs de réponse IA, et les marques qui gagneront la prochaine décennie sont celles que l'IA cite réellement. CiteMe crawle un site, lance des audits multi-fournisseurs sur les principaux moteurs IA, et renvoie un score de 0 à 100 assorti de correctifs priorisés et actionnables. Un traqueur révèle les visites réelles des bots IA, pour que les clients voient quels moteurs lisent leur contenu. Je l'ai cofondée et j'en suis le CTO, en charge de la direction technique, de l'architecture IA et de la roadmap produit. Tourne sur Next.js 16, React 19, Supabase avec pgvector pour la recherche, une file de jobs maison, une couche LLM multi-fournisseurs et la facturation Stripe.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "pgvector",
+      "Stripe"
+    ],
+    "demoUrl": "https://citeme.io",
+    "featured": false,
+    "year": 2026
+  },
+  {
     "slug": "klyx",
     "title": "Klyx",
-    "description": "Agence de développement web proposant des sites modernes et performants avec Next.js et Tailwind CSS.",
-    "longDescription": "Klyx est une agence de développement web que j'ai fondée à Bordeaux. Nous construisons des sites web et applications de production avec des outils modernes, Next.js comme framework, Tailwind CSS pour le styling, et Vercel/Netlify pour le déploiement. L'agence se concentre sur la livraison de sites rapides, accessibles et optimisés SEO pour les entreprises locales et startups.",
-    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
-    "sourceUrl": "https://github.com/airkyzzz/klyx",
+    "description": "Studio web bordelais qui livre des sites et applications rapides, portés par le design.",
+    "longDescription": "Klyx est le studio web que j'ai fondé à Bordeaux, mené de bout en bout : vente, design, développement et livraison. L'offre packagée va de 900 € pour une one-page à 5 700 € et plus pour du sur-mesure, et les projets clients partent en production avec de vrais flux de paiement et d'exploitation, pas de simples plaquettes. Le studio pilote aussi son propre moteur de contenu, un blog Next.js et MDX sur blog.klyx.fr avec analytics, données structurées et pipelines d'images automatisés.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "MDX"
+    ],
     "demoUrl": "https://klyx.fr",
-    "featured": true,
+    "featured": false,
     "year": 2025
   },
   {
     "slug": "hophopimmo",
-    "title": "HopHopImmo",
-    "description": "Plateforme immobilière connectant les acheteurs aux programmes neufs à travers la France.",
-    "longDescription": "HopHopImmo est une plateforme immobilière construite et maintenue en tant que client long terme. Le projet consiste à développer un frontend Next.js en production avec des cartes interactives, des répertoires de programmes, des pages promoteurs et un parcours de contact complet, livré en plusieurs jalons via GitLab CI/CD. C'est mon principal engagement client en cours et le plus grand projet sous Klyx.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GitLab CI/CD", "Netlify"],
+    "title": "Hop Hop Immo",
+    "description": "Plateforme proptech dotée d'un agent IA conversationnel sur un catalogue de plus de 30 000 biens neufs.",
+    "longDescription": "Hop Hop Immo est une plateforme proptech qui construit le premier agent immobilier virtuel pour le neuf en France. J'ai conçu Hoppy, un assistant IA conversationnel en production qui qualifie les acheteurs et les oriente vers les biens correspondants à la demande, ainsi que des agents autonomes pour l'automatisation marketing. J'ai également refondu la page d'accueil avec une architecture SEO ciblée couvrant plus de 30 pages villes, 8 régions et un blog, et intégré les flux de données annonces, CRM et analytics qui relient le catalogue de plus de 30 000 biens à l'assistant.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "ElevenLabs",
+      "Intégrations CRM"
+    ],
     "demoUrl": "https://hophopimmo.com",
-    "featured": true,
-    "year": 2025
-  },
-  {
-    "slug": "clawfans",
-    "title": "ClawFans",
-    "description": "La première plateforme d'abonnement conçue pour les agents IA autonomes.",
-    "longDescription": "ClawFans est une plateforme expérimentale explorant l'idée des agents IA comme acteurs économiques de premier plan. Les agents peuvent publier du contenu, proposer des abonnements payants et interagir de façon autonome avec leurs abonnés. Le projet soulève des questions ouvertes sur l'identité, l'autorisation et la responsabilité des agents, qui alimentent directement ma recherche sur l'identité décentralisée pour les systèmes agentiques.",
-    "technologies": ["TypeScript", "Node.js", "Next.js", "DIDs"],
-    "sourceUrl": "https://github.com/AirKyzzZ/clawfans",
     "featured": false,
-    "year": 2025
+    "year": 2026
   },
   {
-    "slug": "shellsafe",
-    "title": "Shellsafe",
-    "description": "Plateforme de partage de compétences orientée sécurité pour agents IA.",
-    "longDescription": "Shellsafe est une plateforme pour partager et découvrir des compétences et capacités orientées sécurité pour les agents IA. Elle explore comment les agents peuvent acquérir de nouvelles capacités en toute sécurité tout en maintenant des frontières de confiance vérifiables.",
-    "technologies": ["TypeScript", "Node.js"],
-    "sourceUrl": "https://github.com/AirKyzzZ/shellsafe",
-    "featured": false,
-    "year": 2025
-  },
-  {
-    "slug": "nullpost",
-    "title": "NullPost",
-    "description": "Plateforme de micro-blogging privée, chiffrée et auto-hébergée.",
-    "longDescription": "NullPost est une plateforme de micro-blogging auto-hébergée axée sur la confidentialité et le chiffrement. Construite en réponse à la centralisation des plateformes sociales, elle permet aux utilisateurs de gérer leur propre instance avec des posts chiffrés de bout en bout et une exposition minimale des métadonnées.",
-    "technologies": ["Node.js", "TypeScript", "PostgreSQL"],
-    "sourceUrl": "https://github.com/AirKyzzZ/nullpost",
+    "slug": "pkba",
+    "title": "Parkour Bassin d'Arcachon",
+    "description": "Site communautaire et plateforme adhérents du plus grand club de parkour du Sud-Ouest, cofondé en 2025.",
+    "longDescription": "PKBA est le plus grand club de parkour du Sud-Ouest, que j'ai cofondé et où je suis trésorier et responsable communication. Environ 80 membres aujourd'hui, et plus de 110 attendus la saison prochaine. J'ai conçu et développé seul la plateforme de production du club : site public, inscription en ligne persistée dans Airtable, tableau de bord d'administration derrière une authentification maison pour valider les licences et exporter les données adhérents, et des flux Stripe en production pour la boutique et les dons avec reçus automatisés. J'ai pratiqué le parkour en compétition de 2017 à 2025, ce projet est donc autant personnel que technique. Le club a fait l'objet d'un reportage de France 3 Nouvelle-Aquitaine.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Airtable",
+      "Stripe"
+    ],
+    "demoUrl": "https://pkba.vertiflow.fr",
     "featured": false,
     "year": 2025
   },
   {
     "slug": "vertiflow",
     "title": "VertiFlow",
-    "description": "Marque de mouvement urbain et plateforme communautaire pour les passionnés de parkour.",
-    "longDescription": "VertiFlow est une marque de mouvement urbain centrée sur la communauté parkour. La plateforme connecte les athlètes, documente les sessions et construit une communauté autour du freerunning et de la culture du mouvement. Fort de sept ans de pratique du parkour à haut niveau, ce projet fait le pont entre identité sportive et communauté numérique.",
-    "technologies": ["React", "Node.js", "TypeScript"],
-    "sourceUrl": "https://github.com/airkyzzz/vertiflow",
+    "description": "Marque de parkour et de mouvement urbain, avec une boutique e-commerce construite à la main.",
+    "longDescription": "VertiFlow est une marque de parkour et de mouvement urbain que j'ai fondée, mêlant vêtements, contenu et communauté pour rendre la discipline plus accessible. J'ai construit et j'exploite l'intégralité de la boutique vertiflow.fr : catalogue produits, panier, paiement via fonctions serverless, codes promo et e-mails de commande automatisés, avec le blog SEO, la FAQ et l'ensemble des pages légales et CGV. Codée à la main et déployée sur Netlify, connectée à l'écosystème du club PKBA.",
+    "technologies": [
+      "JavaScript",
+      "Netlify Functions",
+      "Stripe",
+      "HTML/CSS"
+    ],
     "demoUrl": "https://vertiflow.fr",
     "featured": false,
     "year": 2024
   },
   {
+    "slug": "pkvision",
+    "title": "PkVision",
+    "description": "Vision par ordinateur open source pour la détection et la notation automatiques des figures de parkour.",
+    "longDescription": "PkVision applique l'estimation de pose et la classification de mouvement à des vidéos de parkour, pour détecter les figures et les noter automatiquement. Le projet naît de huit années dans la discipline et d'un problème que le parkour de compétition n'a jamais réglé proprement : la notation est subjective, et les juges divergent. Une expérimentation ouverte à l'intersection des deux choses auxquelles je consacre mon temps.",
+    "technologies": [
+      "Python",
+      "Vision par ordinateur",
+      "Estimation de pose"
+    ],
+    "sourceUrl": "https://github.com/AirKyzzZ/pkvision",
+    "featured": false,
+    "year": 2026
+  },
+  {
     "slug": "reciproq",
     "title": "Reciproq",
-    "description": "Plateforme sociale de partage de recettes et de cuisine collaborative.",
-    "longDescription": "Reciproq est une plateforme sociale qui connecte les passionnés de cuisine. Les utilisateurs peuvent partager des recettes, collaborer sur des projets culinaires et découvrir de nouveaux plats de leur communauté.",
-    "technologies": ["React", "Next.js", "Node.js", "PostgreSQL"],
-    "demoUrl": "https://reciproq.com",
+    "description": "Site vitrine d'une startup française de santé mentale.",
+    "longDescription": "Reciproq est une startup française qui travaille à améliorer l'accès aux soins de santé mentale. Sur une mission de deux mois, j'ai développé les pages clés de son premier site vitrine en Next.js et Tailwind, en implémentant le design system Figma dans une approche mobile-first, accessible et soucieuse des performances, avec des modules pilotés par les données pour les témoignages et les tarifs afin que l'équipe puisse mettre à jour le contenu sans déploiement.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
     "featured": false,
-    "year": 2024
-  },
-  {
-    "slug": "pkba",
-    "title": "Parkour Bassin d'Arcachon",
-    "description": "Site communautaire du plus grand club de parkour du Sud-Ouest de la France, co-fondé en 2025.",
-    "longDescription": "PKBA est le plus grand club de parkour de Nouvelle-Aquitaine, que j'ai co-fondé et où je siège au bureau. Le site communautaire gère la planification d'événements, les profils des membres, la cartographie des spots d'entraînement et les galeries photos. Conçu mobile-first pour les athlètes qui consultent les spots en déplacement. En tant qu'athlète de haut niveau de 2017 à 2024, construire ce site était autant un projet personnel que technique.",
-    "technologies": ["React", "Tailwind CSS", "Vercel"],
-    "demoUrl": "https://pkba.vertiflow.fr",
-    "featured": false,
-    "year": 2024
-  },
-  {
-    "slug": "deezer-legends",
-    "title": "Deezer Legends",
-    "description": "Jeu de cartes à collectionner basé sur les profils d'écoute Deezer.",
-    "longDescription": "Un projet personnel qui transforme les profils musicaux Deezer en cartes à collectionner uniques. Il récupère les données d'écoute via l'API Deezer et génère des designs de cartes basés sur les artistes, genres et habitudes d'écoute favoris.",
-    "technologies": ["JavaScript", "Deezer API", "Canvas API"],
-    "sourceUrl": "https://github.com/AirKyzzZ/deezer-legends",
-    "featured": false,
-    "year": 2024
-  },
-  {
-    "slug": "noctis",
-    "title": "Noctis",
-    "description": "Application mobile de suivi du sommeil axée sur la confidentialité.",
-    "longDescription": "Noctis est une application mobile de suivi du sommeil axée sur la simplicité et la confidentialité. Les utilisateurs enregistrent leurs sessions de sommeil, suivent leurs patterns au fil du temps et obtiennent des insights sans que leurs données ne quittent leur appareil.",
-    "technologies": ["React Native", "TypeScript"],
-    "sourceUrl": "https://github.com/AirKyzzZ/noctis",
-    "featured": false,
-    "year": 2024
+    "year": 2025
   }
 ]

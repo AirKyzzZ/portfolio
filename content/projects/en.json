@@ -1,11 +1,21 @@
 [
   {
-    "slug": "claw4s-trust-protocol",
-    "title": "Claw4S, Decentralized Agent Trust Protocol",
-    "description": "Research paper and executable protocol for mutual cryptographic trust between AI agents, submitted to Stanford × Princeton hackathon.",
-    "longDescription": "Submitted to the Claw4S Conference 2026 (Stanford × Princeton). A minimal protocol enabling two previously unknown AI agents to establish mutual cryptographic trust using did:key (Ed25519) and W3C Verifiable Credentials, without any central authority. The protocol completes in 2 round trips with under 2ms overhead and produces a fully auditable chain of signed credentials. Implemented as a single Python file with one dependency, featuring three execution modes (mock, live, attack) and a novel interactive lab format where the executing agent participates in the trust handshake.",
-    "technologies": ["Python", "Ed25519", "DIDs", "Verifiable Credentials", "W3C Standards"],
-    "demoUrl": "https://www.clawrxiv.io/abs/2603.00405",
+    "slug": "verana-wallet-interop",
+    "title": "Verana Cross-Ecosystem Wallet Interop",
+    "description": "Live trust-registry resolution wired into eight third-party identity wallets, replacing their hardcoded issuer lists.",
+    "longDescription": "Every mature identity wallet ships a static list of trusted issuers, compiled at build time and updated by release. This work replaces that list with a live, fail-closed call to the Verana trust resolver, using the same HTTP surface in every target so the approach is portable rather than bespoke. Shipped and device-verified: MOSIP's Inji as a full issuer, wallet and verifier triangle; the EUDI reference Android wallet validated on testnet against France Identité's Unfold playground; Talao AltMe, Sphereon, Paradym and Procivis One built and demonstrated on device with both trusted and rogue paths verified; and Hologram running natively on vs-agent. SWIYU, the Swiss Confederation wallet, is partial: positive and control issuance flows are accepted on Android, one verifier request path remains blocked. Built for the Global Digital Trust Collaboration Award 2026, presented at GDC Geneva in September 2026.",
+    "technologies": [
+      "TypeScript",
+      "Kotlin",
+      "Rust",
+      "Dart",
+      "OID4VP",
+      "OID4VCI",
+      "SD-JWT VC",
+      "DIDs",
+      "Verifiable Credentials"
+    ],
+    "demoUrl": "https://playground.mosip.testnet.verana.network/",
     "featured": true,
     "year": 2026
   },
@@ -13,113 +23,158 @@
     "slug": "credat",
     "title": "Credat",
     "description": "Trust layer for AI agents using DIDs and Verifiable Credentials.",
-    "longDescription": "Credat is an open-source TypeScript library that brings decentralized identity to AI agent ecosystems. It allows agents to create verifiable identities (did:web, did:key), issue scoped delegation credentials, and perform cryptographic handshakes to establish mutual trust. Built on W3C DID v1.1 and VC Data Model standards, with minimal dependencies and a transport-agnostic design.",
-    "technologies": ["TypeScript", "DIDs", "Verifiable Credentials", "SD-JWT", "Node.js"],
+    "longDescription": "Credat is an open-source TypeScript library that brings decentralized identity to AI agent ecosystems. Agents get verifiable identities via did:web and did:key, issue scoped delegation credentials, and perform a cryptographic handshake to establish mutual trust. Built on W3C DID v1.1 and the Verifiable Credentials Data Model, with minimal dependencies and a transport-agnostic core. Around it sits a small suite: a CLI, drop-in protection for HTTP APIs, a LangChain and LangGraph integration, and runnable end-to-end demos.",
+    "technologies": [
+      "TypeScript",
+      "DIDs",
+      "Verifiable Credentials",
+      "SD-JWT",
+      "Node.js"
+    ],
     "sourceUrl": "https://github.com/credat/credat",
     "demoUrl": "https://credat.io",
     "featured": true,
     "year": 2026
   },
   {
+    "slug": "claw4s-trust-protocol",
+    "title": "Claw4S, Decentralized Agent Trust Protocol",
+    "description": "Research paper and executable protocol for mutual cryptographic trust between AI agents, submitted to Stanford × Princeton hackathon.",
+    "longDescription": "Submitted to the Claw4S Conference 2026 (Stanford × Princeton). A minimal protocol enabling two previously unknown AI agents to establish mutual cryptographic trust using did:key (Ed25519) and W3C Verifiable Credentials, without any central authority. The protocol completes in 2 round trips with under 2ms overhead and produces a fully auditable chain of signed credentials. Implemented as a single Python file with one dependency, featuring three execution modes (mock, live, attack) and a novel interactive lab format where the executing agent participates in the trust handshake.",
+    "technologies": [
+      "Python",
+      "Ed25519",
+      "DIDs",
+      "Verifiable Credentials",
+      "W3C Standards"
+    ],
+    "demoUrl": "https://www.clawrxiv.io/abs/2603.00405",
+    "featured": true,
+    "year": 2026
+  },
+  {
+    "slug": "hologram-agents",
+    "title": "Hologram Verifiable Service Agents",
+    "description": "DIDComm and verifiable-credential AI agents running as production services on 2060.io's Hologram.",
+    "longDescription": "Hologram is 2060.io's verifiable-trust messaging platform, where every connection between a human and an agent is gated by DIDs and verifiable credentials. I built and shipped several agents on it: a live-avatar agent backed by LiveKit that opens a session on connect, a multilingual concierge handling structured travel workflows, and a credential-gated automation bot. All are NestJS services deployed to Kubernetes with Helm, running on the vs-agent framework.",
+    "technologies": [
+      "TypeScript",
+      "NestJS",
+      "DIDComm",
+      "Verifiable Credentials",
+      "LiveKit",
+      "Kubernetes",
+      "Helm"
+    ],
+    "featured": true,
+    "year": 2026
+  },
+  {
+    "slug": "citeme",
+    "title": "CiteMe",
+    "description": "Generative engine optimization platform measuring how often AI search engines cite a brand.",
+    "longDescription": "Search is moving from Google to AI answer engines, and the brands that win the next decade are the ones AI actually cites. CiteMe crawls a site, runs multi-provider audits across the major AI engines, and returns a 0 to 100 score with prioritized, actionable fixes. A tracker surfaces real AI-bot visits so customers see which engines are reading their content. I co-founded it and serve as CTO, owning technical direction, AI architecture and product roadmap. Runs on Next.js 16, React 19, Supabase with pgvector for retrieval, a custom job queue, a multi-provider LLM layer, and Stripe billing.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "pgvector",
+      "Stripe"
+    ],
+    "demoUrl": "https://citeme.io",
+    "featured": false,
+    "year": 2026
+  },
+  {
     "slug": "klyx",
     "title": "Klyx",
-    "description": "Web development agency offering modern, performant websites built with Next.js and Tailwind CSS.",
-    "longDescription": "Klyx is a web development agency I founded in Bordeaux. We build production-grade websites and web applications using modern tools, Next.js for the framework, Tailwind CSS for styling, and Vercel/Netlify for deployment. The agency focuses on delivering fast, accessible, and SEO-optimized sites for local businesses and startups.",
-    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
-    "sourceUrl": "https://github.com/airkyzzz/klyx",
+    "description": "Web studio in Bordeaux building fast, design-led sites and web apps.",
+    "longDescription": "Klyx is the web studio I founded in Bordeaux, run end to end: sales, design, development and delivery. Productized pricing runs from €900 one-pagers to €5,700+ custom builds, and client work ships with real payment and operations flows rather than brochureware. The studio also runs its own content engine, a Next.js and MDX blog at blog.klyx.fr with analytics, structured data and automated image pipelines.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "MDX"
+    ],
     "demoUrl": "https://klyx.fr",
-    "featured": true,
+    "featured": false,
     "year": 2025
   },
   {
     "slug": "hophopimmo",
-    "title": "HopHopImmo",
-    "description": "Real estate platform connecting buyers with new-build property programs across France.",
-    "longDescription": "HopHopImmo is a real estate platform built and maintained as a long-term client project. The work involves building a production Next.js frontend with interactive maps, program directories, developer pages, and a full contact flow, delivered across multiple milestones with GitLab CI/CD. It is my main ongoing client engagement and the largest project under Klyx.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GitLab CI/CD", "Netlify"],
+    "title": "Hop Hop Immo",
+    "description": "Property-tech platform with a conversational AI agent over a catalogue of 30,000+ new-build listings.",
+    "longDescription": "Hop Hop Immo is a property-tech platform building a virtual real-estate agent for new-build homes across France. I built Hoppy, a conversational AI assistant live in production that qualifies buyers and guides them to matching properties on demand, plus autonomous agents handling marketing automation. I also rebuilt the homepage with a targeted SEO architecture spanning 30+ city pages, 8 regions and a blog, and integrated the listing, CRM and analytics data flows that connect the 30,000+ property catalogue to the assistant.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "ElevenLabs",
+      "CRM integrations"
+    ],
     "demoUrl": "https://hophopimmo.com",
-    "featured": true,
-    "year": 2025
-  },
-  {
-    "slug": "clawfans",
-    "title": "ClawFans",
-    "description": "The first subscription platform built for autonomous AI agents.",
-    "longDescription": "ClawFans is an experimental platform exploring AI agents as first-class economic actors. Agents can publish content, offer paid subscriptions, and interact autonomously with subscribers. The project raises open questions about agent identity, authorization, and accountability that directly inform my research on decentralized identity for agentic systems.",
-    "technologies": ["TypeScript", "Node.js", "Next.js", "DIDs"],
-    "sourceUrl": "https://github.com/AirKyzzZ/clawfans",
     "featured": false,
-    "year": 2025
+    "year": 2026
   },
   {
-    "slug": "shellsafe",
-    "title": "Shellsafe",
-    "description": "Security-focused skills sharing platform for AI agents.",
-    "longDescription": "Shellsafe is a platform for sharing and discovering security-focused skills and capabilities for AI agents. It explores how agents can safely acquire new capabilities while maintaining verifiable trust boundaries, part of the broader ecosystem of tools around AI agent identity and security.",
-    "technologies": ["TypeScript", "Node.js"],
-    "sourceUrl": "https://github.com/AirKyzzZ/shellsafe",
-    "featured": false,
-    "year": 2025
-  },
-  {
-    "slug": "nullpost",
-    "title": "NullPost",
-    "description": "Private, encrypted, self-hosted micro-blogging platform.",
-    "longDescription": "NullPost is a self-hosted micro-blogging platform focused on privacy and encryption. Built as a response to the centralization of social platforms, it lets users run their own instance with end-to-end encrypted posts and minimal metadata exposure.",
-    "technologies": ["Node.js", "TypeScript", "PostgreSQL"],
-    "sourceUrl": "https://github.com/AirKyzzZ/nullpost",
+    "slug": "pkba",
+    "title": "Parkour Bassin d'Arcachon",
+    "description": "Community website and member platform for the largest parkour club in southwestern France, co-founded in 2025.",
+    "longDescription": "PKBA is the largest parkour club in southwestern France, which I co-founded and where I serve as treasurer and head of communication. Around 80 members today, growing to 110+ for the coming season. I designed and solo-built the club's production platform: a public site, online registration persisted to Airtable, an admin dashboard behind custom authentication to validate licences and export member data, and live Stripe flows for the merchandise shop and donations with automated receipts. I trained as a competitive parkour athlete from 2017 to 2025, so building this was as much a personal project as a technical one. The club has been featured by France 3 Nouvelle-Aquitaine.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Airtable",
+      "Stripe"
+    ],
+    "demoUrl": "https://pkba.vertiflow.fr",
     "featured": false,
     "year": 2025
   },
   {
     "slug": "vertiflow",
     "title": "VertiFlow",
-    "description": "Urban movement brand and community platform for parkour enthusiasts.",
-    "longDescription": "VertiFlow is an urban movement brand centered around the parkour community. The platform connects athletes, documents sessions, and builds a community around freerunning and movement culture. Drawing from seven years of high-level parkour practice, the project bridges athletic identity with digital community building.",
-    "technologies": ["React", "Node.js", "TypeScript"],
-    "sourceUrl": "https://github.com/airkyzzz/vertiflow",
+    "description": "Parkour and urban-movement brand with a hand-built e-commerce storefront.",
+    "longDescription": "VertiFlow is a parkour and urban-movement brand I founded, blending apparel, content and community to make the sport more accessible. I built and operate the entire storefront at vertiflow.fr from scratch: product catalogue, cart, checkout via serverless functions, promo codes and automated order emails, alongside the SEO blog, FAQ and full legal pages. Hand-coded and deployed on Netlify, and connected to the PKBA club ecosystem.",
+    "technologies": [
+      "JavaScript",
+      "Netlify Functions",
+      "Stripe",
+      "HTML/CSS"
+    ],
     "demoUrl": "https://vertiflow.fr",
     "featured": false,
     "year": 2024
   },
   {
+    "slug": "pkvision",
+    "title": "PkVision",
+    "description": "Open-source computer vision for automatic parkour trick detection and scoring.",
+    "longDescription": "PkVision applies pose estimation and movement classification to parkour footage, detecting tricks and scoring them automatically. It comes out of eight years in the sport and the judging problem that competitive parkour has never solved cleanly: scoring is subjective, and judges disagree. An open experiment at the intersection of the two things I spend my time on.",
+    "technologies": [
+      "Python",
+      "Computer Vision",
+      "Pose Estimation"
+    ],
+    "sourceUrl": "https://github.com/AirKyzzZ/pkvision",
+    "featured": false,
+    "year": 2026
+  },
+  {
     "slug": "reciproq",
     "title": "Reciproq",
-    "description": "Social platform for recipe sharing and collaborative cooking.",
-    "longDescription": "Reciproq is a social platform that connects food enthusiasts. Users can share recipes, collaborate on cooking projects, and discover new dishes from their community. Built with a modern web stack featuring real-time updates and responsive design.",
-    "technologies": ["React", "Next.js", "Node.js", "PostgreSQL"],
-    "demoUrl": "https://reciproq.com",
+    "description": "Marketing site for a French mental health startup.",
+    "longDescription": "Reciproq is a French startup working to improve access to mental health care. Over a two-month engagement I built key pages of its first marketing site in Next.js and Tailwind, implementing the Figma design system with a mobile-first, accessible and performance-minded approach, plus data-driven modules for testimonials and pricing so the team could update content without a deploy.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
     "featured": false,
-    "year": 2024
-  },
-  {
-    "slug": "pkba",
-    "title": "Parkour Bassin d'Arcachon",
-    "description": "Community website for the largest parkour club in southwestern France, co-founded in 2025.",
-    "longDescription": "PKBA is the largest parkour club in Nouvelle-Aquitaine, which I co-founded and where I serve on the board. The community website handles event scheduling, member profiles, training spot maps, and photo galleries. Designed mobile-first for athletes checking spots on the go. As a high-level parkour athlete from 2017 to 2024, building this was as much a personal project as a technical one.",
-    "technologies": ["React", "Tailwind CSS", "Vercel"],
-    "demoUrl": "https://pkba.vertiflow.fr",
-    "featured": false,
-    "year": 2024
-  },
-  {
-    "slug": "deezer-legends",
-    "title": "Deezer Legends",
-    "description": "Trading card game built on Deezer listening profiles.",
-    "longDescription": "A side project that transforms Deezer music profiles into collectible trading cards. It fetches listening data via the Deezer API and generates unique card designs based on top artists, genres, and listening habits. A creative exploration of APIs and generative design.",
-    "technologies": ["JavaScript", "Deezer API", "Canvas API"],
-    "sourceUrl": "https://github.com/AirKyzzZ/deezer-legends",
-    "featured": false,
-    "year": 2024
-  },
-  {
-    "slug": "noctis",
-    "title": "Noctis",
-    "description": "Privacy-first sleep tracking mobile app.",
-    "longDescription": "Noctis is a mobile sleep tracking application focused on simplicity and privacy. Users log sleep sessions, track patterns over time, and get insights without data leaving their device.",
-    "technologies": ["React Native", "TypeScript"],
-    "sourceUrl": "https://github.com/AirKyzzZ/noctis",
-    "featured": false,
-    "year": 2024
+    "year": 2025
   }
 ]
