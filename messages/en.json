@@ -49,7 +49,15 @@
       },
       {
         "date": "2026.08",
-        "text": "Shipped Verana trust resolution into eight third-party identity wallets, including the EUDI reference wallet and MOSIP's Inji"
+        "text": "Joined the W3C Credentials Community Group"
+      },
+      {
+        "date": "2026.08",
+        "text": "Joined the Trust over IP Foundation"
+      },
+      {
+        "date": "2026.08",
+        "text": "Verana trust resolution now runs in eight third-party identity wallets, seven complete and one partial, including the EUDI reference wallet and MOSIP's Inji"
       },
       {
         "date": "2026.08",
@@ -154,7 +162,7 @@
         "title": "Computer Science Engineering Programme",
         "school": "EPSI Bordeaux",
         "period": "Sep 2024 – Sep 2027",
-        "desc": "Five-year software engineering programme. Currently working toward the RNCP 6 title Concepteur Développeur d'Applications (RNCP37873), September 2026 to September 2027. BTS SIO SLAM completed June 2026."
+        "desc": "Software engineering programme at EPSI Bordeaux. Currently working toward the RNCP 6 title Concepteur Développeur d'Applications (RNCP37873), September 2026 to September 2027. BTS SIO SLAM completed June 2026."
       },
       {
         "title": "CS50: Introduction to Computer Science",
@@ -183,8 +191,12 @@
     ],
     "engagement": [
       {
+        "title": "Standards Bodies",
+        "desc": "Member of the W3C Credentials Community Group and the Trust over IP Foundation. Following the work for now rather than contributing to specifications."
+      },
+      {
         "title": "Open Source",
-        "desc": "Contributor to credo-ts at the OpenWallet Foundation, where a fix to did:webvh log proof verification methods was merged in August 2026. Creator of Credat, an open-source trust layer for AI agents."
+        "desc": "Landed a fix in credo-ts at the OpenWallet Foundation, on did:webvh log proof verification methods, merged in August 2026. Creator of Credat, an open-source trust layer for AI agents."
       },
       {
         "title": "PKBA",
@@ -205,10 +217,10 @@
     "title": "Talks & Presentations",
     "items": [
       {
-        "title": "Cross-ecosystem trust for digital identity wallets",
-        "venue": "Global Digital Collaboration Conference (GDC26), Palexpo Geneva",
+        "title": "Global Digital Collaboration Conference 2026",
+        "venue": "Palexpo, Geneva",
         "date": "1-3 September 2026",
-        "desc": "Co-speaking with Fabrice Rochette and Ariel Gentile for 2060.io on our Global Digital Trust Collaboration Award work: wiring live trust-registry resolution into eight third-party identity wallets. Session details to be confirmed."
+        "desc": "Co-speaking with Fabrice Rochette and Ariel Gentile for 2060.io on our Global Digital Trust Collaboration Award work: wiring live trust-registry resolution into eight third-party identity wallets. Session title and day to be confirmed."
       }
     ],
     "metaDescription": "Conference talks on digital identity, trust registries and cross-ecosystem wallet interoperability."
@@ -216,7 +228,7 @@
   "publications": {
     "title": "Publications",
     "empty": "No publications yet. This section will be updated as research work progresses.",
-    "metaDescription": "Peer-reviewed and conference work on decentralized agent-to-agent trust using DIDs and Verifiable Credentials."
+    "metaDescription": "Conference work on decentralized agent-to-agent trust using DIDs and Verifiable Credentials."
   },
   "projects": {
     "title": "Projects",

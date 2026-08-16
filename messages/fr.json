@@ -31,8 +31,8 @@
     "about": "À propos",
     "bio1": "Je suis ingénieur logiciel, spécialisé en identité auto-souveraine, basé à Bordeaux. Je suis tombé dans l'informatique très jeune et je n'en suis jamais sorti, porté par l'idée que le code n'est pas qu'un outil, c'est une infrastructure de société. Cette curiosité m'a mené aux systèmes distribués, à la cryptographie, puis à la question qui me retient depuis : comment établir la confiance sans autorité centrale ?",
     "bio2": "C'est ce que je construis chez 2060.io, sur Verana, une couche de confiance ouverte pour l'internet. 182 pull requests fusionnées depuis février 2026, sur le frontend du registre de confiance, l'outillage de credentials conforme aux specs, et le résolveur qui permet à un vérifieur de poser une question en direct plutôt que de se fier à une liste figée. Cette année, j'ai intégré la résolution de confiance Verana dans huit portefeuilles d'identité tiers, dont le portefeuille de référence EUDI, Inji de MOSIP, Talao, Sphereon, Paradym et Procivis One. Tous embarquaient une liste d'émetteurs de confiance codée en dur. Remplacer cette liste par un appel en direct, fail-closed, c'est toute l'idée.",
-    "bio3": "Le même problème arrive pour les agents IA, plus vite encore. J'ai écrit Credat, une bibliothèque open source qui donne aux agents une identité vérifiable et une délégation à portée limitée, et co-signé un protocole montrant que deux agents qui ne se connaissent pas peuvent établir une confiance cryptographique mutuelle en deux allers-retours, avec moins de 2 ms de surcoût. J'ai 20 ans, et j'ai tout misé sur l'identité décentralisée, l'un des problèmes fondateurs de la prochaine ère, pour les humains comme pour les agents qui agissent en leur nom.",
-    "bio4": "Avant la tech, j'ai été athlète de parkour en compétition à la Fédération Française de Gymnastique, de 2017 à 2025. En 2025, j'ai cofondé PKBA, aujourd'hui le plus grand club de parkour du Sud-Ouest. Discipline, reconnaissance de motifs, apprendre vite de ses échecs : le sport et la pensée systèmes ont plus en commun qu'il n'y paraît.",
+    "bio3": "Le même problème arrive pour les agents IA, plus vite encore. J'ai écrit Credat, une bibliothèque open source qui donne aux agents une identité vérifiable et une délégation à portée limitée, et co-écrit un protocole montrant que deux agents qui ne se connaissent pas peuvent établir une confiance cryptographique mutuelle en deux allers-retours, avec moins de 2 ms de surcoût. J'ai 20 ans, et j'ai tout misé sur l'identité décentralisée, l'un des problèmes fondateurs de la prochaine ère, pour les humains comme pour les agents qui agissent en leur nom.",
+    "bio4": "Avant la tech, j'ai été athlète de parkour en compétition à la Fédération Française de Gymnastique, de 2017 à 2025. En 2025, j'ai cofondé PKBA, aujourd'hui le plus grand club de parkour du Sud-Ouest. Discipline, reconnaissance de motifs, apprendre vite de ses échecs : le sport et la pensée systémique ont plus en commun qu'il n'y paraît.",
     "researchInterests": "Intérêts de recherche",
     "interests": [
       "Registres de confiance et Trust Registry Query Protocol",
@@ -49,7 +49,15 @@
       },
       {
         "date": "2026.08",
-        "text": "Résolution de confiance Verana intégrée dans huit portefeuilles d'identité tiers, dont le portefeuille de référence EUDI et Inji de MOSIP"
+        "text": "Adhésion au W3C Credentials Community Group"
+      },
+      {
+        "date": "2026.08",
+        "text": "Adhésion à la Trust over IP Foundation"
+      },
+      {
+        "date": "2026.08",
+        "text": "Résolution de confiance Verana désormais active dans huit portefeuilles d'identité tiers, sept complets et un partiel, dont le portefeuille de référence EUDI et Inji de MOSIP"
       },
       {
         "date": "2026.08",
@@ -122,7 +130,7 @@
         "title": "Ingénieur logiciel",
         "company": "2060.io / Verana",
         "period": "Sep 2025 – Aujourd'hui",
-        "desc": "Ingénieur cœur sur Verana, une couche de confiance ouverte pour l'internet. 182 pull requests fusionnées depuis février 2026, sur le frontend du registre de confiance, le playground de démonstration, l'indexeur et le résolveur. Outillage de credentials conforme aux specs : canonicalisation JCS, étiquetage linguistique BCP-47 complet, et règles de validation lues depuis la chaîne. Intégration de la résolution de confiance en direct dans huit portefeuilles d'identité tiers, dont le portefeuille de référence EUDI, Inji de MOSIP, Talao, Sphereon, Paradym et Procivis One. Livraison d'agents DIDComm et credentials vérifiables sur Hologram, en services NestJS sur Kubernetes."
+        "desc": "Ingénieur principal sur Verana, une couche de confiance ouverte pour l'internet. 182 pull requests fusionnées depuis février 2026, sur le frontend du registre de confiance, le playground de démonstration, l'indexeur et le résolveur. Outillage de credentials conforme aux specs : canonicalisation JCS, étiquetage linguistique BCP-47 complet, et règles de validation lues depuis la chaîne. Intégration de la résolution de confiance en direct dans huit portefeuilles d'identité tiers, dont le portefeuille de référence EUDI, Inji de MOSIP, Talao, Sphereon, Paradym et Procivis One. Livraison d'agents DIDComm et credentials vérifiables sur Hologram, en services NestJS sur Kubernetes."
       },
       {
         "title": "Cofondateur & CTO",
@@ -134,7 +142,7 @@
         "title": "Ingénieur logiciel",
         "company": "Hop Hop Immo",
         "period": "Jan 2026 – Aujourd'hui",
-        "desc": "Conception de Hoppy, un assistant immobilier IA conversationnel en production, qui qualifie les acheteurs sur un catalogue de plus de 30 000 biens neufs. Développement d'agents autonomes pour l'automatisation marketing, et refonte de la page d'accueil avec une architecture SEO couvrant plus de 30 pages villes et 8 régions."
+        "desc": "Développement de Hoppy, un assistant immobilier IA conversationnel en production, qui qualifie les acheteurs sur un catalogue de plus de 30 000 biens neufs. Développement d'agents autonomes pour l'automatisation marketing, et refonte de la page d'accueil avec une architecture SEO couvrant plus de 30 pages villes et 8 régions."
       },
       {
         "title": "Fondateur",
@@ -154,7 +162,7 @@
         "title": "Cursus d'ingénierie informatique",
         "school": "EPSI Bordeaux",
         "period": "Sep 2024 – Sep 2027",
-        "desc": "Cursus d'ingénierie logicielle en cinq ans. Actuellement en préparation du titre RNCP 6 Concepteur Développeur d'Applications (RNCP37873), de septembre 2026 à septembre 2027. BTS SIO SLAM obtenu en juin 2026."
+        "desc": "Cursus d'ingénierie logicielle à l'EPSI Bordeaux. Actuellement en préparation du titre RNCP 6 Concepteur Développeur d'Applications (RNCP37873), de septembre 2026 à septembre 2027. BTS SIO SLAM obtenu en juin 2026."
       },
       {
         "title": "CS50 : Introduction to Computer Science",
@@ -183,8 +191,12 @@
     ],
     "engagement": [
       {
+        "title": "Organismes de normalisation",
+        "desc": "Membre du W3C Credentials Community Group et de la Trust over IP Foundation. Je suis les travaux pour l'instant, sans contribuer à la rédaction des spécifications."
+      },
+      {
         "title": "Open Source",
-        "desc": "Contributeur de credo-ts à l'OpenWallet Foundation, où un correctif sur les méthodes de vérification des preuves de log did:webvh a été fusionné en août 2026. Créateur de Credat, couche de confiance open source pour agents IA."
+        "desc": "Correctif fusionné dans credo-ts à l'OpenWallet Foundation, sur les méthodes de vérification des preuves de log did:webvh, en août 2026. Créateur de Credat, couche de confiance open source pour agents IA."
       },
       {
         "title": "PKBA",
@@ -205,10 +217,10 @@
     "title": "Talks & Présentations",
     "items": [
       {
-        "title": "Confiance inter-écosystèmes pour les portefeuilles d'identité numérique",
-        "venue": "Global Digital Collaboration Conference (GDC26), Palexpo Genève",
+        "title": "Global Digital Collaboration Conference 2026",
+        "venue": "Palexpo, Genève",
         "date": "1-3 septembre 2026",
-        "desc": "Intervention conjointe avec Fabrice Rochette et Ariel Gentile pour 2060.io sur nos travaux pour le Global Digital Trust Collaboration Award : l'intégration d'une résolution de confiance en direct dans huit portefeuilles d'identité tiers. Détails de la session à confirmer."
+        "desc": "Intervention conjointe avec Fabrice Rochette et Ariel Gentile pour 2060.io sur nos travaux pour le Global Digital Trust Collaboration Award : l'intégration d'une résolution de confiance en direct dans huit portefeuilles d'identité tiers. Titre et jour de la session à confirmer."
       }
     ],
     "metaDescription": "Interventions en conférence sur l'identité numérique, les registres de confiance et l'interopérabilité des portefeuilles."

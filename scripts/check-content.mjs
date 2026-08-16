@@ -21,7 +21,8 @@ function tsxFiles(dir) {
 const FILES = [...CONTENT_FILES, ...tsxFiles('src')]
 
 const FORBIDDEN = [
-  { re: /(joined|member of|part of|rejoint|membre d)[^.]{0,40}trust over ip/i, why: 'Membership was never granted' },
+  { re: /(chair|editor|working group|task force)[^.]{0,50}trust over ip/i, why: 'Membership only, no working group or task force yet' },
+  { re: /trust over ip[^.]{0,50}(chair|editor|working group|task force)/i, why: 'Membership only, no working group or task force yet' },
   { re: /sybil/i, why: 'Outdated research framing' },
   { re: /face10ai/i, why: 'Dropped from the CV' },
   { re: /RNCP (Level|niveau) 7/i, why: 'It is RNCP 6, code RNCP37873' },

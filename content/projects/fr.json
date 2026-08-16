@@ -3,7 +3,7 @@
     "slug": "verana-wallet-interop",
     "title": "Interopérabilité Verana entre portefeuilles",
     "description": "Résolution de confiance en direct intégrée dans huit portefeuilles d'identité tiers, en remplacement de leurs listes d'émetteurs codées en dur.",
-    "longDescription": "Tout portefeuille d'identité mature embarque une liste figée d'émetteurs de confiance, compilée au build et mise à jour par release. Ces travaux la remplacent par un appel en direct, fail-closed, au résolveur de confiance Verana, avec la même surface HTTP sur chaque cible pour que l'approche soit portable plutôt que sur mesure. Livré et vérifié sur appareil : Inji de MOSIP en triangle complet émetteur, portefeuille et vérifieur ; le portefeuille Android de référence EUDI validé sur testnet face au playground Unfold de France Identité ; Talao AltMe, Sphereon, Paradym et Procivis One construits et démontrés sur appareil, chemins de confiance et chemins malveillants vérifiés ; et Hologram tournant nativement sur vs-agent. SWIYU, le portefeuille de la Confédération suisse, reste partiel : les flux d'émission positifs et de contrôle sont acceptés sur Android, un chemin de requête vérifieur reste bloqué. Réalisé pour le Global Digital Trust Collaboration Award 2026, présenté à GDC Genève en septembre 2026.",
+    "longDescription": "Tout portefeuille d'identité mature embarque une liste figée d'émetteurs de confiance, compilée au build et mise à jour par release. Ces travaux la remplacent par un appel en direct, fail-closed, au résolveur de confiance Verana, avec la même surface HTTP sur chaque cible pour que l'approche soit portable plutôt que sur mesure. Livré et vérifié sur appareil : Inji de MOSIP en triangle complet émetteur, portefeuille et vérifieur ; le portefeuille Android de référence EUDI validé sur testnet face au playground Unfold de France Identité ; Talao AltMe, Sphereon, Paradym et Procivis One construits et démontrés sur appareil, chemins de confiance et chemins malveillants vérifiés ; et Hologram tournant nativement sur vs-agent. SWIYU, le portefeuille de la Confédération suisse, reste partiel : les flux d'émission positifs et de contrôle sont acceptés sur Android, un chemin de requête vérifieur reste bloqué. Réalisé pour le Global Digital Trust Collaboration Award 2026, à présenter à GDC Genève en septembre 2026.",
     "technologies": [
       "TypeScript",
       "Kotlin",
@@ -40,7 +40,7 @@
     "slug": "claw4s-trust-protocol",
     "title": "Claw4S, Protocole de Confiance Décentralisée pour Agents IA",
     "description": "Paper de recherche et protocole exécutable pour la confiance cryptographique mutuelle entre agents IA, soumis au hackathon Stanford × Princeton.",
-    "longDescription": "Soumis à la Claw4S Conference 2026 (Stanford × Princeton). Un protocole minimal permettant à deux agents IA inconnus d'établir une confiance cryptographique mutuelle via did:key (Ed25519) et W3C Verifiable Credentials, sans aucune autorité centrale. Le protocole se complète en 2 allers-retours avec moins de 2ms d'overhead et produit une chaîne vérifiable de credentials signés. Implémenté en un seul fichier Python avec une seule dépendance, proposant trois modes d'exécution (mock, live, attack) et un format innovant de lab interactif où l'agent exécutant participe au handshake de confiance.",
+    "longDescription": "Soumis à la Claw4S Conference 2026 (Stanford × Princeton). Un protocole minimal permettant à deux agents IA inconnus d'établir une confiance cryptographique mutuelle via did:key (Ed25519) et W3C Verifiable Credentials, sans aucune autorité centrale. Le protocole se complète en 2 allers-retours avec moins de 2ms de surcoût et produit une chaîne vérifiable de credentials signés. Implémenté en un seul fichier Python avec une seule dépendance, proposant trois modes d'exécution (mock, live, attack) et un format innovant de lab interactif où l'agent exécutant participe au handshake de confiance.",
     "technologies": [
       "Python",
       "Ed25519",
@@ -73,7 +73,7 @@
     "slug": "citeme",
     "title": "CiteMe",
     "description": "Plateforme de generative engine optimization qui mesure la fréquence à laquelle les moteurs de recherche IA citent une marque.",
-    "longDescription": "La recherche migre de Google vers les moteurs de réponse IA, et les marques qui gagneront la prochaine décennie sont celles que l'IA cite réellement. CiteMe crawle un site, lance des audits multi-fournisseurs sur les principaux moteurs IA, et renvoie un score de 0 à 100 assorti de correctifs priorisés et actionnables. Un traqueur révèle les visites réelles des bots IA, pour que les clients voient quels moteurs lisent leur contenu. Je l'ai cofondée et j'en suis le CTO, en charge de la direction technique, de l'architecture IA et de la roadmap produit. Tourne sur Next.js 16, React 19, Supabase avec pgvector pour la recherche, une file de jobs maison, une couche LLM multi-fournisseurs et la facturation Stripe.",
+    "longDescription": "La recherche migre de Google vers les moteurs de réponse IA. CiteMe crawle un site, lance des audits multi-fournisseurs sur les principaux moteurs IA, et renvoie un score de 0 à 100 assorti de correctifs priorisés et actionnables. Un traqueur révèle les visites réelles des bots IA, pour que les clients voient quels moteurs lisent leur contenu. Je l'ai cofondée et j'en suis le CTO, en charge de la direction technique, de l'architecture IA et de la roadmap produit. Tourne sur Next.js 16, React 19, Supabase avec pgvector pour la recherche, une file de jobs maison, une couche LLM multi-fournisseurs et la facturation Stripe.",
     "technologies": [
       "Next.js",
       "React",
@@ -106,7 +106,7 @@
     "slug": "hophopimmo",
     "title": "Hop Hop Immo",
     "description": "Plateforme proptech dotée d'un agent IA conversationnel sur un catalogue de plus de 30 000 biens neufs.",
-    "longDescription": "Hop Hop Immo est une plateforme proptech qui construit le premier agent immobilier virtuel pour le neuf en France. J'ai conçu Hoppy, un assistant IA conversationnel en production qui qualifie les acheteurs et les oriente vers les biens correspondants à la demande, ainsi que des agents autonomes pour l'automatisation marketing. J'ai également refondu la page d'accueil avec une architecture SEO ciblée couvrant plus de 30 pages villes, 8 régions et un blog, et intégré les flux de données annonces, CRM et analytics qui relient le catalogue de plus de 30 000 biens à l'assistant.",
+    "longDescription": "Hop Hop Immo est une plateforme proptech qui construit le premier agent immobilier virtuel pour le neuf en France. J'ai développé Hoppy, un assistant IA conversationnel en production qui qualifie les acheteurs et les oriente vers les biens correspondants à la demande, ainsi que des agents autonomes pour l'automatisation marketing. J'ai également refondu la page d'accueil avec une architecture SEO ciblée couvrant plus de 30 pages villes, 8 régions et un blog, et intégré les flux de données annonces, CRM et analytics qui relient le catalogue de plus de 30 000 biens à l'assistant.",
     "technologies": [
       "Next.js",
       "TypeScript",
