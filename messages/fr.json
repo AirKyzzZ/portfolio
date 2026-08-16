@@ -118,71 +118,84 @@
     "engagementHeading": "Projets & Engagement communautaire",
     "experience": [
       {
-        "title": "Ingénieur Logiciel",
-        "company": "Verana / 2060.io",
-        "period": "Sep 2025 – Présent",
-        "desc": "Développement du Verana Visualizer, un tableau de bord blockchain en temps réel avec visualisation réseau 3D déployé sur une infrastructure multi-cloud. Développement du frontend de Verifiable Credentials conforme W3C et intégration wallet. Architecture de Concieragent, un assistant IA orchestrant 6 serveurs MCP avec messagerie DIDComm et routage multi-LLM."
+        "title": "Ingénieur logiciel",
+        "company": "2060.io / Verana",
+        "period": "Sep 2025 – Aujourd'hui",
+        "desc": "Ingénieur cœur sur Verana, une couche de confiance ouverte pour l'internet. 182 pull requests fusionnées depuis février 2026, sur le frontend du registre de confiance, le playground de démonstration, l'indexeur et le résolveur. Outillage de credentials conforme aux specs : canonicalisation JCS, étiquetage linguistique BCP-47 complet, et règles de validation lues depuis la chaîne. Intégration de la résolution de confiance en direct dans huit portefeuilles d'identité tiers, dont le portefeuille de référence EUDI, Inji de MOSIP, Talao, Sphereon, Paradym et Procivis One. Livraison d'agents DIDComm et credentials vérifiables sur Hologram, en services NestJS sur Kubernetes."
       },
       {
-        "title": "Fondateur & Développeur Principal",
-        "company": "Klyx",
-        "period": "Avr 2025 – Présent",
-        "desc": "Fondation d'une agence de développement web servant 5+ clients avec 100% de satisfaction. Livraison de sites en production avec un score Lighthouse >95, atteignant +80% de croissance du trafic organique et +35% de génération de leads pour les clients."
+        "title": "Cofondateur & CTO",
+        "company": "CiteMe",
+        "period": "Juin 2026 – Aujourd'hui",
+        "desc": "Plateforme de generative engine optimization qui mesure et améliore la visibilité des marques dans les moteurs de recherche IA. Je porte la direction technique, l'architecture IA et la roadmap produit. Next.js 16, Supabase avec pgvector, une file de jobs maison, une couche LLM multi-fournisseurs et la facturation Stripe, avec des clients payants."
       },
       {
-        "title": "Développeur Fullstack & IA",
+        "title": "Ingénieur logiciel",
         "company": "Hop Hop Immo",
-        "period": "Jan 2026 – Présent",
-        "desc": "Développement de Hoppy, un assistant immobilier vocal utilisant ElevenLabs et l'intégration LLM sur plus de 28K annonces. Création d'agents marketing IA et refonte de la page d'accueil, triplant le trafic du site."
+        "period": "Jan 2026 – Aujourd'hui",
+        "desc": "Conception de Hoppy, un assistant immobilier IA conversationnel en production, qui qualifie les acheteurs sur un catalogue de plus de 30 000 biens neufs. Développement d'agents autonomes pour l'automatisation marketing, et refonte de la page d'accueil avec une architecture SEO couvrant plus de 30 pages villes et 8 régions."
+      },
+      {
+        "title": "Fondateur",
+        "company": "Klyx",
+        "period": "Avr 2025 – Aujourd'hui",
+        "desc": "Studio web à Bordeaux, mené de bout en bout : vente, design, développement et livraison, avec une offre packagée de 900 € pour une one-page à 5 700 € et plus pour du sur-mesure. Sites clients livrés en production avec paiement et flux opérationnels réels, et pilotage du moteur de contenu du studio sur blog.klyx.fr."
+      },
+      {
+        "title": "Développeur web",
+        "company": "Reciproq",
+        "period": "Avr 2025 – Mai 2025",
+        "desc": "Mission de deux mois sur les pages clés du premier site vitrine d'une startup française de santé mentale. Next.js et Tailwind, implémentation du design system Figma en mobile-first, avec des modules pilotés par les données pour les témoignages et les tarifs."
       }
     ],
     "education": [
       {
         "title": "Cursus d'ingénierie informatique",
         "school": "EPSI Bordeaux",
-        "period": "Sep 2024 – Présent",
+        "period": "Sep 2024 – Sep 2027",
         "desc": "Cursus d'ingénierie logicielle en cinq ans. Actuellement en préparation du titre RNCP 6 Concepteur Développeur d'Applications (RNCP37873), de septembre 2026 à septembre 2027. BTS SIO SLAM obtenu en juin 2026."
       },
       {
-        "title": "CS50 : Introduction à l'informatique",
-        "school": "Harvard University (en ligne)",
-        "period": "Août 2025 – Jan 2026",
-        "desc": "Concepts fondamentaux CS : algorithmes, structures de données, programmation système."
+        "title": "CS50 : Introduction to Computer Science",
+        "school": "Université Harvard (en ligne)",
+        "period": "Sep 2025 – Jan 2026",
+        "desc": "Concepts fondamentaux : algorithmes, structures de données, programmation système."
       },
       {
-        "title": "Baccalauréat Général – Mention Bien",
+        "title": "Baccalauréat Général, Mention Bien",
         "school": "Lycée Privé Saint-Elme",
         "period": "Juin 2024",
-        "desc": "Baccalauréat Général avec mention Bien, spécialités Mathématiques et Physique."
+        "desc": "Spécialités Mathématiques et Physique."
       }
     ],
     "skills": [
-      "Langages & Frameworks : TypeScript, JavaScript, Python, Next.js, React, Node.js, HTML/CSS, LaTeX",
-      "Infrastructure & DevOps : Docker, Kubernetes, Helm, CI/CD (GitHub Actions), Git, MySQL/SQL",
-      "Web3 & Architecture : COSMOS SDK, Verifiable Credentials, DIDs, MCP (Model Context Protocol), DIDComm",
-      "Compétences transversales : Autodiscipline, Rigueur, Gestion de projet, Résolution de problèmes, Esprit entrepreneurial, Marketing digital, Travail d'équipe"
+      "Langages & Frameworks : TypeScript, JavaScript, Python, Next.js, React, Node.js, NestJS, LaTeX",
+      "Identité & Confiance : DIDs, Verifiable Credentials, DIDComm, OID4VP, OID4VCI, SD-JWT VC, registres de confiance, COSMOS SDK",
+      "Infrastructure & DevOps : Docker, Kubernetes, Helm, GitHub Actions, GitLab CI, Git, PostgreSQL",
+      "Systèmes IA : routage LLM multi-fournisseurs, RAG, pgvector, orchestration d'agents"
     ],
     "languages": [
-      "Français, Natif",
-      "Anglais, Bilingue (C2 EFSET Certifié)",
-      "Allemand, Intermédiaire (B1 Certifié)"
+      "Français, langue maternelle",
+      "Anglais, bilingue (C2, EFSET 87/100)",
+      "Allemand, certifié B1",
+      "Chinois mandarin, en cours"
     ],
     "engagement": [
       {
-        "title": "Open Source & Projets personnels",
-        "desc": "Contribution à plus de 10 projets dont des travaux avec l'OpenWallet Foundation. Créateur de Credat.io (plateforme de verifiable credentials)."
-      },
-      {
-        "title": "VertiFlow",
-        "desc": "Création d'une marque e-commerce centrée sur la communauté Parkour et Mouvement."
+        "title": "Open Source",
+        "desc": "Contributeur de credo-ts à l'OpenWallet Foundation, où un correctif sur les méthodes de vérification des preuves de log did:webvh a été fusionné en août 2026. Créateur de Credat, couche de confiance open source pour agents IA."
       },
       {
         "title": "PKBA",
-        "desc": "Co-fondateur et trésorier d'un club de Parkour comptant plus de 65 membres actifs."
+        "desc": "Cofondateur, trésorier et responsable communication d'un club de parkour du Sud-Ouest, environ 80 membres et plus de 110 attendus la saison prochaine. Le club a fait l'objet d'un reportage de France 3 Nouvelle-Aquitaine."
+      },
+      {
+        "title": "VertiFlow",
+        "desc": "Création d'une marque de parkour et de mouvement urbain, avec sa boutique e-commerce construite de zéro."
       },
       {
         "title": "GDG Bordeaux",
-        "desc": "Membre actif du Google Developer Group Bordeaux, participant et contributeur aux meetups tech."
+        "desc": "Membre actif du Google Developer Group depuis 2024, participation aux meetups et codelabs web, cloud et IA de l'écosystème tech bordelais."
       }
     ]
   },

@@ -119,70 +119,83 @@
     "experience": [
       {
         "title": "Software Engineer",
-        "company": "Verana / 2060.io",
+        "company": "2060.io / Verana",
         "period": "Sep 2025 – Present",
-        "desc": "Built the Verana Visualizer, a real-time blockchain dashboard with 3D network visualization deployed across multi-cloud infrastructure. Developed the W3C-compliant Verifiable Credentials frontend and wallet integration. Architected Concieragent, an AI-powered assistant orchestrating 6 MCP servers with DIDComm messaging and multi-LLM routing."
+        "desc": "Core engineer on Verana, an open trust layer for the internet. 182 merged pull requests since February 2026 across the trust registry frontend, the demo playground, the indexer and the resolver. Built spec-compliant credential tooling: JCS canonicalization, full BCP-47 language tagging, and validation rules sourced from the chain. Wired live trust resolution into eight third-party identity wallets including the EUDI reference wallet, MOSIP's Inji, Talao, Sphereon, Paradym and Procivis One. Shipped DIDComm and verifiable-credential agents on Hologram as NestJS services on Kubernetes."
       },
       {
-        "title": "Founder & Lead Developer",
-        "company": "Klyx",
-        "period": "Apr 2025 – Present",
-        "desc": "Founded a web development agency serving 5+ clients with 100% satisfaction. Delivered production sites scoring >95 on Lighthouse, achieving +80% organic traffic growth and +35% lead generation for clients."
+        "title": "Co-founder & CTO",
+        "company": "CiteMe",
+        "period": "Jun 2026 – Present",
+        "desc": "Generative engine optimization platform measuring and improving how brands appear inside AI search engines. Own technical direction, AI architecture and product roadmap. Next.js 16, Supabase with pgvector, a custom job queue, a multi-provider LLM layer and Stripe billing, serving paying customers."
       },
       {
-        "title": "Fullstack & AI Developer",
+        "title": "Software Engineer",
         "company": "Hop Hop Immo",
         "period": "Jan 2026 – Present",
-        "desc": "Developed Hoppy, a voice-powered real estate assistant using ElevenLabs and LLM integration across 28K+ property listings. Built AI marketing agents and redesigned the homepage, tripling website traffic."
+        "desc": "Built Hoppy, a conversational AI real-estate assistant live in production, qualifying buyers across a catalogue of 30,000+ new-build listings. Built autonomous agents for marketing automation, and rebuilt the homepage with an SEO architecture spanning 30+ city pages and 8 regions."
+      },
+      {
+        "title": "Founder",
+        "company": "Klyx",
+        "period": "Apr 2025 – Present",
+        "desc": "Web studio in Bordeaux, run end to end: sales, design, development and delivery, with productized pricing from €900 one-pagers to €5,700+ custom builds. Delivered production client sites with live payment and operations flows, and run the studio's content engine at blog.klyx.fr."
+      },
+      {
+        "title": "Web Developer",
+        "company": "Reciproq",
+        "period": "Apr 2025 – May 2025",
+        "desc": "Two-month engagement building key pages of the first marketing site for a French mental health startup. Next.js and Tailwind, implementing the Figma design system mobile-first, with data-driven modules for testimonials and pricing."
       }
     ],
     "education": [
       {
         "title": "Computer Science Engineering Programme",
         "school": "EPSI Bordeaux",
-        "period": "Sep 2024 – Present",
+        "period": "Sep 2024 – Sep 2027",
         "desc": "Five-year software engineering programme. Currently working toward the RNCP 6 title Concepteur Développeur d'Applications (RNCP37873), September 2026 to September 2027. BTS SIO SLAM completed June 2026."
       },
       {
         "title": "CS50: Introduction to Computer Science",
         "school": "Harvard University (online)",
-        "period": "Aug 2025 – Jan 2026",
+        "period": "Sep 2025 – Jan 2026",
         "desc": "Fundamental CS concepts: algorithms, data structures, systems programming."
       },
       {
-        "title": "Baccalauréat Général – Mention Bien",
+        "title": "Baccalauréat Général, Mention Bien",
         "school": "Lycée Privé Saint-Elme",
         "period": "Jun 2024",
-        "desc": "General Baccalauréat with honors, specializing in Mathematics and Physics."
+        "desc": "Specialization in Mathematics and Physics."
       }
     ],
     "skills": [
-      "Languages & Frameworks: TypeScript, JavaScript, Python, Next.js, React, Node.js, HTML/CSS, LaTeX",
-      "Infrastructure & DevOps: Docker, Kubernetes, Helm, CI/CD (GitHub Actions), Git, MySQL/SQL",
-      "Web3 & Architecture: COSMOS SDK, Verifiable Credentials, DIDs, MCP (Model Context Protocol), DIDComm",
-      "Soft Skills: Self-discipline, Rigor, Project Management, Problem Solving, Entrepreneurial Mindset, Digital Marketing, Teamwork"
+      "Languages & Frameworks: TypeScript, JavaScript, Python, Next.js, React, Node.js, NestJS, LaTeX",
+      "Identity & Trust: DIDs, Verifiable Credentials, DIDComm, OID4VP, OID4VCI, SD-JWT VC, trust registries, COSMOS SDK",
+      "Infrastructure & DevOps: Docker, Kubernetes, Helm, GitHub Actions, GitLab CI, Git, PostgreSQL",
+      "AI Systems: multi-provider LLM routing, retrieval-augmented generation, pgvector, agent orchestration"
     ],
     "languages": [
-      "French, Native",
-      "English, Bilingual (C2 EFSET Certified)",
-      "German, Intermediate (B1 Certified)"
+      "French, native",
+      "English, bilingual (C2, EFSET 87/100)",
+      "German, B1 certified",
+      "Mandarin Chinese, in progress"
     ],
     "engagement": [
       {
-        "title": "Open Source & Side Projects",
-        "desc": "Contributed to 10+ projects including work with the OpenWallet Foundation. Creator of Credat.io (verifiable credentials platform)."
-      },
-      {
-        "title": "VertiFlow",
-        "desc": "Founded an e-commerce brand centered around the Parkour and Movement community."
+        "title": "Open Source",
+        "desc": "Contributor to credo-ts at the OpenWallet Foundation, where a fix to did:webvh log proof verification methods was merged in August 2026. Creator of Credat, an open-source trust layer for AI agents."
       },
       {
         "title": "PKBA",
-        "desc": "Co-founded and served as treasurer of a Parkour club with 65+ active members."
+        "desc": "Co-founder, treasurer and head of communication of a parkour club in southwestern France, around 80 members and growing to 110+ for the coming season. Featured by France 3 Nouvelle-Aquitaine."
+      },
+      {
+        "title": "VertiFlow",
+        "desc": "Founded a parkour and urban-movement brand, and built its e-commerce storefront from scratch."
       },
       {
         "title": "GDG Bordeaux",
-        "desc": "Active member of Google Developer Group Bordeaux, participating in and contributing to tech meetups."
+        "desc": "Active member of the Google Developer Group since 2024, attending meetups and codelabs on web, cloud and AI across the Bordeaux tech ecosystem."
       }
     ]
   },
