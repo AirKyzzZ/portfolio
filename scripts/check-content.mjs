@@ -18,6 +18,17 @@ function tsxFiles(dir) {
   })
 }
 
+function blogFrontmatter(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(dir, entry.name)
+    if (entry.isDirectory()) return blogFrontmatter(path)
+    if (!entry.name.endsWith('.mdx')) return []
+    const raw = readFileSync(path, 'utf8')
+    const end = raw.indexOf('\n---', 4)
+    return [{ file: path, raw: end === -1 ? '' : raw.slice(0, end) }]
+  })
+}
+
 const FILES = [...CONTENT_FILES, ...tsxFiles('src')]
 
 const FORBIDDEN = [
@@ -52,6 +63,16 @@ for (const file of FILES) {
     for (const [index, line] of raw.split('\n').entries()) {
       if (re.test(line)) {
         failures.push(`${file}:${index + 1}  ${why}\n    ${line.trim()}`)
+      }
+    }
+  }
+}
+
+for (const { file, raw } of blogFrontmatter('content/blog')) {
+  for (const { re, why } of FORBIDDEN) {
+    for (const [index, line] of raw.split('\n').entries()) {
+      if (re.test(line)) {
+        failures.push(`${file}:${index + 1}  ${why} (frontmatter)\n    ${line.trim()}`)
       }
     }
   }
