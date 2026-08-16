@@ -1,22 +1,18 @@
 # Trust over IP Foundation, Trust Registry Task Force
 
-You applied once before and were not accepted. Worth knowing why that is strange: ToIP
-Contributor Membership is free and open to individuals as well as organisations, and
-every Working Group and Task Force is open to every member. There is no selection step
-to fail on the standard contributor route, which suggests the previous attempt went
-through a different path, an organisational tier, or stalled in paperwork rather than
-being judged and refused. Treat this as a fresh application through the free individual
-route, not as an appeal.
+**Status: you are a member.** Joined August 2026, no working group or task force yet,
+watching rather than contributing to specification work. The site says exactly that and
+nothing more.
 
-## How to join
+The remaining step is picking a room. Membership alone is a line on a page; the Trust
+Registry Task Force is where the membership turns into something worth citing.
 
-1. Go to https://trustoverip.org/get-involved/membership/ and select Contributor
-   Membership. It is free for individuals.
-2. Sign the ToIP membership agreements as a Contributor. This is the IPR paperwork and
-   it is what actually grants working group access.
-3. ToIP sits under LF Decentralized Trust. You do not need separate LFDT membership to
-   participate in ToIP groups.
-4. Join the Trust Registry Task Force. It runs under the Technical Stack Working Group.
+## Joining the task force
+
+Every Working Group and Task Force is open to every member, so there is no application
+and nobody to convince. You add yourself.
+
+1. Trust Registry Task Force, under the Technical Stack Working Group.
    - Wiki: https://lf-toip.atlassian.net/wiki/display/HOME/Trust+Registry+Task+Force
    - Slack: `#tswg-trust-registry-tf`
    - Mailing list: technical-stack-wg@lists.trustoverip.org (the TF has no separate list)
@@ -69,10 +65,13 @@ hit that the specification does not yet answer cleanly.
 > Glad to help with review, and happy to contribute implementation reports if that is
 > useful to the editors.
 
-## Sequencing note
+## What the site may claim, and when
 
-Join the W3C CCG first. It is instant, free, and gives you a public record before the
-ToIP application is processed. See [w3c-ccg.md](./w3c-ccg.md).
+Right now: member of the Trust over IP Foundation. That is on the CV under Standards
+Bodies and in the news feed, phrased as following the work rather than contributing.
 
-Do not put either affiliation on the portfolio, the CV, or LinkedIn until membership is
-confirmed. The site currently has a claim removed for exactly that reason.
+Once you have attended TRTF calls and filed review comments on TRQP v2.0, that sentence
+can change to say you participate in the Trust Registry Task Force. Not before.
+`scripts/check-content.mjs` blocks any copy pairing Trust over IP with chair, editor,
+working group or task force, so the gate will fail the build if that claim lands early.
+Loosen the guard in the same commit that earns the claim.

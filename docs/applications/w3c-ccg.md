@@ -1,21 +1,18 @@
 # W3C Credentials Community Group
 
-Free, open to anyone, no organisational sponsorship needed. This is the lowest-friction
-standards room in the ecosystem and its archives are public and search-indexed, so your
-name accumulates in a record other people can find.
+**Status: you are a member.** Joined August 2026, one of roughly 600. The archives are
+public and search-indexed, so anything you post accumulates in a record other people can
+find, which is most of the value here.
 
-## How to join
+## Loose ends worth closing
 
-1. Create a W3C account at https://www.w3.org/account/request if you do not have one.
-2. Join the group at https://www.w3.org/community/credentials/join
-3. Sign the W3C Community Contributor License Agreement. Joining lets you attend and
-   read; the CLA is what lets you contribute to work items, so sign it now rather than
-   when you first want to open a pull request.
-4. Subscribe to public-credentials@w3.org. The list is where most of the substance
-   happens between calls.
-5. Weekly calls are listed at https://www.w3.org/groups/cg/credentials/calendar/
-
-Anyone may attend a call without joining. Joining costs nothing and takes a few minutes.
+1. Sign the W3C Community Contributor License Agreement if you have not. Membership lets
+   you attend and post; the CLA is what lets you contribute to work items, and it is
+   better signed now than discovered as a blocker later.
+2. Subscribe to public-credentials@w3.org. Most of the substance happens on the list
+   between calls, not on the calls.
+3. Weekly calls: https://www.w3.org/groups/cg/credentials/calendar/
+4. Work items live at https://github.com/w3c-ccg
 
 ## Introduction to the mailing list
 
