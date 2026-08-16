@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import type { TalkEntry } from '@/types/content'
@@ -8,6 +9,17 @@ export function generateStaticParams() {
 
 type Props = {
   params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'talks' })
+
+  return {
+    title: t('title'),
+    description: t('metaDescription'),
+    alternates: { canonical: `/${locale}/talks/` },
+  }
 }
 
 export default async function TalksPage({ params }: Props) {

@@ -15,6 +15,7 @@ export default async function BlogPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'nav' })
+  const ct = await getTranslations({ locale, namespace: 'common' })
   const posts = await getAllBlogPosts(locale)
 
   return (
@@ -23,7 +24,7 @@ export default async function BlogPage({ params }: Props) {
 
       {posts.length === 0 ? (
         <p className="text-sm text-foreground-secondary">
-          No posts yet — check back soon.
+          {ct('noContent')}
         </p>
       ) : (
         <div>

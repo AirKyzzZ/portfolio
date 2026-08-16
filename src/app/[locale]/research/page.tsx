@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { SectionHeading } from '@/components/ui/section-heading'
 import { routing } from '@/i18n/routing'
@@ -9,6 +10,17 @@ export function generateStaticParams() {
 
 type Props = {
   params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'research' })
+
+  return {
+    title: t('title'),
+    description: t('metaDescription'),
+    alternates: { canonical: `/${locale}/research/` },
+  }
 }
 
 export default async function ResearchPage({ params }: Props) {

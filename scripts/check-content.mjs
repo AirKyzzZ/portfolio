@@ -1,6 +1,7 @@
-import { readFileSync } from 'node:fs'
+import { readFileSync, readdirSync } from 'node:fs'
+import { join } from 'node:path'
 
-const FILES = [
+const CONTENT_FILES = [
   'messages/en.json',
   'messages/fr.json',
   'content/projects/en.json',
@@ -8,6 +9,16 @@ const FILES = [
   'content/publications/en.json',
   'content/publications/fr.json',
 ]
+
+function tsxFiles(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(dir, entry.name)
+    if (entry.isDirectory()) return tsxFiles(path)
+    return entry.name.endsWith('.tsx') || entry.name.endsWith('.ts') ? [path] : []
+  })
+}
+
+const FILES = [...CONTENT_FILES, ...tsxFiles('src')]
 
 const FORBIDDEN = [
   { re: /(joined|member of|part of|rejoint|membre d)[^.]{0,40}trust over ip/i, why: 'Membership was never granted' },

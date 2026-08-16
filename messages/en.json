@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Fullstack developer and researcher specializing in decentralized identity, SSI, agentic AI systems, and verifiable credentials. Based in Bordeaux, France."
+    "description": "Self-sovereign identity engineer at 2060.io, working on Verana. Trust registries, verifiable credentials, wallet interoperability, and identity for AI agents. Based in Bordeaux, France."
   },
   "nav": {
     "home": "Home",
@@ -107,7 +107,8 @@
       "A live trust call is a network dependency. What is the correct behaviour when the registry is unreachable, and can fail-closed survive contact with real user expectations?",
       "How should a wallet surface a trust verdict to someone who has never heard of a trust registry, without either hiding the decision or overwhelming them?",
       "What revocation mechanisms preserve holder privacy while keeping a verifier's answer fresh enough to be worth asking for?"
-    ]
+    ],
+    "metaDescription": "Cross-ecosystem wallet trust interoperability, trust registries in production, and identity and delegation for AI agents."
   },
   "cv": {
     "title": "Curriculum Vitae",
@@ -197,7 +198,8 @@
         "title": "GDG Bordeaux",
         "desc": "Active member of the Google Developer Group since 2024, attending meetups and codelabs on web, cloud and AI across the Bordeaux tech ecosystem."
       }
-    ]
+    ],
+    "metaDescription": "Software engineer at 2060.io working on Verana. Experience, education, technical skills and community work."
   },
   "talks": {
     "title": "Talks & Presentations",
@@ -208,15 +210,18 @@
         "date": "1-3 September 2026",
         "desc": "Co-speaking with Fabrice Rochette and Ariel Gentile for 2060.io on our Global Digital Trust Collaboration Award work: wiring live trust-registry resolution into eight third-party identity wallets. Session details to be confirmed."
       }
-    ]
+    ],
+    "metaDescription": "Conference talks on digital identity, trust registries and cross-ecosystem wallet interoperability."
   },
   "publications": {
     "title": "Publications",
-    "empty": "No publications yet. This section will be updated as research work progresses."
+    "empty": "No publications yet. This section will be updated as research work progresses.",
+    "metaDescription": "Peer-reviewed and conference work on decentralized agent-to-agent trust using DIDs and Verifiable Credentials."
   },
   "projects": {
     "title": "Projects",
     "featured": "Featured",
-    "all": "All"
+    "all": "All",
+    "metaDescription": "Selected work: cross-ecosystem wallet trust integrations, Credat, the Claw4S agent trust protocol, and verifiable service agents on Hologram."
   }
 }

@@ -43,7 +43,7 @@ export async function generateMetadata({
   return {
     title: {
       default: 'Maxime Mansiet',
-      template: '%s — Maxime Mansiet',
+      template: '%s · Maxime Mansiet',
     },
     description: t('description'),
     metadataBase: new URL('https://maximemansiet.fr'),

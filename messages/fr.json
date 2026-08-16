@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Développeur fullstack et chercheur spécialisé en identité décentralisée, SSI, systèmes IA agentiques et credentials vérifiables. Basé à Bordeaux, France."
+    "description": "Ingénieur en identité auto-souveraine chez 2060.io, sur Verana. Registres de confiance, credentials vérifiables, interopérabilité des portefeuilles et identité des agents IA. Basé à Bordeaux, France."
   },
   "nav": {
     "home": "Accueil",
@@ -107,7 +107,8 @@
       "Un appel de confiance en direct est une dépendance réseau. Quel est le comportement correct quand le registre est injoignable, et le fail-closed survit-il au contact des attentes réelles des utilisateurs ?",
       "Comment un portefeuille doit-il présenter un verdict de confiance à quelqu'un qui n'a jamais entendu parler de registre de confiance, sans masquer la décision ni le submerger ?",
       "Quels mécanismes de révocation préservent la vie privée du porteur tout en gardant la réponse d'un vérifieur assez fraîche pour valoir la peine d'être demandée ?"
-    ]
+    ],
+    "metaDescription": "Interopérabilité de la confiance entre portefeuilles, registres de confiance en production, et identité et délégation des agents IA."
   },
   "cv": {
     "title": "Curriculum Vitae",
@@ -197,7 +198,8 @@
         "title": "GDG Bordeaux",
         "desc": "Membre actif du Google Developer Group depuis 2024, participation aux meetups et codelabs web, cloud et IA de l'écosystème tech bordelais."
       }
-    ]
+    ],
+    "metaDescription": "Ingénieur logiciel chez 2060.io, sur Verana. Expérience, formation, compétences techniques et engagement communautaire."
   },
   "talks": {
     "title": "Talks & Présentations",
@@ -208,15 +210,18 @@
         "date": "1-3 septembre 2026",
         "desc": "Intervention conjointe avec Fabrice Rochette et Ariel Gentile pour 2060.io sur nos travaux pour le Global Digital Trust Collaboration Award : l'intégration d'une résolution de confiance en direct dans huit portefeuilles d'identité tiers. Détails de la session à confirmer."
       }
-    ]
+    ],
+    "metaDescription": "Interventions en conférence sur l'identité numérique, les registres de confiance et l'interopérabilité des portefeuilles."
   },
   "publications": {
     "title": "Publications",
-    "empty": "Pas encore de publications. Cette section sera mise à jour au fil de l'avancement des travaux de recherche."
+    "empty": "Pas encore de publications. Cette section sera mise à jour au fil de l'avancement des travaux de recherche.",
+    "metaDescription": "Travaux de recherche et de conférence sur la confiance décentralisée entre agents, fondée sur les DIDs et les Verifiable Credentials."
   },
   "projects": {
     "title": "Projets",
     "featured": "En vedette",
-    "all": "Tous"
+    "all": "Tous",
+    "metaDescription": "Travaux sélectionnés : intégrations de confiance inter-écosystèmes, Credat, le protocole de confiance entre agents Claw4S, et les agents de service vérifiables sur Hologram."
   }
 }
