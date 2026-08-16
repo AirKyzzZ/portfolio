@@ -83,35 +83,30 @@
   },
   "research": {
     "title": "Research",
-    "intro": "My research interests lie at the intersection of distributed systems, applied cryptography, and digital identity. I'm particularly interested in systems that give individuals control over their personal data while maintaining interoperability across organizations and borders.",
+    "intro": "I work on establishing trust between parties that share no authority. For people, and increasingly for the AI agents acting on their behalf. Everything below is work I have shipped or published, followed by the questions it left open.",
     "areas": [
       {
-        "id": "dids",
-        "title": "Decentralized Identity & DIDs",
-        "body": "Decentralized Identifiers (DIDs) provide a foundation for self-sovereign identity by allowing entities to create and control their own identifiers without permission from any central authority. I study the design trade-offs between different DID methods (did:web, did:peer, did:key) and their implications for security, privacy, and scalability."
+        "id": "interop",
+        "title": "Cross-ecosystem trust interoperability",
+        "body": "Every mature identity wallet ships a static list of issuers it trusts, compiled at build time and updated by release. I replaced that list with a live, fail-closed call to a trust registry in eight third-party wallets: the EUDI reference Android wallet, MOSIP's Inji, Talao AltMe, Sphereon, Paradym, Procivis One, SWIYU from the Swiss Confederation, and 2060.io's Hologram. MOSIP runs as a full issuer, wallet and verifier triangle; the EUDI reference wallet is validated on testnet against France Identité's Unfold playground. SWIYU is partial, its positive and control flows are accepted on Android but one verifier request path is still blocked. The integration surface everywhere is the same resolver HTTP API, which is what makes the approach portable rather than bespoke."
       },
       {
-        "id": "credentials",
-        "title": "Privacy-Preserving Credential Systems",
-        "body": "Verifiable Credentials enable portable, tamper-evident digital attestations. I'm interested in selective disclosure mechanisms (BBS+ signatures, SD-JWT) that allow holders to share only the minimum necessary information, and in zero-knowledge proof techniques that enable predicate proofs without revealing underlying data."
+        "id": "trust-registries",
+        "title": "Trust registries in production",
+        "body": "Verana is a registry of trust registries: a public ledger recording which entities may issue or verify which credential schemas inside a given ecosystem, and the validation process that grants those permissions. I build the frontend and the credential tooling, including JSON Canonicalization Scheme canonicalization, full BCP-47 language tagging, and validation rules read from the chain rather than hardcoded. 182 merged pull requests since February 2026. The open standards counterpart is the Trust Registry Query Protocol, whose v2.0 is in public review at the Trust over IP Foundation."
       },
       {
-        "id": "trust",
-        "title": "Trust Frameworks & Governance",
-        "body": "Decentralized systems still need trust anchors. I work on trust registry architectures that allow ecosystems to define and enforce governance rules, who can issue what, which credentials are accepted where, and how trust decisions are made at scale."
-      },
-      {
-        "id": "didcomm",
-        "title": "DIDComm & Secure Messaging",
-        "body": "DIDComm is a messaging protocol that enables secure, private communication between identity agents. I work on production implementations of DIDComm v2, including message routing, encryption, and protocol negotiation for credential exchange workflows."
+        "id": "agent-trust",
+        "title": "Agent identity and delegation",
+        "body": "Autonomous agents raise the same question earlier and harder: when an agent calls a service, who is it, and who authorized it to act? Credat is my open-source answer, a TypeScript library giving agents verifiable identities via did:web and did:key, scoped delegation credentials, and a mutual trust handshake, with adapters for HTTP APIs, LangChain and the command line. The Claw4S protocol formalizes the handshake: two previously unknown agents reach mutual cryptographic trust in exactly two round trips, under 2ms of overhead, producing an auditable chain of signed credentials and a structural guarantee of impersonation detection."
       }
     ],
     "openQuestions": "Open Questions",
     "questions": [
-      "How can trust registries be made both decentralized and practically governable?",
-      "What are the formal privacy guarantees of different selective disclosure schemes under realistic adversarial models?",
-      "How can SSI systems achieve meaningful interoperability across jurisdictions with different legal frameworks?",
-      "What are effective revocation mechanisms that preserve holder privacy?"
+      "Trust registries and ETSI trusted lists make different governance assumptions. Where exactly do they fail to meet, and what is the smallest bridge that preserves both?",
+      "A live trust call is a network dependency. What is the correct behaviour when the registry is unreachable, and can fail-closed survive contact with real user expectations?",
+      "How should a wallet surface a trust verdict to someone who has never heard of a trust registry, without either hiding the decision or overwhelming them?",
+      "What revocation mechanisms preserve holder privacy while keeping a verifier's answer fresh enough to be worth asking for?"
     ]
   },
   "cv": {

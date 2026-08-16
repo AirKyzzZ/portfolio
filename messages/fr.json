@@ -83,35 +83,30 @@
   },
   "research": {
     "title": "Recherche",
-    "intro": "Mes intérêts de recherche se situent à l'intersection des systèmes distribués, de la cryptographie appliquée et de l'identité numérique. Je m'intéresse particulièrement aux systèmes qui donnent aux individus le contrôle de leurs données personnelles tout en maintenant l'interopérabilité entre organisations et frontières.",
+    "intro": "Je travaille sur l'établissement de la confiance entre des parties qui ne partagent aucune autorité. Pour les humains, et de plus en plus pour les agents IA qui agissent en leur nom. Tout ce qui suit correspond à des travaux livrés ou publiés, suivis des questions qu'ils laissent ouvertes.",
     "areas": [
       {
-        "id": "dids",
-        "title": "Identité décentralisée & DIDs",
-        "body": "Les Decentralized Identifiers (DIDs) constituent le socle de l'identité auto-souveraine en permettant aux entités de créer et contrôler leurs propres identifiants sans l'autorisation d'une autorité centrale. J'étudie les compromis de conception entre différentes méthodes DID (did:web, did:peer, did:key) et leurs implications en termes de sécurité, confidentialité et scalabilité."
+        "id": "interop",
+        "title": "Interopérabilité de la confiance entre écosystèmes",
+        "body": "Tout portefeuille d'identité mature embarque une liste figée d'émetteurs de confiance, compilée au build et mise à jour par release. J'ai remplacé cette liste par un appel en direct, fail-closed, à un registre de confiance dans huit portefeuilles tiers : le portefeuille Android de référence EUDI, Inji de MOSIP, Talao AltMe, Sphereon, Paradym, Procivis One, SWIYU de la Confédération suisse, et Hologram de 2060.io. MOSIP tourne en triangle complet émetteur, portefeuille et vérifieur ; le portefeuille de référence EUDI est validé sur testnet face au playground Unfold de France Identité. SWIYU reste partiel : ses flux positifs et de contrôle sont acceptés sur Android, mais un chemin de requête vérifieur reste bloqué. La surface d'intégration est partout la même API HTTP de résolveur, ce qui rend l'approche portable plutôt que sur mesure."
       },
       {
-        "id": "credentials",
-        "title": "Systèmes de credentials préservant la vie privée",
-        "body": "Les Verifiable Credentials permettent des attestations numériques portables et infalsifiables. Je m'intéresse aux mécanismes de divulgation sélective (signatures BBS+, SD-JWT) qui permettent aux détenteurs de ne partager que le minimum d'information nécessaire, et aux techniques de preuves à divulgation nulle permettant des preuves sur prédicats sans révéler les données sous-jacentes."
+        "id": "trust-registries",
+        "title": "Registres de confiance en production",
+        "body": "Verana est un registre de registres de confiance : un registre public qui enregistre quelles entités peuvent émettre ou vérifier quels schémas de credentials dans un écosystème donné, et le processus de validation qui accorde ces permissions. J'en construis le frontend et l'outillage de credentials, dont la canonicalisation JCS, l'étiquetage linguistique BCP-47 complet, et des règles de validation lues depuis la chaîne plutôt que codées en dur. 182 pull requests fusionnées depuis février 2026. Le pendant normatif est le Trust Registry Query Protocol, dont la v2.0 est en revue publique à la Trust over IP Foundation."
       },
       {
-        "id": "trust",
-        "title": "Cadres de confiance & gouvernance",
-        "body": "Les systèmes décentralisés ont toujours besoin d'ancres de confiance. Je travaille sur des architectures de registres de confiance permettant aux écosystèmes de définir et appliquer des règles de gouvernance, qui peut émettre quoi, quels credentials sont acceptés où, et comment les décisions de confiance sont prises à grande échelle."
-      },
-      {
-        "id": "didcomm",
-        "title": "DIDComm & messagerie sécurisée",
-        "body": "DIDComm est un protocole de messagerie qui permet une communication sécurisée et privée entre agents d'identité. Je travaille sur des implémentations en production de DIDComm v2, incluant le routage de messages, le chiffrement et la négociation de protocoles pour les workflows d'échange de credentials."
+        "id": "agent-trust",
+        "title": "Identité et délégation des agents",
+        "body": "Les agents autonomes posent la même question plus tôt et plus durement : quand un agent appelle un service, qui est-il, et qui l'a autorisé à agir ? Credat est ma réponse open source, une bibliothèque TypeScript qui donne aux agents une identité vérifiable via did:web et did:key, des credentials de délégation à portée limitée, et une poignée de main de confiance mutuelle, avec des adaptateurs pour les API HTTP, LangChain et la ligne de commande. Le protocole Claw4S formalise cette poignée de main : deux agents qui ne se connaissent pas atteignent une confiance cryptographique mutuelle en exactement deux allers-retours, avec moins de 2 ms de surcoût, produisant une chaîne auditable de credentials signés et une garantie structurelle de détection d'usurpation."
       }
     ],
     "openQuestions": "Questions ouvertes",
     "questions": [
-      "Comment rendre les registres de confiance à la fois décentralisés et pratiquement gouvernables ?",
-      "Quelles sont les garanties formelles de confidentialité des différents schémas de divulgation sélective sous des modèles adversariaux réalistes ?",
-      "Comment les systèmes SSI peuvent-ils atteindre une interopérabilité significative entre juridictions aux cadres légaux différents ?",
-      "Quels sont les mécanismes de révocation efficaces qui préservent la vie privée du détenteur ?"
+      "Les registres de confiance et les listes de confiance ETSI reposent sur des hypothèses de gouvernance différentes. Où exactement ne se rejoignent-ils pas, et quel est le plus petit pont qui préserve les deux ?",
+      "Un appel de confiance en direct est une dépendance réseau. Quel est le comportement correct quand le registre est injoignable, et le fail-closed survit-il au contact des attentes réelles des utilisateurs ?",
+      "Comment un portefeuille doit-il présenter un verdict de confiance à quelqu'un qui n'a jamais entendu parler de registre de confiance, sans masquer la décision ni le submerger ?",
+      "Quels mécanismes de révocation préservent la vie privée du porteur tout en gardant la réponse d'un vérifieur assez fraîche pour valoir la peine d'être demandée ?"
     ]
   },
   "cv": {
