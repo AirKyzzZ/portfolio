@@ -101,7 +101,7 @@
       {
         "id": "trust-registries",
         "title": "Registres de confiance en production",
-        "body": "Verana est un registre de registres de confiance : un registre public qui enregistre quelles entités peuvent émettre ou vérifier quels schémas de credentials dans un écosystème donné, et le processus de validation qui accorde ces permissions. J'en construis le frontend et l'outillage de credentials, dont la canonicalisation JCS, l'étiquetage linguistique BCP-47 complet, et des règles de validation lues depuis la chaîne plutôt que codées en dur. 182 pull requests fusionnées depuis février 2026. Le pendant normatif est le Trust Registry Query Protocol, dont la v2.0 est en revue publique à la Trust over IP Foundation."
+        "body": "Verana est un registre de registres de confiance : un registre public qui enregistre quelles entités peuvent émettre ou vérifier quels schémas de credentials dans un écosystème donné, et le processus de validation qui accorde ces permissions. J'en construis le frontend et l'outillage de credentials, dont la canonicalisation JCS, l'étiquetage linguistique BCP-47 complet, et des règles de validation lues depuis la chaîne plutôt que codées en dur. 182 pull requests fusionnées depuis février 2026. Le pendant normatif est le Trust Registry Query Protocol, approuvé comme spécification ToIP en décembre 2025, qui définit des cibles de conformité mais ne dispose encore d'aucune suite de tests."
       },
       {
         "id": "agent-trust",

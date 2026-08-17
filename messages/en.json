@@ -101,7 +101,7 @@
       {
         "id": "trust-registries",
         "title": "Trust registries in production",
-        "body": "Verana is a registry of trust registries: a public ledger recording which entities may issue or verify which credential schemas inside a given ecosystem, and the validation process that grants those permissions. I build the frontend and the credential tooling, including JSON Canonicalization Scheme canonicalization, full BCP-47 language tagging, and validation rules read from the chain rather than hardcoded. 182 merged pull requests since February 2026. The open standards counterpart is the Trust Registry Query Protocol, whose v2.0 is in public review at the Trust over IP Foundation."
+        "body": "Verana is a registry of trust registries: a public ledger recording which entities may issue or verify which credential schemas inside a given ecosystem, and the validation process that grants those permissions. I build the frontend and the credential tooling, including JSON Canonicalization Scheme canonicalization, full BCP-47 language tagging, and validation rules read from the chain rather than hardcoded. 182 merged pull requests since February 2026. The open standards counterpart is the Trust Registry Query Protocol, approved as a ToIP specification in December 2025, which defines conformance targets but still has no conformance test suite."
       },
       {
         "id": "agent-trust",

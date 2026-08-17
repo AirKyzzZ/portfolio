@@ -19,18 +19,25 @@ and nobody to convince. You add yourself.
    - Meetings: every Thursday, two slots, one NA/EU and one APAC. Take the NA/EU slot.
      All meetings are recorded, so a missed week is recoverable.
 
-## Why this task force and why now
+## Why this task force, and the actual opening
 
-The Trust Registry Query Protocol v2.0 is in public review. A public review is the single
-best moment to arrive, because review comments are a real contribution that costs no
-political capital and gets recorded against your name. You do not have to propose
-anything to be useful, you only have to have implemented something and say what broke.
+Correction to an earlier draft of this note: TRQP v2.0 is **not** in public review. It was
+approved as a ToIP deliverable in **December 2025**. The review window closed, which is
+why `tswg-trust-registry-protocol` has been quiet since April 2026.
 
-You have implemented something. Eight independent wallets now resolve trust through a
-live registry instead of a compiled-in issuer list, across four languages and four
-ecosystems, with the failure paths deliberately exercised. Almost nobody writing that
-specification has done the integration eight times, and implementation feedback at
-public-review stage is exactly what the editors are asking for.
+The real opening is better. TRQP v2.0 defines conformance targets for TRQP Endpoints,
+TRQP Consumers and the HTTPS Binding, and **there is no conformance test suite for any of
+them**. That is a named, acknowledged gap in an approved specification.
+
+You are unusually well placed to fill it. Eight independent wallets now resolve trust
+through a live registry instead of a compiled-in issuer list, across four languages and
+four ecosystems, with failure paths deliberately exercised. You have already written, by
+hand, most of what a conformance suite would assert. Turning that into a test suite is a
+concrete deliverable with your name on it, not a comment on someone else's draft.
+
+Compare with the W3C CCG, which maintains exactly this kind of artifact
+(`vc-api-issuer-test-suite`, `vc-api-verifier-test-suite`, `did-key-test-suite`, all
+updated within the last week). That is the shape to copy.
 
 ## What to say when you introduce yourself
 
@@ -75,3 +82,26 @@ can change to say you participate in the Trust Registry Task Force. Not before.
 `scripts/check-content.mjs` blocks any copy pairing Trust over IP with chair, editor,
 working group or task force, so the gate will fail the build if that claim lands early.
 Loosen the guard in the same commit that earns the claim.
+
+## Which room, revisited
+
+The Trust Registry Task Force is the obvious fit for the day job, and the conformance
+suite is the way in. But two other groups are more active right now and one is a better
+fit for where the research is heading.
+
+**AI & Human Trust Working Group (AIM WG)**, and specifically its **Fiduciary Agent Stack
+Task Force**. Building agent-to-agent infrastructure for "long term or consequential
+relationships bound by mutual duties": duty-bound agents with capability constraints,
+audit trails, and defined permissions and prohibitions. That is Credat's problem
+statement written by someone else. The repo is `trustoverip/aimwg-agent-fiduciary-duties`,
+14 commits old, updated within the last day, and its README still contains a literal
+`<ADD OTHER TASK FORCE DETAILS, HOW TO PARTICIPATE>` placeholder. A room that new is one
+you help shape rather than join late.
+
+**Decentralized Trust Graph Working Group**, `trustoverip/dtgwg-trust-tasks-tf`. Trust
+Tasks are self-contained, transport-agnostic JSON descriptions of verifiable work between
+parties, with a live registry at trusttasks.org. Transport-agnostic and DIDComm-compatible,
+so it touches both the Verana and Hologram sides of your work.
+
+Recommendation: AIM WG for the research, TRTF for the conformance suite. Both are free and
+open to you as an existing member; there is no application for either.
