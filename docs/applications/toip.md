@@ -55,29 +55,34 @@ hit that the specification does not yet answer cleanly.
 > build time, and the integration in every case was replacing that list with a live
 > query. Detail: https://maximemansiet.fr/en/research/#interop
 >
-> Two things came out of that which are relevant to TRQP v2.0 review, and I would rather
-> raise them here than solve them privately.
+> I understand v2.0 is approved and that no conformance test suite exists yet for the
+> three conformance targets. I would like to help build one, and I think the integration
+> work is the right raw material: most of what a suite would assert, I have already
+> checked by hand, eight times, against implementations I did not write.
+>
+> Two things I hit that the specification does not appear to settle, which a test suite
+> would have to take a position on either way.
 >
 > First, availability. A live trust query is a network dependency in a flow that
 > previously had none. Fail-closed is the right default and it is also the behaviour that
-> breaks a demo when the registry is briefly unreachable. I have not found guidance in
-> the specification on what a conforming implementation should do here, and I suspect
-> different implementers are making different choices silently.
+> breaks a demo when the registry is briefly unreachable. I have not found guidance on
+> what a conforming implementation should do here, and I suspect different implementers
+> are making different choices silently.
 >
 > Second, the boundary with ETSI trusted lists and OpenID Federation. EUDI is X.509 and
 > trusted-list centric, TRQP is registry centric, and the two make different governance
 > assumptions. In practice I bridged them at the resolver, which is format agnostic. I
 > would like to know whether the task force considers that the intended seam.
 >
-> Glad to help with review, and happy to contribute implementation reports if that is
-> useful to the editors.
+> Happy to start with implementation reports if that is more useful than jumping straight
+> to a suite.
 
 ## What the site may claim, and when
 
 Right now: member of the Trust over IP Foundation. That is on the CV under Standards
 Bodies and in the news feed, phrased as following the work rather than contributing.
 
-Once you have attended TRTF calls and filed review comments on TRQP v2.0, that sentence
+Once you are actually attending calls in a working group or task force, that sentence
 can change to say you participate in the Trust Registry Task Force. Not before.
 `scripts/check-content.mjs` blocks any copy pairing Trust over IP with chair, editor,
 working group or task force, so the gate will fail the build if that claim lands early.
