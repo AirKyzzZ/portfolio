@@ -136,7 +136,7 @@
         "title": "Co-founder & CIO",
         "company": "CiteMe",
         "period": "Jun 2026 – Present",
-        "desc": "Generative engine optimization platform measuring and improving how brands appear inside AI search engines. Own technical direction, AI architecture and product roadmap. Next.js 16, Supabase with pgvector, a custom job queue, a multi-provider LLM layer and Stripe billing, serving paying customers."
+        "desc": "Generative engine optimization platform measuring and improving how brands appear inside AI search engines. Own data, backend direction and infrastructure: Supabase with Postgres and pgvector for retrieval, a custom job queue, the multi-provider LLM layer, and the observability and billing plumbing behind a product with paying customers."
       },
       {
         "title": "Software Engineer",

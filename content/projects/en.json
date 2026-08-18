@@ -73,7 +73,7 @@
     "slug": "citeme",
     "title": "CiteMe",
     "description": "Generative engine optimization platform measuring how often AI search engines cite a brand.",
-    "longDescription": "Search is moving from Google to AI answer engines. CiteMe crawls a site, runs multi-provider audits across the major AI engines, and returns a 0 to 100 score with prioritized, actionable fixes. A tracker surfaces real AI-bot visits so customers see which engines are reading their content. I co-founded it and serve as CIO, owning technical direction, AI architecture and product roadmap. Runs on Next.js 16, React 19, Supabase with pgvector for retrieval, a custom job queue, a multi-provider LLM layer, and Stripe billing.",
+    "longDescription": "Search is moving from Google to AI answer engines. CiteMe crawls a site, runs multi-provider audits across the major AI engines, and returns a 0 to 100 score with prioritized, actionable fixes. A tracker surfaces real AI-bot visits so customers see which engines are reading their content. I co-founded it and serve as CIO, owning data, backend direction and infrastructure. Runs on Next.js 16, React 19, Supabase with pgvector for retrieval, a custom job queue, a multi-provider LLM layer, and Stripe billing.",
     "technologies": [
       "Next.js",
       "React",

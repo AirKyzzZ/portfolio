@@ -136,7 +136,7 @@
         "title": "Cofondateur & CIO",
         "company": "CiteMe",
         "period": "Juin 2026 – Aujourd'hui",
-        "desc": "Plateforme de generative engine optimization qui mesure et améliore la visibilité des marques dans les moteurs de recherche IA. Je porte la direction technique, l'architecture IA et la roadmap produit. Next.js 16, Supabase avec pgvector, une file de jobs maison, une couche LLM multi-fournisseurs et la facturation Stripe, avec des clients payants."
+        "desc": "Plateforme de generative engine optimization qui mesure et améliore la visibilité des marques dans les moteurs de recherche IA. Je porte les données, la direction backend et l'infrastructure : Supabase avec Postgres et pgvector pour la recherche, une file de jobs maison, la couche LLM multi-fournisseurs, ainsi que l'observabilité et la facturation derrière un produit avec des clients payants."
       },
       {
         "title": "Ingénieur logiciel",

@@ -73,7 +73,7 @@
     "slug": "citeme",
     "title": "CiteMe",
     "description": "Plateforme de generative engine optimization qui mesure la fréquence à laquelle les moteurs de recherche IA citent une marque.",
-    "longDescription": "La recherche migre de Google vers les moteurs de réponse IA. CiteMe crawle un site, lance des audits multi-fournisseurs sur les principaux moteurs IA, et renvoie un score de 0 à 100 assorti de correctifs priorisés et actionnables. Un traqueur révèle les visites réelles des bots IA, pour que les clients voient quels moteurs lisent leur contenu. Je l'ai cofondée et j'en suis le CIO, en charge de la direction technique, de l'architecture IA et de la roadmap produit. Tourne sur Next.js 16, React 19, Supabase avec pgvector pour la recherche, une file de jobs maison, une couche LLM multi-fournisseurs et la facturation Stripe.",
+    "longDescription": "La recherche migre de Google vers les moteurs de réponse IA. CiteMe crawle un site, lance des audits multi-fournisseurs sur les principaux moteurs IA, et renvoie un score de 0 à 100 assorti de correctifs priorisés et actionnables. Un traqueur révèle les visites réelles des bots IA, pour que les clients voient quels moteurs lisent leur contenu. Je l'ai cofondée et j'en suis le CIO, en charge des données, de la direction backend et de l'infrastructure. Tourne sur Next.js 16, React 19, Supabase avec pgvector pour la recherche, une file de jobs maison, une couche LLM multi-fournisseurs et la facturation Stripe.",
     "technologies": [
       "Next.js",
       "React",
