@@ -65,7 +65,7 @@
       },
       {
         "date": "2026.06",
-        "text": "Cofondation de CiteMe, generative engine optimization, en tant que CTO"
+        "text": "Cofondation de CiteMe, generative engine optimization, en tant que CIO"
       },
       {
         "date": "2026.03",
@@ -133,7 +133,7 @@
         "desc": "Ingénieur principal sur Verana, une couche de confiance ouverte pour l'internet. 182 pull requests fusionnées depuis février 2026, sur le frontend du registre de confiance, le playground de démonstration, l'indexeur et le résolveur. Outillage de credentials conforme aux specs : canonicalisation JCS, étiquetage linguistique BCP-47 complet, et règles de validation lues depuis la chaîne. Intégration de la résolution de confiance en direct dans huit portefeuilles d'identité tiers, dont le portefeuille de référence EUDI, Inji de MOSIP, Talao, Sphereon, Paradym et Procivis One. Livraison d'agents DIDComm et credentials vérifiables sur Hologram, en services NestJS sur Kubernetes."
       },
       {
-        "title": "Cofondateur & CTO",
+        "title": "Cofondateur & CIO",
         "company": "CiteMe",
         "period": "Juin 2026 – Aujourd'hui",
         "desc": "Plateforme de generative engine optimization qui mesure et améliore la visibilité des marques dans les moteurs de recherche IA. Je porte la direction technique, l'architecture IA et la roadmap produit. Next.js 16, Supabase avec pgvector, une file de jobs maison, une couche LLM multi-fournisseurs et la facturation Stripe, avec des clients payants."
