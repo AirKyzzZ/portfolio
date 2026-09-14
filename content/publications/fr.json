@@ -1,5 +1,25 @@
 [
   {
+    "slug": "conformant-but-not-compatible",
+    "title": "Conformant but Not Compatible: An Interoperability Study of Thirteen Identity Wallets",
+    "authors": [
+      "Maxime Mansiet"
+    ],
+    "venue": "Prépublication",
+    "year": 2026,
+    "abstract": "L'identité numérique repose sur une promesse : une attestation émise par une organisation peut être conservée dans n'importe quel portefeuille et présentée à n'importe quel vérificateur, sans qu'aucun d'eux ne se soit entendu au préalable. Nous avons lu le code source de treize portefeuilles d'identité en production, issus de gouvernements, d'entreprises et de projets open source, et relevé ce que chacun accepte réellement. Quatre des cinq intersections sont vides. Les portefeuilles ancrent aussi la confiance de manière incompatible : six n'embarquent aucune entrée de confiance, et parmi ceux qui combinent une liste intégrée et une liste récupérée à l'exécution, cinq règles mutuellement incompatibles déterminent laquelle l'emporte. Nous avons ensuite intégré une couche de confiance partagée dans quatorze portefeuilles, sur deux protocoles d'attestation sans lien entre eux, avec six allers-retours émission-présentation attestés sur appareil physique.",
+    "url": "",
+    "paperId": "",
+    "tags": [
+      "identité-décentralisée",
+      "verifiable-credentials",
+      "interopérabilité",
+      "registres-de-confiance",
+      "portefeuille-eudi",
+      "étude-de-mesure"
+    ]
+  },
+  {
     "slug": "trustless-scientific-collaboration",
     "title": "Trustless Scientific Collaboration: A Minimal Protocol for Decentralized Agent-to-Agent Trust Using DID:key and Verifiable Credentials",
     "authors": [
