@@ -2,7 +2,7 @@
   {
     "slug": "verana-wallet-interop",
     "title": "Verana Cross-Ecosystem Wallet Interop",
-    "description": "Live trust-registry resolution wired into eight third-party identity wallets, replacing their hardcoded issuer lists.",
+    "description": "Live trust-registry resolution wired into third-party identity wallets and solutions, replacing their hardcoded issuer lists.",
     "longDescription": "Every mature identity wallet ships a static list of trusted issuers, compiled at build time and updated by release. This work replaces that list with a live, fail-closed call to the Verana trust resolver, using the same HTTP surface in every target so the approach is portable rather than bespoke. Shipped and device-verified: MOSIP's Inji as a full issuer, wallet and verifier triangle; the EUDI reference Android wallet validated on testnet against France Identité's Unfold playground; Talao AltMe, Sphereon, Paradym and Procivis One built and demonstrated on device with both trusted and rogue paths verified; and Hologram running natively on vs-agent. SWIYU, the Swiss Confederation wallet, is partial: positive and control issuance flows are accepted on Android, one verifier request path remains blocked. Built for the Global Digital Trust Collaboration Award 2026, presenting at GDC Geneva in September 2026.",
     "technologies": [
       "TypeScript",
@@ -121,8 +121,8 @@
   {
     "slug": "pkba",
     "title": "Parkour Bassin d'Arcachon",
-    "description": "Community website and member platform for the largest parkour club in southwestern France, co-founded in 2025.",
-    "longDescription": "PKBA is the largest parkour club in southwestern France, which I co-founded and where I serve as treasurer and head of communication. Around 80 members today, growing to 110+ for the coming season. I designed and solo-built the club's production platform: a public site, online registration persisted to Airtable, an admin dashboard behind custom authentication to validate licences and export member data, and live Stripe flows for the merchandise shop and donations with automated receipts. I trained as a competitive parkour athlete from 2017 to 2025, so building this was as much a personal project as a technical one. The club has been featured by France 3 Nouvelle-Aquitaine.",
+    "description": "Community website and member platform for the largest parkour club in southern France, co-founded in 2025.",
+    "longDescription": "PKBA is the largest parkour club in southern France, which I co-founded and where I serve as treasurer and head of communication. 120+ members in its second season. I designed and solo-built the club's production platform: a public site, online registration persisted to Airtable, an admin dashboard behind custom authentication to validate licences and export member data, and live Stripe flows for the merchandise shop and donations with automated receipts. I trained as a competitive parkour athlete from 2017 to 2025, so building this was as much a personal project as a technical one. The club has been featured by France 3 Nouvelle-Aquitaine.",
     "technologies": [
       "Next.js",
       "TypeScript",

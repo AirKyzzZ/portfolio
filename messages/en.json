@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Self-sovereign identity engineer at 2060.io, working on Verana. Trust registries, verifiable credentials, wallet interoperability, and identity for AI agents. Based in Bordeaux, France."
+    "description": "Software engineer and researcher at 2060.io working on Verana, an open trust layer for the internet, and co-founder of CiteMe. Trust registries, verifiable credentials, wallet interoperability, and identity for AI agents. Based in Bordeaux, France."
   },
   "nav": {
     "home": "Home",
@@ -25,14 +25,15 @@
     "featured": "Featured",
     "allProjects": "All projects",
     "downloadPdf": "Download PDF",
-    "latestPosts": "Latest posts"
+    "latestPosts": "Latest posts",
+    "toggleTheme": "Toggle theme"
   },
   "home": {
     "about": "About",
-    "bio1": "I'm a software engineer working on self-sovereign identity, based in Bordeaux. I fell into computer science young and never left, drawn by the idea that code isn't just tooling, it's infrastructure for society. That curiosity led me to distributed systems, cryptography, and eventually to the question I keep coming back to: how do we establish trust without a central authority?",
-    "bio2": "I build that at 2060.io, on Verana, an open trust layer for the internet. 182 merged pull requests since February 2026, across the trust registry frontend, spec-compliant credential tooling, and the resolver work that lets a verifier ask a live question instead of trusting a static list. This year I wired Verana trust resolution into eight third-party identity wallets, among them the EUDI reference wallet, MOSIP's Inji, Talao, Sphereon, Paradym and Procivis One. Every one of them shipped with a hardcoded list of issuers it trusts. Replacing that list with a live, fail-closed call is the whole idea.",
-    "bio3": "The same problem is arriving for AI agents, faster. I wrote Credat, an open-source library that gives agents verifiable identities and scoped delegation, and co-authored a protocol showing that two previously unknown agents can establish mutual cryptographic trust in two round trips, with under 2ms of overhead. I'm 20, and I've bet everything on decentralized identity being one of the foundational problems of the next era, for people and for the agents acting on their behalf.",
-    "bio4": "Before tech, I trained as a competitive parkour athlete with the French Gymnastics Federation from 2017 to 2025. In 2025 I co-founded PKBA, now the largest parkour club in southwestern France. Discipline, pattern recognition, and learning from failure fast: sport and systems thinking have more in common than they appear.",
+    "bio1": "I'm a software engineer and researcher in Bordeaux. I fell into computer science young and never left, and I've spent the years since on a single question: how do you establish trust without a central authority? A wallet refuses a request it cannot verify. An AI engine will describe a company to a stranger with no verification at all. Unverified actors and unverified statements are the same problem seen from opposite ends, and I work on both.",
+    "bio2": "The first end is Verana, at 2060.io, an open trust layer for the internet. This year I wired Verana trust resolution into third-party identity wallets and solutions, among them the EUDI reference wallet, MOSIP's Inji, Talao, Sphereon, Paradym and Procivis One. Every one of them shipped with a hardcoded list of issuers it trusts. Replacing that list with a live, fail-closed call is the whole idea. I co-authored the Verana trust specifications, built the wallet conformance suite that checks those integrations hold under real flows, took Verana into France Identité's EUDI playground, and contribute to credo-ts at the OpenWallet Foundation, part of LF Decentralized Trust since September 2026. I'm a member of the W3C Credentials Community Group, the Trust over IP Foundation, the Agentic AI Foundation and the Linux Foundation.",
+    "bio3": "The same problem is arriving for AI agents, faster. I co-authored a protocol showing that two previously unknown agents can establish mutual cryptographic trust in two round trips, with under 2ms of overhead. The other end is CiteMe, which I co-founded and where I'm CIO, measuring what AI engines say about a company. That answer becomes a reputation for whoever reads it, nobody at the company was asked, and nothing on the open web lets a model check who is behind a claim. I'm 20, and I've bet everything on this being one of the foundational problems of the next era, for people and for the agents acting on their behalf.",
+    "bio4": "Before tech, I trained as a competitive parkour athlete with the French Gymnastics Federation from 2017 to 2025. In 2025 I co-founded PKBA, now the largest parkour club in southern France. Discipline, pattern recognition, and learning from failure fast: sport and systems thinking have more in common than they appear.",
     "researchInterests": "Research Interests",
     "interests": [
       "Trust Registries & the Trust Registry Query Protocol",
@@ -45,7 +46,27 @@
     "newsItems": [
       {
         "date": "2026.09",
-        "text": "Co-speaking at Global Digital Collaboration (GDC26), Geneva, on cross-ecosystem wallet trust"
+        "text": "Preprint out: Conformant but Not Compatible, an interoperability study of production identity wallets"
+      },
+      {
+        "date": "2026.09",
+        "text": "Co-authored the Verana trust specifications"
+      },
+      {
+        "date": "2026.09",
+        "text": "Spoke at Global Digital Collaboration (GDC26), Geneva, on cross-ecosystem wallet trust"
+      },
+      {
+        "date": "2026.09",
+        "text": "Joined the Agentic AI Foundation"
+      },
+      {
+        "date": "2026.09",
+        "text": "Joined the Linux Foundation"
+      },
+      {
+        "date": "2026.08",
+        "text": "Verana trust resolution running inside France Identité's EUDI Unfold playground on testnet"
       },
       {
         "date": "2026.08",
@@ -57,11 +78,11 @@
       },
       {
         "date": "2026.08",
-        "text": "Verana trust resolution now runs in eight third-party identity wallets, seven complete and one partial, including the EUDI reference wallet and MOSIP's Inji"
+        "text": "Verana trust resolution now runs in third-party identity wallets and solutions, including the EUDI reference wallet and MOSIP's Inji"
       },
       {
         "date": "2026.08",
-        "text": "First upstream contribution merged into credo-ts at the OpenWallet Foundation"
+        "text": "Contributor to credo-ts at the OpenWallet Foundation, part of LF Decentralized Trust since September 2026"
       },
       {
         "date": "2026.06",
@@ -81,7 +102,7 @@
       },
       {
         "date": "2025.07",
-        "text": "Co-founded PKBA, the largest parkour club in southwestern France"
+        "text": "Co-founded PKBA, the largest parkour club in southern France"
       },
       {
         "date": "2025.04",
@@ -96,17 +117,17 @@
       {
         "id": "interop",
         "title": "Cross-ecosystem trust interoperability",
-        "body": "Every mature identity wallet ships a static list of issuers it trusts, compiled at build time and updated by release. I replaced that list with a live, fail-closed call to a trust registry in eight third-party wallets: the EUDI reference Android wallet, MOSIP's Inji, Talao AltMe, Sphereon, Paradym, Procivis One, SWIYU from the Swiss Confederation, and 2060.io's Hologram. MOSIP runs as a full issuer, wallet and verifier triangle; the EUDI reference wallet is validated on testnet against France Identité's Unfold playground. SWIYU is partial, its positive and control flows are accepted on Android but one verifier request path is still blocked. The integration surface everywhere is the same resolver HTTP API, which is what makes the approach portable rather than bespoke."
+        "body": "Every mature identity wallet ships a static list of issuers it trusts, compiled at build time and updated by release. I replaced that list with a live, fail-closed call to a trust registry in third-party wallets and solutions: the EUDI reference Android wallet, MOSIP's Inji, Talao AltMe, Sphereon, Paradym, Procivis One, SWIYU from the Swiss Confederation, and 2060.io's Hologram. MOSIP runs as a full issuer, wallet and verifier triangle; the EUDI reference wallet is validated on testnet against France Identité's Unfold playground. SWIYU is partial, its positive and control flows are accepted on Android but one verifier request path is still blocked. The integration surface everywhere is the same resolver HTTP API, which is what makes the approach portable rather than bespoke."
       },
       {
         "id": "trust-registries",
         "title": "Trust registries in production",
-        "body": "Verana is a registry of trust registries: a public ledger recording which entities may issue or verify which credential schemas inside a given ecosystem, and the validation process that grants those permissions. I build the frontend and the credential tooling, including JSON Canonicalization Scheme canonicalization, full BCP-47 language tagging, and validation rules read from the chain rather than hardcoded. 182 merged pull requests since February 2026. The open standards counterpart is the Trust Registry Query Protocol, approved as a ToIP specification in December 2025, which defines conformance targets but still has no conformance test suite."
+        "body": "Verana is a registry of trust registries: a public ledger recording which entities may issue or verify which credential schemas inside a given ecosystem, and the validation process that grants those permissions. I build the frontend and the credential tooling, including JSON Canonicalization Scheme canonicalization, full BCP-47 language tagging, and validation rules read from the chain rather than hardcoded. I co-authored the Verana trust specifications. The open standards counterpart is the Trust Registry Query Protocol, approved as a ToIP specification in December 2025, which defines conformance targets but shipped without a conformance test suite, so I built one: tiered wallet conformance checks that run the real OpenID4VC flows rather than asserting against a document."
       },
       {
         "id": "agent-trust",
         "title": "Agent identity and delegation",
-        "body": "Autonomous agents raise the same question earlier and harder: when an agent calls a service, who is it, and who authorized it to act? Credat is my open-source answer, a TypeScript library giving agents verifiable identities via did:web and did:key, scoped delegation credentials, and a mutual trust handshake, with adapters for HTTP APIs, LangChain and the command line. The Claw4S protocol formalizes the handshake: two previously unknown agents reach mutual cryptographic trust in exactly two round trips, under 2ms of overhead, producing an auditable chain of signed credentials and a structural guarantee of impersonation detection."
+        "body": "Autonomous agents raise the same question earlier and harder: when an agent calls a service, who is it, and who authorized it to act? The Claw4S protocol formalizes the handshake: two previously unknown agents reach mutual cryptographic trust in exactly two round trips, under 2ms of overhead, producing an auditable chain of signed credentials and a structural guarantee of impersonation detection."
       }
     ],
     "openQuestions": "Open Questions",
@@ -130,7 +151,7 @@
         "title": "Software Engineer",
         "company": "2060.io / Verana",
         "period": "Sep 2025 – Present",
-        "desc": "Core engineer on Verana, an open trust layer for the internet. 182 merged pull requests since February 2026 across the trust registry frontend, the demo playground, the indexer and the resolver. Built spec-compliant credential tooling: JCS canonicalization, full BCP-47 language tagging, and validation rules sourced from the chain. Wired live trust resolution into eight third-party identity wallets including the EUDI reference wallet, MOSIP's Inji, Talao, Sphereon, Paradym and Procivis One. Shipped DIDComm and verifiable-credential agents on Hologram as NestJS services on Kubernetes."
+        "desc": "Core engineer and researcher on Verana, an open trust layer for the internet, across the trust registry frontend, the demo playground, the indexer and the resolver. Co-authored the Verana trust specifications. Built spec-compliant credential tooling: JCS canonicalization, full BCP-47 language tagging, and validation rules sourced from the chain. Wired live trust resolution into third-party identity wallets and solutions including the EUDI reference wallet, MOSIP's Inji, Talao, Sphereon, Paradym and Procivis One, and built the tiered wallet conformance suite that checks those integrations under real OpenID4VC flows. Shipped DIDComm and verifiable-credential agents on Hologram as NestJS services on Kubernetes."
       },
       {
         "title": "Co-founder & CIO",
@@ -192,15 +213,15 @@
     "engagement": [
       {
         "title": "Standards Bodies",
-        "desc": "Member of the W3C Credentials Community Group and the Trust over IP Foundation. Following the work for now rather than contributing to specifications."
+        "desc": "Member of the W3C Credentials Community Group, the Trust over IP Foundation, the Agentic AI Foundation and the Linux Foundation. Co-author of the Verana trust specifications."
       },
       {
         "title": "Open Source",
-        "desc": "Landed a fix in credo-ts at the OpenWallet Foundation, on did:webvh log proof verification methods, merged in August 2026. Creator of Credat, an open-source trust layer for AI agents."
+        "desc": "Contributor to credo-ts at the OpenWallet Foundation, part of LF Decentralized Trust since September 2026. Author of the Verana wallet conformance suite."
       },
       {
         "title": "PKBA",
-        "desc": "Co-founder, treasurer and head of communication of a parkour club in southwestern France, around 80 members and growing to 110+ for the coming season. Featured by France 3 Nouvelle-Aquitaine."
+        "desc": "Co-founder, treasurer and head of communication of a parkour club in southern France, 120+ members in its second season. Featured by France 3 Nouvelle-Aquitaine."
       },
       {
         "title": "VertiFlow",
@@ -220,7 +241,7 @@
         "title": "Global Digital Collaboration Conference 2026",
         "venue": "Palexpo, Geneva",
         "date": "1-3 September 2026",
-        "desc": "Co-speaking with Fabrice Rochette and Ariel Gentile for 2060.io on our Global Digital Trust Collaboration Award work: wiring live trust-registry resolution into eight third-party identity wallets. Session title and day to be confirmed."
+        "desc": "Spoke alongside Fabrice Rochette and Ariel Gentile for 2060.io on our Global Digital Trust Collaboration Award work: wiring live trust-registry resolution into third-party identity wallets and solutions."
       }
     ],
     "metaDescription": "Conference talks on digital identity, trust registries and cross-ecosystem wallet interoperability."

@@ -17,7 +17,8 @@
       "registres-de-confiance",
       "portefeuille-eudi",
       "étude-de-mesure"
-    ]
+    ],
+    "pdfUrl": "/files/conformant-but-not-compatible.pdf"
   },
   {
     "slug": "trustless-scientific-collaboration",

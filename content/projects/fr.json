@@ -2,7 +2,7 @@
   {
     "slug": "verana-wallet-interop",
     "title": "Interopérabilité Verana entre portefeuilles",
-    "description": "Résolution de confiance en direct intégrée dans huit portefeuilles d'identité tiers, en remplacement de leurs listes d'émetteurs codées en dur.",
+    "description": "Résolution de confiance en direct intégrée dans des portefeuilles et solutions d'identité tiers, en remplacement de leurs listes d'émetteurs codées en dur.",
     "longDescription": "Tout portefeuille d'identité mature embarque une liste figée d'émetteurs de confiance, compilée au build et mise à jour par release. Ces travaux la remplacent par un appel en direct, fail-closed, au résolveur de confiance Verana, avec la même surface HTTP sur chaque cible pour que l'approche soit portable plutôt que sur mesure. Livré et vérifié sur appareil : Inji de MOSIP en triangle complet émetteur, portefeuille et vérifieur ; le portefeuille Android de référence EUDI validé sur testnet face au playground Unfold de France Identité ; Talao AltMe, Sphereon, Paradym et Procivis One construits et démontrés sur appareil, chemins de confiance et chemins malveillants vérifiés ; et Hologram tournant nativement sur vs-agent. SWIYU, le portefeuille de la Confédération suisse, reste partiel : les flux d'émission positifs et de contrôle sont acceptés sur Android, un chemin de requête vérifieur reste bloqué. Réalisé pour le Global Digital Trust Collaboration Award 2026, à présenter à GDC Genève en septembre 2026.",
     "technologies": [
       "TypeScript",
@@ -121,8 +121,8 @@
   {
     "slug": "pkba",
     "title": "Parkour Bassin d'Arcachon",
-    "description": "Site communautaire et plateforme adhérents du plus grand club de parkour du Sud-Ouest, cofondé en 2025.",
-    "longDescription": "PKBA est le plus grand club de parkour du Sud-Ouest, que j'ai cofondé et où je suis trésorier et responsable communication. Environ 80 membres aujourd'hui, et plus de 110 attendus la saison prochaine. J'ai conçu et développé seul la plateforme de production du club : site public, inscription en ligne persistée dans Airtable, tableau de bord d'administration derrière une authentification maison pour valider les licences et exporter les données adhérents, et des flux Stripe en production pour la boutique et les dons avec reçus automatisés. J'ai pratiqué le parkour en compétition de 2017 à 2025, ce projet est donc autant personnel que technique. Le club a fait l'objet d'un reportage de France 3 Nouvelle-Aquitaine.",
+    "description": "Site communautaire et plateforme adhérents du plus grand club de parkour du Sud de la France, cofondé en 2025.",
+    "longDescription": "PKBA est le plus grand club de parkour du Sud de la France, que j'ai cofondé et où je suis trésorier et responsable communication. 120+ adhérents pour sa deuxième saison. J'ai conçu et développé seul la plateforme de production du club : site public, inscription en ligne persistée dans Airtable, tableau de bord d'administration derrière une authentification maison pour valider les licences et exporter les données adhérents, et des flux Stripe en production pour la boutique et les dons avec reçus automatisés. J'ai pratiqué le parkour en compétition de 2017 à 2025, ce projet est donc autant personnel que technique. Le club a fait l'objet d'un reportage de France 3 Nouvelle-Aquitaine.",
     "technologies": [
       "Next.js",
       "TypeScript",

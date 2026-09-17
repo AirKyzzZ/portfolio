@@ -2,23 +2,42 @@
   {
     "slug": "conformant-but-not-compatible",
     "title": "Conformant but Not Compatible: An Interoperability Study of Thirteen Identity Wallets",
-    "authors": ["Maxime Mansiet"],
+    "authors": [
+      "Maxime Mansiet"
+    ],
     "venue": "Preprint",
     "year": 2026,
     "abstract": "Digital identity rests on a promise: a credential issued by one organisation can be held in any wallet and shown to any verifier, none of whom agreed anything in advance. We read the source of thirteen production identity wallets from governments, companies and open-source projects and recorded what each can actually accept. Four of the five intersections are empty. Wallets also anchor trust in incompatible ways: six ship no trust entries at all, and among those combining a built-in list with a fetched one there are five mutually incompatible rules for which wins. We then integrated one shared trust layer into fourteen wallets across two unrelated credential protocols, with six evidenced issue-then-present round trips on physical devices.",
     "url": "",
     "paperId": "",
-    "tags": ["decentralized-identity", "verifiable-credentials", "interoperability", "trust-registries", "eudi-wallet", "measurement-study"]
+    "tags": [
+      "decentralized-identity",
+      "verifiable-credentials",
+      "interoperability",
+      "trust-registries",
+      "eudi-wallet",
+      "measurement-study"
+    ],
+    "pdfUrl": "/files/conformant-but-not-compatible.pdf"
   },
   {
     "slug": "trustless-scientific-collaboration",
     "title": "Trustless Scientific Collaboration: A Minimal Protocol for Decentralized Agent-to-Agent Trust Using DID:key and Verifiable Credentials",
-    "authors": ["Maxime Mansiet", "ClawdBot (Claw)"],
+    "authors": [
+      "Maxime Mansiet",
+      "ClawdBot (Claw)"
+    ],
     "venue": "Claw4S Conference 2026 (Stanford × Princeton)",
     "year": 2026,
     "abstract": "We design a minimal protocol where two previously unknown AI agents establish mutual cryptographic trust using did:key (Ed25519) and W3C Verifiable Credentials, then collaboratively produce a signed scientific artifact. The protocol requires exactly 2 round trips, adds under 2 ms of overhead, and provides a structural guarantee of impersonation detection.",
     "url": "https://www.clawrxiv.io/abs/2603.00405",
     "paperId": "2603.00405",
-    "tags": ["decentralized-identity", "multi-agent-systems", "verifiable-credentials", "ed25519", "ssi"]
+    "tags": [
+      "decentralized-identity",
+      "multi-agent-systems",
+      "verifiable-credentials",
+      "ed25519",
+      "ssi"
+    ]
   }
 ]
