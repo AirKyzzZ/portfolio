@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { Menu, X } from 'lucide-react'
+import { ThemeToggle } from './theme-toggle'
 
 export function Header() {
   const locale = useLocale()
@@ -57,6 +58,7 @@ export function Header() {
           >
             {otherLocale.toUpperCase()}
           </Link>
+          <ThemeToggle />
         </nav>
 
         {/* Mobile controls */}
@@ -67,6 +69,7 @@ export function Header() {
           >
             {otherLocale.toUpperCase()}
           </Link>
+          <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="p-1 text-foreground-secondary hover:text-foreground transition-colors"

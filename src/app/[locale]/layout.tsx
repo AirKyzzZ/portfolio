@@ -52,6 +52,7 @@ export async function generateMetadata({
       languages: {
         en: '/en/',
         fr: '/fr/',
+        'x-default': '/en/',
       },
     },
     openGraph: {
@@ -92,6 +93,11 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale} className={`${sourceSerif.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <PersonSchema locale={locale} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.dataset.theme=t}}catch(e){}})()`,
+          }}
+        />
       </head>
       <body className="antialiased min-h-screen flex flex-col">
         <NextIntlClientProvider>
