@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { alternatesFor } from '@/lib/metadata'
+import { alternatesFor, openGraphFor } from '@/lib/metadata'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { SectionHeading } from '@/components/ui/section-heading'
 import { routing } from '@/i18n/routing'
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t('title'),
     description: t('metaDescription'),
     alternates: alternatesFor(locale, '/cv/'),
+    openGraph: openGraphFor(locale, '/cv/', t('title'), t('metaDescription')),
   }
 }
 

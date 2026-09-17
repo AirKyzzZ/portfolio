@@ -1,6 +1,6 @@
 import { getProjects, getPublications } from '@/lib/content'
 import { getAllBlogPosts } from '@/lib/mdx'
-import { SITE_URL } from '@/lib/constants'
+import { SITE_URL, SOCIAL_LINKS } from '@/lib/constants'
 
 export const dynamic = 'force-static'
 
@@ -12,9 +12,23 @@ export async function GET() {
   const lines = [
     '# Maxime Mansiet',
     '',
-    '> Self-sovereign identity engineer at 2060.io, working on Verana, an open trust layer for the internet. Based in Bordeaux, France. Works on trust registries, verifiable credentials, cross-ecosystem wallet interoperability, and identity for AI agents.',
+    '> Software engineer and researcher based in Bordeaux, France. Works on self-sovereign identity at 2060.io, on Verana, an open trust layer for the internet, and co-founded CiteMe, a generative engine optimization platform, where he is CIO. His thesis: unverified actors (identity wallets trusting hardcoded issuer lists) and unverified statements (AI engines describing companies with no verification) are the same problem seen from opposite ends.',
     '',
     'Available in English and French. Replace /en/ with /fr/ for the French version of any page.',
+    '',
+    '## Key facts',
+    '',
+    '- Full name: Maxime Mansiet. Based in Bordeaux, Nouvelle-Aquitaine, France. Age 20.',
+    '- Software engineer and researcher at 2060.io since September 2025, working on Verana, an open-source trust layer for the internet.',
+    '- Co-founder and CIO of CiteMe since June 2026, a generative engine optimization (GEO) platform measuring how brands appear inside AI search engines.',
+    '- Co-author of the Verana trust specifications.',
+    '- Integrated live Verana trust-registry resolution into third-party identity wallets and solutions, including the EUDI reference wallet, MOSIP Inji, Talao, Sphereon, Paradym and Procivis One, replacing their hardcoded issuer lists with a live fail-closed call.',
+    '- Author of the Verana wallet conformance suite, which runs real OpenID4VC flows rather than asserting against a document.',
+    '- Contributor to credo-ts at the OpenWallet Foundation, part of LF Decentralized Trust since September 2026.',
+    '- Member of the W3C Credentials Community Group, the Trust over IP Foundation, the Agentic AI Foundation and the Linux Foundation.',
+    '- Founder of Klyx, a web studio in Bordeaux, since April 2025. Co-founder of PKBA, the largest parkour club in southern France, since July 2025.',
+    '- Competitive parkour athlete with the French Gymnastics Federation from 2017 to 2025.',
+    `- Contact: ${SOCIAL_LINKS.email.replace('mailto:', '')}. GitHub: AirKyzzZ. ORCID: 0009-0000-5647-5281.`,
     '',
     '## Pages',
     '',
@@ -34,7 +48,10 @@ export async function GET() {
     '',
     '## Publications',
     '',
-    ...publications.map((p) => `- [${p.title}](${p.url}): ${p.venue}, ${p.year}`),
+    ...publications.map(
+      (p) =>
+        `- [${p.title}](${p.url || (p.pdfUrl ? SITE_URL + p.pdfUrl : `${SITE_URL}/en/publications/`)}): ${p.venue}, ${p.year}`
+    ),
     '',
     '## Writing',
     '',
