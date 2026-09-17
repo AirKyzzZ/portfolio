@@ -10,7 +10,8 @@ export function PersonSchema({ locale }: PersonSchemaProps) {
     '@type': 'Person',
     name: 'Maxime Mansiet',
     url: `${SITE_URL}/${locale}/`,
-    jobTitle: 'Self-Sovereign Identity Engineer',
+    jobTitle: 'Self-Sovereign Identity Engineer & Researcher',
+    email: SOCIAL_LINKS.email.replace('mailto:', ''),
     worksFor: [
       { '@type': 'Organization', name: '2060.io', url: 'https://2060.io' },
       { '@type': 'Organization', name: 'Verana', url: 'https://verana.io' },
@@ -25,6 +26,15 @@ export function PersonSchema({ locale }: PersonSchemaProps) {
       'DIDComm',
       'OpenID for Verifiable Presentations',
       'AI Agent Identity',
+      'Trust Registry Query Protocol',
+      'Wallet Interoperability',
+      'Generative Engine Optimization',
+    ],
+    memberOf: [
+      { '@type': 'Organization', name: 'W3C Credentials Community Group', url: 'https://www.w3.org/community/credentials/' },
+      { '@type': 'Organization', name: 'Trust over IP Foundation', url: 'https://trustoverip.org' },
+      { '@type': 'Organization', name: 'Agentic AI Foundation', url: 'https://agentic-ai.foundation' },
+      { '@type': 'Organization', name: 'Linux Foundation', url: 'https://www.linuxfoundation.org' },
     ],
     sameAs: [
       SOCIAL_LINKS.github,
