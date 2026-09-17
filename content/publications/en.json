@@ -1,5 +1,49 @@
 [
   {
+    "slug": "what-is-actually-crawling-you",
+    "title": "What Is Actually Crawling You",
+    "authors": [
+      "Maxime Mansiet",
+      "Mael Bourdin",
+      "Alex Teillet"
+    ],
+    "venue": "CiteMe Research",
+    "year": 2026,
+    "abstract": "We analysed 385,057 AI-agent requests across twenty websites over eight months. A measurable share of what every GEO tool reports as AI crawler traffic is not an AI crawler at all: credential-path probing is routinely misclassified as legitimate crawling. We also find inconsistent robots.txt compliance among major AI agents, and show that crawler rankings invert depending on which efficiency metric is applied.",
+    "url": "https://www.citeme.io/research/what-is-actually-crawling-you",
+    "pdfUrl": "https://www.citeme.io/research/what-is-actually-crawling-you.pdf",
+    "paperId": "",
+    "tags": [
+      "generative-engine-optimization",
+      "ai-crawlers",
+      "web-measurement",
+      "robots-txt",
+      "measurement-study"
+    ]
+  },
+  {
+    "slug": "verifiable-trust-spec",
+    "title": "Verifiable Trust v5 Specification",
+    "authors": [
+      "Fabrice Rochette (editor)",
+      "Ariel Gentile",
+      "Andres Vallecilla",
+      "Maxime Mansiet"
+    ],
+    "venue": "The Verana Foundation, draft specification",
+    "year": 2026,
+    "abstract": "An open, decentralized trust layer letting services, organizations and user agents cryptographically verify identity and authorization before a connection is established. Every participant presents verifiable credentials and resolves trust through a governed ecosystem, inverting the internet's default connect-first-verify-later pattern into verify-first-then-connect, for humans, applications and AI agents alike. I contribute to the specification, including the SD-JWT VC credential container.",
+    "url": "https://verana-labs.github.io/verifiable-trust-spec/",
+    "paperId": "",
+    "tags": [
+      "decentralized-identity",
+      "verifiable-credentials",
+      "trust-registries",
+      "specification",
+      "sd-jwt-vc"
+    ]
+  },
+  {
     "slug": "conformant-but-not-compatible",
     "title": "Conformant but Not Compatible: An Interoperability Study of Thirteen Identity Wallets",
     "authors": [

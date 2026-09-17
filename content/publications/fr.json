@@ -1,5 +1,49 @@
 [
   {
+    "slug": "what-is-actually-crawling-you",
+    "title": "What Is Actually Crawling You",
+    "authors": [
+      "Maxime Mansiet",
+      "Mael Bourdin",
+      "Alex Teillet"
+    ],
+    "venue": "CiteMe Research",
+    "year": 2026,
+    "abstract": "Nous avons analysé 385 057 requêtes d'agents IA sur vingt sites pendant huit mois. Une part mesurable de ce que tous les outils de GEO comptabilisent comme trafic de crawler IA n'est pas un crawler IA : le sondage de chemins d'identifiants est régulièrement classé à tort comme du crawl légitime. Nous constatons aussi un respect inégal du robots.txt parmi les principaux agents IA, et montrons que le classement des crawlers s'inverse selon la métrique d'efficacité retenue.",
+    "url": "https://www.citeme.io/research/what-is-actually-crawling-you",
+    "pdfUrl": "https://www.citeme.io/research/what-is-actually-crawling-you.pdf",
+    "paperId": "",
+    "tags": [
+      "generative-engine-optimization",
+      "ai-crawlers",
+      "web-measurement",
+      "robots-txt",
+      "measurement-study"
+    ]
+  },
+  {
+    "slug": "verifiable-trust-spec",
+    "title": "Verifiable Trust v5 Specification",
+    "authors": [
+      "Fabrice Rochette (éditeur)",
+      "Ariel Gentile",
+      "Andres Vallecilla",
+      "Maxime Mansiet"
+    ],
+    "venue": "The Verana Foundation, spécification en projet",
+    "year": 2026,
+    "abstract": "Une couche de confiance ouverte et décentralisée qui permet aux services, organisations et agents utilisateurs de vérifier cryptographiquement identité et autorisation avant d'établir une connexion. Chaque participant présente des credentials vérifiables et résout la confiance via un écosystème gouverné, inversant le schéma par défaut de l'internet (se connecter d'abord, vérifier ensuite) en vérifier d'abord, se connecter ensuite, pour les humains, les applications et les agents IA. Je contribue à la spécification, notamment au conteneur de credential SD-JWT VC.",
+    "url": "https://verana-labs.github.io/verifiable-trust-spec/",
+    "paperId": "",
+    "tags": [
+      "decentralized-identity",
+      "verifiable-credentials",
+      "trust-registries",
+      "specification",
+      "sd-jwt-vc"
+    ]
+  },
+  {
     "slug": "conformant-but-not-compatible",
     "title": "Conformant but Not Compatible: An Interoperability Study of Thirteen Identity Wallets",
     "authors": [
