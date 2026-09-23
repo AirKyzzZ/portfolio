@@ -1,6 +1,6 @@
 import { routing } from '@/i18n/routing'
 import { getProjects } from '@/lib/content'
-import { getBlogSlugs } from '@/lib/mdx'
+import { getAllBlogPosts } from '@/lib/mdx'
 import { SITE_URL } from '@/lib/constants'
 
 export const dynamic = 'force-static'
@@ -19,7 +19,7 @@ function alternates(path: string): string {
   return links.join('')
 }
 
-export function GET() {
+export async function GET() {
   const lastmod = new Date().toISOString().slice(0, 10)
   const entries: (Entry & { path: string })[] = []
 
@@ -42,10 +42,10 @@ export function GET() {
       })
     }
 
-    for (const slug of getBlogSlugs(locale)) {
+    for (const post of await getAllBlogPosts(locale)) {
       entries.push({
-        path: `/blog/${slug}/`,
-        url: `${SITE_URL}/${locale}/blog/${slug}/`,
+        path: `/blog/${post.slug}/`,
+        url: `${SITE_URL}/${locale}/blog/${post.slug}/`,
         priority: '0.6',
       })
     }

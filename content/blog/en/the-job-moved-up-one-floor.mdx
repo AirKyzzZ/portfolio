@@ -1,0 +1,86 @@
+---
+title: "The Job Moved Up One Floor"
+date: "2026-09-23"
+description: "I can tell you exactly what my own product does. I could not tell you how it is built. On reviewing instead of writing, what that actually costs, and why I think it still works out."
+tags: ["AI", "Software Engineering", "Craft", "Agents", "Generalists"]
+---
+
+I co-founded a company. I can tell you exactly what it does. Every feature, every flow, what happens when a user clicks anything, which decisions we made and why. I could not tell you how it is architected.
+
+That sentence took me a while to be willing to write down. It sounds like an admission of not being a real engineer. I have decided it is something else.
+
+## What changed
+
+When I started, using AI was optional. A faster autocomplete, a rubber duck that answered back. It was a tool you could reasonably refuse and still be good at the job.
+
+That is over. It is now the core of how the work gets done, and the shape of the work changed with it.
+
+I do not spend my days writing code. I spend them reading code that was written very fast, deciding whether it is right, and deciding what should exist next. The volume is the part nobody warns you about. A model produces more in an hour than I can carefully read in three. So the bottleneck moved from typing to reviewing, and reviewing is more expensive per line than writing ever was, because you have to reconstruct an intent you did not form.
+
+Some days I do not have enough cognitive budget to catch up with what I asked for.
+
+## The part I actually gave up
+
+Here is the honest cost, and it is not the one people usually name.
+
+When a model drafts something, I did not define the base. I did not choose the angle. I did not choose the words, or the order, or the particular way a thing gets said. I approve or reject, and approving is not the same act as choosing. The space of what could have been written closes before I see it.
+
+That is a real loss. I am not going to pretend the review recovers it.
+
+What I get back is a different kind of control. Not each word, but the orientation. The angle I wanted. Whether the thing is functional, whether it answers the question that was actually asked. I steer in blocks now instead of steps, and I have gotten much better at knowing when a block is wrong.
+
+## The producer and the factory
+
+Near where I live there are people who make things entirely by hand. They control every step of the chain, they know every batch, and they genuinely love the act of doing it manually. That love is not decoration, it is why the work is good.
+
+Then a factory opens down the road. It controls less of its own chain. Nobody there touches every unit. But it iterates faster, and over five years it ships more versions, learns from more of them, and ends up making a better product.
+
+Both of those are true at once, and that is the uncomfortable part. A lot of developers believe the manual craft is the noble core of the job. I understand the feeling. I am not sure the feeling predicts who produces better software in 2031.
+
+## What it cost me before I learned to do it properly
+
+I want to be specific about the failure mode, because I lived in it for a while.
+
+I delegated everything. Not the boring parts, everything. And I ended up with three things.
+
+Decisions I could not explain. Someone would ask why the system worked a particular way and I would have no answer that was actually mine.
+
+Results that did not cohere. Each piece defensible on its own, the whole thing pulling in different directions, because nothing was holding the shape.
+
+And the worst one: solutions to problems that did not exist. A model asked to improve something will improve something. It will not tell you the thing did not need improving. I shipped fixes for problems I had invented by asking.
+
+That is the hidden cost of full delegation, and you only find it downstream, when the explanation is due.
+
+## The thing that did not get delegated
+
+Earlier this year I spent months on wallet interoperability. Reading the source of production identity wallets, integrating one trust layer across them, running real credential exchanges on real devices.
+
+The result that mattered was not code. It was a sentence: every one of those wallets passes its conformance tests, and they still cannot talk to each other. Standards have edges. Conformance is not compatibility. There is no single credential offer that works across all of them.
+
+No model was going to hand me that. Not because it lacks the reasoning, but because nobody had asked the question, and the question is the whole contribution. Knowing which result is interesting, and why it is interesting, and that it is worth eight months, is not a task you can hand off. It is the job now.
+
+## Being too junior to micromanage turned out to help
+
+I came into this at a strange moment. I did not have the depth to direct every technical detail, so I did not try. I steered at a level I could actually hold, with a fresher view and fewer priors about how things are supposed to be done.
+
+I do not think that made me better than the engineers around me. Several of them know far more than I do. What I noticed is that they use these tools too, and what makes them good at it is not the depth itself, it is the taste the depth left behind. They know where the good results live before they can prove it. They know which chain of reasoning to send a model down.
+
+That intuition is the real asset, and you can build it without having hand-written every layer underneath. You cannot operate with no abstraction at all. The question was only ever which floor you work on.
+
+## So, generalists
+
+This is the part I believe and cannot fully prove yet.
+
+If raw technical intelligence becomes something you can rent by the token, it stops being the thing that separates people. Models will hold more specification and more detail than any of us. What they will not do is decide what is worth building, or notice that two unrelated fields are describing the same problem.
+
+That noticing is what generalists do. Linking domains, staying curious past the point where it is immediately useful, carrying context from one system into another. It used to be a slightly suspicious trait, the person who did not go deep enough in anything. In a world where depth is purchasable and breadth is not, I think it inverts.
+
+The corollary is that you have to treat these systems as what they are. Not as a junior developer, not as a colleague, not as a person. There are tasks an AI does superbly that a human does badly, and the reverse, and being sentimental about which is which just costs you. Knowing where the line falls, and re-checking it as it moves, is now part of being technically current.
+
+## One more thing
+
+I recorded the raw version of this while doing nothing at all for sixteen minutes. No screen, no input, nothing to react to.
+
+That is the rarest input I have, and I think my generation badly undervalues it. We have gotten very good at filling the gaps, and when we rest we distract rather than stop. Almost nothing I have written here arrived while I was working. It arrived while I was not.
+
+If the job really has moved up a floor, the scarce skill is not throughput. It is having something to say about direction. That does not come from more tooling.
