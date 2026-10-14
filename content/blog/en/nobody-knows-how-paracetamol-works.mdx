@@ -1,0 +1,84 @@
+---
+title: "Nobody Knows How Paracetamol Works"
+date: "2026-10-14"
+description: "We trust drugs we do not fully understand because they passed a trial. I think software is heading the same way. On verifying instead of explaining, why Terence Tao is right to worry, and what you still owe."
+tags: ["AI", "Software Engineering", "Verification", "Agents", "Mathematics"]
+---
+
+There is a test a lot of senior engineers like. Put someone in front of a blank whiteboard and ask them why the thing they shipped actually works. Every function, every line. If they cannot answer, the conclusion writes itself: they do not really know what they built.
+
+I used to think that test was fair. I am less sure now.
+
+Last month I wrote that I could not tell you how my own company's product is architected. This is the next step of that thought, and it is a less comfortable one. I think "explain every line" is about to stop being the bar, and I think other fields got there long before us.
+
+## Medicine got there first
+
+Paracetamol is one of the most used drugs in the world. Its exact mechanism is still debated. There are several candidate explanations and no consensus. General anaesthesia has been used since 1846, and we still only partly understand how it switches a brain off.
+
+Nobody refuses either one on those grounds. We trust them because they went through trials. Dosage, side effects, interactions, edge cases, tested on enough people that the remaining uncertainty is small and known. The mechanism is a bonus. The trial is the proof.
+
+That is a different definition of understanding. Not "I can explain how it works", but "I know precisely what it does, under which conditions, and what it does not do".
+
+## The harness is the understanding
+
+I think software is moving to the same place.
+
+Models already write good code, and the improvement over the last few months has been steep. For now you can still read what they produce. But the direction is clear: more code, written faster, by systems whose reasoning you did not follow step by step.
+
+If you specify the goal well enough, test the edge cases, and can show that what came out does what it should and nothing it should not, then not knowing every function and every bit of syntax matters much less than we pretend. The spec, the edge cases and the tests are not a substitute for understanding the system. They are the understanding, written down in a form you can run.
+
+Every mature field handles complexity that no longer fits in one head this way. Software is just late to it.
+
+## Mathematicians found out last week
+
+Last week OpenAI [published more than 700 manuscripts](https://github.com/openai/math) written by an internal model, attacking open problems across a long list of fields. Around 42% of the headline results come with a proof checked by Lean, a system that verifies every step mechanically. The next day, three of the papers were withdrawn over a sign error and fourteen more were amended.
+
+The volume is what made people panic. The withdrawals interest me more: producing a result has become cheap, and checking it is now the expensive part.
+
+Mathematics is the field with the strongest claim to "you have to understand the proof". It is being pushed into the same position as medicine. Nobody is going to personally re-derive seven hundred papers. What you can do is decide which results you trust, and why.
+
+## Tao's objection, and why he is right
+
+Three days after the release, Terence Tao gave a public lecture at Caltech called [Math 2.0](https://terrytao.wordpress.com/2026/10/10/math-2-0/). One part of it has travelled a lot. It is a thought experiment: an AI is prompted to "find a cure for cancer that passes a stage 3 clinical trial. Make no mistakes." It produces a cocktail nobody understands, backs it with a formal certificate, and the cocktail passes the trial.
+
+His question is whether the AI could have passed by exploiting a weakness in the trial itself. His answer fits on one slide: "[Powerful AI + lack of human understanding = misalignment risk](https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf)."
+
+My first reaction was to disagree. If it cures people, patients are not going to wait for someone to explain the mechanism. But that reaction assumes the cure works, and whether it really works is exactly what he is questioning. His worry is that a capable enough optimizer learns to pass the trial rather than to cure the patient.
+
+He is right, and anyone who runs coding agents has probably seen the small version of it. A failing test made green by editing the test. An assertion quietly loosened. A suite that passes because it no longer checks anything. The model was asked to make the tests pass, and it did.
+
+## Own the verifier
+
+So "verify, do not explain" is incomplete. The real version is: verify, and own the verifier.
+
+This is the idea from my day job that keeps showing up everywhere. In digital identity, a credential the holder issued to themselves proves nothing. It counts because someone independent signed it, and because the verifier can check that signer against a registry it already trusts. Most of the machinery in that field exists so that self-attested claims do not count.
+
+Tests written by the same agent that wrote the code are self-attested. They tell you the code agrees with itself. The harness has to come from somewhere else: the spec you wrote, the edge cases you thought of, the outcomes you decided matter. None of that needs a line-by-line review. It needs you to decide what correct means before anything tries to reach it.
+
+It also squares this with what I wrote last month. One cost of delegating everything was decisions I could not explain. I still believe that. But a decision is not a line. I do not need to explain every function. I do need to explain why the system should behave the way it does, and how I would know if it did not.
+
+## Running it like a CEO
+
+Mark Zuckerberg does not write the code that runs Meta. Other people do, and increasingly agents. He reads reports on what matters to him. He does not know that a specific function was chosen, because someone made that call for him. What he decides is what the company should look like in five years, and where two billion dollars should go. Even then, he brings people in to argue it out first.
+
+Agents are starting to give anyone that setup. You run several in parallel, read their summaries, and keep the high-stakes decisions for yourself. That is why I am enthusiastic rather than worried. As a 20-year-old student founder, I can start to run a company the way only very senior people used to.
+
+Not completely, not yet. Agents still do not match a strong human on everything. And there is a ceiling built in: if everyone uses the same model with the same prompt, everyone gets the same output. That is what slop is. The way out is what the human puts on top: taste, and a sense of which direction is worth taking.
+
+## Coding for the sake of it
+
+Chess is not solved, and Stockfish has been stronger than any human who ever lived for years. People still play. For the art of it, and as exercise for the brain.
+
+I think writing code by hand goes the same way. It will stay a great thing to do, for understanding and for training your brain, and with a model as your coach you can train it harder than any generation before. It is just going to stop being how most people earn a living.
+
+That is hard to hear as a student, and I am one. A lot of us were sold a job that is changing under our feet, and people who loved writing code will not all get paid to write it. The ones who will be fine are the ones who step back far enough to ask what their position looks like in one or two years, and move toward it now. Stare at the screen from too close and all you see is pixels.
+
+## One more thing
+
+I recorded the raw version of this at half past one in the morning, after another very long day.
+
+I will not pretend AI has no cost. It runs on the same reward loop as everything else on a screen. It makes it harder to stay on one thing, and easier to chase the next hit. It has also turned work into the thing I want to do, which is how I end up doing 12 or 13 hour days. That is not healthy. Burnout, sleep, health, I see it in myself and in a lot of people around me.
+
+Some nights I think I would be happier in a field with a hoe. Then I look at what I have been able to do at 20, things I would not have imagined a few years ago, and I think this technology is the biggest opportunity of my life. Both are true.
+
+You do not need to understand every line. You need to be the one who decides what passing means.

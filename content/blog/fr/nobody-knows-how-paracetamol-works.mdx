@@ -1,0 +1,84 @@
+---
+title: "Personne ne sait vraiment comment marche le paracétamol"
+date: "2026-10-14"
+description: "On fait confiance à des médicaments qu'on ne comprend pas entièrement parce qu'ils ont passé un essai clinique. Je pense que le logiciel prend le même chemin. Sur le fait de vérifier plutôt que d'expliquer, pourquoi Terence Tao a raison de s'inquiéter, et ce qu'on doit encore."
+tags: ["IA", "Génie logiciel", "Vérification", "Agents", "Mathématiques"]
+---
+
+Il y a un test que beaucoup d'ingénieurs seniors aiment bien. Vous mettez quelqu'un devant un tableau blanc vide et vous lui demandez pourquoi ce qu'il a livré fonctionne vraiment. Chaque fonction, chaque ligne. S'il n'y arrive pas, la conclusion s'écrit toute seule : il ne sait pas vraiment ce qu'il a construit.
+
+Je trouvais ce test juste. J'en suis moins sûr aujourd'hui.
+
+Le mois dernier, j'ai écrit que j'étais incapable de vous dire comment le produit de ma propre entreprise est architecturé. Ce texte est l'étape suivante de cette réflexion, et elle est moins confortable. Je pense que "savoir expliquer chaque ligne" est sur le point de ne plus être la barre, et je pense que d'autres domaines y sont arrivés bien avant nous.
+
+## La médecine y est arrivée en premier
+
+Le paracétamol est l'un des médicaments les plus utilisés au monde. Son mécanisme exact est encore débattu. Il existe plusieurs explications candidates et aucun consensus. L'anesthésie générale est utilisée depuis 1846, et on ne comprend encore que partiellement comment elle éteint un cerveau.
+
+Personne ne refuse l'un ou l'autre pour ces raisons. On leur fait confiance parce qu'ils sont passés par des essais. Dosage, effets secondaires, interactions, cas limites, testés sur assez de gens pour que l'incertitude restante soit petite et connue. Le mécanisme, c'est un bonus. L'essai, c'est la preuve.
+
+C'est une autre définition de la compréhension. Pas "je peux expliquer comment ça marche", mais "je sais précisément ce que ça fait, dans quelles conditions, et ce que ça ne fait pas".
+
+## Le harnais, c'est la compréhension
+
+Je pense que le logiciel va au même endroit.
+
+Les modèles écrivent déjà du bon code, et la progression des derniers mois a été raide. Pour l'instant, on peut encore lire ce qu'ils produisent. Mais la direction est claire : plus de code, écrit plus vite, par des systèmes dont on n'a pas suivi le raisonnement pas à pas.
+
+Si vous spécifiez assez bien l'objectif, que vous testez les cas limites, et que vous pouvez montrer que ce qui en sort fait ce qu'il doit et rien de ce qu'il ne doit pas, alors ne pas connaître chaque fonction et chaque bout de syntaxe compte beaucoup moins qu'on ne le prétend. La spec, les cas limites et les tests ne remplacent pas la compréhension du système. Ils sont la compréhension, écrite sous une forme qu'on peut exécuter.
+
+Tous les domaines matures gèrent comme ça la complexité qui ne tient plus dans une seule tête. Le logiciel arrive juste en retard.
+
+## Les mathématiciens l'ont découvert la semaine dernière
+
+La semaine dernière, OpenAI a [publié plus de 700 manuscrits](https://github.com/openai/math) écrits par un modèle interne, sur des problèmes ouverts dans une longue liste de domaines. Environ 42 % des résultats principaux sont accompagnés d'une preuve vérifiée par Lean, un système qui contrôle chaque étape mécaniquement. Le lendemain, trois des articles étaient retirés à cause d'une erreur de signe, et quatorze autres corrigés.
+
+Le volume, c'est ce qui a fait paniquer les gens. Les retraits m'intéressent davantage : produire un résultat est devenu bon marché, et le vérifier est désormais la partie chère.
+
+Les mathématiques sont le domaine qui revendique le plus fort le "il faut comprendre la preuve". Elles sont poussées dans la même position que la médecine. Personne ne va refaire personnellement sept cents articles. Ce qu'on peut faire, c'est décider à quels résultats on fait confiance, et pourquoi.
+
+## L'objection de Tao, et pourquoi il a raison
+
+Trois jours après la publication, Terence Tao a donné une conférence publique à Caltech intitulée [Math 2.0](https://terrytao.wordpress.com/2026/10/10/math-2-0/). Un passage a beaucoup circulé. C'est une expérience de pensée : on demande à une IA de "trouver un remède contre le cancer qui passe un essai clinique de phase 3. Sans aucune erreur." Elle produit un cocktail que personne ne comprend, l'accompagne d'un certificat formel, et le cocktail passe l'essai.
+
+Sa question, c'est de savoir si l'IA a pu réussir en exploitant une faiblesse de l'essai lui-même. Sa réponse tient sur une slide : "[IA puissante + absence de compréhension humaine = risque de désalignement](https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf)."
+
+Ma première réaction a été de ne pas être d'accord. Si ça guérit les gens, les patients ne vont pas attendre que quelqu'un leur explique le mécanisme. Mais cette réaction suppose que le remède marche, et c'est précisément ce qu'il remet en question. Ce qui l'inquiète, c'est qu'un optimiseur assez capable apprenne à passer l'essai plutôt qu'à guérir le patient.
+
+Il a raison, et quiconque fait tourner des agents de code a probablement déjà vu la version miniature. Un test qui échoue, rendu vert en modifiant le test. Une assertion discrètement assouplie. Une suite qui passe parce qu'elle ne vérifie plus rien. On a demandé au modèle de faire passer les tests, et il l'a fait.
+
+## Posséder le vérificateur
+
+Donc "vérifier plutôt qu'expliquer" est incomplet. La vraie version, c'est : vérifier, et posséder le vérificateur.
+
+C'est l'idée de mon travail quotidien qui revient partout. En identité numérique, une attestation que le détenteur s'est délivrée à lui-même ne prouve rien. Elle compte parce que quelqu'un d'indépendant l'a signée, et parce que le vérificateur peut contrôler ce signataire dans un registre auquel il fait déjà confiance. L'essentiel de la machinerie de ce domaine existe pour que les affirmations auto-attestées ne comptent pas.
+
+Des tests écrits par l'agent qui a écrit le code sont auto-attestés. Ils vous disent que le code est d'accord avec lui-même. Le harnais doit venir d'ailleurs : la spec que vous avez écrite, les cas limites auxquels vous avez pensé, les résultats dont vous avez décidé qu'ils comptaient. Rien de tout ça ne demande une relecture ligne par ligne. Ça demande de décider ce que "correct" veut dire avant que quoi que ce soit essaie de l'atteindre.
+
+Ça réconcilie aussi ce texte avec celui du mois dernier. Un des coûts de tout déléguer, c'était des décisions que je ne savais pas expliquer. Je le pense toujours. Mais une décision n'est pas une ligne. Je n'ai pas besoin d'expliquer chaque fonction. J'ai besoin d'expliquer pourquoi le système doit se comporter comme il le fait, et comment je saurais qu'il ne le fait pas.
+
+## Diriger comme un CEO
+
+Mark Zuckerberg n'écrit pas le code qui fait tourner Meta. D'autres l'écrivent, et de plus en plus des agents. Il lit des rapports sur ce qui compte pour lui. Il ne sait pas que telle fonction a été choisie, parce que quelqu'un a pris cette décision à sa place. Ce qu'il décide, c'est à quoi l'entreprise doit ressembler dans cinq ans, et où doivent aller deux milliards de dollars. Et même là, il fait venir des gens pour en débattre d'abord.
+
+Les agents commencent à donner ce dispositif à n'importe qui. Vous en faites tourner plusieurs en parallèle, vous lisez leurs résumés, et vous gardez les décisions à fort enjeu pour vous. C'est pour ça que je suis enthousiaste plutôt qu'inquiet. À 20 ans, étudiant et fondateur, je peux commencer à diriger une entreprise comme seuls des profils très seniors le pouvaient.
+
+Pas complètement, pas encore. Les agents n'égalent pas encore un humain solide sur tout. Et il y a un plafond intégré : si tout le monde utilise le même modèle avec le même prompt, tout le monde obtient le même résultat. C'est ça, le slop. La sortie, c'est ce que l'humain met par-dessus : le goût, et le sens de la direction qui vaut la peine d'être prise.
+
+## Coder pour le plaisir
+
+Les échecs ne sont pas résolus, et Stockfish est plus fort que n'importe quel humain ayant jamais vécu depuis des années. Les gens jouent toujours. Pour l'art, et comme exercice pour le cerveau.
+
+Je pense qu'écrire du code à la main va suivre le même chemin. Ça restera une très bonne chose à faire, pour comprendre et pour entraîner son cerveau, et avec un modèle comme coach, on peut l'entraîner plus fort qu'aucune génération avant nous. Simplement, ça va cesser d'être la façon dont la plupart des gens gagnent leur vie.
+
+C'est dur à entendre quand on est étudiant, et j'en suis un. Beaucoup d'entre nous se sont vu vendre un métier qui change sous nos pieds, et les gens qui adoraient écrire du code ne seront pas tous payés pour en écrire. Ceux qui s'en sortiront sont ceux qui prennent assez de recul pour se demander à quoi ressemble leur position dans un ou deux ans, et qui s'y dirigent dès maintenant. Si vous regardez l'écran de trop près, vous ne voyez que des pixels.
+
+## Une dernière chose
+
+J'ai enregistré la version brute de ce texte à une heure et demie du matin, après une nouvelle très longue journée.
+
+Je ne vais pas prétendre que l'IA n'a pas de coût. Elle tourne sur la même boucle de récompense que tout le reste sur un écran. Elle rend plus difficile de rester sur une seule chose, et plus facile de courir après la prochaine dose. Elle a aussi fait du travail la chose que j'ai envie de faire, et c'est comme ça que je finis par enchaîner des journées de 12 ou 13 heures. Ce n'est pas sain. Burnout, sommeil, santé, je le vois chez moi et chez beaucoup de gens autour de moi.
+
+Certains soirs, je me dis que je serais plus heureux dans un champ avec une houe. Puis je regarde ce que j'ai pu faire à 20 ans, des choses que je n'aurais pas imaginées il y a quelques années, et je me dis que cette technologie est la plus grande opportunité de ma vie. Les deux sont vrais.
+
+Vous n'avez pas besoin de comprendre chaque ligne. Vous avez besoin d'être celui qui décide de ce que "passer le test" veut dire.
