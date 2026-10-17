@@ -1,5 +1,28 @@
 [
   {
+    "slug": "who-read-this-page",
+    "title": "Who Read This Page? Identifying AI Assistants from Their Network Calls",
+    "authors": [
+      "Maxime Mansiet",
+      "Maël Bourdin",
+      "Alex Teillet"
+    ],
+    "venue": "CiteMe Research",
+    "year": 2026,
+    "abstract": "A website learns which AI assistant sent a visitor from a label on the click, and the assistant chooses whether to send it: for five days in October 2026, ChatGPT's links carried none. We tested nine assistants on the web and on Android against a page with known answers. Every assistant that read the page live could be identified from its own requests, including three fetchers that pass for browsers, with signatures for DeepSeek, Kimi and Mistral not previously published. Matching a label-less landing to the latest read of the same page named the right assistant on every held-out lab click. On 2,179 labelled ChatGPT clicks from client sites, with the label hidden and a control shifted by a day, a usable read preceded about one click in a hundred beyond chance. Fingerprints identify which assistants read a site; they recover a click only when the assistant reads live.",
+    "url": "https://www.citeme.io/research/who-read-this-page",
+    "pdfUrl": "https://www.citeme.io/research/who-read-this-page.pdf",
+    "paperId": "",
+    "tags": [
+      "generative-engine-optimization",
+      "ai-assistants",
+      "traffic-attribution",
+      "web-measurement",
+      "fingerprinting",
+      "measurement-study"
+    ]
+  },
+  {
     "slug": "what-is-actually-crawling-you",
     "title": "What Is Actually Crawling You",
     "authors": [

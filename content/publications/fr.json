@@ -1,5 +1,28 @@
 [
   {
+    "slug": "who-read-this-page",
+    "title": "Qui a lu cette page ? Identifier les assistants IA à partir de leurs appels réseau",
+    "authors": [
+      "Maxime Mansiet",
+      "Maël Bourdin",
+      "Alex Teillet"
+    ],
+    "venue": "CiteMe Research",
+    "year": 2026,
+    "abstract": "Un site apprend quel assistant IA lui a envoyé un visiteur grâce à une étiquette sur le clic, et c'est l'assistant qui choisit de l'envoyer : pendant cinq jours en octobre 2026, les liens de ChatGPT n'en portaient aucune. Nous avons testé neuf assistants sur le web et sur Android avec une page aux réponses connues. Chaque assistant qui a lu la page en direct a pu être identifié à partir de ses propres requêtes, y compris trois fetchers qui se font passer pour des navigateurs, avec des signatures inédites pour DeepSeek, Kimi et Mistral. Rapprocher une arrivée sans étiquette de la dernière lecture de la même page a désigné le bon assistant sur chaque clic de labo mis de côté. Sur 2 179 clics ChatGPT étiquetés de sites clients, étiquette masquée et face à un témoin décalé d'un jour, une lecture exploitable ne précédait qu'environ un clic sur cent au-delà du hasard. Les empreintes disent quels assistants lisent un site ; elles ne retrouvent un clic que si l'assistant lit en direct.",
+    "url": "https://www.citeme.io/research/who-read-this-page",
+    "pdfUrl": "https://www.citeme.io/research/who-read-this-page.pdf",
+    "paperId": "",
+    "tags": [
+      "generative-engine-optimization",
+      "ai-assistants",
+      "traffic-attribution",
+      "web-measurement",
+      "fingerprinting",
+      "measurement-study"
+    ]
+  },
+  {
     "slug": "what-is-actually-crawling-you",
     "title": "What Is Actually Crawling You",
     "authors": [
