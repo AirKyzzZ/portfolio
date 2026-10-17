@@ -1,0 +1,54 @@
+---
+title: "Sept sur sept, puis un sur cent"
+date: "2026-10-17"
+description: "Pendant cinq jours en octobre, les liens de ChatGPT ont arrêté de dire d'où ils venaient. J'ai monté un labo pour identifier les assistants IA à partir de leurs appels réseau, et ça a marché à chaque fois. Sur de vrais sites, environ une fois sur cent."
+tags: ["IA", "Recherche", "Mesure du web", "Attribution", "CiteMe"]
+---
+
+Le 10 octobre, le trafic ChatGPT sur les tableaux de bord de nos clients a chuté de plus de moitié du jour au lendemain. Les sites n'avaient rien. Les liens de citation de ChatGPT avaient perdu leur tag, donc un clic depuis une réponse arrivait comme si quelqu'un avait tapé l'adresse à la main. Cinq jours plus tard, le tag est revenu.
+
+Cette semaine-là est à l'origine du rapport qu'on publie aujourd'hui avec Maël Bourdin et Alex Teillet, [Qui a lu cette page ?](https://www.citeme.io/fr/research/who-read-this-page). Ce post, c'est la partie qui ne rentre pas dans un rapport : ce que j'attendais, et à quel point je me suis trompé.
+
+## Une étiquette, c'est une politesse
+
+Tous les outils d'analytics, le nôtre compris, apprennent quel assistant a envoyé un visiteur grâce à une étiquette sur le clic. Un en-tête Referer, un tag `utm_source`, sur Android le nom de l'app. C'est l'assistant qui pose les trois, et il peut les retirer à la prochaine mise à jour. Sur les dix sites clients qui avaient du trafic ChatGPT avant, pendant et après cette semaine, les clics ChatGPT tagués ont baissé de 60 %.
+
+Ce que l'assistant ne peut pas retenir, c'est sa propre lecture de la page. Pour répondre avec votre page, il la récupère depuis ses serveurs, et cette requête arrive sur votre site comme n'importe quelle autre. Les lectures de ChatGPT sur ces mêmes sites n'ont baissé que de 13 % cette semaine-là. Le lecteur était toujours là. C'est l'étiquette qui avait disparu.
+
+L'idée était donc simple. Reconnaître le lecteur, puis donner un nom au clic sans étiquette qui le suit.
+
+## Trois jours à cliquer des liens sur un téléphone
+
+J'ai monté une page appât, une fausse publication appelée Halcyon Field Notes, avec des chiffres inventés pour que les assistants aient quelque chose à résumer. Puis j'ai passé trois jours à interroger neuf assistants à son sujet, sur le web depuis un Mac et dans leurs apps Android depuis un seul téléphone, en cliquant chaque lien qu'ils me donnaient. 62 clics, un compte par assistant.
+
+Huit des neuf ont lu la page en direct, et chacun des huit a pu être identifié à partir de ses requêtes. ChatGPT, Claude, Meta AI et Mistral donnent leur nom. Gemini envoie un user agent qui se résume au mot `Google`, ce qu'aucun navigateur ne fait. Les trois autres se font passer pour des navigateurs, et chacun se trahit quelque part :
+
+- DeepSeek arrive en Firefox sous Linux, mais pondère son en-tête de langue comme le fait Chrome, `zh-CN,zh;q=0.9`.
+- Kimi envoie d'abord une sonde, un chargement de page qui ne demande qu'un seul octet avec `Range: bytes=0-0`.
+- Grok charge la page depuis sept à neuf adresses différentes en quelques secondes pour une seule réponse, une petite foule de navigateurs Mac.
+
+D'après nos recherches, les signatures de DeepSeek et de Kimi, et le second fetcher de Mistral, `Mistral/1.0`, ne sont publiés nulle part. Perplexity n'a jamais lu la page en direct pendant nos tests. Il répondait depuis son propre index.
+
+Ensuite, l'appariement. On prend un clic sans étiquette, on cherche la dernière lecture de la même page juste avant, et on donne au clic le nom du lecteur. En labo, la lecture arrivait quelques secondes à quelques minutes avant le clic, et sur les clics mis de côté, l'appariement a désigné le bon assistant sept fois sur sept.
+
+J'étais content de ce chiffre pendant à peu près une journée.
+
+## Le labo était trop gentil
+
+Chaque prompt du labo contenait l'adresse de la page. C'est la meilleure façon de pousser un assistant à aller la lire en direct, et les vrais gens ne posent pas leurs questions comme ça.
+
+On l'a donc testé sur du vrai trafic, de la seule façon honnête qu'on ait trouvée. On prend 2 179 clics ChatGPT sur des sites clients dont on connaît la source parce que l'étiquette était là, on masque l'étiquette, et on regarde si l'appariement l'aurait retrouvée. Puis on relance la même recherche décalée de 24 heures, où chaque résultat relève du hasard.
+
+Dans les deux minutes avant le clic, 31 clics avaient une lecture de la même page. La recherche décalée en a trouvé 7. Ça fait environ un clic sur cent au-delà du hasard. Élargir la fenêtre n'y change rien : à quinze minutes, la vraie recherche en trouve 99, et le hasard 80.
+
+La plupart du temps, ChatGPT répond sans relire votre page, donc il n'y a souvent rien à apparier.
+
+## Ce que j'en retiens
+
+Les empreintes sont réelles, et elles servent. Un site peut savoir quels assistants le lisent, y compris ceux déguisés en navigateur, et c'est plus que ce qu'un Referer vous dira jamais.
+
+Mais nommer le lecteur, ça ne nomme pas le visiteur. Le chiffre du labo, pris seul, disait qu'une baisse de 60 % était récupérable. Elle ne l'était presque pas. Ce qui a ramené les clics, c'est ChatGPT qui a remis le tag le 15 octobre.
+
+La règle sur laquelle le rapport se termine, c'est celle que je donnerais à quiconque mesure du trafic IA : compter les clics étiquetés comme certains, enregistrer les lectures comme un signal à part, et si on rapproche l'un de l'autre, montrer l'estimation séparément du décompte.
+
+Le rapport contient la méthode, les signatures, le test sur le terrain, et deux pièges qui gonflent discrètement le trafic IA sur de vrais sites. Les seuils et le code de production restent dehors. Il est en anglais, avec le PDF, sur [citeme.io/fr/research/who-read-this-page](https://www.citeme.io/fr/research/who-read-this-page). Tout ce qu'il dit d'un tiers, c'est ce qu'on a observé à la date indiquée, et la prochaine mise à jour peut le changer.

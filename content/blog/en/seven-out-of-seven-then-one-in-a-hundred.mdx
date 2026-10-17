@@ -1,0 +1,54 @@
+---
+title: "Seven Out of Seven, Then One in a Hundred"
+date: "2026-10-17"
+description: "For five days in October, ChatGPT's links stopped saying where they came from. I built a lab to identify AI assistants from their network calls, and it worked every time. On real sites, it worked about once in a hundred."
+tags: ["AI", "Research", "Web Measurement", "Attribution", "CiteMe"]
+---
+
+On 10 October, ChatGPT traffic on our clients' dashboards fell by more than half overnight. Nothing was wrong with the sites. ChatGPT's citation links had stopped carrying their tag, so a click from an answer arrived looking like someone had typed the address. Five days later the tag came back.
+
+That week is the reason for the report we published today with Maël Bourdin and Alex Teillet, [Who read this page?](https://www.citeme.io/research/who-read-this-page). This post is the part a report has no room for: what I expected, and how wrong it turned out to be.
+
+## A label is a courtesy
+
+Every analytics tool, ours included, learns which assistant sent a visitor from a label on the click. A Referer header, a `utm_source` tag, on Android the name of the app. The assistant sets all three, and it can drop them with a release. On the ten client sites with ChatGPT traffic before, during and after that week, tagged ChatGPT clicks fell 60%.
+
+What the assistant cannot withhold is its own read of the page. To answer with your page, it fetches it from its own servers, and that request lands on your site like any other. ChatGPT's reads of those same sites fell only 13% that week. The reader was still there. The label was gone.
+
+So the idea was simple. Recognise the reader, then give the unlabelled click that follows it a name.
+
+## Three days of clicking links on a phone
+
+I built a bait page, a made-up publication called Halcyon Field Notes, with invented numbers so the assistants would have something to summarise. Then I spent three days asking nine assistants about it, on the web from a Mac and in their Android apps from one phone, and clicking every link they gave me. 62 clicks, one account per assistant.
+
+Eight of the nine read the page live, and each of the eight could be identified from its requests. ChatGPT, Claude, Meta AI and Mistral say their name. Gemini sends a user agent that is just the word `Google`, which no browser does. The other three pass for browsers, and each one slips somewhere:
+
+- DeepSeek arrives as Firefox on Linux, but weights its language header the way Chrome does, `zh-CN,zh;q=0.9`.
+- Kimi sends a probe first, a page load that asks for a single byte with `Range: bytes=0-0`.
+- Grok loads the page from seven to nine different addresses within seconds for a single answer, a small crowd of Mac browsers.
+
+As far as we could find, the DeepSeek and Kimi signatures, and Mistral's second fetcher `Mistral/1.0`, are not published anywhere. Perplexity never read the page live in our tests. It answered from its own index.
+
+Then the matching. Take a click with no label, find the latest read of the same page just before it, and name the click after the reader. In the lab the read came seconds to minutes before the click, and on the held-out clicks the match named the right assistant seven times out of seven.
+
+I was pleased with that number for about a day.
+
+## The lab was too kind
+
+Every prompt in the lab contained the page's address. That is the strongest push there is for an assistant to go and read the page live, and real people do not ask like that.
+
+So we tested it on real traffic the only honest way we could think of. Take 2,179 ChatGPT clicks on client sites where we know the source because the label was there, hide the label, and check whether the match would have found it. Then run the same search shifted 24 hours earlier, where any hit is chance.
+
+In the two minutes before the click, 31 clicks had a read of the same page. The shifted search found 7. That is about one click in a hundred beyond chance. Widening the window does not save it: at fifteen minutes the real search finds 99 and chance finds 80.
+
+ChatGPT mostly answers without reading your page again, so there is usually nothing to match.
+
+## What I take from it
+
+The fingerprints are real and they are useful. A site can know which assistants read it, including the ones dressed as browsers, which is more than a Referer will ever tell you.
+
+But naming the reader is not naming the visitor. The lab number on its own said a 60% drop was recoverable. It mostly was not. What brought the clicks back was ChatGPT putting the tag back on 15 October.
+
+The rule the report ends on is the one I would give anyone measuring AI traffic: count the labelled clicks as certain, record the reads as their own signal, and if you match one to the other, show the estimate apart from the count.
+
+The report has the method, the signatures, the field test, and two traps that quietly inflate AI traffic on real sites. Production thresholds and code stay out. It is in English, with the PDF, at [citeme.io/research/who-read-this-page](https://www.citeme.io/research/who-read-this-page). Everything it says about a third party is what we saw on the date given, and the next release can change it.
