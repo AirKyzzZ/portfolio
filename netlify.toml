@@ -10,6 +10,26 @@
   to = "/en/"
   status = 301
 
+[[redirects]]
+  from = "/en/projects/claw4s-trust-protocol/*"
+  to = "/en/projects/"
+  status = 301
+
+[[redirects]]
+  from = "/fr/projects/claw4s-trust-protocol/*"
+  to = "/fr/projects/"
+  status = 301
+
+[[redirects]]
+  from = "/en/projects/credat/*"
+  to = "/en/projects/"
+  status = 301
+
+[[redirects]]
+  from = "/fr/projects/credat/*"
+  to = "/fr/projects/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]

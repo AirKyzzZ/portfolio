@@ -10,13 +10,15 @@ export function PersonSchema({ locale }: PersonSchemaProps) {
     '@type': 'Person',
     name: 'Maxime Mansiet',
     url: `${SITE_URL}/${locale}/`,
-    jobTitle: 'Self-Sovereign Identity Engineer & Researcher',
+    jobTitle: 'Software Engineer',
     email: SOCIAL_LINKS.email.replace('mailto:', ''),
     worksFor: [
       { '@type': 'Organization', name: '2060.io', url: 'https://2060.io' },
       { '@type': 'Organization', name: 'Verana', url: 'https://verana.io' },
       { '@type': 'Organization', name: 'CiteMe', url: 'https://citeme.io' },
       { '@type': 'Organization', name: 'Klyx', url: 'https://klyx.fr' },
+      { '@type': 'Organization', name: 'Euthyne', url: 'https://euthyne.com' },
+      { '@type': 'Organization', name: 'Hop Hop Immo', url: 'https://www.hophopimmo.com' },
     ],
     knowsAbout: [
       'Self-Sovereign Identity',
@@ -29,6 +31,7 @@ export function PersonSchema({ locale }: PersonSchemaProps) {
       'Trust Registry Query Protocol',
       'Wallet Interoperability',
       'Generative Engine Optimization',
+      'AI Agent Accountability',
     ],
     memberOf: [
       { '@type': 'Organization', name: 'W3C Credentials Community Group', url: 'https://www.w3.org/community/credentials/' },
