@@ -1,6 +1,6 @@
 export const SITE_NAME = 'Maxime Mansiet'
 export const SITE_URL = 'https://maximemansiet.fr'
-export const GOATCOUNTER_URL = 'https://maximemansiet.goatcounter.com/count'
+export const GOATCOUNTER_URL = 'https://airkyzzz.goatcounter.com/count'
 
 export const SOCIAL_LINKS = {
   github: 'https://github.com/airkyzzz',
