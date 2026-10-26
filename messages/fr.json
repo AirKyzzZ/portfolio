@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Ingénieur logiciel et chercheur chez 2060.io sur Verana, couche de confiance ouverte pour l'internet, et cofondateur de CiteMe. Registres de confiance, credentials vérifiables, interopérabilité des portefeuilles et identité des agents IA. Basé à Bordeaux, France."
+    "description": "Ingénieur logiciel à Bordeaux. Fondateur d'Euthyne, la traçabilité vérifiable des agents IA. Travaille sur Verana chez 2060.io, cofondateur et CIO de CiteMe, alternant chez Hop Hop Immo, dirige Klyx."
   },
   "nav": {
     "home": "Accueil",
@@ -30,114 +30,118 @@
   },
   "home": {
     "about": "À propos",
-    "bio1": "Je suis ingénieur logiciel et chercheur à Bordeaux. Je suis tombé dans l'informatique très jeune et je n'en suis jamais sorti, et depuis je travaille sur une seule question : comment établir la confiance sans autorité centrale ? Un portefeuille refuse une requête qu'il ne peut pas vérifier. Un moteur d'IA, lui, décrira une entreprise à un inconnu sans rien vérifier du tout. Acteurs non vérifiés et affirmations non vérifiées sont le même problème vu par les deux bouts, et je travaille sur les deux.",
-    "bio2": "Le premier bout, c'est Verana, chez 2060.io, une couche de confiance ouverte pour l'internet. Cette année, j'ai intégré la résolution de confiance Verana dans des portefeuilles et solutions d'identité tiers, dont le portefeuille de référence EUDI, Inji de MOSIP, Talao, Sphereon, Paradym et Procivis One. Tous embarquaient une liste d'émetteurs de confiance codée en dur. Remplacer cette liste par un appel en direct, fail-closed, c'est toute l'idée. J'ai co-rédigé les spécifications de confiance Verana, construit la suite de conformance qui vérifie que ces intégrations tiennent en conditions réelles, porté Verana dans le playground EUDI de France Identité, et je contribue à credo-ts à l'OpenWallet Foundation, rattachée à LF Decentralized Trust depuis septembre 2026. Je suis membre du W3C Credentials Community Group, de la Trust over IP Foundation, de l'Agentic AI Foundation et de la Linux Foundation.",
-    "bio3": "Le même problème arrive pour les agents IA, plus vite encore. J'ai co-écrit un protocole montrant que deux agents qui ne se connaissent pas peuvent établir une confiance cryptographique mutuelle en deux allers-retours, avec moins de 2 ms de surcoût. L'autre bout, c'est CiteMe, que j'ai cofondé et dont je suis CIO : mesurer ce que les moteurs d'IA racontent sur une entreprise. Cette réponse devient sa réputation auprès de celui qui la lit, personne dans l'entreprise n'a été consulté, et rien sur le web ouvert ne permet à un modèle de vérifier qui se tient derrière une affirmation. J'ai 20 ans, et j'ai tout misé là-dessus, l'un des problèmes fondateurs de la prochaine ère, pour les humains comme pour les agents qui agissent en leur nom.",
-    "bio4": "Avant la tech, j'ai été athlète de parkour en compétition à la Fédération Française de Gymnastique, de 2017 à 2025. En 2025, j'ai cofondé PKBA, aujourd'hui le plus grand club de parkour du Sud de la France. Discipline, reconnaissance de motifs, apprendre vite de ses échecs : le sport et la pensée systémique ont plus en commun qu'il n'y paraît.",
-    "researchInterests": "Intérêts de recherche",
+    "bio1": "Je suis Maxime, 20 ans, ingénieur logiciel à Bordeaux et étudiant en troisième année à l'EPSI. J'ai commencé à bidouiller des ordinateurs enfant, surtout parce que j'aimais comprendre comment les choses marchent. Ça s'est transformé en sites web pour les gens autour de moi, et je ne me suis jamais vraiment arrêté. J'apprends encore surtout en construisant quelque chose et en regardant où ça casse.",
+    "bio2": "Une bonne partie de ce que je fais revient à la confiance : savoir à qui on a affaire, humain ou IA, et pouvoir le vérifier soi-même. Je ne pense pas que ça doive dépendre d'une seule entreprise ou d'une seule autorité qui tient la liste. Les agents IA vont bientôt agir pour nous un peu partout, et aujourd'hui personne ne peut vraiment dire qui est un agent ni qui l'envoie. Je tiens à l'identité auto-souveraine, à la vie privée et au web ouvert, et oui, j'aime le web3. Je mise le début de ma carrière sur l'idée que c'est un des grands problèmes de la décennie qui vient.",
+    "bio3": "Au quotidien, ça veut dire Verana chez 2060.io, une couche de confiance ouverte pour l'identité numérique : un registre public de qui a le droit d'émettre ou de vérifier quels credentials. Je construis le dashboard Verana, l'émetteur et le vérifieur OpenID4VC de VS Agent, et l'outillage qui vérifie si les portefeuilles d'identité arrivent vraiment à se parler (souvent, non). J'ai co-écrit une partie des specs, et quelques-uns de mes correctifs sont remontés dans credo-ts, à l'OpenWallet Foundation. Je suis aussi membre du W3C Credentials Community Group et de Trust over IP, ce qui veut surtout dire beaucoup de lecture de specs.",
+    "bio4": "Le reste de la semaine se partage entre quelques autres choses. J'ai cofondé CiteMe, où je suis CIO, qui mesure ce que ChatGPT, Perplexity et les autres disent d'une entreprise. Je suis en alternance chez Hop Hop Immo, sur leur plateforme immobilière dédiée au neuf. Je dirige Klyx, un petit studio web et IA pour les startups. Et j'ai lancé Euthyne, qui enregistre ce que les agents IA ont fait et ce qu'ils avaient le droit de faire, pour que n'importe qui puisse le vérifier. Le sommeil est négociable. Quand je peux, je passe aux meetups du GDG Bordeaux.",
+    "researchInterests": "Ce qui m'intéresse",
     "interests": [
-      "Registres de confiance et Trust Registry Query Protocol",
-      "Interopérabilité des portefeuilles entre écosystèmes",
-      "Identité des agents, délégation et autorisations à portée limitée",
-      "Protocoles d'échange de credentials (OID4VP, OID4VCI, SD-JWT VC)",
-      "Cadres de confiance et modèles de gouvernance"
+      "La traçabilité vérifiable des agents IA",
+      "Registres de confiance et identité numérique",
+      "Comment les moteurs IA lisent et décrivent le web",
+      "Vision par ordinateur appliquée au sport"
     ],
     "news": "Actualités",
     "newsItems": [
       {
-        "date": "2026.09",
-        "text": "Préprint : Conformant but Not Compatible, étude d'interopérabilité de portefeuilles d'identité en production"
+        "date": "2026.10",
+        "text": "Lancement d'Euthyne, première version de la CLI pour Claude Code"
+      },
+      {
+        "date": "2026.10",
+        "text": "Élu président de PKBA"
+      },
+      {
+        "date": "2026.10",
+        "text": "Klyx devient un studio web et IA pour les startups et les équipes tech"
+      },
+      {
+        "date": "2026.10",
+        "text": "Étude CiteMe publiée : Who Read This Page? Identifier les assistants IA à partir de leurs appels réseau"
       },
       {
         "date": "2026.09",
-        "text": "Co-rédaction des spécifications de confiance Verana"
+        "text": "Étude CiteMe publiée : What Is Actually Crawling You"
       },
       {
         "date": "2026.09",
-        "text": "Participation à Global Digital Collaboration (GDC26), Genève, sur la confiance inter-écosystèmes des portefeuilles"
+        "text": "Preprint publié : Conformant but Not Compatible, une étude d'interopérabilité de treize portefeuilles d'identité"
       },
       {
         "date": "2026.09",
-        "text": "Adhésion à l'Agentic AI Foundation"
+        "text": "Coauteur des spécifications de confiance Verana"
       },
       {
         "date": "2026.09",
-        "text": "Adhésion à la Linux Foundation"
+        "text": "Début de l'alternance chez Hop Hop Immo"
+      },
+      {
+        "date": "2026.09",
+        "text": "À la Global Digital Collaboration (GDC26) à Genève avec 2060.io"
       },
       {
         "date": "2026.08",
-        "text": "Résolution de confiance Verana active dans le playground EUDI Unfold de France Identité, sur testnet"
+        "text": "Premiers correctifs fusionnés dans credo-ts, à l'OpenWallet Foundation"
       },
       {
         "date": "2026.08",
-        "text": "Adhésion au W3C Credentials Community Group"
-      },
-      {
-        "date": "2026.08",
-        "text": "Adhésion à la Trust over IP Foundation"
-      },
-      {
-        "date": "2026.08",
-        "text": "Résolution de confiance Verana désormais active dans des portefeuilles et solutions d'identité tiers, dont le portefeuille de référence EUDI et Inji de MOSIP"
-      },
-      {
-        "date": "2026.08",
-        "text": "Contributeur à credo-ts à l'OpenWallet Foundation, rattachée à LF Decentralized Trust depuis septembre 2026"
+        "text": "Membre du W3C Credentials Community Group, de Trust over IP, de l'Agentic AI Foundation et de la Linux Foundation"
       },
       {
         "date": "2026.06",
-        "text": "Cofondation de CiteMe, generative engine optimization, en tant que CIO"
+        "text": "Cofondation de CiteMe, en tant que CIO"
       },
       {
-        "date": "2026.03",
-        "text": "Papier du protocole Claw4S accepté, confiance entre agents avec did:key et Verifiable Credentials"
+        "date": "2026.06",
+        "text": "BTS SIO SLAM obtenu, début du titre RNCP 6 à l'EPSI Bordeaux"
       },
       {
-        "date": "2026.02",
-        "text": "Publication de Credat, couche de confiance open source pour agents IA fondée sur DIDs et VCs"
+        "date": "2026.01",
+        "text": "Arrivée chez Hop Hop Immo"
       },
       {
         "date": "2025.09",
-        "text": "Arrivée chez 2060.io comme ingénieur logiciel, infrastructure SSI sur Verana"
+        "text": "Arrivée chez 2060.io comme ingénieur logiciel sur Verana"
       },
       {
         "date": "2025.07",
-        "text": "Cofondation de PKBA, le plus grand club de parkour du Sud de la France"
+        "text": "Cofondation de PKBA, un club de parkour près d'Arcachon"
       },
       {
         "date": "2025.04",
-        "text": "Création de Klyx, studio de développement web à Bordeaux"
+        "text": "Création de Klyx à Bordeaux"
       }
-    ]
+    ],
+    "bio5": "Avant le code, il y avait le parkour. Je me suis entraîné en compétition avec la Fédération française de gymnastique de 2017 à 2025, et en 2025 j'ai cofondé PKBA, un club près d'Arcachon qui compte aujourd'hui plus de 100 adhérents. Je viens d'en devenir président. PkVision, ma tentative d'apprendre à un ordinateur à noter des figures de parkour à partir de vidéos, vient de là. Je parle français et anglais, je me débrouille en allemand, et j'apprends le mandarin, doucement."
   },
   "research": {
     "title": "Recherche",
-    "intro": "Je travaille sur l'établissement de la confiance entre des parties qui ne partagent aucune autorité. Pour les humains, et de plus en plus pour les agents IA qui agissent en leur nom. Tout ce qui suit correspond à des travaux livrés ou publiés, suivis des questions qu'ils laissent ouvertes.",
+    "intro": "Quelques problèmes sur lesquels je reviens sans cesse, ce que j'ai livré sur chacun, et ce que je ne sais toujours pas résoudre.",
     "areas": [
       {
-        "id": "interop",
-        "title": "Interopérabilité de la confiance entre écosystèmes",
-        "body": "Tout portefeuille d'identité mature embarque une liste figée d'émetteurs de confiance, compilée au build et mise à jour par release. J'ai remplacé cette liste par un appel en direct, fail-closed, à un registre de confiance dans des portefeuilles et solutions tiers : le portefeuille Android de référence EUDI, Inji de MOSIP, Talao AltMe, Sphereon, Paradym, Procivis One, SWIYU de la Confédération suisse, et Hologram de 2060.io. MOSIP tourne en triangle complet émetteur, portefeuille et vérifieur ; le portefeuille de référence EUDI est validé sur testnet face au playground Unfold de France Identité. SWIYU reste partiel : ses flux positifs et de contrôle sont acceptés sur Android, mais un chemin de requête vérifieur reste bloqué. La surface d'intégration est partout la même API HTTP de résolveur, ce qui rend l'approche portable plutôt que sur mesure."
+        "id": "agent-records",
+        "title": "Traçabilité vérifiable des agents IA",
+        "body": "Les agents écrivent du code, appellent des API et agissent pour des gens. Quand quelqu'un demande ce qu'un agent a fait, la réponse vient en général des logs de celui qui l'a lancé. Avec Euthyne, je travaille sur des traces qu'une personne extérieure peut vérifier : ce que l'agent avait le droit de faire au démarrage, et un reçu signé pour chaque action, marqué dedans, dehors ou inconnu par rapport à ces permissions. Le contenu est stocké sous forme d'empreintes salées, les reçus partent dans un journal public en ajout seul ancré avec OpenTimestamps, et n'importe qui peut les vérifier hors ligne. Les agents de code passent en premier, parce que c'est là que la question se pose déjà, dans les revues de sécurité et les audits. Signer, c'est la partie facile. Le plus dur, c'est de décider ce qu'une trace peut honnêtement prouver, et de dire clairement ce qu'elle ne prouve pas."
       },
       {
         "id": "trust-registries",
-        "title": "Registres de confiance en production",
-        "body": "Verana est un registre de registres de confiance : un registre public qui enregistre quelles entités peuvent émettre ou vérifier quels schémas de credentials au sein d'un écosystème donné, et le processus de validation qui accorde ces permissions. Je construis le frontend et l'outillage de credentials, notamment la canonicalisation JSON Canonicalization Scheme, le balisage de langue BCP-47 complet, et des règles de validation lues depuis la chaîne plutôt que codées en dur. J'ai co-rédigé les spécifications de confiance Verana. Le pendant côté standards ouverts est le Trust Registry Query Protocol, approuvé comme spécification ToIP en décembre 2025, qui définit des cibles de conformance mais est sorti sans suite de tests de conformance, alors j'en ai construit une : des vérifications de conformance par paliers qui exécutent les vrais flux OpenID4VC plutôt que de s'appuyer sur un document."
+        "title": "Registres de confiance et interopérabilité des portefeuilles",
+        "body": "Les portefeuilles d'identité décident à qui faire confiance à partir d'une liste figée au build. Chez 2060.io, je travaille sur Verana, un registre public de qui peut émettre ou vérifier quels credentials. J'ai écrit l'émetteur et le vérifieur OpenID4VC de VS Agent, qui refuse d'aller plus loin quand le registre ne se porte pas garant de l'autre partie, et j'ai modifié des portefeuilles existants pour qu'ils fassent la même vérification. Je suis coauteur des spécifications de confiance Verana. Le preprint Conformant but Not Compatible vient de tests croisés sur treize portefeuilles en production : ils passent leurs propres tests de conformité et n'arrivent pourtant pas à se parler."
       },
       {
-        "id": "agent-trust",
-        "title": "Identité et délégation des agents",
-        "body": "Les agents autonomes posent la même question plus tôt et plus durement : quand un agent appelle un service, qui est-il, et qui l'a autorisé à agir ? Le protocole Claw4S formalise la poignée de main : deux agents qui ne se connaissent pas atteignent une confiance cryptographique mutuelle en exactement deux allers-retours, avec moins de 2 ms de surcoût, produisant une chaîne auditable de credentials signés et une garantie structurelle de détection d'usurpation."
+        "id": "ai-engines",
+        "title": "Comment les moteurs IA lisent le web",
+        "body": "Les moteurs IA décrivent désormais des entreprises à des gens qui ne visitent jamais leur site, sans que personne dans l'entreprise ne soit consulté. Chez CiteMe, on mesure cette réponse et le trafic derrière. Deux études pour l'instant. La première porte sur 385 057 requêtes d'agents IA sur 20 sites, et montre que 7 % de ce qui passe pour du trafic de crawlers IA est autre chose. La seconde montre qu'on peut reconnaître quel assistant IA a récupéré une page à partir de ses seuls appels réseau, mais qu'on ne peut relier ça à une visite que quand l'assistant lit la page en direct."
       }
     ],
     "openQuestions": "Questions ouvertes",
     "questions": [
-      "Les registres de confiance et les listes de confiance ETSI reposent sur des hypothèses de gouvernance différentes. Où exactement ne se rejoignent-ils pas, et quel est le plus petit pont qui préserve les deux ?",
-      "Un appel de confiance en direct est une dépendance réseau. Quel est le comportement correct quand le registre est injoignable, et le fail-closed survit-il au contact des attentes réelles des utilisateurs ?",
-      "Comment un portefeuille doit-il présenter un verdict de confiance à quelqu'un qui n'a jamais entendu parler de registre de confiance, sans masquer la décision ni le submerger ?",
-      "Quels mécanismes de révocation préservent la vie privée du porteur tout en gardant la réponse d'un vérifieur assez fraîche pour valoir la peine d'être demandée ?"
+      "Quand les permissions d'un agent changent en cours de session, sous quelle version agissait-il vraiment, et comment le prouver après coup ?",
+      "Quelle part du travail d'un agent peut-on prouver à quelqu'un d'extérieur sans lui montrer le code touché ?",
+      "Une vérification de confiance en direct est une dépendance réseau. Que doit faire un portefeuille quand le registre est injoignable, et le fermé par défaut tient-il face à de vrais utilisateurs ?",
+      "Un modèle pourra-t-il un jour vérifier qui se cache derrière une affirmation avant de la répéter au sujet d'une entreprise ?"
     ],
-    "metaDescription": "Interopérabilité de la confiance entre portefeuilles, registres de confiance en production, et identité et délégation des agents IA."
+    "metaDescription": "Traçabilité vérifiable des agents IA, registres de confiance et interopérabilité des portefeuilles, et lecture du web par les moteurs IA."
   },
   "cv": {
     "title": "Curriculum Vitae",
@@ -148,10 +152,16 @@
     "engagementHeading": "Projets & Engagement communautaire",
     "experience": [
       {
+        "title": "Fondateur",
+        "company": "Euthyne",
+        "period": "Oct 2026 – Aujourd'hui",
+        "desc": "Traçabilité vérifiable des agents IA, en commençant par les agents de code. Construit seul : une CLI en Go qui capture les sessions Claude Code via des hooks et signe un reçu par appel d'outil sur la machine du développeur, les réglages de permissions de l'agent capturés comme mandat signé, un journal public en ajout seul ancré avec OpenTimestamps, un vérificateur sans compte, et le dashboard."
+      },
+      {
         "title": "Ingénieur logiciel",
         "company": "2060.io / Verana",
         "period": "Sep 2025 – Aujourd'hui",
-        "desc": "Ingénieur et chercheur sur Verana, une couche de confiance ouverte pour l'internet, sur le frontend du registre de confiance, le playground de démonstration, l'indexeur et le résolveur. Co-rédaction des spécifications de confiance Verana. Outillage de credentials conforme aux specs : canonicalisation JCS, balisage de langue BCP-47 complet, et règles de validation issues de la chaîne. Intégration de la résolution de confiance en direct dans des portefeuilles et solutions d'identité tiers, dont le portefeuille de référence EUDI, Inji de MOSIP, Talao, Sphereon, Paradym et Procivis One, et construction de la suite de conformance par paliers qui vérifie ces intégrations sur de vrais flux OpenID4VC. Agents DIDComm et credentials vérifiables livrés sur Hologram en services NestJS sur Kubernetes."
+        "desc": "Ingénieur full-stack sur Verana, une couche de confiance ouverte pour l'identité numérique. Une grande partie du dashboard Verana (Next.js), dont la refonte v4 et la fonctionnalité Corporation avec gouvernance, délégations d'opérateur et fee grants. Plugin émetteur et vérifieur OpenID4VC pour VS Agent, avec émission de SD-JWT VC et vérifications de confiance fermées par défaut. Coauteur des spécifications Verana et de la section SD-JWT VC de la spec Verifiable Trust. Intégration de la résolution de confiance dans des portefeuilles d'identité existants et outillage de conformité qui les teste sur de vrais appareils. Correctifs fusionnés dans credo-ts."
       },
       {
         "title": "Cofondateur & CIO",
@@ -160,16 +170,16 @@
         "desc": "Plateforme de generative engine optimization qui mesure et améliore la visibilité des marques dans les moteurs de recherche IA. Je porte les données, la direction backend et l'infrastructure : Supabase avec Postgres et pgvector pour la recherche, une file de jobs maison, la couche LLM multi-fournisseurs, ainsi que l'observabilité et la facturation derrière un produit avec des clients payants."
       },
       {
-        "title": "Ingénieur logiciel",
+        "title": "Ingénieur logiciel (alternance)",
         "company": "Hop Hop Immo",
         "period": "Jan 2026 – Aujourd'hui",
-        "desc": "Développement de Hoppy, un assistant immobilier IA conversationnel en production, qui qualifie les acheteurs sur un catalogue de plus de 30 000 biens neufs. Développement d'agents autonomes pour l'automatisation marketing, et refonte de la page d'accueil avec une architecture SEO couvrant plus de 30 pages villes et 8 régions."
+        "desc": "Construction de Hoppy, l'assistant IA conversationnel qui aide les acheteurs à chercher dans un catalogue de plus de 28 000 logements neufs. Travail sur le site Next.js et son API Java : pages annonces et programmes, pages villes, recherche géographique, simulateurs de financement, comptes utilisateurs, bandeau de consentement maison, et le pipeline d'agents Python qui rédige le contenu. Stage début 2026, freelance à partir de mars, alternance depuis septembre 2026."
       },
       {
         "title": "Fondateur",
         "company": "Klyx",
         "period": "Avr 2025 – Aujourd'hui",
-        "desc": "Studio web à Bordeaux, mené de bout en bout : vente, design, développement et livraison, avec une offre packagée de 900 € pour une one-page à 5 700 € et plus pour du sur-mesure. Sites clients livrés en production avec paiement et flux opérationnels réels, et pilotage du moteur de contenu du studio sur blog.klyx.fr."
+        "desc": "Studio web et IA pour les startups et les équipes tech, mené de bout en bout : audits IA, sites pensés pour être lus par Google et les moteurs IA, et assistants ou agents livrés en sprints de deux semaines. Clients : PKBA, Kenzi, Reciproq."
       },
       {
         "title": "Développeur web",
@@ -217,11 +227,11 @@
       },
       {
         "title": "Open Source",
-        "desc": "Contributeur à credo-ts à l'OpenWallet Foundation, rattachée à LF Decentralized Trust depuis septembre 2026. Auteur de la suite de conformance des portefeuilles Verana."
+        "desc": "Contributeur à credo-ts à l'OpenWallet Foundation, rattachée à LF Decentralized Trust depuis septembre 2026. Auteur de l'outillage de conformité des portefeuilles Verana."
       },
       {
         "title": "PKBA",
-        "desc": "Cofondateur, trésorier et responsable communication d'un club de parkour du Sud de la France, 120+ adhérents pour sa deuxième saison. Mis en avant par France 3 Nouvelle-Aquitaine."
+        "desc": "Cofondateur et président d'un club de parkour près d'Arcachon, plus de 100 adhérents. Je construis et fais tourner le site, les inscriptions et la boutique du club. Reportage de France 3 Nouvelle-Aquitaine."
       },
       {
         "title": "VertiFlow",
@@ -249,12 +259,12 @@
   "publications": {
     "title": "Publications",
     "empty": "Pas encore de publications. Cette section sera mise à jour au fil de l'avancement des travaux de recherche.",
-    "metaDescription": "Travaux de recherche et de conférence sur la confiance décentralisée entre agents, fondée sur les DIDs et les Verifiable Credentials."
+    "metaDescription": "Articles, preprints, spécifications et études sur l'identité numérique, les registres de confiance et les moteurs IA."
   },
   "projects": {
     "title": "Projets",
     "featured": "En vedette",
     "all": "Tous",
-    "metaDescription": "Travaux sélectionnés : intégrations de confiance inter-écosystèmes, Credat, le protocole de confiance entre agents Claw4S, et les agents de service vérifiables sur Hologram."
+    "metaDescription": "Travaux sélectionnés : Euthyne, l'interopérabilité des portefeuilles Verana, CiteMe, Hop Hop Immo et d'autres."
   }
 }

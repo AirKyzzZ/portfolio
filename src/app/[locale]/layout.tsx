@@ -3,11 +3,13 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
+import Script from 'next/script'
 import { Source_Serif_4, Inter, JetBrains_Mono } from 'next/font/google'
 import { routing } from '@/i18n/routing'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { PersonSchema } from '@/components/seo/structured-data'
+import { GOATCOUNTER_URL } from '@/lib/constants'
 import '../globals.css'
 
 const sourceSerif = Source_Serif_4({
@@ -107,6 +109,11 @@ export default async function LocaleLayout({ children, params }: Props) {
           </main>
           <Footer />
         </NextIntlClientProvider>
+        <Script
+          data-goatcounter={GOATCOUNTER_URL}
+          src="https://gc.zgo.at/count.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Software engineer and researcher at 2060.io working on Verana, an open trust layer for the internet, and co-founder of CiteMe. Trust registries, verifiable credentials, wallet interoperability, and identity for AI agents. Based in Bordeaux, France."
+    "description": "Software engineer in Bordeaux. Founder of Euthyne, accountability for AI agents. Works on Verana at 2060.io, co-founder and CIO of CiteMe, apprentice at Hop Hop Immo, runs Klyx."
   },
   "nav": {
     "home": "Home",
@@ -30,23 +30,42 @@
   },
   "home": {
     "about": "About",
-    "bio1": "I'm a software engineer and researcher in Bordeaux. I fell into computer science young and never left, and I've spent the years since on a single question: how do you establish trust without a central authority? A wallet refuses a request it cannot verify. An AI engine will describe a company to a stranger with no verification at all. Unverified actors and unverified statements are the same problem seen from opposite ends, and I work on both.",
-    "bio2": "The first end is Verana, at 2060.io, an open trust layer for the internet. This year I wired Verana trust resolution into third-party identity wallets and solutions, among them the EUDI reference wallet, MOSIP's Inji, Talao, Sphereon, Paradym and Procivis One. Every one of them shipped with a hardcoded list of issuers it trusts. Replacing that list with a live, fail-closed call is the whole idea. I co-authored the Verana trust specifications, built the wallet conformance suite that checks those integrations hold under real flows, took Verana into France Identité's EUDI playground, and contribute to credo-ts at the OpenWallet Foundation, part of LF Decentralized Trust since September 2026. I'm a member of the W3C Credentials Community Group, the Trust over IP Foundation, the Agentic AI Foundation and the Linux Foundation.",
-    "bio3": "The same problem is arriving for AI agents, faster. I co-authored a protocol showing that two previously unknown agents can establish mutual cryptographic trust in two round trips, with under 2ms of overhead. The other end is CiteMe, which I co-founded and where I'm CIO, measuring what AI engines say about a company. That answer becomes a reputation for whoever reads it, nobody at the company was asked, and nothing on the open web lets a model check who is behind a claim. I'm 20, and I've bet everything on this being one of the foundational problems of the next era, for people and for the agents acting on their behalf.",
-    "bio4": "Before tech, I trained as a competitive parkour athlete with the French Gymnastics Federation from 2017 to 2025. In 2025 I co-founded PKBA, now the largest parkour club in southern France. Discipline, pattern recognition, and learning from failure fast: sport and systems thinking have more in common than they appear.",
-    "researchInterests": "Research Interests",
+    "bio1": "I'm Maxime, 20, a software engineer in Bordeaux and a third-year student at EPSI. I started playing around with computers as a kid, mostly because I liked figuring out how things work. That turned into building websites for people around me, and I never really stopped. I still learn mostly by building something and seeing where it breaks.",
+    "bio2": "A lot of what I work on comes down to trust: knowing who you're dealing with, human or AI, and being able to check it yourself. I don't think that should depend on one company or one authority holding the list. AI agents are about to act for us all over the place, and right now nobody can really tell who an agent is or who sent it. I care about self-sovereign identity, privacy and the open web, and yes, I like web3. I'm betting my early career on this being one of the big problems of the next decade.",
+    "bio3": "Day to day, that means Verana at 2060.io, an open trust layer for digital identity: a public registry of who is allowed to issue or verify which credentials. I build the Verana dashboard, the OpenID4VC issuer and verifier in VS Agent, and the tooling that checks whether identity wallets can actually talk to each other (often they can't). I co-wrote parts of the specs, and a few of my fixes went upstream into credo-ts at the OpenWallet Foundation. I'm also in the W3C Credentials Community Group and Trust over IP, which mostly means a lot of spec reading.",
+    "bio4": "The rest of the week is split between a few other things. I co-founded CiteMe, where I'm CIO, which measures what ChatGPT, Perplexity and the others say about a company. I'm an apprentice at Hop Hop Immo, working on their new-build real estate platform. I run Klyx, a small web and AI studio for startups. And I've started Euthyne, which records what AI agents did and what they were allowed to do, so anyone can check. Sleep is negotiable. When I can, I'm at GDG Bordeaux meetups.",
+    "researchInterests": "What I'm into",
     "interests": [
-      "Trust Registries & the Trust Registry Query Protocol",
-      "Cross-Ecosystem Wallet Interoperability",
-      "Agent Identity, Delegation & Scoped Authorization",
-      "Credential Exchange Protocols (OID4VP, OID4VCI, SD-JWT VC)",
-      "Trust Frameworks & Governance Models"
+      "Accountability for AI agents",
+      "Trust registries and digital identity",
+      "How AI engines read and describe the web",
+      "Computer vision for sport"
     ],
     "news": "News",
     "newsItems": [
       {
+        "date": "2026.10",
+        "text": "Started Euthyne, first CLI release for Claude Code"
+      },
+      {
+        "date": "2026.10",
+        "text": "Became president of PKBA"
+      },
+      {
+        "date": "2026.10",
+        "text": "Klyx is now a web and AI studio for startups and tech teams"
+      },
+      {
+        "date": "2026.10",
+        "text": "CiteMe study published: Who Read This Page? Identifying AI assistants from their network calls"
+      },
+      {
         "date": "2026.09",
-        "text": "Preprint out: Conformant but Not Compatible, an interoperability study of production identity wallets"
+        "text": "CiteMe study published: What Is Actually Crawling You"
+      },
+      {
+        "date": "2026.09",
+        "text": "Preprint out: Conformant but Not Compatible, an interoperability study of thirteen identity wallets"
       },
       {
         "date": "2026.09",
@@ -54,90 +73,75 @@
       },
       {
         "date": "2026.09",
-        "text": "Attended Global Digital Collaboration (GDC26), Geneva, on cross-ecosystem wallet trust"
+        "text": "Started an apprenticeship at Hop Hop Immo"
       },
       {
         "date": "2026.09",
-        "text": "Joined the Agentic AI Foundation"
-      },
-      {
-        "date": "2026.09",
-        "text": "Joined the Linux Foundation"
+        "text": "At Global Digital Collaboration (GDC26) in Geneva with 2060.io"
       },
       {
         "date": "2026.08",
-        "text": "Verana trust resolution running inside France Identité's EUDI Unfold playground on testnet"
+        "text": "First fixes merged upstream in credo-ts at the OpenWallet Foundation"
       },
       {
         "date": "2026.08",
-        "text": "Joined the W3C Credentials Community Group"
-      },
-      {
-        "date": "2026.08",
-        "text": "Joined the Trust over IP Foundation"
-      },
-      {
-        "date": "2026.08",
-        "text": "Verana trust resolution now runs in third-party identity wallets and solutions, including the EUDI reference wallet and MOSIP's Inji"
-      },
-      {
-        "date": "2026.08",
-        "text": "Contributor to credo-ts at the OpenWallet Foundation, part of LF Decentralized Trust since September 2026"
+        "text": "Joined the W3C Credentials Community Group, Trust over IP, the Agentic AI Foundation and the Linux Foundation"
       },
       {
         "date": "2026.06",
-        "text": "Co-founded CiteMe, generative engine optimization, as CIO"
+        "text": "Co-founded CiteMe, as CIO"
       },
       {
-        "date": "2026.03",
-        "text": "Claw4S protocol paper accepted, agent-to-agent trust with did:key and Verifiable Credentials"
+        "date": "2026.06",
+        "text": "BTS SIO SLAM done, starting the RNCP 6 programme at EPSI Bordeaux"
       },
       {
-        "date": "2026.02",
-        "text": "Published Credat, an open-source trust layer for AI agents using DIDs and VCs"
+        "date": "2026.01",
+        "text": "Joined Hop Hop Immo"
       },
       {
         "date": "2025.09",
-        "text": "Joined 2060.io as a software engineer, building SSI infrastructure on Verana"
+        "text": "Joined 2060.io as a software engineer on Verana"
       },
       {
         "date": "2025.07",
-        "text": "Co-founded PKBA, the largest parkour club in southern France"
+        "text": "Co-founded PKBA, a parkour club near Arcachon"
       },
       {
         "date": "2025.04",
-        "text": "Founded Klyx, a web development studio in Bordeaux"
+        "text": "Founded Klyx in Bordeaux"
       }
-    ]
+    ],
+    "bio5": "Before code there was parkour. I trained competitively with the French Gymnastics Federation from 2017 to 2025, and in 2025 I co-founded PKBA, a club near Arcachon that now has more than 100 members. I've just become its president. PkVision, my attempt at getting a computer to score parkour tricks from video, comes from there. I speak French and English, get by in German, and I'm slowly learning Mandarin."
   },
   "research": {
     "title": "Research",
-    "intro": "I work on establishing trust between parties that share no authority. For people, and increasingly for the AI agents acting on their behalf. Everything below is work I have shipped or published, followed by the questions it left open.",
+    "intro": "A few problems I keep coming back to, what I've shipped on each, and what I still don't know how to answer.",
     "areas": [
       {
-        "id": "interop",
-        "title": "Cross-ecosystem trust interoperability",
-        "body": "Every mature identity wallet ships a static list of issuers it trusts, compiled at build time and updated by release. I replaced that list with a live, fail-closed call to a trust registry in third-party wallets and solutions: the EUDI reference Android wallet, MOSIP's Inji, Talao AltMe, Sphereon, Paradym, Procivis One, SWIYU from the Swiss Confederation, and 2060.io's Hologram. MOSIP runs as a full issuer, wallet and verifier triangle; the EUDI reference wallet is validated on testnet against France Identité's Unfold playground. SWIYU is partial, its positive and control flows are accepted on Android but one verifier request path is still blocked. The integration surface everywhere is the same resolver HTTP API, which is what makes the approach portable rather than bespoke."
+        "id": "agent-records",
+        "title": "Accountability for AI agents",
+        "body": "Agents now write code, call APIs and act for people. When someone asks what an agent did, the answer usually comes from logs held by whoever ran it. With Euthyne I'm working on records an outsider can check: what the agent was allowed to do when it started, and a signed receipt for each action, marked inside, outside or unknown against those permissions. Content is stored as salted hashes, receipts go into an append-only public log anchored with OpenTimestamps, and anyone can verify them offline. Coding agents come first, because that's where the question already gets asked, in security reviews and audits. The signing is the easy part. The hard part is deciding what a record can honestly prove and being clear about what it can't."
       },
       {
         "id": "trust-registries",
-        "title": "Trust registries in production",
-        "body": "Verana is a registry of trust registries: a public ledger recording which entities may issue or verify which credential schemas inside a given ecosystem, and the validation process that grants those permissions. I build the frontend and the credential tooling, including JSON Canonicalization Scheme canonicalization, full BCP-47 language tagging, and validation rules read from the chain rather than hardcoded. I co-authored the Verana trust specifications. The open standards counterpart is the Trust Registry Query Protocol, approved as a ToIP specification in December 2025, which defines conformance targets but shipped without a conformance test suite, so I built one: tiered wallet conformance checks that run the real OpenID4VC flows rather than asserting against a document."
+        "title": "Trust registries and wallet interoperability",
+        "body": "Identity wallets decide who to trust from a list baked in at build time. At 2060.io I work on Verana, a public registry of who may issue or verify which credentials. I wrote the OpenID4VC issuer and verifier in VS Agent, which refuses to proceed when the registry doesn't vouch for the other side, and I patched existing wallets to do the same lookup. I co-authored the Verana trust specifications. The preprint Conformant but Not Compatible came out of testing thirteen production wallets against each other: they pass their own conformance tests and still can't talk to one another."
       },
       {
-        "id": "agent-trust",
-        "title": "Agent identity and delegation",
-        "body": "Autonomous agents raise the same question earlier and harder: when an agent calls a service, who is it, and who authorized it to act? The Claw4S protocol formalizes the handshake: two previously unknown agents reach mutual cryptographic trust in exactly two round trips, under 2ms of overhead, producing an auditable chain of signed credentials and a structural guarantee of impersonation detection."
+        "id": "ai-engines",
+        "title": "How AI engines read the web",
+        "body": "AI engines now describe companies to people who never visit their site, and nobody at the company is asked. At CiteMe we measure that answer and the traffic behind it. Two studies so far. The first looked at 385,057 AI-agent requests across 20 sites and found that 7% of what passes for AI crawler traffic is something else. The second shows you can tell which AI assistant fetched a page from its network calls alone, but you can only tie that to a visit when the assistant reads the page live."
       }
     ],
     "openQuestions": "Open Questions",
     "questions": [
-      "Trust registries and ETSI trusted lists make different governance assumptions. Where exactly do they fail to meet, and what is the smallest bridge that preserves both?",
-      "A live trust call is a network dependency. What is the correct behaviour when the registry is unreachable, and can fail-closed survive contact with real user expectations?",
-      "How should a wallet surface a trust verdict to someone who has never heard of a trust registry, without either hiding the decision or overwhelming them?",
-      "What revocation mechanisms preserve holder privacy while keeping a verifier's answer fresh enough to be worth asking for?"
+      "When an agent's permissions change mid-session, which version was it really acting under, and how do you prove it after the fact?",
+      "How much of an agent's work can you prove to an outsider without showing them the code it touched?",
+      "A live trust lookup is a network dependency. What should a wallet do when the registry is down, and does fail-closed survive real users?",
+      "Can a model ever check who is behind a claim before it repeats it about a company?"
     ],
-    "metaDescription": "Cross-ecosystem wallet trust interoperability, trust registries in production, and identity and delegation for AI agents."
+    "metaDescription": "Accountability for AI agents, trust registries and wallet interoperability, and how AI engines read the web."
   },
   "cv": {
     "title": "Curriculum Vitae",
@@ -148,10 +152,16 @@
     "engagementHeading": "Projects & Community Engagement",
     "experience": [
       {
+        "title": "Founder",
+        "company": "Euthyne",
+        "period": "Oct 2026 – Present",
+        "desc": "Accountability for AI agents, starting with coding agents. Building it solo: a Go CLI that captures Claude Code sessions through hooks and signs a receipt per tool call on the developer's machine, the agent's permission settings captured as a signed mandate, a public append-only log anchored with OpenTimestamps, a verifier that needs no account, and the dashboard."
+      },
+      {
         "title": "Software Engineer",
         "company": "2060.io / Verana",
         "period": "Sep 2025 – Present",
-        "desc": "Core engineer and researcher on Verana, an open trust layer for the internet, across the trust registry frontend, the demo playground, the indexer and the resolver. Co-authored the Verana trust specifications. Built spec-compliant credential tooling: JCS canonicalization, full BCP-47 language tagging, and validation rules sourced from the chain. Wired live trust resolution into third-party identity wallets and solutions including the EUDI reference wallet, MOSIP's Inji, Talao, Sphereon, Paradym and Procivis One, and built the tiered wallet conformance suite that checks those integrations under real OpenID4VC flows. Shipped DIDComm and verifiable-credential agents on Hologram as NestJS services on Kubernetes."
+        "desc": "Full-stack engineer on Verana, an open trust layer for digital identity. Built large parts of the Verana dashboard (Next.js), including the v4 redesign and the Corporation feature with governance, operator grants and fee grants. Wrote the OpenID4VC issuer and verifier plugin for VS Agent, with SD-JWT VC issuance and fail-closed trust checks. Co-authored the Verana specifications and the SD-JWT VC section of the Verifiable Trust spec. Patched trust resolution into existing identity wallets and built the conformance tooling that tests them on real devices. Fixes merged upstream in credo-ts."
       },
       {
         "title": "Co-founder & CIO",
@@ -160,16 +170,16 @@
         "desc": "Generative engine optimization platform measuring and improving how brands appear inside AI search engines. Own data, backend direction and infrastructure: Supabase with Postgres and pgvector for retrieval, a custom job queue, the multi-provider LLM layer, and the observability and billing plumbing behind a product with paying customers."
       },
       {
-        "title": "Software Engineer",
+        "title": "Software Engineer (apprentice)",
         "company": "Hop Hop Immo",
         "period": "Jan 2026 – Present",
-        "desc": "Built Hoppy, a conversational AI real-estate assistant live in production, qualifying buyers across a catalogue of 30,000+ new-build listings. Built autonomous agents for marketing automation, and rebuilt the homepage with an SEO architecture spanning 30+ city pages and 8 regions."
+        "desc": "Built Hoppy, the conversational AI assistant that helps buyers search a catalogue of 28,000+ new-build homes. Work across the Next.js site and its Java API: listing and programme pages, city pages, geo-search, financing simulators, user accounts, an in-house consent banner, and the Python agent pipeline that writes content. Internship in early 2026, freelance from March, apprenticeship since September 2026."
       },
       {
         "title": "Founder",
         "company": "Klyx",
         "period": "Apr 2025 – Present",
-        "desc": "Web studio in Bordeaux, run end to end: sales, design, development and delivery, with productized pricing from €900 one-pagers to €5,700+ custom builds. Delivered production client sites with live payment and operations flows, and run the studio's content engine at blog.klyx.fr."
+        "desc": "Web and AI studio for startups and tech teams, run end to end: AI audits, sites built to be read by Google and AI engines, and assistants or agents shipped in two-week sprints. Clients include PKBA, Kenzi and Reciproq."
       },
       {
         "title": "Web Developer",
@@ -217,11 +227,11 @@
       },
       {
         "title": "Open Source",
-        "desc": "Contributor to credo-ts at the OpenWallet Foundation, part of LF Decentralized Trust since September 2026. Author of the Verana wallet conformance suite."
+        "desc": "Contributor to credo-ts at the OpenWallet Foundation, part of LF Decentralized Trust since September 2026. Author of the Verana wallet conformance tooling."
       },
       {
         "title": "PKBA",
-        "desc": "Co-founder, treasurer and head of communication of a parkour club in southern France, 120+ members in its second season. Featured by France 3 Nouvelle-Aquitaine."
+        "desc": "Co-founder and president of a parkour club near Arcachon, more than 100 members. Built and run the club's website, sign-ups and shop. Featured by France 3 Nouvelle-Aquitaine."
       },
       {
         "title": "VertiFlow",
@@ -249,12 +259,12 @@
   "publications": {
     "title": "Publications",
     "empty": "No publications yet. This section will be updated as research work progresses.",
-    "metaDescription": "Conference work on decentralized agent-to-agent trust using DIDs and Verifiable Credentials."
+    "metaDescription": "Papers, preprints, specifications and studies on digital identity, trust registries and AI engines."
   },
   "projects": {
     "title": "Projects",
     "featured": "Featured",
     "all": "All",
-    "metaDescription": "Selected work: cross-ecosystem wallet trust integrations, Credat, the Claw4S agent trust protocol, and verifiable service agents on Hologram."
+    "metaDescription": "Selected work: Euthyne, Verana wallet interoperability, CiteMe, Hop Hop Immo and more."
   }
 }

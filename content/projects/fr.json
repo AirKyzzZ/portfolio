@@ -1,9 +1,25 @@
 [
   {
+    "slug": "euthyne",
+    "title": "Euthyne",
+    "description": "Traçabilité vérifiable des agents IA : ce que chaque agent avait le droit de faire à côté de ce qu'il a fait, signé et vérifiable par tous. En commençant par les agents de code.",
+    "longDescription": "Les agents IA agissent pour des gens, et la trace de ce qu'ils ont fait appartient en général à celui qui les a lancés. Euthyne garde une trace qu'une personne extérieure peut vérifier. Ça commence par les agents de code. La CLI se branche sur Claude Code, capture les réglages de permissions de l'agent au début de la session sous forme de mandat signé, et signe un reçu sur la machine du développeur pour chaque appel d'outil, marqué dedans, dehors ou inconnu par rapport à ce mandat. Le contenu est conservé sous forme d'empreintes salées. Les reçus partent dans un journal public en ajout seul avec des checkpoints signés et des preuves OpenTimestamps, et n'importe qui peut les vérifier sur euthyne.com/verify ou hors ligne, sans compte. Je le construis seul.",
+    "technologies": [
+      "Go",
+      "TypeScript",
+      "Next.js",
+      "Journaux de transparence",
+      "OpenTimestamps"
+    ],
+    "demoUrl": "https://euthyne.com",
+    "featured": true,
+    "year": 2026
+  },
+  {
     "slug": "verana-wallet-interop",
     "title": "Interopérabilité Verana entre portefeuilles",
     "description": "Résolution de confiance en direct intégrée dans des portefeuilles et solutions d'identité tiers, en remplacement de leurs listes d'émetteurs codées en dur.",
-    "longDescription": "Tout portefeuille d'identité mature embarque une liste figée d'émetteurs de confiance, compilée au build et mise à jour par release. Ces travaux la remplacent par un appel en direct, fail-closed, au résolveur de confiance Verana, avec la même surface HTTP sur chaque cible pour que l'approche soit portable plutôt que sur mesure. Livré et vérifié sur appareil : Inji de MOSIP en triangle complet émetteur, portefeuille et vérifieur ; le portefeuille Android de référence EUDI validé sur testnet face au playground Unfold de France Identité ; Talao AltMe, Sphereon, Paradym et Procivis One construits et démontrés sur appareil, chemins de confiance et chemins malveillants vérifiés ; et Hologram tournant nativement sur vs-agent. SWIYU, le portefeuille de la Confédération suisse, reste partiel : les flux d'émission positifs et de contrôle sont acceptés sur Android, un chemin de requête vérifieur reste bloqué. Réalisé pour le Global Digital Trust Collaboration Award 2026, à présenter à GDC Genève en septembre 2026.",
+    "longDescription": "Tout portefeuille d'identité mature embarque une liste figée d'émetteurs de confiance, compilée au build et mise à jour par release. Ces travaux la remplacent par un appel en direct, fail-closed, au résolveur de confiance Verana, avec la même surface HTTP sur chaque cible pour que l'approche soit portable plutôt que sur mesure. Livré et vérifié sur appareil : Inji de MOSIP en triangle complet émetteur, portefeuille et vérifieur ; le portefeuille Android de référence EUDI validé sur testnet face au playground Unfold de France Identité ; Talao AltMe, Sphereon, Paradym et Procivis One construits et démontrés sur appareil, chemins de confiance et chemins malveillants vérifiés ; et Hologram tournant nativement sur vs-agent. SWIYU, le portefeuille de la Confédération suisse, reste partiel : les flux d'émission positifs et de contrôle sont acceptés sur Android, un chemin de requête vérifieur reste bloqué. Réalisé pour le Global Digital Trust Collaboration Award 2026 et présenté à GDC Genève en septembre 2026.",
     "technologies": [
       "TypeScript",
       "Kotlin",
@@ -16,39 +32,6 @@
       "Verifiable Credentials"
     ],
     "demoUrl": "https://playground.mosip.testnet.verana.network/",
-    "featured": true,
-    "year": 2026
-  },
-  {
-    "slug": "credat",
-    "title": "Credat",
-    "description": "Couche de confiance pour agents IA fondée sur les DIDs et les Verifiable Credentials.",
-    "longDescription": "Credat est une bibliothèque TypeScript open source qui apporte l'identité décentralisée aux écosystèmes d'agents IA. Les agents obtiennent une identité vérifiable via did:web et did:key, émettent des credentials de délégation à portée limitée, et effectuent une poignée de main cryptographique pour établir une confiance mutuelle. Construite sur W3C DID v1.1 et le Verifiable Credentials Data Model, avec un minimum de dépendances et un cœur agnostique du transport. Autour gravite une petite suite : une CLI, une protection prête à l'emploi pour les API HTTP, une intégration LangChain et LangGraph, et des démos exécutables de bout en bout.",
-    "technologies": [
-      "TypeScript",
-      "DIDs",
-      "Verifiable Credentials",
-      "SD-JWT",
-      "Node.js"
-    ],
-    "sourceUrl": "https://github.com/credat/credat",
-    "demoUrl": "https://credat.io",
-    "featured": true,
-    "year": 2026
-  },
-  {
-    "slug": "claw4s-trust-protocol",
-    "title": "Claw4S, Protocole de Confiance Décentralisée pour Agents IA",
-    "description": "Paper de recherche et protocole exécutable pour la confiance cryptographique mutuelle entre agents IA, soumis au hackathon Stanford × Princeton.",
-    "longDescription": "Soumis à la Claw4S Conference 2026 (Stanford × Princeton). Un protocole minimal permettant à deux agents IA inconnus d'établir une confiance cryptographique mutuelle via did:key (Ed25519) et W3C Verifiable Credentials, sans aucune autorité centrale. Le protocole se complète en 2 allers-retours avec moins de 2ms de surcoût et produit une chaîne vérifiable de credentials signés. Implémenté en un seul fichier Python avec une seule dépendance, proposant trois modes d'exécution (mock, live, attack) et un format innovant de lab interactif où l'agent exécutant participe au handshake de confiance.",
-    "technologies": [
-      "Python",
-      "Ed25519",
-      "DIDs",
-      "Verifiable Credentials",
-      "W3C Standards"
-    ],
-    "demoUrl": "https://www.clawrxiv.io/abs/2603.00405",
     "featured": true,
     "year": 2026
   },
@@ -66,7 +49,7 @@
       "Kubernetes",
       "Helm"
     ],
-    "featured": true,
+    "featured": false,
     "year": 2026
   },
   {
@@ -83,20 +66,20 @@
       "Stripe"
     ],
     "demoUrl": "https://citeme.io",
-    "featured": false,
+    "featured": true,
     "year": 2026
   },
   {
     "slug": "klyx",
     "title": "Klyx",
-    "description": "Studio web bordelais qui livre des sites et applications rapides, portés par le design.",
-    "longDescription": "Klyx est le studio web que j'ai fondé à Bordeaux, mené de bout en bout : vente, design, développement et livraison. L'offre packagée va de 900 € pour une one-page à 5 700 € et plus pour du sur-mesure, et les projets clients partent en production avec de vrais flux de paiement et d'exploitation, pas de simples plaquettes. Le studio pilote aussi son propre moteur de contenu, un blog Next.js et MDX sur blog.klyx.fr avec analytics, données structurées et pipelines d'images automatisés.",
+    "description": "Studio web et IA pour les startups et les équipes tech : sites, audits IA, assistants et agents.",
+    "longDescription": "Klyx est le studio que j'ai fondé à Bordeaux. Parti d'un studio web, il fait aujourd'hui du web et de l'IA pour les startups et les équipes tech : un audit IA pour trouver où elle rapporte vraiment, des sites pensés pour être lus par Google comme par les moteurs IA, et des assistants, agents et serveurs MCP livrés en sprints de deux semaines sur les données du client. Les clients parlent directement à la personne qui écrit le code.",
     "technologies": [
       "Next.js",
-      "React",
-      "Tailwind CSS",
       "TypeScript",
-      "MDX"
+      "WordPress",
+      "MCP",
+      "Agents LLM"
     ],
     "demoUrl": "https://klyx.fr",
     "featured": false,
@@ -105,8 +88,8 @@
   {
     "slug": "hophopimmo",
     "title": "Hop Hop Immo",
-    "description": "Plateforme proptech dotée d'un agent IA conversationnel sur un catalogue de plus de 30 000 biens neufs.",
-    "longDescription": "Hop Hop Immo est une plateforme proptech qui construit le premier agent immobilier virtuel pour le neuf en France. J'ai développé Hoppy, un assistant IA conversationnel en production qui qualifie les acheteurs et les oriente vers les biens correspondants à la demande, ainsi que des agents autonomes pour l'automatisation marketing. J'ai également refondu la page d'accueil avec une architecture SEO ciblée couvrant plus de 30 pages villes, 8 régions et un blog, et intégré les flux de données annonces, CRM et analytics qui relient le catalogue de plus de 30 000 biens à l'assistant.",
+    "description": "Plateforme immobilière du neuf avec Hoppy, un assistant IA conversationnel sur plus de 28 000 logements.",
+    "longDescription": "Hop Hop Immo est une plateforme bordelaise dédiée au logement neuf, avec un catalogue de plus de 28 000 biens. J'ai construit Hoppy, l'assistant IA conversationnel en ligne sur le site, qui qualifie les acheteurs et les oriente vers les logements qui leur correspondent. Au-delà de Hoppy, je travaille sur le site Next.js et son API Java : pages annonces et programmes, pages villes, recherche géographique, simulateurs de financement, comptes utilisateurs et bandeau de consentement maison, ainsi que le pipeline d'agents Python qui rédige le contenu. J'y suis entré en stage en janvier 2026 et j'y suis en alternance depuis septembre.",
     "technologies": [
       "Next.js",
       "TypeScript",
@@ -115,14 +98,14 @@
       "Intégrations CRM"
     ],
     "demoUrl": "https://hophopimmo.com",
-    "featured": false,
+    "featured": true,
     "year": 2026
   },
   {
     "slug": "pkba",
     "title": "Parkour Bassin d'Arcachon",
-    "description": "Site communautaire et plateforme adhérents du plus grand club de parkour du Sud de la France, cofondé en 2025.",
-    "longDescription": "PKBA est le plus grand club de parkour du Sud de la France, que j'ai cofondé et où je suis trésorier et responsable communication. 120+ adhérents pour sa deuxième saison. J'ai conçu et développé seul la plateforme de production du club : site public, inscription en ligne persistée dans Airtable, tableau de bord d'administration derrière une authentification maison pour valider les licences et exporter les données adhérents, et des flux Stripe en production pour la boutique et les dons avec reçus automatisés. J'ai pratiqué le parkour en compétition de 2017 à 2025, ce projet est donc autant personnel que technique. Le club a fait l'objet d'un reportage de France 3 Nouvelle-Aquitaine.",
+    "description": "Site et plateforme adhérents de PKBA, un club de parkour près d'Arcachon que j'ai cofondé en 2025 et que je préside.",
+    "longDescription": "PKBA est un club de parkour près d'Arcachon que j'ai cofondé en 2025 et que je préside aujourd'hui, avec plus de 100 adhérents. J'ai conçu et construit seul toute sa plateforme : le site public, les inscriptions en ligne stockées dans Airtable, un tableau de bord d'administration pour valider les licences et exporter les données adhérents, les inscriptions aux stages de vacances, et des flux Stripe en production pour la boutique et les dons. J'ai pratiqué le parkour en compétition de 2017 à 2025, donc ce projet est autant personnel que technique. Le club a fait l'objet d'un reportage de France 3 Nouvelle-Aquitaine.",
     "technologies": [
       "Next.js",
       "TypeScript",
@@ -152,8 +135,8 @@
   {
     "slug": "pkvision",
     "title": "PkVision",
-    "description": "Vision par ordinateur open source pour la détection et la notation automatiques des figures de parkour.",
-    "longDescription": "PkVision applique l'estimation de pose et la classification de mouvement à des vidéos de parkour, pour détecter les figures et les noter automatiquement. Le projet naît de huit années dans la discipline et d'un problème que le parkour de compétition n'a jamais réglé proprement : la notation est subjective, et les juges divergent. Une expérimentation ouverte à l'intersection des deux choses auxquelles je consacre mon temps.",
+    "description": "Expérimentation ouverte pour reconnaître et noter des figures de parkour à partir de vidéos. En cours.",
+    "longDescription": "PkVision essaie de reconnaître des figures de parkour dans des vidéos et de les noter, parce que le jugement en compétition est subjectif et que les juges ne sont pas d'accord entre eux. Le projet a commencé avec de l'estimation de pose et des modèles entraînés. En ce moment, je teste une idée plus simple : compter les saltos et les vrilles à partir de points clés 2D avec des règles fixes, en commençant par la famille du salto arrière. Toujours en cours, pas encore de résultats à montrer.",
     "technologies": [
       "Python",
       "Vision par ordinateur",
